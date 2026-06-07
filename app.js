@@ -4,15 +4,15 @@ const products = [
     kicker: "Høyphenolitisk olivenolje",
     name: "OliveX høyphenolitisk olje",
     description:
-      "Mer enn en matolje. Ditt daglige, flytende kosttilskudd. Resultatet er en olje med 600–700 mg/l polyfenoler.",
-    image: "./assets/visuals/olivex-hero-editorial-2026-06-07.jpg",
-    imagePosition: "76% center",
-    badge: "600–700 mg/l",
+      "Mer enn en matolje. Ditt daglige, flytende kosttilskudd. Resultatet er en olje med 600-700 mg/l polyfenoler.",
+    image: "./assets/visuals/olivex-product-ritual-2026-06-07.jpg",
+    imagePosition: "34% center",
+    badge: "600-700 mg/l",
     detailsUrl: "./product-olivex-superolje.html",
     facts: [
-      ["Polyfenoler", "600–700 mg/l"],
+      ["Polyfenoler", "600-700 mg/l"],
       ["Oleocanthal", "Over 67 %"],
-      ["Dosering", "15–20 ml"],
+      ["Dosering", "15-20 ml"],
     ],
     variants: [
       { id: "core-size-1", size: "Størrelse 1", note: "ml og pris kommer", price: null },
@@ -51,24 +51,28 @@ const products = [
 
 const evidenceCopy = {
   heart: {
+    step: "01",
     title: "Forebygging av hjerte- og karsykdommer (Hjerteinfarkt og slag)",
     body:
       "Oljen beskytter hjertet ditt på tre måter samtidig: Hindre harskning av kolesterol, lavere blodtrykk og elastiske årer.",
   },
   diabetes: {
+    step: "02",
     title: "Forebygging av type 2-diabetes og metabolsk syndrom",
     body:
       "Polyfenolene bidrar til å øke kroppens insulinsensitivitet. Dette hjelper cellene dine med å ta opp sukker fra blodet mer effektivt, noe som gir mer stabilt blodsukker og motvirker utviklingen av insulinresistens og type 2-diabetes.",
   },
   liver: {
+    step: "03",
     title: "Reduksjon av fettlever (Ikke-alkoholisk fettlever)",
     body:
       "Kliniske undersøkelser viser at høyt inntak av polyfenolrik olje reduserer fettansamling i levercellene og demper betennelse i leveren. Dette hjelper organet med dens naturlige fettforbrenning.",
   },
   brain: {
+    step: "04",
     title: "Nevrologisk beskyttelse",
     body:
-      "Hjerneforskning viser at oleocanthal aktiverer kroppens egne mekanismer for å renske ut skadelige proteinavleiringer (amyloid-beta-plakk) i hjernen – de samme avleiringene som knyttes til utviklingen av Alzheimers sykdom.",
+      "Hjerneforskning viser at oleocanthal aktiverer kroppens egne mekanismer for å renske ut skadelige proteinavleiringer (amyloid-beta-plakk) i hjernen, de samme avleiringene som knyttes til utviklingen av Alzheimers sykdom.",
   },
 };
 
@@ -79,11 +83,11 @@ const faqs = [
   },
   {
     question: "Hvorfor smaker oljen litt pepperaktig, og hvorfor må jeg hoste noen ganger?",
-    answer: `Det er en helt naturlig, biokjemisk reaksjon – og beviset på at den virker. Oljen har en frisk, grønn smak med en karakteristisk pepperaktig ettersmak. At du av og til føler trang til å kremte eller hoste når du svelger den rå, skyldes det høye innholdet av Oleocanthal. Dette unike molekylet aktiverer en spesifikk nerve-reseptor (TRPA1) som sitter dypt i svelget, noe som utløser en mild hosterefleks. Det er akkurat denne egenskapen som bekrefter oljens høye kvalitet og betennelsesdempende egenskaper. Hvis en olivenolje er helt mild og smøraktig, betyr det at innholdet av de biologisk aktive stoffene er lavt.`,
+    answer: `Det er en helt naturlig, biokjemisk reaksjon og beviset på at den virker. Oljen har en frisk, grønn smak med en karakteristisk pepperaktig ettersmak. At du av og til føler trang til å kremte eller hoste når du svelger den rå, skyldes det høye innholdet av Oleocanthal. Dette unike molekylet aktiverer en spesifikk nerve-reseptor (TRPA1) som sitter dypt i svelget, noe som utløser en mild hosterefleks. Det er akkurat denne egenskapen som bekrefter oljens høye kvalitet og betennelsesdempende egenskaper. Hvis en olivenolje er helt mild og smøraktig, betyr det at innholdet av de biologisk aktive stoffene er lavt.`,
   },
   {
     question: "Er 1 spiseskje om dagen virkelig nok for å gi effekt?",
-    answer: `Ja, 1 spiseskje (ca. 15 ml) som en fast helseshot om morgenen er et utmerket utgangspunkt. Mens EU setter en minimumsgrense som tilsvarer 5 mg blandede polyfenoler for å beskytte kolesterolet, viser nyere medisinsk forskning at man bør opp i over 10 mg av kun stoffet Oleocanthal per dag for å oppnå en reell, målbar betennelsesdempende effekt i kroppen. Ved å ta 1 spiseskje rå om morgenen dekker du grunndosen din. Hvis du i tillegg bruker oljen aktivt i hverdagen – for eksempel ringlet over salaten, som topping på middagen eller som erstatning for smør – bikker du enkelt den optimale dagsdosen på 10 mg Oleocanthal, helt uten unødvendige kalorier.`,
+    answer: `Ja, 1 spiseskje (ca. 15 ml) som en fast helseshot om morgenen er et utmerket utgangspunkt. Mens EU setter en minimumsgrense som tilsvarer 5 mg blandede polyfenoler for å beskytte kolesterolet, viser nyere medisinsk forskning at man bør opp i over 10 mg av kun stoffet Oleocanthal per dag for å oppnå en reell, målbar betennelsesdempende effekt i kroppen. Ved å ta 1 spiseskje rå om morgenen dekker du grunndosen din. Hvis du i tillegg bruker oljen aktivt i hverdagen, for eksempel ringlet over salaten, som topping på middagen eller som erstatning for smør, bikker du enkelt den optimale dagsdosen på 10 mg Oleocanthal, helt uten unødvendige kalorier.`,
   },
   {
     question: "Kan jeg ikke bare spise vanlige oliven i stedet for å drikke oljen?",
@@ -91,11 +95,11 @@ const faqs = [
   },
   {
     question: "Kan jeg bruke denne oljen til vanlig steking og matlaging?",
-    answer: `Nei, det anbefaler vi ikke – det vil være sløsing med de sunne stoffene. Høye temperaturer i en stekepanne (over 120–140 °C) vil raskt bryte ned og ødelegge de ømfintlige polyfenolene. Oljens sunne fettsyrer tåler varmen godt, men du mister den unike effekten. Bruk heller en rimeligere, vanlig olivenolje til steking, og behold superoljen til kaldt bruk for å bevare virkestoffene intakt.`,
+    answer: `Nei, det anbefaler vi ikke. Det vil være sløsing med de sunne stoffene. Høye temperaturer i en stekepanne (over 120-140 °C) vil raskt bryte ned og ødelegge de ømfintlige polyfenolene. Oljens sunne fettsyrer tåler varmen godt, men du mister den unike effekten. Bruk heller en rimeligere, vanlig olivenolje til steking, og behold superoljen til kaldt bruk for å bevare virkestoffene intakt.`,
   },
   {
     question: "I hvilken alder er det viktigst å begynne med et daglig inntak?",
-    answer: `Forebyggingen bør starte i 30–40-årsalderen, mens den aktive beskyttelsen blir mer kritisk fra 50 år og oppover. 30–50 år: Det er i disse tiårene at kronisk, lavgradig betennelse begynner å etablere seg i kroppen uten at du merker det. Ved å starte tidlig, bremser du disse prosessene før de utvikler seg til synlig sykdom. 50 år+: Etter fylte 50 øker risikoen for tette blodårer, stive ledd, insulinresistens og kognitiv svikt markant. Her fungerer oljen som en aktiv beskytter av organer, hjerneceller og blodårer.`,
+    answer: `Forebyggingen bør starte i 30-40-årsalderen, mens den aktive beskyttelsen blir mer kritisk fra 50 år og oppover. 30-50 år: Det er i disse tiårene at kronisk, lavgradig betennelse begynner å etablere seg i kroppen uten at du merker det. Ved å starte tidlig, bremser du disse prosessene før de utvikler seg til synlig sykdom. 50 år+: Etter fylte 50 øker risikoen for tette blodårer, stive ledd, insulinresistens og kognitiv svikt markant. Her fungerer oljen som en aktiv beskytter av organer, hjerneceller og blodårer.`,
   },
   {
     question: "Tran gis jo gjerne til barn, bør denne oljen også gis til barn?",
@@ -107,11 +111,11 @@ const faqs = [
   },
   {
     question: "Hvilke konkrete blodmarkører kan legen min måle for å se effekten?",
-    answer: `Ved regelmessig inntak over 3–6 måneder vil du kunne se positive endringer på flere sentrale helsemarkører: Oksidert LDL (ox-LDL), hs-CRP, HbA1c (langtidsblodsukker) og blodtrykk.`,
+    answer: `Ved regelmessig inntak over 3-6 måneder vil du kunne se positive endringer på flere sentrale helsemarkører: Oksidert LDL (ox-LDL), hs-CRP, HbA1c (langtidsblodsukker) og blodtrykk.`,
   },
   {
     question: "Hvorfor er det så viktig å dempe betennelsesnivået i kroppen, og hvorfor øker det med alderen?",
-    answer: `Kronisk, lavgradig betennelse (ofte kalt "silent inflammation") er roten til de fleste moderne livsstilssykdommer. Den fungerer som en usynlig ulmebrann som over tid skader blodårene og vev. Jo eldre vi blir, desto mer opplever vi det forskerne kaller "inflammaging" (aldringsbetennelse). Immunforsvaret svekkes naturlig, cellene produserer mer avfall, og kroppens egen evne til å slukke disse ulmebrannene blir dårligere. Derfor blir vi med årene mer avhengige av å tilføre kraftige, eksterne betennelsesdempere – som Oleocanthal fra superoljen.`,
+    answer: `Kronisk, lavgradig betennelse (ofte kalt "silent inflammation") er roten til de fleste moderne livsstilssykdommer. Den fungerer som en usynlig ulmebrann som over tid skader blodårene og vev. Jo eldre vi blir, desto mer opplever vi det forskerne kaller "inflammaging" (aldringsbetennelse). Immunforsvaret svekkes naturlig, cellene produserer mer avfall, og kroppens egen evne til å slukke disse ulmebrannene blir dårligere. Derfor blir vi med årene mer avhengige av å tilføre kraftige, eksterne betennelsesdempere som Oleocanthal fra superoljen.`,
   },
   {
     question: "Hvordan kan det skadelige bukfettet (visceralt fett) reduseres av at man drikker ren olje?",
@@ -123,7 +127,7 @@ const faqs = [
   },
   {
     question: "Hvor raskt kan jeg forvente å merke eller måle en effekt?",
-    answer: `De biokjemiske endringene starter med en gang, men målbare resultater krever litt tid. Uke 1–2: Den milde betennelsesdempende effekten i muskler og ledd kan for noen merkes ganske raskt som en lett lindring av stivhet. Måned 2–3: Cellene i blodårene fornyer seg. Dette er tidspunktet hvor du kan begynne å se utslag på blodtrykket og betennelsesmarkører (hs-CRP) på prøver hos legen. Måned 6+: Langtidseffekter på metabolisme, reduksjon av visceralt bukfett og leverhelse blir tydelige. Husk at dette er en forebyggende livsstilsendring, ikke en hurtigkur.`,
+    answer: `De biokjemiske endringene starter med en gang, men målbare resultater krever litt tid. Uke 1-2: Den milde betennelsesdempende effekten i muskler og ledd kan for noen merkes ganske raskt som en lett lindring av stivhet. Måned 2-3: Cellene i blodårene fornyer seg. Dette er tidspunktet hvor du kan begynne å se utslag på blodtrykket og betennelsesmarkører (hs-CRP) på prøver hos legen. Måned 6+: Langtidseffekter på metabolisme, reduksjon av visceralt bukfett og leverhelse blir tydelige. Husk at dette er en forebyggende livsstilsendring, ikke en hurtigkur.`,
   },
   {
     question: "Kan jeg ta denne oljen hvis jeg allerede går på reseptbelagte medisiner?",
@@ -136,6 +140,7 @@ const state = {
   selectedPlans: Object.fromEntries(
     products.map((product) => [product.id, product.purchasePlans?.[0]?.id || "one-time"]),
   ),
+  activeProductIndex: 0,
   cart: new Map(),
 };
 
@@ -197,7 +202,7 @@ const assistantTopics = [
     pattern: /dose|dosering|mengde|spiseskje|daglig|morgen|ritual/,
     title: "Daglig bruk",
     answer:
-      "Kildeteksten anbefaler 15–20 ml, altså 1,5 til 2 spiseskjeer, hver morgen. Den kan drikkes bar eller helles over kald mat.",
+      "Kildeteksten anbefaler 15-20 ml, altså 1,5 til 2 spiseskjeer, hver morgen. Den kan drikkes bar eller helles over kald mat.",
     source: "Kilde: kildetekstens seksjon om daglig rituale",
   },
   {
@@ -414,19 +419,40 @@ function selectPurchasePlan(productId, planId, shouldFocus = false) {
   syncStickyPurchase(productId);
 }
 
+function setActiveProduct(index, shouldFocus = false) {
+  state.activeProductIndex = (index + products.length) % products.length;
+  renderProducts();
+  if (shouldFocus) {
+    requestAnimationFrame(() => {
+      document.querySelector(`[data-product-slide="${state.activeProductIndex}"]`)?.focus();
+    });
+  }
+}
+
 function renderProducts() {
   if (!productGrid) return;
-  productGrid.innerHTML = products
-    .map((product) => {
-      const selectedId = state.selectedVariants[product.id];
-      const selectedVariant = product.variants.find((variant) => variant.id === selectedId);
-      const selectedPlanId = state.selectedPlans[product.id] || product.purchasePlans?.[0]?.id || "one-time";
-      const canPurchase = canPurchaseVariant(product, selectedVariant);
-      return `
-        <article class="product-card" aria-labelledby="${product.id}-title">
+  const product = products[state.activeProductIndex] || products[0];
+  const selectedId = state.selectedVariants[product.id];
+  const selectedVariant = product.variants.find((variant) => variant.id === selectedId);
+  const selectedPlanId = state.selectedPlans[product.id] || product.purchasePlans?.[0]?.id || "one-time";
+  const canPurchase = canPurchaseVariant(product, selectedVariant);
+
+  productGrid.innerHTML = `
+    <section
+      class="product-carousel"
+      aria-roledescription="carousel"
+      aria-label="Produkter"
+      aria-live="polite"
+    >
+      <div class="product-carousel-stage">
+        <article class="product-card product-card-feature" aria-labelledby="${product.id}-title">
           <div class="product-media">
             <img src="${product.image}" alt="${product.name}" loading="eager" decoding="async" style="object-position: ${product.imagePosition || "center"}" />
             <span class="product-badge">${product.badge}</span>
+            <div class="product-media-caption">
+              <span>Slide ${state.activeProductIndex + 1} av ${products.length}</span>
+              <strong>${product.available === false ? "Produktdata kommer" : "Høyphenolitisk olje"}</strong>
+            </div>
           </div>
           <div class="product-body">
             <span class="product-kicker">${product.kicker}</span>
@@ -452,7 +478,7 @@ function renderProducts() {
                       </button>
                     `,
                   )
-                .join("")}
+                  .join("")}
               </div>
             </div>
             ${
@@ -495,23 +521,47 @@ function renderProducts() {
                 )
                 .join("")}
             </div>
-            <button
-              class="add-button"
-              type="button"
-              ${canPurchase ? `data-add-to-cart="${selectedVariant.id}"` : "disabled"}
-            >
-              ${product.available === false ? "Kommer" : canPurchase ? `Legg ${selectedVariant.size} i kurv` : "Pris kommer"}
-            </button>
-            ${
-              product.detailsUrl
-                ? `<a class="detail-link" href="${product.detailsUrl}">Se produktside og analysebevis</a>`
-                : ""
-            }
+            <div class="product-actions">
+              <button
+                class="add-button"
+                type="button"
+                ${canPurchase ? `data-add-to-cart="${selectedVariant.id}"` : "disabled"}
+              >
+                ${product.available === false ? "Kommer" : canPurchase ? `Legg ${selectedVariant.size} i kurv` : "Pris kommer"}
+              </button>
+              ${
+                product.detailsUrl
+                  ? `<a class="detail-link" href="${product.detailsUrl}">Produktside og analysebevis</a>`
+                  : ""
+              }
+            </div>
           </div>
         </article>
-      `;
-    })
-    .join("");
+      </div>
+      <div class="product-carousel-controls" aria-label="Produktcarousel kontroller">
+        <button class="carousel-arrow" type="button" data-product-carousel-prev aria-label="Forrige produkt">Forrige</button>
+        <div class="product-thumbs" role="tablist" aria-label="Velg produkt">
+          ${products
+            .map(
+              (item, index) => `
+                <button
+                  class="product-thumb ${index === state.activeProductIndex ? "is-active" : ""}"
+                  type="button"
+                  role="tab"
+                  aria-selected="${index === state.activeProductIndex ? "true" : "false"}"
+                  data-product-slide="${index}"
+                >
+                  <img src="${item.image}" alt="" loading="lazy" decoding="async" />
+                  <span>${item.name}</span>
+                </button>
+              `,
+            )
+            .join("")}
+        </div>
+        <button class="carousel-arrow" type="button" data-product-carousel-next aria-label="Neste produkt">Neste</button>
+      </div>
+    </section>
+  `;
 }
 
 function renderCart() {
@@ -552,21 +602,24 @@ function renderCart() {
 function renderFaqs(query = "") {
   if (!faqList) return;
   const normalized = query.trim().toLowerCase();
-  const visibleFaqs = normalized
+  const matchingFaqs = normalized
     ? faqs.filter((faq) => `${faq.question} ${faq.answer}`.toLowerCase().includes(normalized))
-    : faqs;
+    : faqs.slice(0, 5);
 
-  faqList.innerHTML = visibleFaqs.length
-    ? visibleFaqs
+  faqList.innerHTML = matchingFaqs.length
+    ? matchingFaqs
         .map(
           (faq, index) => `
-            <details class="faq-item" ${index === 0 && !normalized ? "open" : ""}>
+            <details class="faq-item">
               <summary>${faq.question}</summary>
               <p>${faq.answer}</p>
             </details>
           `,
         )
-        .join("")
+        .join("") +
+      (!normalized && faqs.length > matchingFaqs.length
+        ? `<p class="faq-more-note">Søk i feltet over for å hente frem resten av FAQ-arkivet.</p>`
+        : "")
     : `<p class="faq-empty">Ingen treff. Prøv et annet søkeord eller kontakt support.</p>`;
 }
 
@@ -587,13 +640,25 @@ function normalizeText(value) {
   return value.trim().toLowerCase();
 }
 
-function renderAssistantAnswer({ title, answer, source, warning = false }) {
+function renderAssistantAnswer({ title, answer, source, warning = false }, query = "") {
   if (!assistantAnswer) return;
   assistantAnswer.classList.toggle("is-warning", warning);
   assistantAnswer.innerHTML = `
-    <strong>${escapeHtml(title)}</strong>
-    <span>${escapeHtml(answer)}</span>
-    ${source ? `<small>${escapeHtml(source)}</small>` : ""}
+    ${
+      query
+        ? `
+          <div class="chat-bubble user">
+            <strong>Du</strong>
+            <span>${escapeHtml(query)}</span>
+          </div>
+        `
+        : ""
+    }
+    <div class="chat-bubble assistant ${warning ? "is-warning" : ""}">
+      <strong>${escapeHtml(title)}</strong>
+      <span>${escapeHtml(answer)}</span>
+      ${source ? `<small>${escapeHtml(source)}</small>` : ""}
+    </div>
   `;
 }
 
@@ -616,13 +681,13 @@ function answerAssistant(query) {
       answer:
         "Jeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.",
       warning: true,
-    });
+    }, query);
     return;
   }
 
   const topic = assistantTopics.find((item) => item.pattern.test(normalized));
   if (topic) {
-    renderAssistantAnswer(topic);
+    renderAssistantAnswer(topic, query);
     return;
   }
 
@@ -634,21 +699,21 @@ function answerAssistant(query) {
         answer:
           "Spørsmålet kan handle om helse, sykdom, biomarkører eller medisiner. Ta det med lege, farmasøyt eller support.",
         warning: true,
-      });
+      }, query);
       return;
     }
     renderAssistantAnswer({
       title: match.question,
       answer: match.answer,
       source: "Kilde: FAQ på siden",
-    });
+    }, query);
     return;
   }
 
   renderAssistantAnswer({
     title: "Ingen sikkert treff.",
     answer: `Jeg fant ikke et sikkert svar på "${query}". Kontakt support for hjelp.`,
-  });
+  }, query);
 }
 
 async function hydrateProducerVideo() {
@@ -707,7 +772,7 @@ function selectEvidenceTab(tabId, shouldFocus = false) {
     button.tabIndex = selected ? 0 : -1;
     if (selected && shouldFocus) button.focus();
   });
-  evidencePanel.innerHTML = `<h3>${copy.title}</h3><p>${copy.body}</p>`;
+  evidencePanel.innerHTML = `<span class="journey-step">${copy.step}</span><h3>${copy.title}</h3><p>${copy.body}</p>`;
 }
 
 document.addEventListener("click", (event) => {
@@ -717,6 +782,9 @@ document.addEventListener("click", (event) => {
   const increaseButton = event.target.closest("[data-increase]");
   const decreaseButton = event.target.closest("[data-decrease]");
   const tabButton = event.target.closest("[data-tab]");
+  const productSlideButton = event.target.closest("[data-product-slide]");
+  const productPrevButton = event.target.closest("[data-product-carousel-prev]");
+  const productNextButton = event.target.closest("[data-product-carousel-next]");
 
   if (selectButton) {
     selectVariant(selectButton.dataset.productId, selectButton.dataset.selectVariant);
@@ -763,6 +831,18 @@ document.addEventListener("click", (event) => {
 
   if (tabButton) {
     selectEvidenceTab(tabButton.dataset.tab);
+  }
+
+  if (productSlideButton) {
+    setActiveProduct(Number(productSlideButton.dataset.productSlide));
+  }
+
+  if (productPrevButton) {
+    setActiveProduct(state.activeProductIndex - 1);
+  }
+
+  if (productNextButton) {
+    setActiveProduct(state.activeProductIndex + 1);
   }
 });
 
@@ -884,6 +964,7 @@ if (savedConsent) applyConsent(savedConsent);
 else showConsentBanner();
 renderCart();
 renderFaqs();
+selectEvidenceTab("heart");
 hydrateProducerVideo();
 const heroElement = document.querySelector(".hero");
 if (heroElement) {

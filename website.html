@@ -19,23 +19,25 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" as="image" href="./assets/visuals/olivex-hero-editorial-2026-06-07.jpg" />
+    <link rel="preload" as="image" href="./assets/visuals/olivex-product-ritual-2026-06-07.jpg" />
+    <link rel="preload" as="image" href="./assets/olivex-wordmark-cropped.png" />
+    <link rel="preload" as="image" href="./assets/olivex-wordmark-white.png" />
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="visual-refresh-page">
     <a class="skip-link" href="#main">Gå til innhold</a>
 
     <header class="site-header" data-elevated="false">
       <a class="brand" href="#top" aria-label="OliveX hjem">
-        <img class="brand-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+        <img class="brand-logo" src="./assets/olivex-wordmark-nav.png" alt="OliveX" />
       </a>
       <nav class="main-nav" aria-label="Hovedmeny">
-        <a href="#products">Produkter</a>
+        <a href="#products">Produkt</a>
         <a href="#why">Hvorfor</a>
-        <a href="#oleocanthal">Oleocanthal</a>
         <a href="#body">I kroppen</a>
-        <a href="#ritual">Bruk</a>
-        <a href="#commerce">Levering</a>
+        <a href="#references">Studier</a>
+        <a href="#producer">Produsent</a>
         <a href="#support">FAQ</a>
       </nav>
       <button
@@ -52,7 +54,7 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
+      <section class="hero hero-refresh" id="top" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
           <img
             src="./assets/visuals/olivex-hero-editorial-2026-06-07.jpg"
@@ -65,7 +67,7 @@
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-inner">
           <div class="hero-copy">
-            <img class="hero-logo-lockup" src="./assets/olivex-wordmark-white.png" alt="" aria-hidden="true" />
+            <img class="hero-logo-lockup" src="./assets/olivex-wordmark-white-nav.png" alt="" aria-hidden="true" />
             <p class="eyebrow">Høyphenolitisk olje</p>
             <h1 id="hero-title">Mer enn en matolje. Ditt daglige, flytende kosttilskudd.</h1>
             <p class="hero-lede">
@@ -74,33 +76,40 @@
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#products">Se OliveX</a>
-              <a class="button ghost" href="#why">Hvorfor denne oljen?</a>
+              <a class="button ghost" href="#body">Se reisen i kroppen</a>
             </div>
           </div>
+
           <aside class="hero-ritual" aria-label="Ditt daglige rituale">
-            <img class="hero-panel-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+            <span class="ritual-orbit" aria-hidden="true"></span>
             <p class="eyebrow">Slik bruker du den</p>
             <h2>Ditt daglige rituale</h2>
-            <p>
-              For å oppnå den optimale, dokumenterte effekten, anbefaler vi 15–20 ml (1,5 til 2 spiseskjeer) hver
-              morgen.
-            </p>
-            <ul>
-              <li>Drikkes bar som en "helseshot".</li>
-              <li>Kan helles over kald mat rett før servering.</li>
-              <li>Må aldri brukes til steking.</li>
-            </ul>
+            <p>15-20 ml hver morgen. Bar som helseshot, eller over kald mat rett før servering.</p>
+            <dl class="ritual-meter">
+              <div>
+                <dt>1</dt>
+                <dd>Skje</dd>
+              </div>
+              <div>
+                <dt>600-700</dt>
+                <dd>mg/l polyfenoler</dd>
+              </div>
+              <div>
+                <dt>0</dt>
+                <dd>steking</dd>
+              </div>
+            </dl>
           </aside>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Produktkjennetegn">
+      <section class="trust-strip trust-strip-refresh" aria-label="Produktkjennetegn">
         <div>
           <strong>Tidlig høstet</strong>
           <span>For høy konsentrasjon av virkestoffer</span>
         </div>
         <div>
-          <strong>600–700 mg/l</strong>
+          <strong>600-700 mg/l</strong>
           <span>Polyfenoler</span>
         </div>
         <div>
@@ -108,12 +117,24 @@
           <span>Oleocanthal av totalt fenolinnhold</span>
         </div>
         <div>
-          <strong>15–20 ml</strong>
+          <strong>15-20 ml</strong>
           <span>Hver morgen</span>
         </div>
       </section>
 
-      <section class="section intro-section" id="why" aria-labelledby="intro-title">
+      <section class="section products-section products-refresh" id="products" aria-labelledby="products-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Nettbutikk</p>
+          <h2 id="products-title">Velg ditt daglige rituale</h2>
+          <p>
+            Velg størrelse og kjøpsvalg når pris og volum er klare. Når analysebeviset er klart, lenkes det direkte
+            fra produktsiden.
+          </p>
+        </div>
+        <div class="product-grid" data-product-grid></div>
+      </section>
+
+      <section class="section intro-section intro-refresh" id="why" aria-labelledby="intro-title">
         <div class="section-heading">
           <p class="eyebrow">Problemet og løsningen</p>
           <h2 id="intro-title">Hvorfor vanlig ekstra virgin olivenolje ikke er nok</h2>
@@ -123,115 +144,186 @@
             <strong>polyfenoler</strong>.
           </p>
         </div>
+        <div class="polyphenol-stage" aria-label="Sammenligning av polyfenoler">
+          <div class="threshold-card">
+            <span>EU-krav</span>
+            <strong>250 mg/kg</strong>
+            <p>Minimum for å bruke EUs offisielle helsepåstand.</p>
+          </div>
+          <div class="oil-stream" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="threshold-card is-olive">
+            <span>OliveX</span>
+            <strong>600-700 mg/l</strong>
+            <p>Nesten tre ganger så høy konsentrasjon av aktive virkestoffer i hver eneste dråpe.</p>
+          </div>
+        </div>
         <div class="intro-grid">
           <article>
             <span class="number">01</span>
             <h3>EUs offisielle helsepåstand</h3>
-            <p>
-              For å kunne bruke EUs offisielle helsepåstand, må en olivenolje inneholde minst 250 mg polyfenoler per
-              kilo.
-            </p>
+            <p>Olivenolje må inneholde minst 250 mg polyfenoler per kilo for å bruke helsepåstanden.</p>
           </article>
           <article>
             <span class="number">02</span>
             <h3>Vanlig olivenolje faller ofte lavt</h3>
-            <p>
-              En standard olivenolje fra matbutikken ligger ofte rett rundt eller under denne grensen – og innholdet
-              synker gradvis jo lenger flasken står i butikkhyllen.
-            </p>
+            <p>Innholdet synker gradvis jo lenger flasken står i butikkhyllen.</p>
           </article>
           <article>
             <span class="number">03</span>
             <h3>Vår olje er annerledes</h3>
-            <p>
-              Den er høstet tidlig og presset under strenge temperaturkrav for å bevare naturens egne
-              forsvarsmekanismer. Resultatet er en olje med <strong>600–700 mg/l polyfenoler</strong>. Det betyr at du
-              får nesten tre ganger så høy konsentrasjon av aktive virkestoffer i hver eneste dråpe.
-            </p>
+            <p>Den er høstet tidlig og presset under strenge temperaturkrav for å bevare virkestoffene.</p>
           </article>
         </div>
       </section>
 
-      <section class="section products-section" id="products" aria-labelledby="products-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Nettbutikk</p>
-          <h2 id="products-title">Ditt daglige rituale</h2>
-          <p>
-            For å oppnå den optimale, dokumenterte effekten, anbefaler vi 15–20 ml (1,5 til 2 spiseskjeer) hver morgen.
-          </p>
-        </div>
-        <div class="product-grid" data-product-grid></div>
-      </section>
-
-      <section class="passport-section" id="oleocanthal" aria-labelledby="passport-title">
+      <section class="passport-section oleo-refresh" id="oleocanthal" aria-labelledby="passport-title">
         <div class="passport-image">
-          <img
-            src="./Website context/unnamed.png"
-            alt="Molekylstruktur for oleocanthal"
-          />
+          <img src="./assets/visuals/oleocanthal-molecule-line-2026-06-07.png" alt="Molekylstruktur for oleocanthal" />
         </div>
         <div class="passport-content">
           <p class="eyebrow">Den unike stjernespilleren</p>
-          <h2 id="passport-title">Hva er Oleocanthal – og hvorfor stikker det i halsen?</h2>
+          <h2 id="passport-title">Hva er Oleocanthal og hvorfor stikker det i halsen?</h2>
           <p>
             Når du smaker på vår olje, vil du merke en distinkt, skarp og pepperaktig følelse bakerst i halsen.
             Dette er ikke en feil; det er det ultimate kvalitetstegnet.
           </p>
-          <p>
-            Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
-            totale fenolinnholdet i vår olje.
-          </p>
-          <ul class="copy-list">
-            <li>
+          <div class="oleo-proof">
+            <strong>Over 67 %</strong>
+            <span>av det totale fenolinnholdet i vår olje</span>
+          </div>
+          <div class="oleo-copy-grid">
+            <p>
+              Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
+              totale fenolinnholdet i vår olje.
+            </p>
+            <p>
               I 2005 oppdaget forskere at oleocanthal hemmer kroppens betennelsesenzymer (COX-1 og COX-2) på nøyaktig
-              samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner (som Ibuprofen).
-            </li>
-            <li>
-              <strong>Betennelsesdemping uten bivirkninger:</strong> Mens medisiner kan irritere magesekken, tynne ut
-              blodet eller belaste nyrene ved langvarig bruk, gir vår høyphenolitiske olje en naturlig, lavdose
-              betennelsesdemping som jobber trygt i bakgrunnen – <strong>helt uten negative bivirkninger for kroppen.</strong>
-            </li>
-          </ul>
+              samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner.
+            </p>
+          </div>
           <div class="passport-card">
             <div class="passport-card-header">
               <span>Oleocanthal</span>
-              <strong>67 % av fenolinnholdet</strong>
-            </div>
-            <div class="metric-row">
-              <span>Oppdagelse</span>
-              <strong>Beauchamp et al. (Nature, 2005)</strong>
-            </div>
-            <div class="metric-row">
-              <span>Forklaring</span>
-              <strong>COX-1 og COX-2</strong>
+              <strong>Sensorisk kvalitetstegn</strong>
             </div>
             <div class="metric-row">
               <span>Smak</span>
               <strong>Skarp og pepperaktig</strong>
             </div>
             <div class="metric-row">
+              <span>Forklaring</span>
+              <strong>COX-1 og COX-2</strong>
+            </div>
+            <div class="metric-row">
               <span>Kilde</span>
-              <strong>Wikipedia</strong>
+              <strong>Beauchamp et al. (Nature, 2005)</strong>
             </div>
           </div>
-          <p class="fine-print">
-            Oleocanthal: Det unike molekylet som kun finnes i olivenolje.
-          </p>
+          <p class="fine-print">Oleocanthal: Det unike molekylet som kun finnes i olivenolje. Kilde: Wikipedia.</p>
         </div>
       </section>
 
-      <section class="producer-section" id="producer" aria-labelledby="producer-title">
+      <section class="body-journey" id="body" aria-labelledby="evidence-title">
+        <div class="body-journey-media" aria-hidden="true">
+          <img src="./assets/visuals/olivex-body-journey-2026-06-07.jpg" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="body-journey-scrim" aria-hidden="true"></div>
+        <div class="body-journey-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Hva skjer i kroppen?</p>
+            <h2 id="evidence-title">Hjertehelse og dokumentert sykdomsforebygging</h2>
+            <p>
+              Dette er ikke vage løfter om velvære. Dette er de direkte biologiske konsekvensene EUs
+              mattrygghetsorgan (EFSA) og store kliniske studier knytter til et daglig inntak av 20 gram
+              høyphenolitisk olje.
+            </p>
+          </div>
+          <div class="evidence-layout">
+            <div class="evidence-tabs" role="tablist" aria-label="Dokumenterte områder">
+              <button class="tab is-active" type="button" data-tab="heart" role="tab" aria-selected="true">
+                Hjerte
+              </button>
+              <button class="tab" type="button" data-tab="diabetes" role="tab" aria-selected="false" tabindex="-1">
+                Metabolsk
+              </button>
+              <button class="tab" type="button" data-tab="liver" role="tab" aria-selected="false" tabindex="-1">
+                Fettlever
+              </button>
+              <button class="tab" type="button" data-tab="brain" role="tab" aria-selected="false" tabindex="-1">
+                Hjerne
+              </button>
+            </div>
+            <div class="evidence-panel" data-evidence-panel role="tabpanel" tabindex="0" aria-live="polite">
+              <span class="journey-step">01</span>
+              <h3>Forebygging av hjerte- og karsykdommer</h3>
+              <p>
+                Oljen beskytter hjertet ditt på tre måter samtidig: hindre harskning av kolesterol, lavere blodtrykk
+                og elastiske årer.
+              </p>
+            </div>
+            <div class="bio-card">
+              <p class="eyebrow">Hvorfor ikke bare ta en pille?</p>
+              <h3>Naturens egen synergieffekt (Biotilgjengelighet)</h3>
+              <p>
+                Oleocanthal og de andre polyfenolene i vår olje er fettløselige. Naturen har pakket dem inn i oljens
+                sunne, enumettede fettsyrer.
+              </p>
+              <ul>
+                <li>Fettet fungerer som en transportør.</li>
+                <li>Over 30 mikronæringsstoffer beskytter og forsterker hverandre.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section references-section references-refresh" id="references" aria-labelledby="references-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Vitenskapelig dokumentasjon</p>
+          <h2 id="references-title">Etterprøvbare referanser</h2>
+          <p>
+            Vi baserer våre forklaringer på fagfellevurdert forskning. Dette er de sentrale studiene som dokumenterer
+            effektene vi beskriver.
+          </p>
+        </div>
+        <div class="reference-list" aria-label="Forskningsreferanser">
+          <article>
+            <span>01</span>
+            <h3>Beauchamp et al. (Nature, 2005)</h3>
+            <p>Den opprinnelige studien som oppdaget oleocanthal og beskriver COX-1 og COX-2.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>PREDIMED-studien (New England Journal of Medicine)</h3>
+            <p>Stor klinisk studie på ekstra virgin olivenolje og hjerterelaterte utfall.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>EFSA Journal</h3>
+            <p>EUs offisielle godkjenning for olivenoljens polyfenoler og oksidativt stress.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Patti et al. / Ruiz-García et al.</h3>
+            <p>Kliniske studier på høyphenolitiske oljer, kroppsvekt, fettlever og betennelsesmarkører.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Batarseh et al. (Metabolic Brain Disease)</h3>
+            <p>Dokumenterer hvordan oleocanthal knyttes til amyloid-beta-plakk og hjernebeskyttelse.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="producer-section producer-refresh" id="producer" aria-labelledby="producer-title">
         <div class="producer-copy">
           <p class="eyebrow">Produsenten i Hellas</p>
           <h2 id="producer-title">Video fra produsenten i Hellas kommer her.</h2>
-          <p>
-            Når videoen er klar, viser denne delen produsenten, olivenlunden og produksjonsmiljøet.
-          </p>
-          <ul class="clean-list">
-            <li>Produsenten forteller om olivenlunden og produksjonen.</li>
-            <li>Miljøet, innhøstingen og råvaren vises visuelt.</li>
-            <li>Norsk teksting og transkript legges inn når videoen er klar.</li>
-          </ul>
+          <p>Når videoen er klar, viser denne delen produsenten, olivenlunden og produksjonsmiljøet.</p>
         </div>
         <div
           class="video-placeholder"
@@ -251,217 +343,11 @@
         </div>
       </section>
 
-      <section class="section evidence-section" id="body" aria-labelledby="evidence-title">
-        <div class="section-heading">
-          <p class="eyebrow">Hva skjer i kroppen?</p>
-          <h2 id="evidence-title">Hjertehelse og dokumentert sykdomsforebygging</h2>
-          <p>
-            Dette er ikke vage løfter om velvære. Dette er de direkte biologiske konsekvensene EUs mattrygghetsorgan
-            (EFSA) og store kliniske studier knytter til et daglig inntak av 20 gram høyphenolitisk olje.
-          </p>
-        </div>
-        <div class="evidence-layout">
-          <div class="evidence-tabs" role="tablist" aria-label="Dokumenterte områder">
-            <button class="tab is-active" type="button" data-tab="heart" role="tab" aria-selected="true">
-              Hjerte
-            </button>
-            <button class="tab" type="button" data-tab="diabetes" role="tab" aria-selected="false" tabindex="-1">Metabolsk</button>
-            <button class="tab" type="button" data-tab="liver" role="tab" aria-selected="false" tabindex="-1">Fettlever</button>
-            <button class="tab" type="button" data-tab="brain" role="tab" aria-selected="false" tabindex="-1">Hjerne</button>
-          </div>
-          <div
-            class="evidence-panel"
-            data-evidence-panel
-            role="tabpanel"
-            tabindex="0"
-            aria-live="polite"
-          >
-            <h3>Forebygging av hjerte- og karsykdommer</h3>
-            <p>
-              Oljen beskytter hjertet ditt på tre måter samtidig: hindre harskning av kolesterol, lavere blodtrykk og
-              elastiske årer.
-            </p>
-          </div>
-          <div class="evidence-visual evidence-image">
-            <img src="./Website context/unnamed.jpg" alt="Illustrasjon av hvordan polyfenolene beskytter kroppens organsystemer" />
-            <div class="compound-card">
-              <span>Kilde: MDPI</span>
-              <strong>Hvordan polyfenolene beskytter kroppens organsystemer</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section checkout-section" aria-labelledby="checkout-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Hvorfor ikke bare ta en pille?</p>
-          <h2 id="checkout-title">Naturens egen synergieffekt (Biotilgjengelighet)</h2>
-          <p>
-            Et vanlig spørsmål er: <em>Kan jeg ikke bare ta et olivenekstrakt i kapselform?</em>
-          </p>
-          <p>
-            Vitenskapen viser at isolerte tilskudd sjelden gir samme effekt. Oleocanthal og de andre polyfenolene i vår
-            olje er fettløselige. Naturen har pakket dem perfekt inn i oljens sunne, enumettede fettsyrer (oleinsyre).
-          </p>
-        </div>
-        <div class="checkout-grid">
-          <article class="checkout-step">
-            <span>1</span>
-            <h3>Fettet fungerer som en transportør</h3>
-            <p>
-              Det aktiverer fordøyelsen og sørger for at tarmen faktisk klarer å absorbere polyfenolene over i blodet.
-            </p>
-          </article>
-          <article class="checkout-step">
-            <span>2</span>
-            <h3>Fett-matrisen betyr noe</h3>
-            <p>Uten denne fett-matrisen vil de fleste pulvertilskudd passere rett gjennom kroppen.</p>
-          </article>
-          <article class="checkout-step">
-            <span>3</span>
-            <h3>Entourage-effekten</h3>
-            <p>Oljen vår inneholder over 30 ulike mikronæringsstoffer som beskytter og forsterker hverandre.</p>
-          </article>
-          <article class="checkout-step">
-            <span>4</span>
-            <h3>Helheten bevares</h3>
-            <p>Tar du bort én brikke for å lage en tablett, mister du helheten.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section references-section" aria-labelledby="references-title">
-        <div class="section-heading">
-          <p class="eyebrow">Vitenskapelig dokumentasjon</p>
-          <h2 id="references-title">Etterprøvbare referanser</h2>
-          <p>
-            Vi baserer våre forklaringer på fagfellevurdert forskning. Her er de sentrale studiene som dokumenterer
-            effektene vi beskriver:
-          </p>
-        </div>
-        <div class="reference-list">
-          <article>
-            <h3>Beauchamp et al. (Nature, 2005)</h3>
-            <p>
-              Den opprinnelige studien som oppdaget oleocanthal. Dokumenterer at stoffet har nøyaktig samme
-              betennelsesdempende profil som Ibuprofen (hemmer COX-1 og COX-2), men uten medisinens bivirkninger.
-            </p>
-          </article>
-          <article>
-            <h3>PREDIMED-studien (New England Journal of Medicine)</h3>
-            <p>
-              Den største kliniske studien på olivenolje i verden (over 7400 deltakere). Viste at daglig inntak av
-              ekstra virgin olivenolje reduserer risikoen for hjerteinfarkt, slag og hjerterelatert død med ca. 30 %.
-            </p>
-          </article>
-          <article>
-            <h3>EFSA Journal</h3>
-            <p>
-              EUs offisielle godkjenning som fastslår at et daglig inntak av 20 g olivenolje med nok polyfenoler
-              beviselig beskytter blodlipider (kolesterol) mot oksidativt stress og forebygger tette blodårer.
-            </p>
-          </article>
-          <article>
-            <h3>Patti et al. / Ruiz-García et al.</h3>
-            <p>
-              Kliniske studier på mennesker som dokumenterer at høyphenolitiske oljer reduserer kroppsvekt, farlig
-              bukfett, fettlever-indeks og systemiske betennelsesmarkører (som IL-6).
-            </p>
-          </article>
-          <article>
-            <h3>Batarseh et al. (Metabolic Brain Disease)</h3>
-            <p>
-              Dokumenterer hvordan oleocanthal stimulerer utrenskningen av amyloid-beta-plakk fra hjernecellene og
-              beskytter mot kognitiv svikt og nevrologiske sykdommer.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="support-section" id="support" aria-labelledby="support-title">
-        <div class="support-panel">
-          <div>
-            <p class="eyebrow">Ofte stilte spørsmål</p>
-            <h2 id="support-title">Ofte stilte spørsmål om vår superolje</h2>
-            <p>
-              Finn svar om smak, bruk, dosering, oppbevaring, betaling og levering.
-            </p>
-          </div>
-          <form class="support-search" data-faq-search role="search">
-            <label for="faq-query">Søk i spørsmål</label>
-            <div>
-              <input id="faq-query" name="faq-query" type="search" placeholder="F.eks. polyfenoler, smak, levering" />
-              <button type="submit">Søk</button>
-            </div>
-          </form>
-        </div>
-        <div class="faq-list" data-faq-list></div>
-        <div class="assistant-card" aria-labelledby="assistant-title">
-          <div>
-            <p class="eyebrow">Support</p>
-            <h3 id="assistant-title">Spør OliveX</h3>
-            <p>
-              Spør om bruk, smak, oppbevaring, betaling eller levering. Medisinske spørsmål bør tas med lege eller
-              farmasøyt.
-            </p>
-          </div>
-          <div class="assistant-status" aria-label="Supportagent status">
-            <span>Bruk</span>
-            <span>Betaling</span>
-            <span>Levering</span>
-          </div>
-          <form class="assistant-form" data-assistant-form>
-            <label for="assistant-query">Spørsmål</label>
-            <div>
-              <input
-                id="assistant-query"
-                name="assistant-query"
-                type="search"
-                autocomplete="off"
-                data-assistant-input
-                placeholder="F.eks. kan jeg bruke oljen til steking?"
-              />
-              <button type="submit">Spør</button>
-            </div>
-          </form>
-          <div class="assistant-prompts" aria-label="Forslag til spørsmål">
-            <button type="button" data-assistant-prompt="Kan jeg bruke oljen til steking?">Steking</button>
-            <button type="button" data-assistant-prompt="Hvordan oppbevares flasken?">Oppbevaring</button>
-            <button type="button" data-assistant-prompt="Hvor finner jeg analysebevis?">Analysebevis</button>
-            <button type="button" data-assistant-prompt="Kan jeg betale med Vipps?">Vipps</button>
-          </div>
-          <div class="assistant-answer" data-assistant-answer role="status" aria-live="polite">
-            <strong>Eksempel:</strong>
-            <span>Spør om smak, bruk, dosering, oppbevaring, analysebevis, Vipps eller levering.</span>
-            <small>Svarene er basert på FAQ og informasjonen på siden.</small>
-          </div>
-        </div>
-      </section>
-
-      <section class="training-section" id="ritual" aria-labelledby="training-title">
-        <div>
-          <p class="eyebrow">Slik bruker du den</p>
-          <h2 id="training-title">Ditt daglige rituale</h2>
-          <p>
-            For å oppnå den optimale, dokumenterte effekten, anbefaler vi 15–20 ml (1,5 til 2 spiseskjeer) hver morgen.
-          </p>
-        </div>
-        <ul class="deliverables">
-          <li><strong>Dosering:</strong> 15–20 ml (1,5 til 2 spiseskjeer) hver morgen.</li>
-          <li><strong>Hvordan:</strong> Den kan drikkes bar som en "helseshot".</li>
-          <li>Den kan helles over kald mat: salater, yoghurt eller middagsretten rett før servering.</li>
-          <li><strong>Viktig:</strong> For å bevare de ømfintlige polyfenolene må oljen aldri brukes til steking.</li>
-          <li>Flasken bør oppbevares mørkt og kjølig.</li>
-        </ul>
-      </section>
-
-      <section class="commerce-section" id="commerce" aria-labelledby="commerce-title">
+      <section class="commerce-section commerce-refresh" id="commerce" aria-labelledby="commerce-title">
         <div class="commerce-intro">
           <p class="eyebrow">Betaling og levering</p>
           <h2 id="commerce-title">Vipps, kortbetaling og Posten/Bring</h2>
-          <p>
-            Velg størrelse, betal med Vipps eller kort, og få levering med Posten/Bring.
-          </p>
+          <p>Velg størrelse, betal med Vipps eller kort, og få levering med Posten/Bring.</p>
         </div>
         <div class="commerce-grid" aria-label="Betalings- og leveringsvalg">
           <article>
@@ -477,13 +363,65 @@
           <article>
             <span>03</span>
             <h3>Posten/Bring</h3>
-            <p>Velg leveringsmåte, hentested og sporing i checkout.</p>
+            <p>Leveringsvalg, hentested og sporing vises i checkout.</p>
           </article>
           <article>
             <span>04</span>
             <h3>Sikker handel</h3>
             <p>SSL, kjøpsvilkår, retur, personvern og ordrebekreftelser følger nettbutikken.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="support-section support-refresh" id="support" aria-labelledby="support-title">
+        <div class="support-panel">
+          <div>
+            <p class="eyebrow">Ofte stilte spørsmål</p>
+            <h2 id="support-title">Ofte stilte spørsmål om vår superolje</h2>
+            <p>Finn svar om smak, bruk, dosering, oppbevaring, betaling og levering.</p>
+          </div>
+          <form class="support-search" data-faq-search role="search">
+            <label for="faq-query">Søk i spørsmål</label>
+            <div>
+              <input id="faq-query" name="faq-query" type="search" placeholder="F.eks. polyfenoler, smak, levering" />
+              <button type="submit">Søk</button>
+            </div>
+          </form>
+        </div>
+        <div class="faq-list" data-faq-list></div>
+        <div class="assistant-card chatbot-shell" aria-labelledby="assistant-title">
+          <div class="assistant-intro">
+            <p class="eyebrow">Chat</p>
+            <h3 id="assistant-title">Spør OliveX</h3>
+            <p>Spør om bruk, smak, oppbevaring, betaling eller levering.</p>
+          </div>
+          <div class="assistant-answer" data-assistant-answer role="log" aria-live="polite" aria-label="Chatlogg">
+            <div class="chat-bubble assistant">
+              <strong>OliveX</strong>
+              <span>Hei. Jeg kan svare på spørsmål fra FAQ og informasjonen på siden.</span>
+              <small>Medisinske spørsmål bør tas med lege eller farmasøyt.</small>
+            </div>
+          </div>
+          <div class="assistant-prompts" aria-label="Forslag til spørsmål">
+            <button type="button" data-assistant-prompt="Kan jeg bruke oljen til steking?">Steking</button>
+            <button type="button" data-assistant-prompt="Hvordan oppbevares flasken?">Oppbevaring</button>
+            <button type="button" data-assistant-prompt="Hvor finner jeg analysebevis?">Analysebevis</button>
+            <button type="button" data-assistant-prompt="Kan jeg betale med Vipps?">Vipps</button>
+          </div>
+          <form class="assistant-form" data-assistant-form>
+            <label for="assistant-query">Spørsmål</label>
+            <div>
+              <input
+                id="assistant-query"
+                name="assistant-query"
+                type="search"
+                autocomplete="off"
+                data-assistant-input
+                placeholder="Skriv spørsmålet ditt"
+              />
+              <button type="submit">Send</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -560,9 +498,7 @@
           <button class="payment-button vipps" type="button">Fortsett med Vipps</button>
           <button class="payment-button card" type="button">Betal med kort</button>
         </div>
-        <p class="fine-print">
-          Endelig fraktpris og leveringsvalg vises i checkout.
-        </p>
+        <p class="fine-print">Endelig fraktpris og leveringsvalg vises i checkout.</p>
       </section>
     </aside>
 
