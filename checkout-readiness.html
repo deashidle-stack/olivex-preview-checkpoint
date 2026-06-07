@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Checkout, betaling og frakt readiness</title>
+    <meta
+      name="description"
+      content="Nettleservennlig produksjonsreview for OliveX checkout, Vipps, kortbetaling, Posten/Bring, SSL, abonnement og testordre."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Checkout readiness</p>
+          <h1>Betaling og frakt er ikke ferdig før testordre er gjennomført.</h1>
+          <p>
+            Denne siden gjør kravene om Vipps, betalingskort, Posten/Bring, SSL og opplæring operative før OliveX går
+            live.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html#commerce">Se betaling/frakt i nettsiden</a>
+          <a class="secondary" href="./docs/PAYMENT_SHIPPING_SPEC_2026-06-07.md">Åpne full spec</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./legal-policy-readiness.html">Juridisk/policy</a>
+          <a class="secondary" href="./launch-checklist.html">Lanseringssjekkliste</a>
+          <a class="secondary" href="./index.html">Til leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="checkout-rule-title">
+        <p class="eyebrow">Operativ regel</p>
+        <h2 id="checkout-rule-title">Vis ønsket kjøpsreise i preview. Lov kun det som er testet i Shopify.</h2>
+        <p>
+          Previewen viser Vipps, kort, Posten/Bring og fast levering som ønsket retning. Produksjon krever Shopify-butikk,
+          godkjente betalingskontoer, konfigurert frakt, testordre, returvilkår og opplæring.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="checkout-status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Status</p>
+          <h2 id="checkout-status-title">Checkout er designet, men ikke produksjonsaktiv</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>4</span>
+            <strong>Synlige krav i preview</strong>
+            <p>Vipps, kort, Posten/Bring og SSL vises i kundereisen og på produktsiden.</p>
+          </article>
+          <article class="risk-amber">
+            <span>7</span>
+            <strong>Mangler konto/oppsett</strong>
+            <p>Shopify, betalingskontoer, Posten/Bring, domene, vilkår, cookie/CMP og testordre må på plass.</p>
+          </article>
+          <article class="risk-red">
+            <span>0</span>
+            <strong>Live betaling verifisert</strong>
+            <p>Ingen betaling, refund, shipping rate, label eller tracking er live-testet ennå.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="payment-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Betaling</p>
+          <h2 id="payment-title">Vipps og kort må testes som faktiske checkout-ruter</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-amber">Må settes opp</span>
+            <strong>Shopify Payments / kort</strong>
+            <p>Bekreft bedrift, bankkonto, valuta, MVA/skatt, 2FA, korttyper, payout, capture, refund og chargebacks.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må settes opp</span>
+            <strong>Vipps/MobilePay app</strong>
+            <p>Opprett merchant, installer offisiell app, koble riktig merchant og test at Vipps vises for norsk checkout.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke nok</span>
+            <strong>Shopify Payments MobilePay alene</strong>
+            <p>MobilePay-kilden har kundelokasjon- og subscription-begrensninger. Bruk den som risikokilde, ikke som bevis på norsk Vipps.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke lov ennå</span>
+            <strong>Express Checkout</strong>
+            <p>Ikke planlegg Vipps Express i Shopify før dokumentert støtte finnes. Vipps/MobilePay oppgir at dette ikke er tilgjengelig i Shopify.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må avklares</span>
+            <strong>Fast levering</strong>
+            <p>Subscriptions krever app, vilkår, støttet gateway og full test av fornyelse, feilet betaling, endring og kansellering.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke anta</span>
+            <strong>Vipps + abonnement</strong>
+            <p>Ikke lov recurring Vipps i Shopify før valgt arkitektur er verifisert. Direkte Recurring API kan være en annen teknisk løype.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Preview</span>
+            <strong>Engangskjøp</strong>
+            <p>Previewen viser engangskjøp og fast levering uten rabatt, frekvens eller juridiske subscription-løfter.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="shipping-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Posten/Bring</p>
+          <h2 id="shipping-title">Fraktoppsettet må testes helt fra rate til tracking</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Kundeavtale</strong>
+            <p>Avklar Posten/Bring-avtale, API/app og hvilke leveringsprodukter som skal tilbys.</p>
+          </article>
+          <article>
+            <strong>Variantdata</strong>
+            <p>Legg inn korrekt vekt, dimensjoner, lagerlokasjon og eventuell fri-frakt terskel.</p>
+          </article>
+          <article>
+            <strong>Live rates</strong>
+            <p>Test at Shopify-plan/app støtter live carrier rates eller valgt shipping-rate løsning.</p>
+          </article>
+          <article>
+            <strong>Hentested</strong>
+            <p>Test hentested/pakkeboks på mobil og desktop, inkludert norske adresser og postnummer.</p>
+          </article>
+          <article>
+            <strong>Etikett</strong>
+            <p>Opprett testordre, skriv ut fraktetikett, bekreft servicekode og pakkedimensjon.</p>
+          </article>
+          <article>
+            <strong>Sporing</strong>
+            <p>Bekreft trackingnummer, ordrebekreftelse, e-post/SMS og kundeservicesvar ved forsinkelse.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="test-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Testordreplan</p>
+          <h2 id="test-title">Minimumstest før lansering</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Størrelse 1 + Vipps</strong>
+            <p>Betaling, capture, ordrebekreftelse og refund.</p>
+          </article>
+          <article>
+            <strong>Størrelse 2 + kort</strong>
+            <p>Visa/Mastercard, 3DS der relevant, payout og refund.</p>
+          </article>
+          <article>
+            <strong>Feilet betaling</strong>
+            <p>Avbrutt Vipps, avvist kort, supporttekst og cart recovery.</p>
+          </article>
+          <article>
+            <strong>Posten/Bring hentested</strong>
+            <p>Rate, hentestedvelger, etikett, tracking og ordrestatus.</p>
+          </article>
+          <article>
+            <strong>Hjemlevering</strong>
+            <p>Test bare hvis dette tilbys i første release.</p>
+          </article>
+          <article>
+            <strong>Rabatt/fri frakt</strong>
+            <p>Hvis brukt: rabattkode, terskel, MVA og totalsum.</p>
+          </article>
+          <article>
+            <strong>Kansellering</strong>
+            <p>Kanseller før fulfilment og bekreft betalingsstatus.</p>
+          </article>
+          <article>
+            <strong>Skadet vare</strong>
+            <p>Reklamasjonsflyt, ny sending/refund og kundeservice-svar.</p>
+          </article>
+          <article>
+            <strong>Fast levering</strong>
+            <p>Kun hvis abonnement er i scope: fornyelse, pause, endring, kansellering og failed payment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="ssl-title">
+        <div class="section-kicker">
+          <p class="eyebrow">SSL, consent og opplæring</p>
+          <h2 id="ssl-title">Teknisk drift må være del av leveransen</h2>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Domene / SSL</h3>
+            <ul>
+              <li>Domene koblet til Shopify.</li>
+              <li>HTTPS aktiv uten mixed content.</li>
+              <li>Canonical URLs satt.</li>
+              <li>Search Console og sitemap klare.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Vilkår</h3>
+            <ul>
+              <li>Kjøpsvilkår godkjent.</li>
+              <li>Retur/angrerett godkjent.</li>
+              <li>Fraktvilkår og skadet vare-prosess godkjent.</li>
+              <li>Subscription-vilkår hvis fast levering beholdes.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Consent</h3>
+            <ul>
+              <li>CMP/cookieverktøy valgt.</li>
+              <li>GA4 ecommerce events etter samtykke.</li>
+              <li>Ingen pixels før samtykke.</li>
+              <li>Personvern tekst oppdatert for checkout/support.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Opplæring</h3>
+            <ul>
+              <li>Produkter, pris og lager.</li>
+              <li>Ordre, refund og kansellering.</li>
+              <li>Fraktetikett og tracking.</li>
+              <li>FAQ/support, retur og rapporter.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-title">Kildene som styrer checkout-beslutningene</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Vipps/MobilePay Shopify</h3>
+            <p><a href="https://developer.vippsmobilepay.com/docs/plugins-ext/shopify/">Shopify plugin documentation</a></p>
+          </article>
+          <article>
+            <h3>Vipps Recurring</h3>
+            <p><a href="https://developer.vippsmobilepay.com/docs/APIs/recurring-api/">Recurring API documentation</a></p>
+          </article>
+          <article>
+            <h3>Shopify Payments</h3>
+            <p><a href="https://help.shopify.com/en/manual/payments/shopify-payments">Shopify Payments requirements</a></p>
+          </article>
+          <article>
+            <h3>Shopify MobilePay</h3>
+            <p><a href="https://help.shopify.com/en/manual/payments/shopify-payments/local-payment-methods/mobilepay">MobilePay local payment method</a></p>
+          </article>
+          <article>
+            <h3>Shopify subscriptions</h3>
+            <p><a href="https://help.shopify.com/en/manual/products/purchase-options/subscriptions/considerations">Subscription considerations</a></p>
+          </article>
+          <article>
+            <h3>Posten Bring Checkout</h3>
+            <p><a href="https://apps.shopify.com/posten-bring-checkout">Shopify app listing</a></p>
+          </article>
+          <article>
+            <h3>Bring developer</h3>
+            <p><a href="https://developer.bring.com/api/e-commerce-solutions/">E-commerce API resources</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.text }}</p>
+  </div>
+  <div class="evidence-grid">
+    {% for block in section.blocks %}
+      <article {{ block.shopify_attributes }}>
+        <p class="eyebrow">{{ block.settings.label }}</p>
+        <h3>{{ block.settings.heading }}</h3>
+        <p>{{ block.settings.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Delivery and payment",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Betaling og levering" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Vipps, kortbetaling og Posten/Bring" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Velg størrelse, betal med Vipps eller kort, og få levering med Posten/Bring." }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "1" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Velg størrelse" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Variantvelgeren viser pris og størrelse tydelig." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Delivery and payment",
+      "blocks": [
+        { "type": "step", "settings": { "label": "1", "heading": "Velg størrelse", "text": "Variantvelgeren viser pris og størrelse tydelig." } },
+        { "type": "step", "settings": { "label": "2", "heading": "Legg i kurv", "text": "Kurven summerer varer og leder til checkout." } },
+        { "type": "step", "settings": { "label": "3", "heading": "Posten/Bring", "text": "Velg leveringsmåte, hentested og sporing i checkout." } },
+        { "type": "step", "settings": { "label": "4", "heading": "Vipps og kort", "text": "Betal med Vipps eller kort." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

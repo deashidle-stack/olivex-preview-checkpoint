@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Produksjonsforespørsel</title>
+    <meta
+      name="description"
+      content="Copybar forespørsel for å samle produktdata, analysebevis, media, juridiske avklaringer og kontoer før OliveX kan bygges ferdig i Shopify."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Produksjonsforespørsel</p>
+          <h1>Del hubben. Hent data.</h1>
+          <p>
+            Denne siden gir en kort e-post, filstruktur og mottakssjekk for det kunden må levere før OliveX kan flyttes
+            fra preview til reelt Shopify-bygg.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./production-intake.html">Åpne produksjonsintake</a>
+          <a class="primary" href="./client-handoff.html">Kundehandoff</a>
+          <a class="secondary" href="./shopify-data-contract.html">Datakontrakt</a>
+          <a class="secondary" href="./preview-readiness.html">Preview v1 status</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="why-title">
+        <p class="eyebrow">Formål</p>
+        <h2 id="why-title">Målet er å få ja, nei eller mangler på hvert produksjonskritiske punkt.</h2>
+        <p>
+          Previewen kan vurderes nå, men Shopify, checkout, frakt, SEO/schema og support bør ikke låses før disse
+          dataene er levert eller eksplisitt markert som manglende.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="email-title">
+        <div class="section-kicker">
+          <p class="eyebrow">E-post</p>
+          <h2 id="email-title">Kort forespørsel du kan sende sammen med preview-lenken</h2>
+          <p>Bytt ut hakeparentesene før sending. Teksten ber om data uten å fremstille previewen som ferdig butikk.</p>
+        </div>
+        <section class="intake-actions" aria-labelledby="request-email-title">
+          <h3 id="request-email-title">E-posttekst</h3>
+          <label class="field handoff-email">
+            <span>Kopierbar tekst</span>
+            <textarea data-request-email readonly rows="20">Hei,
+
+Her er OliveX-previewen:
+https://deashidle-stack.github.io/olivex-preview-checkpoint/
+
+Start gjerne med Preview v1 status og reviewsporene øverst i hubben. Nettsidepreviewen viser retning, kjøpsreise og informasjonsstruktur, men den er ikke produksjonsklar nettbutikk ennå.
+
+For å kunne gå videre mot Shopify-produksjon trenger vi produksjonsdataene under. Send gjerne det som er klart nå, og marker resten som "mangler", "uavklart" eller "kommer senere".
+
+1. Produktdata
+- Endelige navn på de 2 produktene
+- 2 størrelser per produkt
+- Pris inkl. mva per størrelse
+- SKU/GTIN hvis tilgjengelig
+- Vekt/fraktgrunnlag og lagerstatus
+- Ingredienser, anbefalt bruk, oppbevaring, advarsler og allergener
+
+2. Analysebevis og opprinnelse
+- COA/analysebevis som PDF
+- Batch/lot-ID, innhøstingsår, region/produsent, lab, testmetode og testdato
+- Polyfenol-/oleocanthalverdier slik de står i analysebeviset
+
+3. Media og merkevare
+- Endelig logo som SVG og transparent PNG
+- Produktbilder/packshots og emballasjefiler
+- Produsentvideo fra Hellas, posterbilde, norsk teksting/transkript og rettighetsbekreftelse
+
+4. Juridisk og policy
+- Godkjente produktpåstander eller kontaktperson for claim review
+- Juridisk selger/importør, org.nr., adresse, returadresse og support-e-post
+- Kjøpsvilkår, angrerett/retur, personvern, cookiegrunnlag og eventuelle abonnementsvilkår
+
+5. Kontoer og drift
+- Shopify-status
+- Vipps/MobilePay-status
+- Posten/Bring-status
+- Hvem som eier produkter, ordre, refund, frakt, support og analytics etter lansering
+
+Det enkleste er å fylle produksjonsintake-siden i previewen og sende den eksporterte `.md`- eller `.json`-filen sammen med relevante filer/lenker.
+
+Frist for første datarunde:
+[sett inn dato]
+
+Vennlig hilsen
+[Navn]</textarea>
+          </label>
+          <div class="hub-actions inline">
+            <button class="primary" type="button" data-copy-request-email>Kopier e-post</button>
+            <a class="secondary" href="./production-intake.html">Åpne intake</a>
+            <a class="secondary" href="./client-review-decisions.html">Åpne beslutningslogg</a>
+          </div>
+          <p class="intake-live" data-request-live aria-live="polite"></p>
+        </section>
+      </section>
+
+      <section class="review-section" aria-labelledby="package-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Filpakke</p>
+          <h2 id="package-title">Foreslå denne mappestrukturen når kunden sender filer</h2>
+        </div>
+        <section class="intake-actions" aria-labelledby="folder-title">
+          <h3 id="folder-title">Filstruktur</h3>
+          <label class="field">
+            <span>Kopierbar sjekkliste</span>
+            <textarea data-folder-checklist readonly rows="16">OliveX produksjonsfiler
+
+01-produktdata/
+- produktdata.xlsx eller produktdata.csv
+- priser-storrelser-sku.md
+
+02-analysebevis-opprinnelse/
+- COA-batch-[batch-id].pdf
+- opprinnelse-produsent-lab.md
+
+03-logo-brand/
+- logo.svg
+- logo-transparent.png
+- farger-font-brandnotater.md
+
+04-produktbilder-emballasje/
+- packshot-produkt-1-storrelse-1.jpg
+- packshot-produkt-1-storrelse-2.jpg
+- packshot-produkt-2-storrelse-1.jpg
+- packshot-produkt-2-storrelse-2.jpg
+- etikett-emballasje-originalfiler/
+
+05-produsentvideo/
+- producer-video-original.mp4
+- producer-video-poster.jpg
+- producer-video-no.vtt
+- producer-video-transkript-no.md
+- rettigheter-og-samtykke.md
+
+06-juridisk-policy/
+- godkjente-claims.md
+- kjopsvilkar.md
+- angrerett-retur.md
+- personvern.md
+- cookies.md
+- seller-importer-info.md
+
+07-kontoer-drift/
+- shopify-status.md
+- vipps-mobilepay-status.md
+- posten-bring-status.md
+- driftsansvar-og-opplaering.md</textarea>
+          </label>
+          <div class="hub-actions inline">
+            <button class="primary" type="button" data-copy-folder-checklist>Kopier filstruktur</button>
+            <a class="secondary" href="./producer-video-handoff.html">Videohandoff</a>
+            <a class="secondary" href="./legal-policy-readiness.html">Juridisk</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="review-section" aria-labelledby="acceptance-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Mottakskriterier</p>
+          <h2 id="acceptance-title">Når dataene kommer inn, sjekk dette før Shopify bygges videre</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Produkter</strong>
+            <p>2 produkter og 2 størrelser per produkt har navn, pris, SKU/GTIN hvis tilgjengelig, vekt og lagerstatus.</p>
+          </article>
+          <article>
+            <strong>Analysebevis</strong>
+            <p>COA er en faktisk fil eller stabil lenke, og batch/lab/metode/dato/verdier kan spores til dokumentet.</p>
+          </article>
+          <article>
+            <strong>Claims</strong>
+            <p>Helse- og effektpåstander er enten godkjent for bruk eller markert som ikke klare for live copy.</p>
+          </article>
+          <article>
+            <strong>Media</strong>
+            <p>Logo, packshots og video kan brukes kommersielt, og video har poster, captions, transkript og rettigheter.</p>
+          </article>
+          <article>
+            <strong>Checkout</strong>
+            <p>Shopify, Vipps/MobilePay og Posten/Bring har konkret eier, status og testplan.</p>
+          </article>
+          <article>
+            <strong>Drift</strong>
+            <p>Ansvar for produkter, COA, ordre, refund, frakt, support, analytics og teknisk eskalering er navngitt.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="next-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Neste handling</p>
+          <h2 id="next-title">Bruk forespørselen som første produksjonsrunde</h2>
+        </div>
+        <div class="review-steps">
+          <a href="./client-handoff.html">
+            <span>01</span>
+            <strong>Send preview-hub</strong>
+            <p>Bruk hub-lenken slik at mottaker ser status, reviewrekkefølge og produksjonsforbehold.</p>
+          </a>
+          <a href="./production-intake.html">
+            <span>02</span>
+            <strong>Fyll intake</strong>
+            <p>Samle data i skjemaet og eksporter `.md` eller `.json` for videre arbeid.</p>
+          </a>
+          <a href="./client-review-decisions.html">
+            <span>03</span>
+            <strong>Logg beslutninger</strong>
+            <p>Marker godkjent retning, endringsønsker og manglende data etter review.</p>
+          </a>
+          <a href="./production-build-brief.html">
+            <span>04</span>
+            <strong>Bygg Shopify</strong>
+            <p>Først når dataene og kontoene er klare, bør theme, checkout, frakt og schema låses.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const live = document.querySelector("[data-request-live]");
+
+      function setLive(message) {
+        live.textContent = message;
+      }
+
+      async function copyFrom(selector, successMessage) {
+        const field = document.querySelector(selector);
+        try {
+          await navigator.clipboard.writeText(field.value);
+          setLive(successMessage);
+        } catch {
+          field.focus();
+          field.select();
+          setLive("Kunne ikke kopiere automatisk. Marker teksten manuelt.");
+        }
+      }
+
+      document.querySelector("[data-copy-request-email]").addEventListener("click", () => {
+        copyFrom("[data-request-email]", "E-posttekst kopiert.");
+      });
+
+      document.querySelector("[data-copy-folder-checklist]").addEventListener("click", () => {
+        copyFrom("[data-folder-checklist]", "Filstruktur kopiert.");
+      });
+    </script>
+  </body>
+</html>

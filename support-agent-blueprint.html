@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Supportagent produksjonsblueprint</title>
+    <meta
+      name="description"
+      content="Produksjonsblueprint for OliveX supportagent: OpenAI Responses, File Search, Shopify, personvern, guardrails, test og rollout."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Supportagent produksjonsblueprint</p>
+          <h1>Bygg agenten som et kontrollert supportprodukt, ikke som en fri chatbot.</h1>
+          <p>
+            Dette er produksjonsoppskriften for OliveX-agenten: godkjent kunnskapsbase, OpenAI Responses/File Search,
+            server-side nøkler, Shopify-grenser, personvern, guardrails, test og gradvis rollout.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./support-agent-testbench.html">Åpne testbenk</a>
+          <a class="secondary" href="./support-agent-kb.html">Support KB review</a>
+          <a class="secondary" href="./docs/SUPPORT_AGENT_PRODUCTION_BLUEPRINT_2026-06-07.md">Markdown blueprint</a>
+          <a class="secondary" href="./legal-policy-readiness.html">Personvern/juridisk</a>
+          <a class="secondary" href="./claim-review.html">Påstandsgjennomgang</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="rule-title">
+        <p class="eyebrow">Arbeidsregel</p>
+        <h2 id="rule-title">Agenten kan først gå live når den har færre frihetsgrader enn FAQ-en.</h2>
+        <p>
+          Den skal svare fra godkjente kilder, vise når den mangler grunnlag, eskalere helse-/medisinsaker og aldri
+          hente produktfakta, leveringstid, claims eller rabattvilkår fra egen fantasi.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="architecture-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Arkitektur</p>
+          <h2 id="architecture-title">Anbefalt produksjonsløype</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>1. Shopify widget</strong>
+            <p>En lett chat/FAQ-widget i temaet. Ingen API-nøkler i nettleseren. Norsk språk, foreslåtte spørsmål og tydelig support-handoff.</p>
+          </article>
+          <article>
+            <strong>2. Server endpoint</strong>
+            <p>Shopify app proxy, serverless endpoint eller backend som holder OpenAI-nøkkel, rate limiting, logging og abuse-beskyttelse.</p>
+          </article>
+          <article>
+            <strong>3. Retrieval</strong>
+            <p>OpenAI Responses API med `file_search` mot godkjent vector store. Returner korte svar med kildeetikett.</p>
+          </article>
+          <article>
+            <strong>4. Guardrails</strong>
+            <p>Pre-filter for medisinsk/claim-sensitivt språk, systeminstruks, draft-kildeblokkering og eskalering ved usikkerhet.</p>
+          </article>
+          <article>
+            <strong>5. Shopify data</strong>
+            <p>Produkt-, pris-, lager-, ordre- og abonnementsdata skal komme fra Shopify eller supportverktøy, ikke fra LLM-kunnskap.</p>
+          </article>
+          <article>
+            <strong>6. QA og rollout</strong>
+            <p>Start med FAQ-only modus, testbenk, intern pilot, begrenset live, logging og review før full synlighet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="dataflow-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Dataflyt</p>
+          <h2 id="dataflow-title">Hva agenten skal vite, og hvor det skal komme fra</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">OpenAI</span>
+            <strong>Responses API for ny agent</strong>
+            <p>Bruk Responses som primær agentflate. Assistants API skal ikke brukes for ny produksjonsbygging.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">File Search</span>
+            <strong>Godkjente dokumenter i vector store</strong>
+            <p>FAQ, kjøpsvilkår, frakt, retur, produktdata og COA kan søkes semantisk når filene er godkjent og metadata-merket.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Shopify</span>
+            <strong>Live data via egne verktøy</strong>
+            <p>Pris, lager, ordrestatus, abonnement og refund må hentes fra Shopify/appdata via sikre server-side verktøy.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Claims</span>
+            <strong>Helse og medisiner skal ikke besvares</strong>
+            <p>Sykdom, behandling, graviditet, medisiner, bivirkninger, biomarkører og `antioksidant`-påstander må håndteres av guardrail/handoff.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Personvern</span>
+            <strong>Chatlogging er egen policyflate</strong>
+            <p>Personvernerklæring, cookie/CMP, databehandlerforhold, sletting og minimumslogging må avklares før live agent.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Support</span>
+            <strong>Ukjent svar blir oppgave</strong>
+            <p>Spørsmål uten sikkert grunnlag skal bli supportticket eller FAQ-backlog, ikke et selvsikkert generert svar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="kb-contract-title">
+        <div class="section-kicker">
+          <p class="eyebrow">KB-kontrakt</p>
+          <h2 id="kb-contract-title">Metadata som må følge hver kilde</h2>
+        </div>
+        <div class="code-panel">
+          <pre><code>{
+  "doc_type": "faq | product | coa | shipping | returns | legal | payment | privacy",
+  "approval_status": "draft | approved | expired",
+  "language": "nb",
+  "product_id": "shopify_product_id_or_pending",
+  "batch_id": "batch_id_if_relevant",
+  "claim_review": "approved | restricted | blocked",
+  "last_reviewed": "YYYY-MM-DD",
+  "owner": "role_or_person"
+}</code></pre>
+        </div>
+        <p>
+          Produksjonsagenten skal bare bruke `approval_status=approved`. Draft-kilder kan være med i testbenken, men
+          må blokkeres i live-modus.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="rollout-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Rollout</p>
+          <h2 id="rollout-title">Lanser agenten i fire kontrollerte trinn</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>1. FAQ-only</h3>
+            <p>Statisk FAQ/search og foreslåtte spørsmål. Ingen fritekst-LLM mot kunder.</p>
+          </article>
+          <article>
+            <h3>2. Intern agent</h3>
+            <p>Teamet tester fritekst mot godkjente kilder, testbench og røde claims. Logg feil og manglende svar.</p>
+          </article>
+          <article>
+            <h3>3. Begrenset live</h3>
+            <p>Agenten svarer på bruk, frakt, retur og betaling. Medisinsk/claim-sensitivt språk eskaleres automatisk.</p>
+          </article>
+          <article>
+            <h3>4. Utvidet support</h3>
+            <p>Ordrestatus, retur og abonnement kan åpnes først etter sikker autentisering og Shopify-verktøy er testet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="go-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Go/no-go</p>
+          <h2 id="go-title">Ikke aktiver live-agent før alle disse er sanne</h2>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Kilder</h3>
+            <ul>
+              <li>FAQ og produktcopy er claim-reviewet.</li>
+              <li>Produktdata, størrelser, priser og COA er ekte.</li>
+              <li>Frakt, retur, betaling og subscription-vilkår er godkjent.</li>
+              <li>Alle dokumenter har metadata og eier.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Teknikk</h3>
+            <ul>
+              <li>Server endpoint holder API-nøkler skjult.</li>
+              <li>Rate limiting og abuse-beskyttelse er aktivert.</li>
+              <li>Shopify-verktøy returnerer bare nødvendige data.</li>
+              <li>Feil, timeouts og fallback er testet.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Personvern</h3>
+            <ul>
+              <li>Chat/AI er omtalt i personvern og supportvilkår.</li>
+              <li>Cookie/CMP og Shopify Customer Privacy API er avklart.</li>
+              <li>Helseopplysninger logges ikke som supportanalyse.</li>
+              <li>Sletterutine og dataeier er definert.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>QA</h3>
+            <ul>
+              <li>Testbenken passerer standardpakken.</li>
+              <li>Medisinsk handoff er testet med norske formuleringer.</li>
+              <li>Ukjent-spørsmål blir supportoppgave.</li>
+              <li>Manuell support kan overta samtalen.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-title">Kildene som styrer blueprinten</h2>
+        </div>
+        <div class="file-list">
+          <article>
+            <strong>OpenAI</strong>
+            <p>
+              <a href="https://platform.openai.com/docs/guides/migrate-to-responses">Responses migration</a>,
+              <a href="https://platform.openai.com/docs/guides/tools-file-search">File Search</a>,
+              <a href="https://platform.openai.com/docs/guides/agents">Agents guide</a>,
+              <a href="https://platform.openai.com/docs/guides/safety-best-practices">Safety best practices</a>,
+              <a href="https://developers.openai.com/api/docs/guides/deployment-checklist">Deployment checklist</a>.
+            </p>
+          </article>
+          <article>
+            <strong>Shopify / privacy</strong>
+            <p>
+              <a href="https://shopify.dev/docs/api/customer-privacy">Customer Privacy API</a>,
+              <a href="https://help.shopify.com/en/manual/privacy-and-security/privacy/legal-pages">Shopify legal pages</a>,
+              <a href="https://shopify.dev/docs/api/admin-graphql">Admin GraphQL API</a>,
+              <a href="https://shopify.dev/docs/apps/build/online-store/app-proxies">App proxies</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

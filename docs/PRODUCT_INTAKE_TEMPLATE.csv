@@ -1,0 +1,46 @@
+section;field;description;example;required
+general;product_name;Commercial product name;Olea Max Polyfenololje;yes
+general;legal_product_name;Legal product/category name;Ekstra virgin olivenolje;yes
+general;product_category;Food, food supplement, fortified food, novel food or other;Food;yes
+general;short_description;Claim-safe product summary;Batchtestet olivenolje med sporbar opprinnelse;yes
+general;variant_1_size;First size variant;Størrelse 1;yes
+general;variant_1_price;Price including VAT;Pris størrelse 1;yes
+general;variant_1_sku;SKU for first variant;SKU-1;yes
+general;variant_2_size;Second size variant;Størrelse 2;yes
+general;variant_2_price;Price including VAT;Pris størrelse 2;yes
+general;variant_2_sku;SKU for second variant;SKU-2;yes
+general;inventory;Initial inventory per variant;120;yes
+general;shipping_weight;Shipping weight per variant;0.55 kg;yes
+general;dimensions;Package dimensions;22 x 7 x 7 cm;recommended
+usage;serving_size;Serving size;20 g;yes
+usage;recommended_daily_dose;Recommended daily dose;20 g per day;yes
+usage;servings_per_variant;Servings per size;12 / 24;yes
+usage;directions;How to use;Use with cold food or take directly;yes
+usage;storage;Storage instructions;Store cool and away from light;yes
+compliance;ingredients;Full ingredient list;Extra virgin olive oil;yes
+compliance;allergens;Allergens or none;None;yes
+compliance;warnings;Required warnings;Not a substitute for varied diet;yes
+compliance;approved_claims;Legally reviewed claims;Olive oil polyphenols contribute...;yes
+compliance;claim_conditions;Conditions for each claim;5 mg hydroxytyrosol and derivatives per 20 g;yes
+compliance;legal_review_contact;Who approves claims;Name/email;recommended
+olive_oil;origin_country;Country of origin;Greece;conditional
+olive_oil;region_estate;Region or estate;Crete;conditional
+olive_oil;cultivar;Olive cultivar;Koroneiki;conditional
+olive_oil;harvest_date;Harvest date/year;2025 harvest;conditional
+olive_oil;milling_method;Production/extraction method;Cold extraction;conditional
+olive_oil;bottle_date;Bottling date;2026-02-20;conditional
+olive_oil;polyphenols_mg_kg;Measured total phenol profile;1040 mg/kg;conditional
+olive_oil;hydroxytyrosol_derivatives_per_20g;Qualifying analytes per 20 g;5 mg+ per 20 g;conditional
+lab;batch_id;Batch/lot ID;B-0426;yes
+lab;lab_name;Lab that performed analysis;Eurofins;yes
+lab;test_method;Analysis method;HPLC;yes
+lab;test_date;Date of test;2026-03-12;yes
+lab;certificate_url;Certificate or COA link;https://...;yes
+media;packshot;Product packshot file/link;packshot-front.png;yes
+media;label_files;Label or packaging source files;label.ai;recommended
+media;lifestyle_images;Existing lifestyle photos if any;folder/link;optional
+business;company_name;Legal seller/importer;Company AS;yes
+business;org_number;Organization number;999999999;yes
+business;postal_address;Postal address;Street 1, 0000 City;yes
+business;support_email;Customer support email;support@example.no;yes
+business;return_address;Return address;Warehouse address;yes

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Kunde-copy validator</title>
+    <meta
+      name="description"
+      content="Maskinell guardrail for OliveX kunde-copy, kildelås, logo, produktdata-plassholdere og fravær av intern strategi i storefront."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Kunde-copy validator</p>
+          <h1>Kildeteksten skal vinne hver gang.</h1>
+          <p>
+            Denne siden dokumenterer den automatiske sjekken som hindrer at intern strategi, preview-logikk eller
+            fiktive produktdata lekker inn i OliveX-opplevelsen kunden faktisk ser.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./product-olivex-superolje.html">Produktside</a>
+          <a class="secondary" href="./content-source-map.html">Kildestatus</a>
+          <a class="secondary" href="./docs/OLIVEX_COPY_GUARDRAILS.md">Copy guardrails</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="rule-title">
+        <p class="eyebrow">Regel</p>
+        <h2 id="rule-title">Vi viser tillit gjennom struktur. Vi selger ikke strategien som tekst.</h2>
+        <p>
+          Forsiden og kundeopplevelsen skal starte med den leverte produktfortellingen:
+          <strong>Mer enn en matolje. Ditt daglige, flytende kosttilskudd.</strong>
+          Dokumentasjon, analysebevis, tillit og premium hierarki er fortsatt viktige, men de skal oppleves gjennom
+          layout, produktside, FAQ, handlekurv, policy og supportflyt.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="command-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Kommando</p>
+          <h2 id="command-title">Kjør før hver deling eller deploy</h2>
+          <p>Validatoren er rask og uten eksterne avhengigheter.</p>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Run</h3>
+            <p><code>node scripts/validate-customer-copy.cjs</code></p>
+          </article>
+          <article>
+            <h3>Forventet resultat</h3>
+            <p>JSON med `problems: []`. Hvis listen ikke er tom, skal public preview ikke deles.</p>
+          </article>
+          <article>
+            <h3>Når den skal kjøres</h3>
+            <p>Etter copy-endringer, asset-synk, share-preview-synk, Netlify Drop rebuild og før ny offentlig lenke sendes.</p>
+          </article>
+          <article>
+            <h3>Hvor den ligger</h3>
+            <p><code>scripts/validate-customer-copy.cjs</code></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="checks-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Hva sjekkes</p>
+          <h2 id="checks-title">Krav som nå er maskinelle</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Hero</strong>
+            <p>H1 må inneholde levert tekst verbatim: `Mer enn en matolje. Ditt daglige, flytende kosttilskudd.`</p>
+          </article>
+          <article>
+            <strong>Lede</strong>
+            <p>Forside og produktside må inneholde levert supporting copy om spiseskje, celler, hjerte og hjerne.</p>
+          </article>
+          <article>
+            <strong>Logo</strong>
+            <p>Root, share og Drop må bruke `assets/olivex-wordmark-cropped.png` på kunde- og hubflater.</p>
+          </article>
+          <article>
+            <strong>Kildeoverskrifter</strong>
+            <p>Forsiden må beholde hovedseksjonene fra levert nettsidetekst: problem/løsning, Oleocanthal, kropp, biotilgjengelighet, rituale og referanser.</p>
+          </article>
+          <article>
+            <strong>Produktdata</strong>
+            <p>Validatoren stopper gamle fiktive priser, gamle variant-ID-er og gamle størrelser som `250 ml` / `500 ml`.</p>
+          </article>
+          <article>
+            <strong>Share-ruter</strong>
+            <p>Share- og Drop-produktsiden må peke tilbake til `website.html`, ikke lokal `index.html`.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="blocked-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Stoppliste</p>
+          <h2 id="blocked-title">Uttrykk som ikke skal tilbake i kundeopplevelsen</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-red">Blokkeres</span>
+            <strong>Intern strategi som pitch</strong>
+            <p>`Dokumentasjon før påstand`, `sporbar sammensetning`, `Norsk tillit`, `Produktutdanning`, `Tydelig handel`, `Mindre støy`, `premium hierarki`.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Blokkeres</span>
+            <strong>Internt arbeidsnavn</strong>
+            <p>`Quality Passport` skal ikke vises som kunde-pitch. På produktsiden brukes norsk, konkret språk som analysebevis.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Blokkeres</span>
+            <strong>Preview-logikk</strong>
+            <p>`claim-reviewes`, `statisk preview`, `Live-agent`, `I ferdig løsning`, `før live`, `supportassistent`, `checkout readiness`.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Blokkeres</span>
+            <strong>Gamle mock-data</strong>
+            <p>`OliveX Superolje`, `250 ml`, `500 ml`, `NOK 549`, `NOK 899`, `core-250`, `core-500`.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="scope-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Dekning</p>
+          <h2 id="scope-title">Root, share og Netlify Drop må være enige</h2>
+        </div>
+        <div class="source-table-wrap">
+          <table class="source-table">
+            <thead>
+              <tr>
+                <th scope="col">Flate</th>
+                <th scope="col">Filer</th>
+                <th scope="col">Formål</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Root</td>
+                <td><code>index.html</code>, <code>product-olivex-superolje.html</code>, <code>app.js</code></td>
+                <td>Lokal arbeids-preview.</td>
+              </tr>
+              <tr>
+                <td>Share</td>
+                <td><code>share-preview/website.html</code>, <code>share-preview/product-olivex-superolje.html</code>, <code>share-preview/app.js</code></td>
+                <td>Full delingspakke der root åpner hubben.</td>
+              </tr>
+              <tr>
+                <td>Drop</td>
+                <td><code>deliverables/olivex-preview-hub-netlify-drop/website.html</code>, produktside og app-script</td>
+                <td>Slank Netlify Drop-pakke som kan deles offentlig.</td>
+              </tr>
+              <tr>
+                <td>Hub</td>
+                <td><code>preview.html</code>, <code>share-preview/index.html</code>, Drop <code>index.html</code></td>
+                <td>Skal vise OliveX-logo, kildetekst-hero og riktig storefront-rute.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Status 2026-06-07</p>
+          <h2 id="status-title">Siste kjøring: OK</h2>
+          <p>
+            Validatoren ble kjørt etter copy-fix, share-synk og Netlify Drop rebuild. Resultat:
+            <code>problems: []</code>.
+          </p>
+        </div>
+        <div class="hub-actions inline">
+          <a class="primary" href="./website.html">Se forsiden</a>
+          <a class="secondary" href="./docs/QA_REPORT_2026-06-07.md">QA-rapport</a>
+          <a class="secondary" href="./preview-deploy.html">Deploy og deling</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

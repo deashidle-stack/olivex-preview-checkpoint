@@ -1,0 +1,22 @@
+<article class="section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ article.published_at | date: '%d.%m.%Y' }}</p>
+    <h1>{{ article.title }}</h1>
+    {% if article.excerpt != blank %}
+      <p>{{ article.excerpt | strip_html }}</p>
+    {% endif %}
+  </div>
+  {% if article.image %}
+    {{ article.image | image_url: width: 1600 | image_tag: loading: 'eager', alt: article.image.alt | escape }}
+  {% endif %}
+  <div class="rte">
+    {{ article.content }}
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Main article",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,41 @@
+source;owner;field;shopify_target;required_before;notes
+product;merchant;product_title;Product.title;product_publish;Final commercial name
+product;merchant;handle;Product.handle;product_publish;Stable URL slug
+product;merchant;product_category;Product.category;product_publish;Legal category must be clarified
+product;merchant;product_type;Product.productType;product_publish;Used for theme labels and filtering
+product;merchant;description;Product.descriptionHtml;product_publish;Claim-reviewed copy only
+product;merchant;seo_title;Product.seo.title;indexing;Must match visible content
+product;merchant;seo_description;Product.seo.description;indexing;Must match visible content
+product;merchant;media;Product.media;product_publish;Packshot, lifestyle, video/poster when available
+variant;merchant;variant_size_ml;ProductVariant.title;purchase;Actual size/ml, not placeholder
+variant;merchant;price;ProductVariant.price;purchase;Required before add-to-cart/Offer schema
+variant;merchant;sku;ProductVariant.sku;purchase;Required for operations and fulfillment
+variant;merchant;barcode_gtin;ProductVariant.barcode;merchant_center;Use if available
+variant;merchant;inventory_quantity;InventoryLevel.available;purchase;Required before live checkout
+variant;merchant;weight;InventoryItem.measurement/weight;shipping;Required for Posten/Bring
+variant;merchant;duration;variant.metafields.lab.duration;size_comparison;Only after ml and dose are final
+variant;merchant;use_case;variant.metafields.lab.use_case;size_comparison;Short size-specific use case
+metafield;merchant;batch_id;product.metafields.lab.batch_id;coa_support;Must match certificate
+metafield;merchant;origin;product.metafields.lab.origin;origin_copy;Country, region, estate or producer
+metafield;merchant;lab_name;product.metafields.lab.lab_name;coa_display;Actual lab only
+metafield;merchant;test_method;product.metafields.lab.test_method;coa_display;Must match certificate
+metafield;merchant;test_date;product.metafields.lab.test_date;coa_display;Recommended field for freshness
+metafield;merchant;certificate_url;product.metafields.lab.certificate_url;certificate_cta;File or URL reference
+metafield;legal;serving_condition;product.metafields.lab.serving_condition;claim_context;For example 20 g daily context
+metafield;merchant;serving_size;product.metafields.lab.serving_size;pdp_buybox;Approved serving text
+metafield;merchant;daily_dose;product.metafields.lab.daily_dose;pdp_support;No personal medical dosage
+metafield;merchant;servings;product.metafields.lab.servings;pdp_support;Variant-specific if needed
+metafield;legal;warnings;product.metafields.lab.warnings;product_publish;Required warnings
+metafield;legal;approved_claims;product.metafields.lab.approved_claims;live_copy;Only legal-approved copy
+metafield;lab;polyphenols_mg_kg;product.metafields.lab.polyphenols_mg_kg;claim_context;Requires COA
+metafield;lab;hydroxytyrosol_derivatives_per_20g;product.metafields.lab.hydroxytyrosol_derivatives_per_20g;eu_claim;Requires COA and 20 g context
+metaobject;merchant;coa_record;Metaobject.coa;certificate_cta;Batch ID, lab, method, values, PDF
+metaobject;merchant;producer_video;Metaobject.video;video_schema;Video, poster, transcript, metadata
+metaobject;legal;claim_record;Metaobject.claim;live_copy;Approval status and source
+metaobject;support;support_source;Metaobject.support_source;support_agent;Approved KB source only
+policy;legal;return_policy;Shopify policy/page;returns_schema;Visible and approved before schema
+policy;legal;privacy_cookie_policy;Shopify policy/page;consent;Required before tracking/chat
+app;ops;vipps_mobilepay;Payment app config;checkout;Must pass test order
+app;ops;posten_bring;Shipping app config;shipping;Rates, pickup, labels, tracking tested
+app;ops;subscription_app;Selling plans/app config;recurring_delivery;Required before Fast levering is promised
+app;ops;merchant_center;Merchant Center feed/schema;indexing;Only after product/offers/shipping/returns are final

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Beslutningslogg</title>
+    <meta
+      name="description"
+      content="Beslutningslogg for OliveX-previewen: hva godkjennes, hva må endres, og hva mangler før Shopify-produksjon."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page decision-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Beslutningslogg</p>
+          <h1>Godkjenn retning. Fang mangler.</h1>
+          <p>
+            Bruk denne siden etter previewgjennomgang. Marker hva som er godkjent, hva som må endres, og hva som
+            mangler data før Shopify-bygg, betaling, frakt og juridisk publisering kan låses.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./preview-readiness.html">Preview v1 status</a>
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./review-guide.html">Reviewguide</a>
+          <a class="secondary" href="./client-handoff.html">Kundehandoff</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./shopify-data-contract.html">Datakontrakt</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="decision-note-title">
+        <p class="eyebrow">Riktig bruk</p>
+        <h2 id="decision-note-title">Dette er en reviewflate, ikke en produksjonsgaranti.</h2>
+        <p>
+          En godkjent retning betyr at design, struktur eller flyt kan brukes videre. Produksjon krever fortsatt reelle
+          produktdata, COA/analysebevis, juridisk godkjente påstander, Shopify, Vipps/MobilePay, Posten/Bring,
+          kjøpsvilkår, personvern, cookie-oppsett og testordre.
+        </p>
+      </section>
+
+      <form class="intake-form decision-form" data-decision-form novalidate>
+        <fieldset class="intake-fieldset" data-section="Reviewinformasjon">
+          <legend>Reviewinformasjon</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Reviewer</span>
+              <input name="reviewer" data-label="Reviewer" autocomplete="name" />
+            </label>
+            <label class="field">
+              <span>Selskap/rolle</span>
+              <input name="role" data-label="Selskap/rolle" autocomplete="organization" />
+            </label>
+            <label class="field">
+              <span>Dato</span>
+              <input name="review_date" data-label="Dato" type="date" />
+            </label>
+            <label class="field">
+              <span>Preview-lenke</span>
+              <input name="preview_link" data-label="Preview-lenke" type="url" inputmode="url" />
+            </label>
+            <label class="field full">
+              <span>Overordnet vurdering</span>
+              <textarea
+                name="overall_notes"
+                data-label="Overordnet vurdering"
+                rows="4"
+                placeholder="Kort oppsummering av inntrykk, viktigste endringer og eventuelle go/no-go-punkter."
+              ></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Beslutninger">
+          <legend>Beslutninger</legend>
+          <div class="decision-grid">
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>01</span>
+                <h3>Forside og hero-copy</h3>
+                <p>Hovedbudskap, førsteinntrykk, OliveX-logo, kildebasert tekst og fravær av interne prosjektfraser.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="homepage_status" data-label="Forside og hero-copy">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="homepage_notes" data-label="Forside og hero-copy kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>02</span>
+                <h3>Produktside og kjøpsreise</h3>
+                <p>Produktpresentasjon, størrelsesvalg, mobil hurtigkjøp, handlekurv, FAQ og tydelig kjøpsflyt.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="pdp_status" data-label="Produktside og kjøpsreise">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="pdp_notes" data-label="Produktside og kjøpsreise kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>03</span>
+                <h3>Produkt 2, størrelser og priser</h3>
+                <p>Endelig produktdefinisjon, to størrelser per produkt, variantdata, pris, SKU, vekt og lager.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="product_data_status" data-label="Produkt 2, størrelser og priser">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="product_data_notes" data-label="Produktdata kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>04</span>
+                <h3>Claims og juridisk språk</h3>
+                <p>Helsepåstander, support-svar, FAQ, produktmerking, forsiktighetsråd og legal review.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="claims_status" data-label="Claims og juridisk språk">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="claims_notes" data-label="Claims og juridisk språk kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>05</span>
+                <h3>Analysebevis og opprinnelse</h3>
+                <p>COA/analysebevis, batch, lab, metode, dato, polyfenolverdier, opprinnelse og PDF.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="coa_status" data-label="Analysebevis og opprinnelse">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="coa_notes" data-label="Analysebevis og opprinnelse kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>06</span>
+                <h3>Visuell retning og produsentvideo</h3>
+                <p>Logo, packshots, foto, produsentvideo fra Hellas, poster, captions, transkript og rettigheter.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="visual_status" data-label="Visuell retning og produsentvideo">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="visual_notes" data-label="Visuell retning og produsentvideo kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>07</span>
+                <h3>Checkout, betaling og abonnement</h3>
+                <p>Shopify checkout, kortbetaling, Vipps/MobilePay, SSL, testordre og eventuell fast levering.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="checkout_status" data-label="Checkout, betaling og abonnement">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="checkout_notes" data-label="Checkout, betaling og abonnement kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>08</span>
+                <h3>Frakt og retur</h3>
+                <p>Posten/Bring, fraktvalg, hentested, labels, tracking, retur, leveringstekst og angrerett.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="shipping_status" data-label="Frakt og retur">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="shipping_notes" data-label="Frakt og retur kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>09</span>
+                <h3>Supportagent og FAQ</h3>
+                <p>Kunnskapsbase, svargrenser, medisinsk handoff, kildestatus, eskalering og testbench.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="support_status" data-label="Supportagent og FAQ">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="support_notes" data-label="Supportagent og FAQ kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>10</span>
+                <h3>SEO, AI-søk og Merchant</h3>
+                <p>Indeksering, canonical, ProductGroup/Product/Offer, VideoObject, Search Console og Merchant Center.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="seo_status" data-label="SEO, AI-søk og Merchant">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="seo_notes" data-label="SEO, AI-søk og Merchant kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>11</span>
+                <h3>Juridisk, personvern og cookies</h3>
+                <p>Kjøpsvilkår, selgerdata, personvern, cookie-inventory, CMP, retur, abonnement og footer-lenker.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="legal_status" data-label="Juridisk, personvern og cookies">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="legal_notes" data-label="Juridisk, personvern og cookies kommentar" rows="3"></textarea>
+              </label>
+            </article>
+
+            <article class="decision-card" data-decision-item>
+              <header>
+                <span>12</span>
+                <h3>Opplæring og drift</h3>
+                <p>Shopify-admin, ordre, refusjon, fulfillment, support-KB, analytics, roller og overtakelse.</p>
+              </header>
+              <label class="field">
+                <span>Status</span>
+                <select name="ops_status" data-label="Opplæring og drift">
+                  <option>Ikke vurdert</option>
+                  <option>Godkjent retning</option>
+                  <option>Må endres</option>
+                  <option>Mangler data</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span>Kommentar</span>
+                <textarea name="ops_notes" data-label="Opplæring og drift kommentar" rows="3"></textarea>
+              </label>
+            </article>
+          </div>
+        </fieldset>
+
+        <section class="intake-actions" aria-labelledby="decision-summary-title">
+          <div>
+            <p class="eyebrow">Eksport</p>
+            <h2 id="decision-summary-title">Generer beslutningsrapport</h2>
+            <p>
+              Rapporten lagres bare lokalt i nettleseren. Den kan kopieres til e-post, lastes ned som Markdown eller
+              eksporteres som JSON for videre produksjonsstyring.
+            </p>
+          </div>
+          <div class="decision-summary-strip" data-decision-counts aria-label="Beslutningsstatus">
+            <article>
+              <span data-count-approved>0</span>
+              <strong>Godkjent</strong>
+            </article>
+            <article>
+              <span data-count-change>0</span>
+              <strong>Må endres</strong>
+            </article>
+            <article>
+              <span data-count-data>0</span>
+              <strong>Mangler data</strong>
+            </article>
+            <article>
+              <span data-count-unreviewed>12</span>
+              <strong>Ikke vurdert</strong>
+            </article>
+          </div>
+          <div class="hub-actions inline">
+            <button class="primary" type="submit">Generer rapport</button>
+            <button class="secondary" type="button" data-copy-decision>Kopier rapport</button>
+            <button class="secondary" type="button" data-download-decision-md>Last ned .md</button>
+            <button class="secondary" type="button" data-download-decision-json>Last ned .json</button>
+            <button class="secondary" type="button" data-clear-decisions>Nullstill</button>
+          </div>
+          <label class="field full">
+            <span>Generert rapport</span>
+            <textarea data-decision-output rows="18" readonly></textarea>
+          </label>
+          <p class="intake-live" data-decision-live aria-live="polite"></p>
+        </section>
+      </form>
+    </main>
+
+    <script>
+      const form = document.querySelector("[data-decision-form]");
+      const output = document.querySelector("[data-decision-output]");
+      const live = document.querySelector("[data-decision-live]");
+      const storageKey = "olivex-client-review-decisions";
+      let latestReport = null;
+
+      const countTargets = {
+        "Godkjent retning": document.querySelector("[data-count-approved]"),
+        "Må endres": document.querySelector("[data-count-change]"),
+        "Mangler data": document.querySelector("[data-count-data]"),
+        "Ikke vurdert": document.querySelector("[data-count-unreviewed]"),
+      };
+
+      function setLive(message) {
+        if (live) live.textContent = message;
+      }
+
+      function setDefaultDate() {
+        const dateField = form.elements.review_date;
+        if (dateField && !dateField.value) dateField.value = new Date().toISOString().slice(0, 10);
+      }
+
+      function collectValues() {
+        const values = {};
+        form.querySelectorAll("input, textarea, select").forEach((field) => {
+          if (!field.name) return;
+          values[field.name] = field.value.trim();
+        });
+        return values;
+      }
+
+      function collectItems() {
+        return Array.from(document.querySelectorAll("[data-decision-item]")).map((item) => {
+          const title = item.querySelector("h3").textContent.trim();
+          const statusField = item.querySelector("select");
+          const noteField = item.querySelector("textarea");
+          return {
+            title,
+            status: statusField.value,
+            note: noteField.value.trim(),
+          };
+        });
+      }
+
+      function updateCounts(items = collectItems()) {
+        const counts = {
+          "Godkjent retning": 0,
+          "Må endres": 0,
+          "Mangler data": 0,
+          "Ikke vurdert": 0,
+        };
+
+        items.forEach((item) => {
+          counts[item.status] += 1;
+        });
+
+        Object.entries(counts).forEach(([status, count]) => {
+          if (countTargets[status]) countTargets[status].textContent = String(count);
+        });
+
+        return counts;
+      }
+
+      function collectReport() {
+        const generatedAt = new Date();
+        const values = collectValues();
+        const items = collectItems();
+        const counts = updateCounts(items);
+        const openItems = items.filter((item) => item.status !== "Godkjent retning");
+
+        return {
+          generatedAt: generatedAt.toISOString(),
+          generatedAtLocal: generatedAt.toLocaleString("no-NO"),
+          reviewer: values.reviewer || "",
+          role: values.role || "",
+          reviewDate: values.review_date || "",
+          previewLink: values.preview_link || "",
+          overallNotes: values.overall_notes || "",
+          counts,
+          approvedForProductionPlanning: openItems.length === 0,
+          items,
+          openItems,
+        };
+      }
+
+      function reportToMarkdown(report) {
+        const lines = [
+          "OliveX beslutningsrapport",
+          `Generert: ${report.generatedAtLocal}`,
+          `Reviewer: ${report.reviewer || "Ikke oppgitt"}`,
+          `Selskap/rolle: ${report.role || "Ikke oppgitt"}`,
+          `Reviewdato: ${report.reviewDate || "Ikke oppgitt"}`,
+          `Preview-lenke: ${report.previewLink || "Ikke oppgitt"}`,
+          "",
+          "## Status",
+          `- Godkjent retning: ${report.counts["Godkjent retning"]}`,
+          `- Må endres: ${report.counts["Må endres"]}`,
+          `- Mangler data: ${report.counts["Mangler data"]}`,
+          `- Ikke vurdert: ${report.counts["Ikke vurdert"]}`,
+          "",
+          "## Overordnet vurdering",
+          report.overallNotes || "Ingen overordnet vurdering skrevet.",
+          "",
+          "## Beslutninger",
+        ];
+
+        report.items.forEach((item) => {
+          lines.push(`- ${item.title}: ${item.status}`);
+          if (item.note) lines.push(`  Kommentar: ${item.note}`);
+        });
+
+        lines.push("");
+        lines.push("## Åpne punkter før produksjon");
+        if (report.openItems.length) {
+          report.openItems.forEach((item) => {
+            lines.push(`- ${item.title}: ${item.status}${item.note ? ` - ${item.note}` : ""}`);
+          });
+        } else {
+          lines.push("- Alle beslutningspunkter er markert som godkjent retning.");
+        }
+
+        lines.push("");
+        lines.push("## Neste handling");
+        if (report.openItems.length) {
+          lines.push("- Avklar eller lever åpne punkter før Shopify-produkter, checkout, schema, support og publisering låses.");
+          lines.push("- Bruk produksjonsintake og Shopify datakontrakt for felter som mangler data.");
+        } else {
+          lines.push("- Bruk rapporten som grunnlag for produksjonsplan, men kjør fortsatt juridisk, checkout, frakt og testordre før live.");
+        }
+
+        lines.push("");
+        lines.push("Merk: Denne statiske siden sender ikke data. Rapporten må deles manuelt.");
+        return lines.join("\n");
+      }
+
+      function buildReport() {
+        const report = collectReport();
+        const text = reportToMarkdown(report);
+        latestReport = { ...report, text };
+        return latestReport;
+      }
+
+      function getReport() {
+        if (!latestReport || !output.value.trim()) output.value = buildReport().text;
+        return latestReport;
+      }
+
+      function downloadText(filename, mimeType, text) {
+        const blob = new Blob([text], { type: mimeType });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function saveDraft() {
+        const data = collectValues();
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(data));
+        } catch {
+          // Local storage can be unavailable in strict browser modes.
+        }
+      }
+
+      function loadDraft() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+          form.querySelectorAll("input, textarea, select").forEach((field) => {
+            if (!field.name || saved[field.name] === undefined) return;
+            field.value = saved[field.name];
+          });
+        } catch {
+          // Ignore malformed local drafts.
+        }
+      }
+
+      function invalidate() {
+        latestReport = null;
+        updateCounts();
+        saveDraft();
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const report = buildReport();
+        output.value = report.text;
+        saveDraft();
+        setLive(
+          report.openItems.length
+            ? `Rapport generert. ${report.openItems.length} punkter er fortsatt åpne.`
+            : "Rapport generert. Alle punkter er markert som godkjent retning."
+        );
+      });
+
+      form.addEventListener("input", invalidate);
+      form.addEventListener("change", invalidate);
+
+      document.querySelector("[data-copy-decision]").addEventListener("click", async () => {
+        getReport();
+
+        try {
+          await navigator.clipboard.writeText(output.value);
+          setLive("Beslutningsrapport kopiert.");
+        } catch {
+          output.focus();
+          output.select();
+          setLive("Kunne ikke kopiere automatisk. Marker teksten og kopier manuelt.");
+        }
+      });
+
+      document.querySelector("[data-download-decision-md]").addEventListener("click", () => {
+        const report = getReport();
+        downloadText("olivex-beslutningsrapport.md", "text/markdown;charset=utf-8", report.text);
+        setLive("Markdown-fil generert.");
+      });
+
+      document.querySelector("[data-download-decision-json]").addEventListener("click", () => {
+        const report = getReport();
+        downloadText(
+          "olivex-beslutningsrapport.json",
+          "application/json;charset=utf-8",
+          JSON.stringify(report, null, 2)
+        );
+        setLive("JSON-fil generert.");
+      });
+
+      document.querySelector("[data-clear-decisions]").addEventListener("click", () => {
+        form.reset();
+        output.value = "";
+        latestReport = null;
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {
+          // Ignore storage cleanup failures.
+        }
+        setDefaultDate();
+        updateCounts();
+        setLive("Beslutningsloggen er nullstilt.");
+      });
+
+      loadDraft();
+      setDefaultDate();
+      updateCounts();
+    </script>
+  </body>
+</html>

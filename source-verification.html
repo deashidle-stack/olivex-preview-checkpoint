@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Kilde- og best-practice-verifisering</title>
+    <meta
+      name="description"
+      content="Browser-native kildeverifisering for OliveX: offisielle 2026-kilder for Shopify, Vipps, Posten/Bring, SEO, accessibility, supportagent og visuelle AI-assets."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Kildeverifisering</p>
+          <h1>Beslutningene må være bundet til offisielle kilder.</h1>
+          <p>
+            Denne siden samler de viktigste produksjonsantakelsene som er re-sjekket 7. juni 2026. Bruk den før
+            Shopify-bygg, checkout, SEO/AI-søk, supportagent, video og visuelle assets låses.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./production-build-brief.html">Produksjonsbrief</a>
+          <a class="primary" href="./client-review-decisions.html">Beslutningslogg</a>
+          <a class="secondary" href="./seo-merchant-readiness.html">SEO/AEO</a>
+          <a class="secondary" href="./checkout-readiness.html">Checkout</a>
+          <a class="secondary" href="./accessibility-readiness.html">Tilgjengelighet</a>
+          <a class="secondary" href="./support-agent-testbench.html">Agenttest</a>
+          <a class="secondary" href="./visual-direction.html">Visuell retning</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="source-rule-title">
+        <p class="eyebrow">Arbeidsregel</p>
+        <h2 id="source-rule-title">Når kilden er svak, skal previewen være tydelig på at data mangler.</h2>
+        <p>
+          OliveX-previewen skal vise retning uten å late som at produktdata, betalingsoppsett, frakt, analysebevis,
+          juridisk tekst, video eller supportagent er ferdig. Produksjon kan først låses når kildedata og kontoer er
+          reelle.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Status 7. juni 2026</p>
+          <h2 id="status-title">Dette er kildegrunnlaget som styrer produksjonsretningen</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>13</span>
+            <strong>Kildeområder verifisert</strong>
+            <p>Shopify, Vipps/MobilePay, Posten/Bring, Google, WCAG/WAI, norske myndigheter, OpenAI og Netlify.</p>
+          </article>
+          <article class="risk-amber">
+            <span>8</span>
+            <strong>Produksjonsgater åpne</strong>
+            <p>Produktdata, COA, claims, betaling, frakt, juridisk tekst, video og live support krever fortsatt input.</p>
+          </article>
+          <article class="risk-red">
+            <span>0</span>
+            <strong>Livebutikk-godkjenning</strong>
+            <p>Ingen offisiell kilde erstatter faktisk Shopify-oppsett, testordre, fraktprøve og juridisk signoff.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="decisions-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Kildestyrte beslutninger</p>
+          <h2 id="decisions-title">Hva dette betyr konkret for OliveX</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Google</span>
+            <strong>AI-søk følger vanlig SEO</strong>
+            <p>
+              Google beskriver at AI-features ikke krever egne spesialfiler eller egen AI-only schema. Synlig, nyttig og
+              crawlbar HTML må være sannhetskilden.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Google</span>
+            <strong>FAQ rich results skal ikke være SEO-planen</strong>
+            <p>
+              Google har avviklet bred FAQ rich-result synlighet. FAQ skal fortsatt være god for kunder, support og
+              answer engines, men ikke selges inn som en sikker SERP-feature.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Google Merchant</span>
+            <strong>Schema må speile synlige handelsdata</strong>
+            <p>
+              Merchant/Product/Offer-data skal først publiseres når pris, lager, bilder, frakt, retur og variantdata er
+              faktiske og matcher Shopify/Google Merchant Center.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Shopify</span>
+            <strong>Kortbetaling må settes opp i faktisk butikk</strong>
+            <p>
+              Shopify Payments er et godt utgangspunkt, men konto, kvalifisering, payout, skatt/MVA og refund-flow må
+              bekreftes i den reelle Shopify-butikken.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Vipps</span>
+            <strong>Ikke anta at MobilePay-dokumentasjon dekker norsk Vipps</strong>
+            <p>
+              Shopify Payments MobilePay har egne begrensninger for kundelokasjon og subscription-produkter. Norsk
+              Vipps skal derfor planlegges som offisiell Vipps/MobilePay-plugin med merchant, checkoutvisning,
+              capture/refund og testordre før launch.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Abonnement</span>
+            <strong>Fast levering er ikke lovet i produksjon</strong>
+            <p>
+              Subscriptions krever valgt app, betalingsgateway, juridiske vilkår og test av fornyelse, endring,
+              kansellering og feilet betaling.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Posten/Bring</span>
+            <strong>Frakt er en integrasjon, ikke tekst</strong>
+            <p>
+              Posten/Bring må konfigureres i Shopify med rates, hentested, etiketter, tracking og returflyt. Previewen
+              kan bare vise ønsket kundeopplevelse.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">WCAG 2.2</span>
+            <strong>Tilgjengelighet må følge hele kjøpsreisen</strong>
+            <p>
+              Fokus, touchmål, skjemaer, sticky UI, video, support, cookies og checkout må testes i Shopify og på mobil,
+              ikke bare i statisk forsidepreview.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">OpenAI</span>
+            <strong>Supportagent må bygges på nåværende API-retning</strong>
+            <p>
+              Produksjonsagent bør bruke Responses/File Search/Agents-retningen, godkjent kunnskapsbase og medisinsk
+              handoff. Ikke bygg ny løsning på deprecated Assistants API.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">OpenAI Images</span>
+            <strong>GPT Image kan brukes til art direction, ikke falske bevis</strong>
+            <p>
+              Genererte visuals kan løfte preview og retning. De skal ikke skape falske etiketter, COA, labverdier,
+              sertifiseringer, badges eller målbare produktpåstander.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Norske myndigheter</span>
+            <strong>Policy og merking må godkjennes separat</strong>
+            <p>
+              Forbrukerrett, personvern, cookies, selgerinformasjon og matmerking må avklares med relevante norske
+              regler og endelig klient-/juridisk godkjenning.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Mattilsynet</span>
+            <strong>Helsepåstander er strengere enn vanlig produktcopy</strong>
+            <p>
+              Kosttilskudd og høyphenolisk olje må ikke markedsføres med sykdoms-, behandlings- eller smertepåstander.
+              Også ord som «antioksidant» må vurderes som helsepåstand og bare brukes hvis påstanden er tillatt og
+              vilkårene er oppfylt.
+            </p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Netlify</span>
+            <strong>Previewdeling må fortsatt være hub-first</strong>
+            <p>
+              Delingspakken skal deployes som ferdig statisk mappe der roten åpner hubben. Storefronten skal ikke
+              sendes alene som om den er ferdig livebutikk.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="latest-evidence-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Presiseringer fra ny kildesjekk</p>
+          <h2 id="latest-evidence-title">Tre produksjonsrisikoer som ikke skal glattes over</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Norsk Vipps er ikke løst av generisk MobilePay-copy</h3>
+            <p>
+              Shopify Payments MobilePay-dokumentasjonen viser begrensninger for kundelokasjon, lokal betalingsmetode
+              og abonnement. Produksjonsplanen skal derfor kreve faktisk Vipps/MobilePay Shopify-plugin og testordre for
+              norske kunder før betalingskravet regnes som levert.
+            </p>
+          </article>
+          <article>
+            <h3>Subscription må være eksplisitt samtykke, ikke bare «fast levering»</h3>
+            <p>
+              Shopify subscription-dokumentasjonen krever subscription-app, støttet betalingsgateway og tydelige
+              vilkår i checkout. OliveX-previewen kan vise ønsket kjøpsvalg, men produksjon må teste fornyelse,
+              kansellering, feilet betaling, endret kort og kundeserviceflyt.
+            </p>
+          </article>
+          <article>
+            <h3>Kosttilskudd-copy må gjennom claim-review før noindex fjernes</h3>
+            <p>
+              Mattilsynet og Forbrukertilsynet har i 2026 veiledet kosttilskuddsbransjen om merking, markedsføring og
+              abonnementsavtaler. Dette gjør juridisk claim-signoff til en launch-gate, ikke en etterjustering.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="matrix-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Produksjonsmatrise</p>
+          <h2 id="matrix-title">Hva må bevises før live?</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Produktdata</strong>
+            <p>Finalt navn, produkt 2, to størrelser per produkt, pris, SKU, vekt, lager og produktbilder.</p>
+          </article>
+          <article>
+            <strong>COA/analysebevis</strong>
+            <p>Batch, lab, metode, dato, verdier, PDF, HTML-sammendrag og juridisk godkjent formulering.</p>
+          </article>
+          <article>
+            <strong>Checkout</strong>
+            <p>Kort, Vipps/MobilePay, refund, capture, feilet betaling, fast levering hvis i scope og testordre.</p>
+          </article>
+          <article>
+            <strong>Frakt</strong>
+            <p>Posten/Bring-rater, hentested, etikett, tracking, retur, fri-frakt-regel og leveringsvilkår.</p>
+          </article>
+          <article>
+            <strong>SEO/Merchant</strong>
+            <p>Canonical, sitemap, Product/Offer, shipping/return schema, Merchant Center-feed og Search Console.</p>
+          </article>
+          <article>
+            <strong>Accessibility</strong>
+            <p>Keyboard, VoiceOver, 200 % zoom, touchmål, fokus, video captions, PDF/COA og checkout-widgeter.</p>
+          </article>
+          <article>
+            <strong>Privacy/legal</strong>
+            <p>Selgerdata, kjøpsvilkår, angrerett, personvern, cookies, subscription-vilkår og claim signoff.</p>
+          </article>
+          <article>
+            <strong>Supportagent</strong>
+            <p>Godkjent KB, testbench, kildeetiketter, eskalering, medisinsk handoff, logging og eier for oppdatering.</p>
+          </article>
+          <article>
+            <strong>Visuelle assets</strong>
+            <p>Final logo, packshots, video, poster, captions, transkript, rettigheter og godkjente prompts/edits.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-list-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-list-title">Lenkene som bør brukes ved produksjonsbeslutninger</h2>
+        </div>
+        <div class="file-list">
+          <article>
+            <strong>Google Search / AI / Merchant</strong>
+            <p>
+              <a href="https://developers.google.com/search/docs/appearance/ai-features">AI-features</a>,
+              <a href="https://developers.google.com/search/docs/appearance/structured-data/merchant-listing">Merchant listing structured data</a>,
+              <a href="https://developers.google.com/search/docs/appearance/structured-data/faqpage">FAQPage</a>,
+              <a href="https://developers.google.com/search/docs/appearance/structured-data/video">VideoObject</a>.
+            </p>
+          </article>
+          <article>
+            <strong>Shopify / Vipps / Posten Bring</strong>
+            <p>
+              <a href="https://help.shopify.com/en/manual/payments">Shopify payments</a>,
+              <a href="https://help.shopify.com/en/manual/payments/shopify-payments/local-payment-methods/mobilepay">Shopify MobilePay</a>,
+              <a href="https://help.shopify.com/en/manual/products/purchase-options/subscriptions/considerations">Shopify subscriptions</a>,
+              <a href="https://developer.vippsmobilepay.com/docs/plugins-ext/shopify/">Vipps/MobilePay Shopify plugin</a>,
+              <a href="https://developer.bring.com/api/e-commerce-solutions/">Bring ecommerce resources</a>.
+            </p>
+          </article>
+          <article>
+            <strong>Norske myndigheter / kosttilskudd</strong>
+            <p>
+              <a href="https://www.mattilsynet.no/mat-og-drikke/kosttilskott/kosttilskudd-eller-treningsprodukt--hvilke-regler-gjelder">Kosttilskudd-regler</a>,
+              <a href="https://www.mattilsynet.no/mat-og-drikke/merking-av-mat/ernaerings-og-helsepastander/veileder-om-ernaeringspastander/helsepastand-og-ikke-ernaeringspastand">Antioksidant som helsepåstand</a>,
+              <a href="https://www.mattilsynet.no/mat-og-drikke/kosttilskott/mattilsynet-og-forbrukertilsynet-veileder-sammen-om-kosttilskudd">Kosttilskudd og abonnement</a>,
+              <a href="https://www.forbrukertilsynet.no/">Forbrukertilsynet</a>.
+            </p>
+          </article>
+          <article>
+            <strong>Accessibility / performance / privacy</strong>
+            <p>
+              <a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>,
+              <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WCAG 2.2 summary</a>,
+              <a href="https://web.dev/articles/vitals">Web Vitals</a>,
+              <a href="https://shopify.dev/docs/api/customer-privacy">Shopify Customer Privacy API</a>.
+            </p>
+          </article>
+          <article>
+            <strong>OpenAI support og visuals</strong>
+            <p>
+              <a href="https://platform.openai.com/docs/guides/migrate-to-responses">Migrate to Responses</a>,
+              <a href="https://platform.openai.com/docs/guides/tools-file-search/">File Search</a>,
+              <a href="https://platform.openai.com/docs/guides/image-generation">Image generation</a>,
+              <a href="https://developers.openai.com/api/docs/models/gpt-image-2">GPT Image 2</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="next-title">
+        <p class="eyebrow">Neste handling</p>
+        <h2 id="next-title">Bruk kildeverifiseringen sammen med beslutningsloggen.</h2>
+        <p>
+          Praktisk neste steg er å markere hvilke kildebundne krav som er godkjent, hva som må endres, og hva kunden
+          må levere før produksjon. Deretter kan Shopify-bygg, checkout, frakt, SEO og support planlegges med mindre
+          risiko.
+        </p>
+        <div class="hub-actions inline">
+          <a class="primary" href="./client-review-decisions.html">Åpne beslutningslogg</a>
+          <a class="secondary" href="./production-intake.html">Åpne produksjonsdata</a>
+          <a class="secondary" href="./docs/RESEARCH_SOURCE_REGISTER_2026-06-07.md">Åpne source register</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

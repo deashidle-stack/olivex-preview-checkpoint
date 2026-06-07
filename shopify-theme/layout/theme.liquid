@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; {{ current_tags | join: ', ' }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    <link rel="canonical" href="{{ canonical_url }}">
+    {{ content_for_header }}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body class="template-{{ request.page_type | handle }}">
+    <a class="skip-link" href="#MainContent">{{ 'accessibility.skip_to_content' | t }}</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+        {% if settings.logo != blank %}
+          {{ settings.logo | image_url: width: 360 | image_tag: class: 'brand-logo', loading: 'eager', alt: shop.name }}
+        {% else %}
+          <span class="brand-mark" aria-hidden="true"></span>
+        {% endif %}
+        <span>
+          <strong>{{ shop.name }}</strong>
+          <small>{{ settings.brand_tagline | default: 'Mer enn en matolje.' }}</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="{{ 'general.navigation' | t }}">
+        {% for link in linklists.main-menu.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+      <a class="cart-button" href="{{ routes.cart_url }}" aria-label="{{ 'cart.open' | t }}">
+        <span>{{ 'cart.title' | t }}</span>
+        <strong>{{ cart.item_count }}</strong>
+      </a>
+    </header>
+
+    <main id="MainContent" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>{{ shop.name }}</strong>
+        <span>{{ settings.footer_note | default: 'Mer enn en matolje. Ditt daglige, flytende kosttilskudd.' }}</span>
+      </div>
+      <nav aria-label="{{ 'general.footer_navigation' | t }}">
+        {% for link in linklists.footer.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+      {% if settings.show_privacy_controls %}
+        <button class="privacy-link" type="button" data-consent-reopen hidden>{{ 'privacy.choices' | t }}</button>
+      {% endif %}
+    </footer>
+
+    {% if settings.show_privacy_controls %}
+      <aside class="consent-banner" data-consent-banner aria-labelledby="ConsentTitle" hidden>
+        <div>
+          <p class="eyebrow">{{ 'privacy.eyebrow' | t }}</p>
+          <h2 id="ConsentTitle">{{ 'privacy.heading' | t }}</h2>
+          <p>{{ settings.privacy_notice_text }}</p>
+        </div>
+        <div class="consent-preferences" id="ConsentPreferences" data-consent-preferences hidden>
+          <label>
+            <input type="checkbox" checked disabled>
+            <span>{{ 'privacy.necessary' | t }}</span>
+          </label>
+          <label>
+            <input type="checkbox" data-consent-toggle="analytics">
+            <span>{{ 'privacy.analytics' | t }}</span>
+          </label>
+          <label>
+            <input type="checkbox" data-consent-toggle="marketing">
+            <span>{{ 'privacy.marketing' | t }}</span>
+          </label>
+        </div>
+        <div class="consent-actions">
+          <button class="button secondary" type="button" data-consent-settings aria-expanded="false" aria-controls="ConsentPreferences">
+            {{ 'privacy.customize' | t }}
+          </button>
+          <button class="button secondary" type="button" data-consent-reject>{{ 'privacy.reject_optional' | t }}</button>
+          <button class="button" type="button" data-consent-save hidden>{{ 'privacy.save' | t }}</button>
+          <button class="button" type="button" data-consent-accept>{{ 'privacy.accept_all' | t }}</button>
+        </div>
+      </aside>
+    {% endif %}
+
+    {{ 'theme.js' | asset_url | script_tag }}
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | SEO, AEO og Merchant readiness</title>
+    <meta
+      name="description"
+      content="Nettleservennlig produksjonsreview for OliveX SEO, AEO, Merchant Center, strukturert data og indeksering."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">SEO / AEO / Merchant readiness</p>
+          <h1>Gjør ekte innhold maskinlesbart. Ikke bruk schema til å pynte på placeholders.</h1>
+          <p>
+            Denne reviewen viser hva som må være klart før OliveX åpnes for indeksering, Google Merchant Center,
+            produkt-schema, video-schema og answer-engine synlighet.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./docs/STRUCTURED_DATA_MERCHANT_SEO_PLAN_2026-06-07.md">Åpne full SEO-plan</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./claim-review.html">Påstandsgjennomgang</a>
+          <a class="secondary" href="./index.html">Til leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="seo-rule-title">
+        <p class="eyebrow">Operativ regel</p>
+        <h2 id="seo-rule-title">Vanlig SEO gjelder også for AI-svar.</h2>
+        <p>
+          Google sin veiledning for AI-features peker fortsatt på ordinære SEO-prinsipper: synlig innhold som hjelper
+          brukeren, tydelig intern struktur, crawlbare ressurser og teknisk korrekt indeksering. OliveX trenger ikke
+          en egen AI-only schema-type. Det trenger sanne produktdata og ryddig informasjonsarkitektur.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Nåværende status</p>
+          <h2 id="status-title">Previewen skal fortsatt være noindex</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>1</span>
+            <strong>Synlig innhold klart som retning</strong>
+            <p>Forside, produktside, FAQ, support og video-plassholder viser struktur og kundereise.</p>
+          </article>
+          <article class="risk-amber">
+            <span>8</span>
+            <strong>Datagater før schema</strong>
+            <p>Produktdata, SKU/GTIN, COA, bilder, frakt, retur, video og juridisk copy må låses først.</p>
+          </article>
+          <article class="risk-red">
+            <span>0</span>
+            <strong>Live merchant markup klart</strong>
+            <p>Endelig Product/Offer/Merchant markup skal ikke publiseres før dataene er faktiske.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="aeo-title">
+        <div class="section-kicker">
+          <p class="eyebrow">AEO / GEO</p>
+          <h2 id="aeo-title">Answer engines må lese samme innhold som kunden ser</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Synlig norsk tekst</h3>
+            <p>Viktige svar må ligge i HTML: bruk, smak, oppbevaring, analysebevis, frakt, retur og support.</p>
+          </article>
+          <article>
+            <h3>Internlenker</h3>
+            <p>Forside, produktside, FAQ, analysebevis, frakt, retur og kontakt må henge tydelig sammen.</p>
+          </article>
+          <article>
+            <h3>Kildekontroll</h3>
+            <p>Påstander skal komme fra godkjent copy, godkjent FAQ, analysebevis eller juridisk avklart tekst.</p>
+          </article>
+          <article>
+            <h3>Media</h3>
+            <p>Bruk ekte packshots, produsentvideo, captions, transcript og crawlbare produksjons-URLer.</p>
+          </article>
+          <article>
+            <h3>Schema samsvar</h3>
+            <p>Strukturert data må beskrive synlig sideinnhold og faktiske produkt-/butikkdata.</p>
+          </article>
+          <article>
+            <h3>Ikke FAQ-triks</h3>
+            <p>FAQ skal hjelpe kunder og support, men FAQ rich results bør ikke selges inn som normal SEO-gevinst.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="preview-schema-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Preview-sikkerhet</p>
+          <h2 id="preview-schema-title">Denne previewen publiserer ikke placeholder JSON-LD</h2>
+          <p>
+            Storefront og produktside er noindex og har bevisst ingen Organization, Product, Offer, FAQPage,
+            VideoObject eller rating-schema. Structured data skal først inn når Shopify har reelle produkt-, pris-,
+            frakt-, retur-, video- og selskapsdata.
+          </p>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Fjernet fra preview</strong>
+            <p>`example.no`, Organization schema, ItemList schema og Product schema er fjernet fra root/share/drop.</p>
+          </article>
+          <article>
+            <strong>Validator-gate</strong>
+            <p>`validate-customer-copy.cjs` feiler nå hvis placeholder JSON-LD kommer tilbake i storefront eller PDP.</p>
+          </article>
+          <article>
+            <strong>Produksjonsregel</strong>
+            <p>Schema skal genereres fra faktiske Shopify-felter og matche synlig side, Merchant feed og checkoutdata.</p>
+          </article>
+        </div>
+        <div class="hub-actions inline">
+          <a class="secondary" href="./docs/STRUCTURED_DATA_PREVIEW_SAFETY_2026-06-07.md">Åpne schema-sikkerhet</a>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="schema-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Schema-inventar</p>
+          <h2 id="schema-title">Dette er riktig schema når produksjonsdataene finnes</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Planlagt</span>
+            <strong>Organization</strong>
+            <p>Finalt firmanavn, produksjonsdomene, logo-URL, kontakt og returpolicy.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Planlagt</span>
+            <strong>WebSite</strong>
+            <p>Final domain og eventuell site-search beslutning. Ikke bruk placeholder URL.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Planlagt</span>
+            <strong>BreadcrumbList</strong>
+            <p>Legges på produkt-, support- og policiesider når URL-struktur er bestemt.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må vente</span>
+            <strong>ProductGroup</strong>
+            <p>Brukes for størrelsesvarianter når produktnavn, varianter, SKU, pris og bilder er finalt.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må vente</span>
+            <strong>Product / Offer</strong>
+            <p>Hver variant trenger pris i NOK, availability, itemCondition, URL, bilde, SKU og gjerne GTIN.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må vente</span>
+            <strong>OfferShippingDetails</strong>
+            <p>Bruk først når Posten/Bring-priser, regioner og leveringstid er stabile og synlige.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må vente</span>
+            <strong>MerchantReturnPolicy</strong>
+            <p>Legges på organisasjonsnivå når returvilkår og land/region er juridisk godkjent.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må vente</span>
+            <strong>VideoObject</strong>
+            <p>Kun etter faktisk produsentvideo, poster, varighet, upload date, captions og transcript.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke nå</span>
+            <strong>Review / AggregateRating</strong>
+            <p>Ikke legg inn rating/reviews før ekte, synlige og policy-kompatible kundeanmeldelser finnes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="merchant-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Merchant Center</p>
+          <h2 id="merchant-title">Produktfeed må bli sannhetskilden for handelsdata</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Produktidentitet</strong>
+            <p>Navn, merke, beskrivelse, produktkategori, variantstørrelser og endelig produkt 2.</p>
+          </article>
+          <article>
+            <strong>Variantdata</strong>
+            <p>SKU, GTIN/EAN hvis tilgjengelig, pris, lagerstatus, vekt og variantbilder.</p>
+          </article>
+          <article>
+            <strong>Bilder</strong>
+            <p>Produksjonsbilder må være crawlbare, reelle, representative og matche synlig produktside.</p>
+          </article>
+          <article>
+            <strong>Frakt</strong>
+            <p>Posten/Bring-rater, leveringstid, hentested/hjemlevering og eventuell gratisfrakt.</p>
+          </article>
+          <article>
+            <strong>Retur</strong>
+            <p>Angrerett, returfrist, skadet vare, kostnad og kundeserviceflyt.</p>
+          </article>
+          <article>
+            <strong>Samsvar</strong>
+            <p>Merchant-feed, schema og synlig Shopify-side må vise samme pris, tilgjengelighet og vilkår.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="validation-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Launch validation</p>
+          <h2 id="validation-title">Dette må testes før noindex fjernes</h2>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Indexing</h3>
+            <ul>
+              <li>Produksjonsdomene og SSL er aktivt.</li>
+              <li>`noindex,nofollow` fjernes bare fra godkjente sider.</li>
+              <li>Canonical URLs er self-referencing.</li>
+              <li>Sitemap er sendt til Search Console.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Structured data</h3>
+            <ul>
+              <li>Rich Results Test på hjem og produktsider.</li>
+              <li>Ingen Product 2 schema før produktet er reelt.</li>
+              <li>Ingen placeholder video-schema.</li>
+              <li>Ingen fake rating eller reviews.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Merchant</h3>
+            <ul>
+              <li>Merchant Center feed uten kritiske feil.</li>
+              <li>Shipping og returns validert.</li>
+              <li>Pris/lager matcher Shopify.</li>
+              <li>Produktbilder er crawlbare.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>AEO / support</h3>
+            <ul>
+              <li>FAQ er synlig HTML.</li>
+              <li>Support-agent bruker godkjente kilder.</li>
+              <li>Medisinske spørsmål eskaleres.</li>
+              <li>Claim review er lukket.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-title">Kildene som styrer produksjonsbeslutningene</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Google AI features</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/ai-features">AI-features guidance</a></p>
+          </article>
+          <article>
+            <h3>Structured data</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">General structured data policies</a></p>
+          </article>
+          <article>
+            <h3>Merchant listings</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/structured-data/merchant-listing">Merchant listing structured data</a></p>
+          </article>
+          <article>
+            <h3>Product variants</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/structured-data/product-variants">Product variant structured data</a></p>
+          </article>
+          <article>
+            <h3>Video</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/structured-data/video">Video structured data</a></p>
+          </article>
+          <article>
+            <h3>Merchant Center</h3>
+            <p><a href="https://support.google.com/merchants/answer/7331077">Structured data setup for Merchant Center</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Kildestatus</title>
+    <meta
+      name="description"
+      content="Kildestatus for OliveX-previewen: hvilke tekster, data og krav som er brukt, hva som er placeholder og hva som må avklares før live."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Kildestatus</p>
+          <h1>Hva i previewen kommer fra kilden, og hva mangler fortsatt?</h1>
+          <p>
+            Denne siden er en intern reviewflate. Den skal hindre at vi blander levert kundecopy, tekniske krav,
+            placeholders og egne antakelser.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./product-olivex-superolje.html">Åpne produktsiden</a>
+          <a class="secondary" href="./claim-review.html">Påstandsgjennomgang</a>
+          <a class="secondary" href="./index.html">Til preview hub</a>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="summary-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Status</p>
+          <h2 id="summary-title">Kildebruken er nå eksplisitt låst.</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>1</span>
+            <strong>Hero er låst</strong>
+            <p>Forsiden bruker levert hero og lede verbatim.</p>
+          </article>
+          <article class="risk-amber">
+            <span>2</span>
+            <strong>Størrelser mangler</strong>
+            <p>Client request sier to størrelser per produkt, men eksakt ml og pris er ikke levert.</p>
+          </article>
+          <article class="risk-red">
+            <span>29</span>
+            <strong>Claims til review</strong>
+            <p>Påstander fra kildedokumentene må juridisk vurderes før produksjonslansering.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="changed-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Ryddet i denne runden</p>
+          <h2 id="changed-title">Fiktive commerce-data er fjernet.</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Størrelser</h3>
+            <p>250 ml og 500 ml er fjernet fra kundevendte hovedflater fordi de ikke ligger i kildene.</p>
+          </article>
+          <article>
+            <h3>Priser</h3>
+            <p>549 kr, 899 kr og pris per ml er fjernet. Størrelses- og prisknapper viser nå at data kommer.</p>
+          </article>
+          <article>
+            <h3>Schema</h3>
+            <p>Product/ItemList-data inneholder ikke lenger mock-priser eller AggregateOffer.</p>
+          </article>
+          <article>
+            <h3>Kjøpsknapper</h3>
+            <p>Legg-i-kurv blokkeres når pris mangler, slik at nullpris ikke blir et falskt kjøp.</p>
+          </article>
+          <article>
+            <h3>CTA</h3>
+            <p>Forsidens primærknapp sier nå "Se OliveX" i stedet for å love kjøp før pris og størrelser er klare.</p>
+          </article>
+          <article>
+            <h3>Dokumentasjon</h3>
+            <p>Regelen dokumenteres i QA/checkpoint slik at nye iterasjoner ikke reintroduserer mock-data.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="map-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Kildekart</p>
+          <h2 id="map-title">Hva hver del av previewen bygger på</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Verbatim</span>
+            <strong>Hero</strong>
+            <p>`Mer enn en matolje. Ditt daglige, flytende kosttilskudd.` fra revidert nettsidetekst.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Verbatim</span>
+            <strong>Lede</strong>
+            <p>`En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av laboratoriet.`</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Kilde + COA mangler</span>
+            <strong>Polyfenoler</strong>
+            <p>600–700 mg/l og over 67 % Oleocanthal kommer fra kildedokumentet, men krever analysebevis før live.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Juridisk review</span>
+            <strong>Oleocanthal-effekt</strong>
+            <p>Ibuprofen, COX, betennelsesdemping og bivirkningsspråk kommer fra kilden, men er rødt før live.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Juridisk review</span>
+            <strong>Kropp og sykdom</strong>
+            <p>Hjerte, diabetes, fettlever, kognitiv svikt og biomarkører kommer fra kilden, men må ryddes før produksjon.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Juridisk review</span>
+            <strong>FAQ</strong>
+            <p>FAQ-tekstene er basert på levert FAQ, men flere svar må erstattes eller juridisk godkjennes før live.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Kravspesifikasjon</span>
+            <strong>Vipps, kort og Posten/Bring</strong>
+            <p>Kommer fra opprinnelig nettbutikkspesifikasjon. Live krever Shopify/payment/shipping-kontoer og testordre.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Placeholder</span>
+            <strong>To produkter, to størrelser</strong>
+            <p>Kravet er kjent. Eksakt produkt 2, SKU, størrelse, pris, lager og abonnement mangler.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Levert asset</span>
+            <strong>Logo</strong>
+            <p>OliveX-logoen er hentet fra levert PDF og brukes som PNG i header, hub og reviewflater.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Placeholder</span>
+            <strong>Produsentvideo</strong>
+            <p>Plassholderen er basert på brukerens beskjed om kommende video fra produsenten i Hellas.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Teknisk krav</span>
+            <strong>Supportagent</strong>
+            <p>Preview-agenten er avgrenset til kildebaserte produkt- og kjøpsspørsmål med medisinsk handoff.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Produksjonsgate</span>
+            <strong>SEO/AEO/schema</strong>
+            <p>Schema skal først låses når ekte produktdata, offers, COA, video, FAQ og policy-sider er klare.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="required-title">
+        <p class="eyebrow">Mangler før ekte butikk</p>
+        <h2 id="required-title">Dataene vi fortsatt må få fra kunden.</h2>
+        <ol class="agenda-list">
+          <li>Endelig produktnavn for produkt 1 og produkt 2.</li>
+          <li>To reelle størrelser per produkt, med ml, SKU, strekkode hvis relevant, pris, lager og bilder.</li>
+          <li>Analysebevis per batch med lab, metode, dato, enhet, region/produsent og PDF.</li>
+          <li>Godkjent live-copy: enten juridisk godkjent kildetekst eller trygg produksjonsvariant.</li>
+          <li>Video fra produsenten i Hellas, posterbilde, norsk teksting og transkript.</li>
+          <li>Shopify, Vipps/MobilePay, kortbetaling, Posten/Bring, domene, SSL, vilkår, retur og personvern.</li>
+        </ol>
+        <div class="hub-actions inline">
+          <a class="primary" href="./production-intake.html">Åpne produksjonsintake</a>
+          <a class="secondary" href="./claim-review.html">Åpne påstandsgjennomgang</a>
+          <a class="secondary" href="./checkout-readiness.html">Åpne checkout readiness</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

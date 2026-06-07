@@ -1,0 +1,171 @@
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign serving_size = product.metafields.lab.serving_size
+  assign daily_dose = product.metafields.lab.daily_dose
+  assign servings = product.metafields.lab.servings
+  assign warnings = product.metafields.lab.warnings
+%}
+
+<section class="product-main" data-product-shell>
+  <div class="product-main__media">
+    {% if product.featured_image %}
+      {{ product.featured_image | image_url: width: 1400 | image_tag: loading: 'eager', alt: product.featured_image.alt | escape }}
+    {% endif %}
+  </div>
+  <div class="product-main__body">
+    <p class="eyebrow">{{ product.type | default: 'Høyphenolitisk olje' }}</p>
+    <h1>{{ product.title }}</h1>
+    <div class="product-price" data-current-price>{{ current_variant.price | money }}</div>
+    <div class="rte">
+      {{ product.description }}
+    </div>
+
+    {% form 'product', product, class: 'product-form', data-product-form: true %}
+      {% if product.variants.size > 1 %}
+        <label for="ProductVariant-{{ section.id }}">{{ 'products.select_size' | t }}</label>
+        <select class="variant-select" id="ProductVariant-{{ section.id }}" name="id" data-variant-select>
+          {% for variant in product.variants %}
+            <option
+              value="{{ variant.id }}"
+              data-price="{{ variant.price | money }}"
+              {% if variant == current_variant %}selected{% endif %}
+              {% unless variant.available %}disabled{% endunless %}
+            >
+              {{ variant.title }} &ndash; {{ variant.price | money }}
+            </option>
+          {% endfor %}
+        </select>
+      {% else %}
+        <input type="hidden" name="id" value="{{ current_variant.id }}">
+      {% endif %}
+
+      {% if product.selling_plan_groups.size > 0 %}
+        <label for="SellingPlan-{{ section.id }}">{{ 'products.purchase_option' | t }}</label>
+        <select class="variant-select" id="SellingPlan-{{ section.id }}" name="selling_plan" data-selling-plan-select>
+          {% unless product.requires_selling_plan %}
+            <option value="">{{ 'products.one_time_purchase' | t }}</option>
+          {% endunless %}
+          {% for group in product.selling_plan_groups %}
+            <optgroup label="{{ group.name | escape }}">
+              {% for selling_plan in group.selling_plans %}
+                <option value="{{ selling_plan.id }}">{{ selling_plan.name }}</option>
+              {% endfor %}
+            </optgroup>
+          {% endfor %}
+        </select>
+      {% elsif section.settings.show_selling_plan_setup_note %}
+        <div class="subscription-note" role="note">
+          <strong>{{ 'products.recurring_delivery' | t }}</strong>
+          <span>{{ section.settings.selling_plan_setup_note }}</span>
+        </div>
+      {% endif %}
+
+      <label for="ProductQuantity-{{ section.id }}">{{ 'products.quantity' | t }}</label>
+      <input class="quantity-input" id="ProductQuantity-{{ section.id }}" type="number" name="quantity" value="1" min="1">
+      <button class="product-form__submit" type="submit" {% unless current_variant.available %}disabled{% endunless %}>
+        {% if current_variant.available %}
+          {{ 'products.add_to_cart' | t }}
+        {% else %}
+          {{ 'products.sold_out' | t }}
+        {% endif %}
+      </button>
+      {{ form | payment_button }}
+    {% endform %}
+
+    <div class="passport-card">
+      <div class="metric-row">
+        <span>Dagsmengde</span>
+        <strong>{{ daily_dose | default: 'Vises her' }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>Serveringsstørrelse</span>
+        <strong>{{ serving_size | default: 'Vises her' }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>Porsjoner</span>
+        <strong>{{ servings | default: 'Avhenger av variant' }}</strong>
+      </div>
+      {% if warnings != blank %}
+        <div class="metric-row">
+          <span>Advarsel</span>
+          <strong>{{ warnings }}</strong>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% form 'product', product, class: 'mobile-sticky-product-form', data-sticky-product-form: true %}
+    <div class="mobile-sticky-product-form__summary">
+      <strong>{{ product.title }}</strong>
+    </div>
+    <strong class="mobile-sticky-product-form__price" data-sticky-price>{{ current_variant.price | money }}</strong>
+    {% if product.variants.size > 1 %}
+      <label class="visually-hidden" for="StickyProductVariant-{{ section.id }}">{{ 'products.select_size' | t }}</label>
+      <select
+        class="variant-select"
+        id="StickyProductVariant-{{ section.id }}"
+        name="id"
+        data-variant-select
+        data-sticky-variant-select
+      >
+        {% for variant in product.variants %}
+          <option
+            value="{{ variant.id }}"
+            data-price="{{ variant.price | money }}"
+            {% if variant == current_variant %}selected{% endif %}
+            {% unless variant.available %}disabled{% endunless %}
+          >
+            {{ variant.title }}
+          </option>
+        {% endfor %}
+      </select>
+    {% else %}
+      <input type="hidden" name="id" value="{{ current_variant.id }}">
+    {% endif %}
+
+    {% if product.selling_plan_groups.size > 0 %}
+      <label class="visually-hidden" for="StickySellingPlan-{{ section.id }}">{{ 'products.purchase_option' | t }}</label>
+      <select class="variant-select" id="StickySellingPlan-{{ section.id }}" name="selling_plan">
+        {% unless product.requires_selling_plan %}
+          <option value="">{{ 'products.one_time_purchase' | t }}</option>
+        {% endunless %}
+        {% for group in product.selling_plan_groups %}
+          <optgroup label="{{ group.name | escape }}">
+            {% for selling_plan in group.selling_plans %}
+              <option value="{{ selling_plan.id }}">{{ selling_plan.name }}</option>
+            {% endfor %}
+          </optgroup>
+        {% endfor %}
+      </select>
+    {% endif %}
+
+    <input type="hidden" name="quantity" value="1">
+    <button class="product-form__submit" type="submit" {% unless current_variant.available %}disabled{% endunless %}>
+      {% if current_variant.available %}
+        {{ 'products.add_to_cart' | t }}
+      {% else %}
+        {{ 'products.sold_out' | t }}
+      {% endif %}
+    </button>
+  {% endform %}
+</section>
+
+{% schema %}
+{
+  "name": "Main product lab",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_selling_plan_setup_note",
+      "label": "Show recurring delivery setup note",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "selling_plan_setup_note",
+      "label": "Recurring delivery setup note",
+      "default": "Fast levering kan brukes når du ønsker jevnlig påfyll. Vilkår og intervall vises der kjøpsvalget er tilgjengelig."
+    }
+  ]
+}
+{% endschema %}

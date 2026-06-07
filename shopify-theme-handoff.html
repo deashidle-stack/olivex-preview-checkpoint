@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Shopify theme handoff</title>
+    <meta
+      name="description"
+      content="Praktisk handoff for OliveX Shopify theme ZIP: upload som draft, testplan, konfigurasjon og publiseringsgater."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Shopify theme handoff</p>
+          <h1>Bruk theme ZIP-en som draft. Ikke publiser den som live butikk ennå.</h1>
+          <p>
+            Denne siden forklarer hvordan `olivex-shopify-theme.zip` skal brukes videre: last opp som upublisert
+            Shopify-tema, koble til ekte produkter og metafields, kjør Theme Check og test checkout/frakt før live.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./deliverables/olivex-shopify-theme.zip">Last ned theme ZIP</a>
+          <a class="secondary" href="./shopify-theme/README.md">Theme README</a>
+          <a class="secondary" href="./preview-readiness.html">Preview v1 status</a>
+          <a class="secondary" href="./shopify-data-contract.html">Datakontrakt</a>
+          <a class="secondary" href="./production-build-brief.html">Produksjonsbrief</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./launch-checklist.html">Lanseringssjekkliste</a>
+          <a class="secondary" href="./index.html">Til hub</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="decision-title">
+        <p class="eyebrow">Beslutning</p>
+        <h2 id="decision-title">Theme ZIP-en er et produksjonsutgangspunkt, ikke en ferdig Shopify-butikk.</h2>
+        <p>
+          Den riktige bruken er å laste temaet inn i en Shopify dev store som draft, koble det til faktiske produkter,
+          varianter, media, metafields, betalingsapper og fraktregler, og først publisere etter full testordre og signoff.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="contains-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Hva ZIP-en inneholder</p>
+          <h2 id="contains-title">Dette følger med i scaffolden</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>OliveX hero</h3>
+            <p>Hero-seksjon med kildebasert heading og bundled hvit transparent OliveX-logo som fallback.</p>
+          </article>
+          <article>
+            <h3>Produktshowcase</h3>
+            <p>Liquid-seksjon for produktkort, variantpris og to-produktstruktur uten hardkodede preview-priser.</p>
+          </article>
+          <article>
+            <h3>Produktside</h3>
+            <p>Buybox, variantvelger, selling-plan readiness, dynamisk pris og mobile sticky add-to-cart.</p>
+          </article>
+          <article>
+            <h3>Metafield-mønster</h3>
+            <p>`lab`-metafields for batch, opprinnelse, lab, metode, sertifikat, dagsmengde og advarsler.</p>
+          </article>
+          <article>
+            <h3>Quality passport</h3>
+            <p>Analysebevis-modul som skal fylles fra produkt/metafields, ikke statisk previewtekst.</p>
+          </article>
+          <article>
+            <h3>Privacy scaffold</h3>
+            <p>Preview-kontroller for samtykke som må kobles til valgt Shopify-kompatibel CMP før produksjon.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="upload-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Upload som draft</p>
+          <h2 id="upload-title">Anbefalt Shopify-admin flyt</h2>
+        </div>
+        <div class="launch-phases">
+          <article>
+            <span>01</span>
+            <strong>Opprett dev store</strong>
+            <p>Bruk en butikk der vi kan teste produkter, betaling, frakt og tema uten å påvirke live domene.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Last opp ZIP</strong>
+            <p>I Shopify admin: Online Store, Themes, Add theme, Upload zip file. Legg det inn som upublisert tema.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Preview før publisering</strong>
+            <p>Åpne theme preview og sjekk hero, menyer, produkter, cart, mobile sticky buybox og policy-lenker.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Koble data</strong>
+            <p>Legg inn produkter, varianter, bilder, `lab`-metafields, COA-linker, seller data og policy-innhold.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <strong>Installer apper</strong>
+            <p>Konfigurer Vipps/MobilePay, Posten/Bring, CMP, analytics og eventuell subscription-app i dev/testmodus.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <strong>Publiser først etter QA</strong>
+            <p>Ikke publiser temaet før checkout, frakt, claims, schema, accessibility, performance og opplæring er grønt.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="cli-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Utviklerflyt</p>
+          <h2 id="cli-title">CLI-kommandoer for videre arbeid</h2>
+        </div>
+        <div class="code-panel">
+          <pre><code>cd /Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/shopify-theme
+shopify theme check
+shopify theme dev --store &lt;shopify-store.myshopify.com&gt;
+shopify theme push --unpublished --store &lt;shopify-store.myshopify.com&gt;
+shopify theme open --store &lt;shopify-store.myshopify.com&gt;</code></pre>
+        </div>
+        <p>
+          Bruk CLI-flyten når temaet skal itereres mot en konkret Shopify-butikk. Admin upload er nok for første
+          review, men Theme Check og `theme dev` bør brukes før temaet blir produksjonsgrunnlag.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="config-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Konfigurasjon</p>
+          <h2 id="config-title">Dette må settes i Shopify før temaet kan vurderes realistisk</h2>
+        </div>
+        <div class="review-columns">
+          <div>
+            <h3>Butikkdata</h3>
+            <ul>
+              <li>Brandnavn, final logo og favicon.</li>
+              <li>Hovedmeny, footermeny, kontaktinfo og selskapsdata.</li>
+              <li>Kjøpsvilkår, personvern, cookies, frakt, retur og angrerett.</li>
+              <li>Domene, SSL, Search Console, sitemap og noindex/indexing beslutning.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Produktdata</h3>
+            <ul>
+              <li>To produkter med to varianter per produkt.</li>
+              <li>Finale priser, SKU, lager, vekt, fraktdimensjoner og eventuell GTIN.</li>
+              <li>Produktbilder, packshots, produsentvideo, poster, captions og transcript.</li>
+              <li>`lab`-metafields, COA PDF, batch, metode, lab, dato og godkjente claims.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="tests-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Acceptance test</p>
+          <h2 id="tests-title">Minimum før publisering</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Theme upload</strong>
+            <p>ZIP laster opp uten manglende layout, schema-feil eller brutte assets.</p>
+          </article>
+          <article>
+            <strong>Theme Check</strong>
+            <p>`shopify theme check` er kjørt og funn er enten rettet eller eksplisitt akseptert.</p>
+          </article>
+          <article>
+            <strong>Produktdata</strong>
+            <p>Ingen `Pris kommer`, placeholder-produkt, tom COA eller uavklart størrelse er synlig i live theme.</p>
+          </article>
+          <article>
+            <strong>Checkout</strong>
+            <p>Testordre med kort, Vipps/MobilePay, capture, refund og kansellering er dokumentert.</p>
+          </article>
+          <article>
+            <strong>Frakt</strong>
+            <p>Posten/Bring viser forventede valg, hentested, rates, etikett, tracking og returflyt.</p>
+          </article>
+          <article>
+            <strong>Mobile</strong>
+            <p>Ingen horisontal overflow, clipped headings, ødelagte bilder eller for små touch targets.</p>
+          </article>
+          <article>
+            <strong>Schema</strong>
+            <p>Product/ProductGroup/Offer, shipping, return policy og VideoObject matcher synlig innhold.</p>
+          </article>
+          <article>
+            <strong>Performance</strong>
+            <p>LCP, INP, CLS og tredjepartsscripts er testet etter apper, video, CMP og supportwidget.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="sources-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="sources-title">Kilder som styrer handoffen</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Shopify admin</span>
+            <strong>Legg til tema</strong>
+            <p>Bruk Shopify theme library som draft/opplasting før publisering.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Shopify CLI</span>
+            <strong>Dev workflow</strong>
+            <p>CLI brukes for lokal utvikling, push, preview og theme-arbeid mot valgt butikk.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Theme Check</span>
+            <strong>Static analysis</strong>
+            <p>Theme Check skal kjøres før temaet behandles som produksjonsgrunnlag.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Performance</span>
+            <strong>Theme best practices</strong>
+            <p>Images, CSS, JS, app embeds og tredjepartsscripts må vurderes etter Shopify performance-praksis.</p>
+          </article>
+        </div>
+        <div class="hub-actions inline">
+          <a class="secondary" href="https://help.shopify.com/en/manual/online-store/themes/adding-themes">Shopify: adding themes</a>
+          <a class="secondary" href="https://shopify.dev/docs/storefronts/themes/tools/cli">Shopify CLI</a>
+          <a class="secondary" href="https://shopify.dev/docs/storefronts/themes/tools/theme-check">Theme Check</a>
+          <a class="secondary" href="https://shopify.dev/docs/storefronts/themes/best-practices/performance">Theme performance</a>
+          <a class="secondary" href="https://shopify.dev/docs/storefronts/themes/best-practices/performance/optimized-images">Optimized images</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="next-title">
+        <p class="eyebrow">Neste praktiske steg</p>
+        <h2 id="next-title">Last opp som draft når Shopify dev store finnes.</h2>
+        <p>
+          Etter upload bør første review handle om datatilkobling og Shopify-konfigurasjon, ikke visuell smak alene.
+          Temaet skal ikke publiseres før produktdata, COA, claims, betaling, frakt, policy og testordre er grønt.
+        </p>
+        <div class="hub-actions inline">
+          <a class="primary" href="./production-intake.html">Samle produksjonsdata</a>
+          <a class="secondary" href="./docs/SHOPIFY_THEME_HANDOFF_2026-06-07.md">Markdown-handoff</a>
+          <a class="secondary" href="./docs/SHOPIFY_SCAFFOLD_ALIGNMENT_2026-06-07.md">Scaffold alignment</a>
+          <a class="secondary" href="./checkout-readiness.html">Checkout readiness</a>
+          <a class="secondary" href="./performance-readiness.html">Performance readiness</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

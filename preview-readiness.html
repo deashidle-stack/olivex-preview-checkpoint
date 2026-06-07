@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Preview v1 status</title>
+    <meta
+      name="description"
+      content="Kort status for OliveX-previewen: hva som kan deles nå, hva som ikke er produksjonsklart, og neste konkrete milepæl."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Preview v1 status</p>
+          <h1>Previewen kan deles. Produksjon er ikke låst.</h1>
+          <p>
+            Dette er en kort beslutningsside for hvor prosjektet står nå: previewpakken er klar som review- og
+            beslutningsgrunnlag, men live Shopify, checkout, frakt, claims og produktdata krever fortsatt kundeinput,
+            kontoer og godkjenninger.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./client-handoff.html">Send riktig lenke</a>
+          <a class="primary" href="./client-review-decisions.html">Beslutningslogg</a>
+          <a class="secondary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./production-data-request.html">Produksjonsforespørsel</a>
+          <a class="secondary" href="./production-intake.html">Samle data</a>
+          <a class="secondary" href="./shopify-theme-handoff.html">Theme handoff</a>
+          <a class="secondary" href="./source-verification.html">Kildeverifisering</a>
+          <a class="secondary" href="./preview-deploy.html">Deploy og deling</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="decision-title">
+        <p class="eyebrow">Beslutning</p>
+        <h2 id="decision-title">Bruk pakken til kunde-/partnerreview nå. Ikke presenter den som ferdig nettbutikk.</h2>
+        <p>
+          Riktig bruk er å sende hub-lenken, be mottaker starte med reviewguiden, og være tydelig på at produktdata,
+          analysebevis, betaling, frakt, juridikk og live drift fortsatt må fylles inn før Shopify-lansering.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Statuskort</p>
+          <h2 id="status-title">Tre ting som må holdes adskilt</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>01</span>
+            <strong>Klar for previewdeling</strong>
+            <p>Hub, nettside, produktside, handoff, kravdekning, QA, deploypakke og produksjonsgater er reviewbare.</p>
+          </article>
+          <article class="risk-amber">
+            <span>02</span>
+            <strong>Ikke produksjonsklar</strong>
+            <p>Mangler reelle produktdata, COA, juridisk signoff, Shopify, Vipps/MobilePay, Posten/Bring og testordre.</p>
+          </article>
+          <article class="risk-yellow">
+            <span>03</span>
+            <strong>Neste milepæl</strong>
+            <p>Samle produksjonsdata og kontoavklaringer, deretter bygge Shopify med faktiske produkter og checkout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="share-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Kan deles nå</p>
+          <h2 id="share-title">Dette er sterkt nok for en kontrollert preview</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Riktig inngang</strong>
+            <p>Netlify Drop-roten åpner preview hub. Storefront ligger inne i hubben som `website.html`.</p>
+          </article>
+          <article>
+            <strong>Kildebasert copy</strong>
+            <p>Forsiden bruker levert hero og lede. Intern salgs-/IA-strategi er fjernet fra kundens førsteinntrykk.</p>
+          </article>
+          <article>
+            <strong>Ærlige mangler</strong>
+            <p>Produkt 2, størrelser, priser og COA vises ikke som ferdige data.</p>
+          </article>
+          <article>
+            <strong>Produksjonsgater</strong>
+            <p>Checkout, SEO/AEO, juridisk, accessibility, performance, support, video og opplæring har egne reviewflater.</p>
+          </article>
+          <article>
+            <strong>QA</strong>
+            <p>Customer-copy validator, link audit og focused browser-QA er grønne etter siste pass.</p>
+          </article>
+          <article>
+            <strong>Delingspakke</strong>
+            <p>Lean ZIP er rebuildet uten QA-mappe og macOS-metadata.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="not-live-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Ikke kall dette ferdig</p>
+          <h2 id="not-live-title">Produksjonsklar betyr noe mer konkret</h2>
+        </div>
+        <div class="review-columns">
+          <div>
+            <h3>Kundeinput</h3>
+            <ul>
+              <li>Produkt 1 og produkt 2 med finalt navn, kategori, størrelse, pris, SKU, vekt og lager.</li>
+              <li>COA/analysebevis med batch, lab, metode, dato, verdier og PDF.</li>
+              <li>Final logo, packshots, produsentvideo, poster, captions, transkript og rettigheter.</li>
+              <li>Godkjente produktpåstander, FAQ-svar, kjøpsvilkår, privacy, cookies, retur og sellerdata.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Kontoer og testing</h3>
+            <ul>
+              <li>Shopify dev store, domene, SSL og theme upload.</li>
+              <li>Shopify Payments eller valgt kortleverandør.</li>
+              <li>Vipps/MobilePay merchant og faktisk checkout-test.</li>
+              <li>Posten/Bring-oppsett med fraktvalg, hentested, labels, tracking og retur.</li>
+              <li>Testordre, refund, fulfillment, supportagent, Search Console, Merchant Center og Core Web Vitals.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="proof-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Bevis</p>
+          <h2 id="proof-title">Hvor statusen kan kontrolleres</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Copy og logo</strong>
+            <p><a href="./customer-copy-validation.html">Kunde-copy validator</a> og <a href="./docs/OLIVEX_COPY_GUARDRAILS.md">copy guardrails</a>.</p>
+          </article>
+          <article>
+            <strong>Briefdekning</strong>
+            <p><a href="./request-coverage.html">Kravdekning</a> mot opprinnelig nettbutikkforespørsel.</p>
+          </article>
+          <article>
+            <strong>Produksjonsdata</strong>
+            <p><a href="./production-data-request.html">Produksjonsforespørsel</a>, <a href="./production-intake.html">produksjonsintake</a> og <a href="./shopify-data-contract.html">Shopify datakontrakt</a>.</p>
+          </article>
+          <article>
+            <strong>Reviewrekkefølge</strong>
+            <p><a href="./review-guide.html">Reviewguide</a> og <a href="./client-handoff.html">kundehandoff</a>.</p>
+          </article>
+          <article>
+            <strong>Beslutninger</strong>
+            <p><a href="./client-review-decisions.html">Beslutningslogg</a> for godkjent retning, endringsønsker og manglende data.</p>
+          </article>
+          <article>
+            <strong>Kilder</strong>
+            <p><a href="./source-verification.html">Kildeverifisering</a> og <a href="./docs/RESEARCH_SOURCE_REGISTER_2026-06-07.md">source register</a>.</p>
+          </article>
+          <article>
+            <strong>Deploy</strong>
+            <p><a href="./preview-deploy.html">Deploy og deling</a> for Netlify Drop-regler.</p>
+          </article>
+          <article>
+            <strong>QA</strong>
+            <p><a href="./docs/QA_REPORT_2026-06-07.md">QA-rapport</a> og <a href="./docs/SESSION_CHECKPOINT.md">checkpoint</a>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="next-title">
+        <p class="eyebrow">Neste handling</p>
+        <h2 id="next-title">Send previewen, men be om produksjonsdata samtidig.</h2>
+        <p>
+          Praktisk neste steg er å bruke `client-handoff.html` og Netlify Drop-hubben for review, samtidig som kunden
+          fyller `production-intake.html` og beslutningsloggen. Når data og kontoer finnes, kan Shopify-bygg og live
+          checkout testes.
+        </p>
+        <div class="hub-actions inline">
+          <a class="primary" href="./client-handoff.html">Åpne kundehandoff</a>
+          <a class="secondary" href="./production-data-request.html">Åpne produksjonsforespørsel</a>
+          <a class="secondary" href="./client-review-decisions.html">Åpne beslutningslogg</a>
+          <a class="secondary" href="./production-intake.html">Åpne produksjonsdata</a>
+          <a class="secondary" href="./production-build-brief.html">Åpne produksjonsbrief</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

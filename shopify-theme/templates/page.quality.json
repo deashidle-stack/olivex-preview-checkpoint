@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "eyebrow": "Kvalitet"
+      }
+    },
+    "passport": {
+      "type": "quality-passport"
+    },
+    "evidence": {
+      "type": "evidence-tabs"
+    }
+  },
+  "order": ["main", "passport", "evidence"]
+}

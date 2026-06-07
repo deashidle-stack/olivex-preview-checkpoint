@@ -1,0 +1,174 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-lab",
+      "settings": {
+        "eyebrow": "Høyphenolitisk olje",
+        "heading": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+        "text": "En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av laboratoriet.",
+        "primary_label": "Kjøp OliveX",
+        "secondary_label": "Hvorfor denne oljen?",
+        "card_eyebrow": "Slik bruker du den",
+        "card_heading": "Ditt daglige rituale",
+        "card_text": "For å oppnå den optimale, dokumenterte effekten, anbefaler vi 15–20 ml (1,5 til 2 spiseskjeer) hver morgen.",
+        "metric_1_label": "Dosering",
+        "metric_1_value": "15–20 ml",
+        "metric_2_label": "Hvordan",
+        "metric_2_value": "Helseshot",
+        "metric_3_label": "Mat",
+        "metric_3_value": "Kald bruk",
+        "metric_4_label": "Viktig",
+        "metric_4_value": "Ikke steking"
+      }
+    },
+    "trust": {
+      "type": "trust-strip",
+      "blocks": {
+        "trust_1": {
+          "type": "item",
+          "settings": {
+            "heading": "Tidlig høstet",
+            "text": "For høy konsentrasjon av virkestoffer"
+          }
+        },
+        "trust_2": {
+          "type": "item",
+          "settings": {
+            "heading": "600–700 mg/l",
+            "text": "Polyfenoler"
+          }
+        },
+        "trust_3": {
+          "type": "item",
+          "settings": {
+            "heading": "15–20 ml",
+            "text": "Hver morgen"
+          }
+        },
+        "trust_4": {
+          "type": "item",
+          "settings": {
+            "heading": "Over 67 %",
+            "text": "Oleocanthal av totalt fenolinnhold"
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3", "trust_4"]
+    },
+    "products": {
+      "type": "product-showcase",
+      "settings": {
+        "heading": "Ditt daglige rituale",
+        "text": "15–20 ml hver morgen. Den kan drikkes bar som en \"helseshot\", eller helles over kald mat."
+      }
+    },
+    "evidence": {
+      "type": "evidence-tabs",
+      "settings": {
+        "heading": "Hvorfor vanlig ekstra virgin olivenolje ikke er nok",
+        "text": "De fleste forbrukere vet at ekstra virgin olivenolje er sunt. Det mange ikke vet, er at helsefordelene i all hovedsak drives av mikroskopiske plantestoffer som kalles polyfenoler."
+      },
+      "blocks": {
+        "evidence_1": {
+          "type": "module",
+          "settings": {
+            "label": "01",
+            "heading": "EUs offisielle helsepåstand",
+            "text": "For å kunne bruke EUs offisielle helsepåstand, må en olivenolje inneholde minst 250 mg polyfenoler per kilo."
+          }
+        },
+        "evidence_2": {
+          "type": "module",
+          "settings": {
+            "label": "02",
+            "heading": "Vanlig olivenolje faller ofte lavt",
+            "text": "En standard olivenolje fra matbutikken ligger ofte rett rundt eller under denne grensen."
+          }
+        },
+        "evidence_3": {
+          "type": "module",
+          "settings": {
+            "label": "03",
+            "heading": "Vår olje er annerledes",
+            "text": "Den er høstet tidlig og presset under strenge temperaturkrav. Resultatet er en olje med 600–700 mg/l polyfenoler."
+          }
+        },
+        "evidence_4": {
+          "type": "module",
+          "settings": {
+            "label": "04",
+            "heading": "Ditt daglige rituale",
+            "text": "15–20 ml hver morgen. Brukes bar som helseshot eller over kald mat."
+          }
+        }
+      },
+      "block_order": ["evidence_1", "evidence_2", "evidence_3", "evidence_4"]
+    },
+    "delivery": {
+      "type": "delivery-payment",
+      "blocks": {
+        "delivery_1": {
+          "type": "step",
+          "settings": {
+            "label": "1",
+            "heading": "Velg størrelse",
+            "text": "Variantvelgeren viser pris og størrelse tydelig."
+          }
+        },
+        "delivery_2": {
+          "type": "step",
+          "settings": {
+            "label": "2",
+            "heading": "Legg i kurv",
+            "text": "Kurven summerer varer og leder til checkout."
+          }
+        },
+        "delivery_3": {
+          "type": "step",
+          "settings": {
+            "label": "3",
+            "heading": "Posten/Bring",
+            "text": "Velg leveringsmåte, hentested og sporing i checkout."
+          }
+        },
+        "delivery_4": {
+          "type": "step",
+          "settings": {
+            "label": "4",
+            "heading": "Vipps og kort",
+            "text": "Betal med Vipps eller kort."
+          }
+        }
+      },
+      "block_order": ["delivery_1", "delivery_2", "delivery_3", "delivery_4"]
+    },
+    "notes": {
+      "type": "lab-notes",
+      "settings": {
+        "eyebrow": "Faginnhold",
+        "heading": "Svarene kunden trenger før kjøp.",
+        "text": "Artikler bør forklare produktkvalitet, analyse og bruk uten å gå utover juridisk godkjente claims."
+      },
+      "blocks": {
+        "note_1": {
+          "type": "fallback",
+          "settings": {
+            "label": "Tema",
+            "heading": "Hva er polyfenoler i olivenolje?",
+            "text": "En kort forklaring av råvarens dokumentasjon."
+          }
+        },
+        "note_2": {
+          "type": "fallback",
+          "settings": {
+            "label": "Tema",
+            "heading": "Hvordan lese en analyseattest",
+            "text": "Forklar måleverdier, batch og hva kunden bør se etter."
+          }
+        }
+      },
+      "block_order": ["note_1", "note_2"]
+    }
+  },
+  "order": ["hero", "trust", "products", "evidence", "delivery", "notes"]
+}

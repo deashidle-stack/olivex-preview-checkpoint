@@ -1,0 +1,245 @@
+:root {
+  --ink: #151817;
+  --muted: #66716d;
+  --surface: #fbfaf5;
+  --deep: #153a32;
+  --mineral: #315f50;
+  --ice: #dcefed;
+  --amber: #b88338;
+  --line: rgba(21, 24, 23, 0.14);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.board-hero {
+  min-height: 70dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+  padding: clamp(34px, 6vw, 86px);
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(21, 58, 50, 0.98), rgba(49, 95, 80, 0.82)),
+    radial-gradient(circle at 86% 18%, rgba(220, 239, 237, 0.72), transparent 28%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--amber);
+  font-size: 0.82rem;
+  font-weight: 840;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 560;
+  line-height: 0.98;
+}
+
+h1 {
+  max-width: 1000px;
+  margin-bottom: 20px;
+  font-size: clamp(3.2rem, 8vw, 8.4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4.8vw, 4.8rem);
+}
+
+p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.28rem);
+}
+
+.board-hero p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.board-hero a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: var(--amber);
+  color: #15110a;
+  font-weight: 820;
+  text-decoration: none;
+}
+
+main {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: -40px 0 80px;
+  border: 1px solid var(--line);
+  background: var(--line);
+  position: relative;
+  z-index: 1;
+}
+
+.palette div {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--swatch);
+  color: #fff;
+}
+
+.palette div:first-child,
+.palette div:nth-child(4) {
+  color: var(--ink);
+}
+
+.palette span {
+  font-weight: 800;
+}
+
+.palette strong {
+  font-size: 0.84rem;
+}
+
+.concept-grid {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 100px;
+}
+
+.concept {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1fr);
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.concept:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+}
+
+.concept:nth-child(even) img {
+  order: 2;
+}
+
+.concept img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88);
+}
+
+.concept div {
+  align-self: center;
+  padding: clamp(26px, 5vw, 64px);
+}
+
+.prompt-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1fr);
+  gap: clamp(30px, 6vw, 80px);
+  padding: 86px 0;
+  border-top: 1px solid var(--line);
+}
+
+.prompt-list {
+  display: grid;
+  gap: 14px;
+}
+
+.prompt-list article {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.prompt-list h3 {
+  margin-bottom: 12px;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+code {
+  color: var(--deep);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.rules {
+  padding: 76px 0 100px;
+  border-top: 1px solid var(--line);
+}
+
+.rules ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 30px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+  list-style: none;
+}
+
+.rules li {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  background: #fff;
+  font-weight: 720;
+}
+
+@media (max-width: 860px) {
+  .board-hero,
+  .prompt-section,
+  .concept,
+  .concept:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .concept:nth-child(even) img {
+    order: 0;
+  }
+
+  .concept img {
+    min-height: 300px;
+  }
+
+  .palette,
+  .rules ul {
+    grid-template-columns: 1fr;
+  }
+}

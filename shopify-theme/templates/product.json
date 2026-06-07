@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-lab"
+    },
+    "sizes": {
+      "type": "product-size-comparison"
+    },
+    "passport": {
+      "type": "quality-passport"
+    },
+    "evidence": {
+      "type": "evidence-tabs"
+    },
+    "delivery": {
+      "type": "delivery-payment"
+    }
+  },
+  "order": ["main", "sizes", "passport", "evidence", "delivery"]
+}

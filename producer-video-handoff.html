@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Produsentvideo handoff</title>
+    <meta
+      name="description"
+      content="Handoff for produsentvideoen fra Hellas: filer, teksting, transkript, rettigheter, Shopify-oppsett og SEO/accessibility-gates."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Produsentvideo</p>
+          <h1>Gjør videoen fra Hellas produksjonsklar.</h1>
+          <p>
+            Denne siden beskriver nøyaktig hva som må leveres før videoen kan brukes i nettbutikken, i Shopify,
+            i tilgjengelighetsarbeidet og i eventuell VideoObject-markup.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html#producer">Se video-plassholder</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./production-build-brief.html">Produksjonsbrief</a>
+          <a class="secondary" href="./seo-merchant-readiness.html">SEO/AEO</a>
+          <a class="secondary" href="./accessibility-readiness.html">Tilgjengelighet</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="gate-title">
+        <p class="eyebrow">Produksjonsregel</p>
+        <h2 id="gate-title">Videoen skal vise ekte opprinnelse. Den skal ikke bære udokumenterte påstander.</h2>
+        <p>
+          Produsentvideoen kan gi OliveX mer nærhet og troverdighet, men den må behandles som innholdskilde:
+          vi trenger fil, poster, teksting, transkript, rettigheter og godkjente fakta før den brukes live.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="current-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Nåværende preview</p>
+          <h2 id="current-title">Forsiden har allerede en dedikert plass for videoen.</h2>
+          <p>
+            Bildet under er bare en preview-poster. Det skal erstattes med ekte video og et ekte posterbilde fra
+            produsenten eller produksjonsmiljøet.
+          </p>
+        </div>
+        <figure class="video-handoff-preview">
+          <img
+            src="./assets/visuals/olivex-producer-poster-2026-06-07.jpg"
+            alt="Preview-poster for produsentvideo-seksjonen i OliveX-nettbutikken"
+          />
+          <figcaption>
+            Preview-asset, ikke produksjonsbevis. Finalen bør bruke ekte opptak/stillbilde fra produsenten i Hellas.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="review-section" aria-labelledby="needed-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Leveransekrav</p>
+          <h2 id="needed-title">Dette må kunden eller produsenten sende.</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Videofil eller hostet lenke</h3>
+            <p>Send høyeste tilgjengelige kvalitet, helst originalfil. Vi kan lage weboptimalisert variant etterpå.</p>
+          </article>
+          <article>
+            <h3>Posterbilde</h3>
+            <p>Send et stillbilde som tåler crop på desktop og mobil. Hvis ikke, velger vi poster fra videoen.</p>
+          </article>
+          <article>
+            <h3>Norsk teksting</h3>
+            <p>Hvis noen snakker i videoen, trenger vi norsk teksting som VTT-fil før live-publisering.</p>
+          </article>
+          <article>
+            <h3>Transkript</h3>
+            <p>Send norsk transkript eller godkjent oversettelse. Viktig innhold skal også finnes som tekst på siden.</p>
+          </article>
+          <article>
+            <h3>Faktagrunnlag</h3>
+            <p>Navn, rolle, produsent/estate, region, innhøstingskontekst og eventuelle produktpåstander må godkjennes.</p>
+          </article>
+          <article>
+            <h3>Rettigheter og samtykke</h3>
+            <p>Bekreft at video, personer, musikk, grafikk og location kan brukes kommersielt på OliveX-nettbutikken.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="files-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Praktisk plassering</p>
+          <h2 id="files-title">Når filene kommer, bruker vi denne strukturen i previewen.</h2>
+        </div>
+        <div class="file-list" aria-label="Video files">
+          <article>
+            <strong>Video</strong>
+            <p>Legg weboptimalisert video her:</p>
+            <code>assets/producer-video.mp4</code>
+          </article>
+          <article>
+            <strong>Poster</strong>
+            <p>Legg posterbilde her:</p>
+            <code>assets/producer-video-poster.jpg</code>
+          </article>
+          <article>
+            <strong>Norsk teksting</strong>
+            <p>Legg VTT-teksting her:</p>
+            <code>assets/producer-video-no.vtt</code>
+          </article>
+          <article>
+            <strong>Transkript</strong>
+            <p>Legg norsk transkript her:</p>
+            <code>docs/producer-video-transcript-no.md</code>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="implementation-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Implementering</p>
+          <h2 id="implementation-title">Slik aktiveres videoen uten å endre opplevelsen rundt den.</h2>
+        </div>
+        <div class="launch-phases">
+          <article>
+            <span>01</span>
+            <strong>Importer filene</strong>
+            <p>Legg inn video, poster, norsk VTT og transkript på avtalte stier.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Optimaliser</strong>
+            <p>Komprimer til rask nok avspilling, test på mobil og behold en originalfil som arkiv.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Aktiver slot</strong>
+            <p>Sett video-slotten på forsiden til <code>data-video-ready="true"</code>.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Legg inn tekst</strong>
+            <p>Koble VTT-spor og transkript, og sørg for at viktige poenger også finnes som HTML-tekst.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <strong>Flytt til Shopify</strong>
+            <p>I produksjon bør videoen eies av Shopify media eller en avtalt videohost, ikke av statisk preview.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <strong>Valider før live</strong>
+            <p>Test desktop, mobil, tastatur, captions, ytelse og juridisk godkjente fakta.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="seo-a11y-title">
+        <div class="section-kicker">
+          <p class="eyebrow">SEO og tilgjengelighet</p>
+          <h2 id="seo-a11y-title">VideoObject kommer etter ekte metadata, ikke før.</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Ikke schema på placeholder</strong>
+            <p>VideoObject skal bare brukes når videoen faktisk er synlig og har ekte navn, beskrivelse, thumbnail, dato og varighet.</p>
+          </article>
+          <article>
+            <strong>Teksting og transkript</strong>
+            <p>Spoken content trenger teksting. Transkript gjør innholdet søkbart, tilgjengelig og enklere å claim-reviewe.</p>
+          </article>
+          <article>
+            <strong>Ytelse</strong>
+            <p>Video skal ikke blokkere hero, checkout eller produktinnhold. Bruk metadata-preload og poster før avspilling.</p>
+          </article>
+          <article>
+            <strong>Claim review</strong>
+            <p>Produsenten kan ikke få si ubegrensede helseeffekter i en video som publiseres kommersielt.</p>
+          </article>
+          <article>
+            <strong>Rettigheter</strong>
+            <p>Dokumenter samtykke for personer, location, musikk, dronefoto og eventuell tredjepartsgrafikk.</p>
+          </article>
+          <article>
+            <strong>Shopify data</strong>
+            <p>Hvis videoen skal knyttes til produktdata, bør den eies av Shopify media/metafields/metaobject i produksjon.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="request-title">
+        <div class="section-kicker">
+          <p class="eyebrow">E-post</p>
+          <h2 id="request-title">Kort forespørsel som kan sendes videre.</h2>
+        </div>
+        <label class="field handoff-email">
+          <span>Forespørsel om produsentvideo</span>
+          <textarea readonly rows="18">Hei,
+
+For å legge produsentvideoen fra Hellas inn i OliveX-nettbutikken trenger vi dette:
+
+1. Videofil i høyeste tilgjengelige kvalitet, eller nedlastbar lenke.
+2. Poster/stillbilde for videoen, helst fra samme miljø.
+3. Norsk teksting som .vtt, eller et manus/transkript vi kan oversette og formatere.
+4. Norsk transkript eller godkjent engelsk/transkribert kilde.
+5. Navn og rolle på personen som snakker.
+6. Produsent/estate, region og dato/periode for opptaket.
+7. Bekreftelse på at video, personer, musikk, grafikk og location kan brukes kommersielt på OliveX-nettbutikken.
+8. Eventuelle produktpåstander som sies i videoen, slik at de kan gjennomgås før publisering.
+
+Vi publiserer ikke VideoObject/schema eller bruker videoen som dokumentasjon før disse punktene er klare.
+
+Vennlig hilsen
+[Navn]</textarea>
+        </label>
+        <div class="hub-actions inline">
+          <a class="primary" href="./production-intake.html">Åpne produksjonsintake</a>
+          <a class="secondary" href="./docs/PRODUCER_VIDEO_HANDOFF_2026-06-07.md">Markdown-notat</a>
+          <a class="secondary" href="./website.html#producer">Se placeholder</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

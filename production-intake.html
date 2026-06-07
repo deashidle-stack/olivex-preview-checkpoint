@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Produksjonsintake</title>
+    <meta
+      name="description"
+      content="Produksjonsintake for OliveX: produktdata, analysebevis, media, juridiske avklaringer og Shopify-oppsett."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Produksjonsintake</p>
+          <h1>Dataene som trengs før OliveX kan bygges ferdig.</h1>
+          <p>
+            Fyll inn det som er klart. Generer oppsummeringen nederst og send den videre sammen med filer, lenker og
+            eventuelle avklaringer.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsidepreview</a>
+          <a class="secondary" href="./review-guide.html">Åpne reviewguide</a>
+          <a class="secondary" href="./shopify-data-contract.html">Datakontrakt</a>
+          <a class="secondary" href="./producer-video-handoff.html">Videohandoff</a>
+          <a class="secondary" href="./legal-policy-readiness.html">Juridisk</a>
+          <a class="secondary" href="./docs/PRODUCT_INTAKE_TEMPLATE.csv">CSV-mal</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="intake-note-title">
+        <p class="eyebrow">Viktig</p>
+        <h2 id="intake-note-title">Ikke alle felt må være klare i dag.</h2>
+        <p>
+          Manglende felt er like nyttige som utfylte felt, fordi de viser hva som blokkerer produksjon. Claims,
+          analysebevis, betaling, frakt og abonnement bør ikke låses før de er dokumentert og testet.
+        </p>
+      </section>
+
+      <form class="intake-form" data-intake-form novalidate>
+        <fieldset class="intake-fieldset" data-section="Kontakt og selskap">
+          <legend>Kontakt og selskap</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Kontaktperson</span>
+              <input name="contact_person" data-label="Kontaktperson" autocomplete="name" />
+            </label>
+            <label class="field">
+              <span>E-post</span>
+              <input name="contact_email" data-label="E-post" type="email" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Juridisk selger/importør</span>
+              <input name="company_name" data-label="Juridisk selger/importør" />
+            </label>
+            <label class="field">
+              <span>Organisasjonsnummer</span>
+              <input name="org_number" data-label="Organisasjonsnummer" inputmode="numeric" />
+            </label>
+            <label class="field full">
+              <span>Adresse og returadresse</span>
+              <textarea name="addresses" data-label="Adresse og returadresse" rows="3"></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Produkt 1">
+          <legend>Produkt 1</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Endelig produktnavn</span>
+              <input name="product_1_name" data-label="Produktnavn" placeholder="OliveX høyphenolitisk olje / endelig navn" required />
+            </label>
+            <label class="field">
+              <span>Juridisk produktkategori</span>
+              <input name="product_1_category" data-label="Juridisk produktkategori" placeholder="Ekstra virgin olivenolje" required />
+            </label>
+            <label class="field">
+              <span>Størrelse 1</span>
+              <input name="product_1_size_1" data-label="Størrelse 1" placeholder="f.eks. ml" required />
+            </label>
+            <label class="field">
+              <span>Pris størrelse 1 inkl. mva</span>
+              <input name="product_1_price_1" data-label="Pris størrelse 1" inputmode="decimal" required />
+            </label>
+            <label class="field">
+              <span>SKU størrelse 1</span>
+              <input name="product_1_sku_1" data-label="SKU størrelse 1" />
+            </label>
+            <label class="field">
+              <span>Lager størrelse 1</span>
+              <input name="product_1_stock_1" data-label="Lager størrelse 1" inputmode="numeric" />
+            </label>
+            <label class="field">
+              <span>Størrelse 2</span>
+              <input name="product_1_size_2" data-label="Størrelse 2" placeholder="f.eks. ml" required />
+            </label>
+            <label class="field">
+              <span>Pris størrelse 2 inkl. mva</span>
+              <input name="product_1_price_2" data-label="Pris størrelse 2" inputmode="decimal" required />
+            </label>
+            <label class="field">
+              <span>SKU størrelse 2</span>
+              <input name="product_1_sku_2" data-label="SKU størrelse 2" />
+            </label>
+            <label class="field">
+              <span>Lager størrelse 2</span>
+              <input name="product_1_stock_2" data-label="Lager størrelse 2" inputmode="numeric" />
+            </label>
+            <label class="field full">
+              <span>Kort produktbeskrivelse</span>
+              <textarea name="product_1_description" data-label="Kort produktbeskrivelse" rows="3">Mer enn en matolje. Ditt daglige, flytende kosttilskudd.</textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Produkt 2">
+          <legend>Produkt 2</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Endelig produktnavn</span>
+              <input name="product_2_name" data-label="Produktnavn" placeholder="Avventer produktdata" required />
+            </label>
+            <label class="field">
+              <span>Juridisk produktkategori</span>
+              <input name="product_2_category" data-label="Juridisk produktkategori" required />
+            </label>
+            <label class="field">
+              <span>Størrelse 1</span>
+              <input name="product_2_size_1" data-label="Størrelse 1" required />
+            </label>
+            <label class="field">
+              <span>Pris størrelse 1 inkl. mva</span>
+              <input name="product_2_price_1" data-label="Pris størrelse 1" inputmode="decimal" required />
+            </label>
+            <label class="field">
+              <span>Størrelse 2</span>
+              <input name="product_2_size_2" data-label="Størrelse 2" required />
+            </label>
+            <label class="field">
+              <span>Pris størrelse 2 inkl. mva</span>
+              <input name="product_2_price_2" data-label="Pris størrelse 2" inputmode="decimal" required />
+            </label>
+            <label class="field full">
+              <span>Kort produktbeskrivelse</span>
+              <textarea name="product_2_description" data-label="Kort produktbeskrivelse" rows="3"></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Bruk, innhold og merking">
+          <legend>Bruk, innhold og merking</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Anbefalt daglig dose</span>
+              <input name="daily_dose" data-label="Anbefalt daglig dose" value="15-20 ml hver morgen" required />
+            </label>
+            <label class="field">
+              <span>Porsjoner per størrelse</span>
+              <input name="servings" data-label="Porsjoner per størrelse" placeholder="Størrelse 1: ... / Størrelse 2: ..." />
+            </label>
+            <label class="field full">
+              <span>Ingredienser</span>
+              <textarea name="ingredients" data-label="Ingredienser" rows="3" required></textarea>
+            </label>
+            <label class="field full">
+              <span>Advarsler, allergener og oppbevaring</span>
+              <textarea name="warnings_storage" data-label="Advarsler, allergener og oppbevaring" rows="4" required></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Analysebevis og opprinnelse">
+          <legend>Analysebevis og opprinnelse</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Opprinnelsesland/region</span>
+              <input name="origin" data-label="Opprinnelsesland/region" placeholder="Hellas, region/estate" required />
+            </label>
+            <label class="field">
+              <span>Innhøstingsår/dato</span>
+              <input name="harvest" data-label="Innhøstingsår/dato" />
+            </label>
+            <label class="field">
+              <span>Batch/lot-ID</span>
+              <input name="batch_id" data-label="Batch/lot-ID" required />
+            </label>
+            <label class="field">
+              <span>Lab og testmetode</span>
+              <input name="lab_method" data-label="Lab og testmetode" placeholder="Labnavn, HPLC e.l." required />
+            </label>
+            <label class="field">
+              <span>Polyfenoler</span>
+              <input name="polyphenols" data-label="Polyfenoler" placeholder="mg/kg eller mg/l fra COA" required />
+            </label>
+            <label class="field">
+              <span>Oleocanthal</span>
+              <input name="oleocanthal" data-label="Oleocanthal" placeholder="andel eller målt verdi fra COA" />
+            </label>
+            <label class="field full">
+              <span>Lenke/navn på COA eller sertifikat-PDF</span>
+              <textarea name="certificate" data-label="COA eller sertifikat-PDF" rows="3" required></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Media og assets">
+          <legend>Media og assets</legend>
+          <div class="form-grid">
+            <label class="field full">
+              <span>Logo og brandfiler</span>
+              <textarea name="logo_files" data-label="Logo og brandfiler" rows="3" placeholder="SVG, transparent PNG, font, fargekoder eller lenke til mappe"></textarea>
+            </label>
+            <label class="field full">
+              <span>Produktbilder og emballasje</span>
+              <textarea name="product_media" data-label="Produktbilder og emballasje" rows="3" placeholder="Packshots, etiketter, bilder eller lenke til mappe"></textarea>
+            </label>
+            <label class="field full">
+              <span>Produsentvideo fra Hellas</span>
+              <textarea name="producer_video" data-label="Produsentvideo fra Hellas" rows="3" placeholder="Videofil/lenke, posterbilde, teksting og transkript"></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Juridisk, betaling og frakt">
+          <legend>Juridisk, betaling og frakt</legend>
+          <div class="form-grid">
+            <label class="field full">
+              <span>Juridisk godkjente claims eller claim-review-kontakt</span>
+              <textarea name="claims_review" data-label="Juridisk claims-status" rows="4" required></textarea>
+            </label>
+            <label class="field">
+              <span>Shopify-status</span>
+              <select name="shopify_status" data-label="Shopify-status">
+                <option value="">Velg status</option>
+                <option>Shopify-konto finnes</option>
+                <option>Shopify må opprettes</option>
+                <option>Uavklart</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Vipps/MobilePay-status</span>
+              <select name="vipps_status" data-label="Vipps/MobilePay-status">
+                <option value="">Velg status</option>
+                <option>Konto/app klar</option>
+                <option>Må settes opp</option>
+                <option>Uavklart</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Posten/Bring-status</span>
+              <select name="bring_status" data-label="Posten/Bring-status">
+                <option value="">Velg status</option>
+                <option>Avtale/app klar</option>
+                <option>Må settes opp</option>
+                <option>Uavklart</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Fast levering</span>
+              <select name="subscription_status" data-label="Fast levering">
+                <option value="">Velg status</option>
+                <option>Skal være med i v1</option>
+                <option>Fase 2</option>
+                <option>Uavklart</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="intake-fieldset" data-section="Prioriteringer">
+          <legend>Prioriteringer</legend>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="priorities" value="Lansere raskt med engangskjøp" /> Lansere raskt med engangskjøp</label>
+            <label><input type="checkbox" name="priorities" value="Fast levering i første versjon" /> Fast levering i første versjon</label>
+            <label><input type="checkbox" name="priorities" value="Sterkere produksjonssikker copy" /> Sterkere produksjonssikker copy</label>
+            <label><input type="checkbox" name="priorities" value="Premium visuell retning med produsentvideo" /> Premium visuell retning med produsentvideo</label>
+            <label><input type="checkbox" name="priorities" value="Supportagent etter godkjent kunnskapsbase" /> Supportagent etter godkjent kunnskapsbase</label>
+            <label><input type="checkbox" name="priorities" value="Google Merchant Center og strukturert produktdata" /> Google Merchant Center og strukturert produktdata</label>
+          </div>
+        </fieldset>
+
+        <section class="intake-actions" aria-labelledby="summary-title">
+          <div>
+            <p class="eyebrow">Oppsummering</p>
+            <h2 id="summary-title">Generer og eksporter data som kan sendes videre</h2>
+            <p>
+              Oppsummeringen lagres bare lokalt i nettleseren. Ingen data sendes fra denne statiske previewen. Last ned
+              `.md` for e-post/workshop og `.json` for videre strukturert produksjonsarbeid.
+            </p>
+          </div>
+          <div class="hub-actions inline">
+            <button class="primary" type="submit">Generer oppsummering</button>
+            <button class="secondary" type="button" data-copy-summary>Kopier</button>
+            <button class="secondary" type="button" data-copy-missing>Kopier mangelliste</button>
+            <button class="secondary" type="button" data-download-summary>Last ned .md</button>
+            <button class="secondary" type="button" data-download-json>Last ned .json</button>
+            <button class="secondary" type="button" data-clear-intake>Nullstill</button>
+          </div>
+          <label class="field full">
+            <span>Generert oppsummering</span>
+            <textarea data-intake-output rows="16" readonly></textarea>
+          </label>
+          <p class="intake-live" data-intake-live aria-live="polite"></p>
+        </section>
+      </form>
+    </main>
+
+    <script>
+      const form = document.querySelector("[data-intake-form]");
+      const output = document.querySelector("[data-intake-output]");
+      const live = document.querySelector("[data-intake-live]");
+      const storageKey = "olivex-production-intake";
+      let latestSummary = null;
+
+      function setLive(message) {
+        if (live) live.textContent = message;
+      }
+
+      function fieldValue(field) {
+        if (field.type === "checkbox") return field.checked ? field.value : "";
+        return field.value.trim();
+      }
+
+      function collectIntake() {
+        const generatedAt = new Date();
+        const sections = [];
+        const missing = [];
+        const values = {};
+        let requiredTotal = 0;
+
+        document.querySelectorAll("[data-section]").forEach((section) => {
+          const title = section.dataset.section;
+          const fields = [];
+          const groupedCheckboxes = new Map();
+
+          section.querySelectorAll("input, textarea, select").forEach((field) => {
+            if (!field.name) return;
+            if (field.type === "checkbox") {
+              if (!groupedCheckboxes.has(field.name)) groupedCheckboxes.set(field.name, []);
+              if (field.checked) groupedCheckboxes.get(field.name).push(field.value);
+              return;
+            }
+
+            const label = field.dataset.label || field.name;
+            const value = fieldValue(field);
+            if (field.required) requiredTotal += 1;
+            if (field.required && !value) missing.push(`${title}: ${label}`);
+            values[field.name] = value;
+            fields.push({ name: field.name, label, required: field.required, value });
+          });
+
+          groupedCheckboxes.forEach((checkboxValues, name) => {
+            const label = name === "priorities" ? "Prioriteringer" : name;
+            values[name] = checkboxValues;
+            fields.push({ name, label, required: false, value: checkboxValues });
+          });
+
+          sections.push({ title, fields });
+        });
+
+        return {
+          generatedAt: generatedAt.toISOString(),
+          generatedAtLocal: generatedAt.toLocaleString("no-NO"),
+          requiredTotal,
+          requiredMissing: missing.length,
+          readyForProductionDataLock: missing.length === 0,
+          missing,
+          values,
+          sections,
+        };
+      }
+
+      function summaryToMarkdown(summary) {
+        const lines = [
+          "OliveX produksjonsintake",
+          `Generert: ${summary.generatedAtLocal}`,
+          `Påkrevde felt: ${summary.requiredTotal - summary.requiredMissing}/${summary.requiredTotal} utfylt`,
+          "",
+        ];
+
+        summary.sections.forEach((section) => {
+          lines.push(`## ${section.title}`);
+          section.fields.forEach((field) => {
+            const value = Array.isArray(field.value)
+              ? field.value.length
+                ? field.value.join(", ")
+                : "Mangler"
+              : field.value || "Mangler";
+            const marker = field.required && !field.value ? " [PÅKREVD]" : "";
+            lines.push(`- ${field.label}${marker}: ${value}`);
+          });
+          lines.push("");
+        });
+
+        if (summary.missing.length) {
+          lines.push("## Mangler før produksjon");
+          summary.missing.forEach((item) => lines.push(`- ${item}`));
+          lines.push("");
+        }
+
+        lines.push("## Neste handlinger");
+        if (summary.missing.length) {
+          lines.push("- Fyll ut eller avklar påkrevde felt før Shopify-produkter, schema, checkout og support-KB låses.");
+          lines.push("- Send denne oppsummeringen sammen med COA, logoeksporter, produktbilder, produsentvideo og juridisk claim-status.");
+        } else {
+          lines.push("- Gå gjennom Shopify datakontrakt og launch-sjekkliste før produksjonsbygg.");
+          lines.push("- Verifiser at alle utfylte felt er juridisk og operativt godkjent før publisering.");
+        }
+        lines.push("");
+        lines.push("Merk: Previewen sender ikke data. Send denne oppsummeringen sammen med relevante filer/lenker.");
+        return lines.join("\n");
+      }
+
+      function buildSummary() {
+        const summary = collectIntake();
+        const text = summaryToMarkdown(summary);
+        latestSummary = { ...summary, text };
+        return latestSummary;
+      }
+
+      function getSummary() {
+        if (!latestSummary || !output.value.trim()) output.value = buildSummary().text;
+        return latestSummary;
+      }
+
+      function downloadText(filename, mimeType, text) {
+        const blob = new Blob([text], { type: mimeType });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function saveDraft() {
+        const data = {};
+        form.querySelectorAll("input, textarea, select").forEach((field) => {
+          if (!field.name) return;
+          if (field.type === "checkbox") {
+            if (!data[field.name]) data[field.name] = [];
+            if (field.checked) data[field.name].push(field.value);
+          } else {
+            data[field.name] = field.value;
+          }
+        });
+
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(data));
+        } catch {
+          // Local storage can be unavailable in strict browser modes.
+        }
+      }
+
+      function loadDraft() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+          form.querySelectorAll("input, textarea, select").forEach((field) => {
+            if (!field.name || saved[field.name] === undefined) return;
+            if (field.type === "checkbox") {
+              field.checked = Array.isArray(saved[field.name]) && saved[field.name].includes(field.value);
+            } else {
+              field.value = saved[field.name];
+            }
+          });
+        } catch {
+          // Ignore malformed local drafts.
+        }
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const summary = buildSummary();
+        output.value = summary.text;
+        saveDraft();
+        setLive(
+          summary.missing.length
+            ? `Oppsummering generert. ${summary.missing.length} påkrevde felt mangler.`
+            : "Oppsummering generert. Ingen påkrevde felt mangler."
+        );
+      });
+
+      form.addEventListener("input", () => {
+        latestSummary = null;
+        saveDraft();
+      });
+      form.addEventListener("change", () => {
+        latestSummary = null;
+        saveDraft();
+      });
+
+      document.querySelector("[data-copy-summary]").addEventListener("click", async () => {
+        getSummary();
+
+        try {
+          await navigator.clipboard.writeText(output.value);
+          setLive("Oppsummering kopiert.");
+        } catch {
+          output.focus();
+          output.select();
+          setLive("Kunne ikke kopiere automatisk. Marker teksten og kopier manuelt.");
+        }
+      });
+
+      document.querySelector("[data-copy-missing]").addEventListener("click", async () => {
+        const summary = getSummary();
+        const text = summary.missing.length
+          ? ["Mangler før OliveX-produksjon", ...summary.missing.map((item) => `- ${item}`)].join("\n")
+          : "Ingen påkrevde felt mangler i produksjonsintake.";
+
+        try {
+          await navigator.clipboard.writeText(text);
+          setLive(summary.missing.length ? "Mangelliste kopiert." : "Status kopiert. Ingen påkrevde felt mangler.");
+        } catch {
+          output.value = text;
+          output.focus();
+          output.select();
+          setLive("Kunne ikke kopiere automatisk. Mangellisten er lagt i tekstfeltet.");
+        }
+      });
+
+      document.querySelector("[data-download-summary]").addEventListener("click", () => {
+        const summary = getSummary();
+        downloadText("olivex-produksjonsintake.md", "text/markdown;charset=utf-8", summary.text);
+        setLive("Markdown-fil generert.");
+      });
+
+      document.querySelector("[data-download-json]").addEventListener("click", () => {
+        const summary = getSummary();
+        downloadText(
+          "olivex-produksjonsintake.json",
+          "application/json;charset=utf-8",
+          JSON.stringify(summary, null, 2)
+        );
+        setLive("JSON-fil generert.");
+      });
+
+      document.querySelector("[data-clear-intake]").addEventListener("click", () => {
+        form.reset();
+        output.value = "";
+        latestSummary = null;
+        try {
+          localStorage.removeItem(storageKey);
+        } catch {
+          // Ignore storage cleanup failures.
+        }
+        setLive("Skjema nullstilt.");
+      });
+
+      loadDraft();
+    </script>
+  </body>
+</html>

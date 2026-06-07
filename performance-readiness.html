@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Performance readiness</title>
+    <meta
+      name="description"
+      content="Produksjonsreview for OliveX performance, Core Web Vitals, medievekt, Shopify-apper, tredjepartsscripts og lanseringsbudsjett."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Performance readiness</p>
+          <h1>Premium må også være raskt.</h1>
+          <p>
+            Denne siden gjør Core Web Vitals, medievekt, Shopify-apper, video, consent, support og tredjepartsscripts
+            til konkrete go/no-go-punkter før OliveX går live.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./product-olivex-superolje.html">Produktside</a>
+          <a class="secondary" href="./seo-merchant-readiness.html">SEO/AEO</a>
+          <a class="secondary" href="./accessibility-readiness.html">Tilgjengelighet</a>
+          <a class="secondary" href="./launch-checklist.html">Lansering</a>
+          <a class="secondary" href="./index.html">Leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="perf-rule-title">
+        <p class="eyebrow">Produksjonsregel</p>
+        <h2 id="perf-rule-title">Mål på ekte mobilopplevelse, ikke bare pen desktop-preview.</h2>
+        <p>
+          Den statiske previewen er lett. Produksjonsrisikoen kommer når Shopify-theme, apper, video, pixels,
+          cookie/CMP, supportwidget og checkout kobles inn. Derfor må ytelse være en lanseringsgate.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="targets-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Core Web Vitals</p>
+          <h2 id="targets-title">Mål som må holdes i produksjon</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>2.5s</span>
+            <strong>LCP</strong>
+            <p>Largest Contentful Paint bør være under 2,5 sekunder for minst 75 % av sidevisningene.</p>
+          </article>
+          <article class="risk-yellow">
+            <span>200ms</span>
+            <strong>INP</strong>
+            <p>Interaction to Next Paint bør være under 200 ms, også etter app- og checkout-scripts.</p>
+          </article>
+          <article class="risk-yellow">
+            <span>0.1</span>
+            <strong>CLS</strong>
+            <p>Cumulative Layout Shift bør være under 0,1. Media, sticky cart, cookiebanner og chat må ikke flytte layout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="current-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Nåværende statisk preview</p>
+          <h2 id="current-title">Utgangspunktet er lett nok til review</h2>
+          <p>Filstørrelsene under er lokale kildefiler, ikke komprimert Shopify/CDN-overføring.</p>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>HTML</strong>
+            <p>Forside ca. 28 KB. Produktside ca. 16 KB.</p>
+          </article>
+          <article>
+            <strong>CSS / JS</strong>
+            <p>`styles.css` ca. 40 KB og `app.js` ca. 40 KB. Ingen framework-bundle i previewen.</p>
+          </article>
+          <article>
+            <strong>Hero</strong>
+            <p>Hero JPG ca. 296 KB, preloaded og brukt med eksplisitt bredde/høyde.</p>
+          </article>
+          <article>
+            <strong>Logo</strong>
+            <p>Synlig OliveX-wordmark ca. 40 KB. SVG/optimal eksport bør erstatte raster-logo i produksjon.</p>
+          </article>
+          <article>
+            <strong>Nedover siden</strong>
+            <p>Produkt-placeholder ca. 428 KB og produsentposter ca. 600 KB ligger lenger ned i opplevelsen.</p>
+          </article>
+          <article>
+            <strong>Tredjeparter</strong>
+            <p>Previewen laster ingen analytics, ads, chat, remote fonts eller eksterne scripts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="budget-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Performance budget</p>
+          <h2 id="budget-title">Anbefalt budsjett for Shopify-produksjon</h2>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Critical path</h3>
+            <ul>
+              <li>Hero/LCP-bilde under ca. 350 KB etter optimalisering.</li>
+              <li>CSS som blokkerer render holdes under ca. 100 KB.</li>
+              <li>Initial JS under ca. 150 KB gzip der det er realistisk.</li>
+              <li>Ingen tredjepartsscript i critical path uten klar verdi.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Media</h3>
+            <ul>
+              <li>Bruk moderne formater der Shopify/CDN støtter det.</li>
+              <li>Sett width/height eller aspect-ratio på alle media.</li>
+              <li>Lazy-load below-the-fold bilder.</li>
+              <li>Video bruker poster og `preload="metadata"`.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Apps</h3>
+            <ul>
+              <li>Mål kostnaden av CMP, chat, reviews, subscriptions og shipping app.</li>
+              <li>Fjern app-embed scripts som ikke brukes.</li>
+              <li>Last supportagent først etter samtykke/brukerintensjon hvis mulig.</li>
+              <li>Hold checkout-risiko separat fra storefront-måling.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Stabilitet</h3>
+            <ul>
+              <li>Sticky kjøp, cookiebanner og chat må ikke dekke fokus eller skyve innhold.</li>
+              <li>Produktkort, størrelsestabeller og badges får stabile dimensjoner.</li>
+              <li>Fontstrategi må unngå store layout shifts.</li>
+              <li>Variantbytte skal ikke endre layoutbredde.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="risk-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Produksjonsrisiko</p>
+          <h2 id="risk-title">Det som mest sannsynlig ødelegger hastigheten</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-amber">Må måles</span>
+            <strong>Shopify-apper</strong>
+            <p>CMP, review-app, subscriptions, shipping, chat og tracking kan legge inn scripts på alle sider.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må måles</span>
+            <strong>Produsentvideo</strong>
+            <p>Video skal ikke autoloade tung fil. Bruk poster, metadata-preload og egen QA på mobilnett.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">No-go</span>
+            <strong>Uoptimaliserte packshots</strong>
+            <p>Store PNG-er eller originalfoto direkte i theme kan ødelegge LCP og mobilopplevelse.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må måles</span>
+            <strong>Fonts</strong>
+            <p>Eksterne fontkall eller sen fontlasting kan gi treg førstevisning og layout shift.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må måles</span>
+            <strong>Supportagent</strong>
+            <p>Live widget bør lazy-loades og ikke blokkere kjøpsreise, consent eller checkout.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">No-go</span>
+            <strong>Tracking før consent</strong>
+            <p>Analytics/ads skal ikke lastes før samtykke. Dette er både privacy- og performance-risiko.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="test-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Testmatrise</p>
+          <h2 id="test-title">Må kjøres etter Shopify-oppsett</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Lighthouse mobile</strong>
+            <p>Forside, produktside, cart state og policy/support-sider etter appene er installert.</p>
+          </article>
+          <article>
+            <strong>Real device</strong>
+            <p>iPhone/Android på mobilnett: hero, variantvalg, sticky purchase, cookiebanner og FAQ/support.</p>
+          </article>
+          <article>
+            <strong>Resource inventory</strong>
+            <p>Liste alle scripts, CSS, bilder, fonts og tredjepartsdomener før noindex fjernes.</p>
+          </article>
+          <article>
+            <strong>Checkout path</strong>
+            <p>Mål handoff til Shopify checkout, Vipps/kort og Posten/Bring uten uventet venting eller layout shift.</p>
+          </article>
+          <article>
+            <strong>Consent states</strong>
+            <p>Test avvis, godta og preferanser. Analytics/ads må kun lastes etter riktig consent.</p>
+          </article>
+          <article>
+            <strong>RUM etter launch</strong>
+            <p>Følg Core Web Vitals i Search Console/CrUX eller valgt RUM-verktøy etter trafikk kommer inn.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="go-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Go/no-go</p>
+          <h2 id="go-title">Ikke lanser før dette er dokumentert</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Core Web Vitals</h3>
+            <p>LCP, INP og CLS er testet på mobil etter theme, media, app embeds, CMP og support er aktivert.</p>
+          </article>
+          <article>
+            <h3>Mediebudsjett</h3>
+            <p>Hero, packshots, produsentposter og video er optimalisert og har stabile dimensjoner.</p>
+          </article>
+          <article>
+            <h3>Tredjeparter</h3>
+            <p>Alle tredjepartsressurser har eier, formål, consent-status og målt performance-kostnad.</p>
+          </article>
+          <article>
+            <h3>Shopify</h3>
+            <p>Ubrukte app embeds, theme sections og scripts er fjernet før live.</p>
+          </article>
+          <article>
+            <h3>Checkout</h3>
+            <p>Kjøpsflyt, betaling og frakt er testet for hastighet og stabilitet på mobil.</p>
+          </article>
+          <article>
+            <h3>Monitoring</h3>
+            <p>Search Console/Core Web Vitals eller RUM følges etter lansering og første trafikk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-title">Kildene som styrer performance-beslutningene</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>web.dev Web Vitals</h3>
+            <p><a href="https://web.dev/articles/vitals">Core Web Vitals thresholds and definitions</a></p>
+          </article>
+          <article>
+            <h3>Google Search</h3>
+            <p><a href="https://developers.google.com/search/docs/appearance/page-experience">Page experience guidance</a></p>
+          </article>
+          <article>
+            <h3>Lighthouse scoring</h3>
+            <p><a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring">Performance scoring documentation</a></p>
+          </article>
+          <article>
+            <h3>Chrome DevTools</h3>
+            <p><a href="https://developer.chrome.com/docs/devtools/performance">Performance panel documentation</a></p>
+          </article>
+          <article>
+            <h3>Shopify performance</h3>
+            <p><a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance">Theme performance best practices</a></p>
+          </article>
+          <article>
+            <h3>Shopify images</h3>
+            <p><a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance/optimized-images">Optimized images guidance</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

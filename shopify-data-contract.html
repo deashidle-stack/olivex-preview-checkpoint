@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Shopify datakontrakt</title>
+    <meta
+      name="description"
+      content="Datakontrakt for OliveX Shopify-produksjon: produkter, varianter, metafields, COA, media, SEO/schema, support og QA-gates."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Shopify datakontrakt</p>
+          <h1>Produktdata skal eie kjøpsopplevelsen.</h1>
+          <p>
+            Denne kontrakten viser hvor OliveX-data skal ligge i Shopify før previewen kan bli en ekte nettbutikk.
+            Målet er å unngå hardkodede priser, størrelser, batchverdier, claims og supportfakta i temaet.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./production-build-brief.html">Produksjonsbrief</a>
+          <a class="secondary" href="./shopify-theme/README.md">Shopify theme</a>
+          <a class="secondary" href="./docs/SHOPIFY_DATA_CONTRACT_2026-06-07.md">Markdown</a>
+          <a class="secondary" href="./docs/SHOPIFY_DATA_CONTRACT_FIELDS_2026-06-07.csv">CSV-feltliste</a>
+          <a class="secondary" href="./index.html">Til hub</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="rule-title">
+        <p class="eyebrow">Hovedregel</p>
+        <h2 id="rule-title">Ingen produktfakta skal være sannere i temaet enn i Shopify-dataene.</h2>
+        <p>
+          Theme-seksjonene kan vise opplevelsen, men Shopify-produkter, varianter, metafields, media, policy-sider og
+          godkjent support-kunnskap må være autoritativ kilde før lansering.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="ownership-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Eierskap</p>
+          <h2 id="ownership-title">Hvilken datakilde eier hva?</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Product</span>
+            <strong>Kommersiell vare</strong>
+            <p>Tittel, handle, status, produktkategori, beskrivelse, SEO title/description, vendor, collections og media.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Variant</span>
+            <strong>Det som kjøpes</strong>
+            <p>Størrelse/ml, pris, SKU, barcode/GTIN, lager, vekt, fraktplikt, avgift og variantbilde.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Metafields</span>
+            <strong>Produktbevis</strong>
+            <p>Batch, opprinnelse, lab, metode, testdato, COA-lenke, dosering, advarsler og godkjente claimvilkår.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Metaobjects</span>
+            <strong>Gjenbrukbare dokumenter</strong>
+            <p>COA-records, produsentvideo, FAQ/support-kilder, returvilkår, fraktforklaringer og juridisk godkjente claims.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Apps</span>
+            <strong>Operativ handel</strong>
+            <p>Vipps/MobilePay, Shopify Payments, Posten/Bring, subscriptions, consent/CMP, analytics og Merchant Center feed.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke theme</span>
+            <strong>Skal ikke hardkodes</strong>
+            <p>Priser, ml, SKU, lager, batchverdier, analysebevis, sykdomsclaims, leveringstid eller returfrister.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="product-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Produkter og varianter</p>
+          <h2 id="product-title">Minimumsfelter før produkter kan legges inn</h2>
+        </div>
+        <div class="review-columns">
+          <div>
+            <h3>Product-level</h3>
+            <ul>
+              <li>Title: endelig kommersielt produktnavn.</li>
+              <li>Handle: kort, stabil URL-slug.</li>
+              <li>Product category og type: juridisk avklart kategori.</li>
+              <li>Description: godkjent, claim-sikker produkttekst.</li>
+              <li>Media: packshot, miljøbilder, eventuell video/poster.</li>
+              <li>SEO title og meta description.</li>
+              <li>Status: draft til claims, pris, lager, frakt og vilkår er godkjent.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Variant-level</h3>
+            <ul>
+              <li>Variant title: faktisk størrelse, helst med ml.</li>
+              <li>Price og compare-at price hvis relevant.</li>
+              <li>SKU og barcode/GTIN hvis tilgjengelig.</li>
+              <li>Inventory quantity og inventory policy.</li>
+              <li>Weight og dimensions/fraktgrunnlag.</li>
+              <li>Requires shipping og tax behavior.</li>
+              <li>Variant image når størrelsene har ulik emballasje.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="metafields-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Metafields</p>
+          <h2 id="metafields-title">Current scaffold namespace: `lab`</h2>
+          <p>Hvis namespace endres i Shopify, må Liquid-seksjonene oppdateres samtidig.</p>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>`lab.batch_id`</strong>
+            <p>Batch/lot shown in analysebevis and support answers.</p>
+          </article>
+          <article>
+            <strong>`lab.origin`</strong>
+            <p>Country, region, estate or producer. Used for traceability copy.</p>
+          </article>
+          <article>
+            <strong>`lab.lab_name`</strong>
+            <p>Lab that performed the analysis. Required before COA claims go live.</p>
+          </article>
+          <article>
+            <strong>`lab.test_method`</strong>
+            <p>Method such as HPLC. Must match the actual certificate.</p>
+          </article>
+          <article>
+            <strong>`lab.test_date`</strong>
+            <p>Recommended production field. Needed for support and audit freshness.</p>
+          </article>
+          <article>
+            <strong>`lab.certificate_url`</strong>
+            <p>File or URL reference to the actual COA/analysebevis.</p>
+          </article>
+          <article>
+            <strong>`lab.serving_condition`</strong>
+            <p>Claim context, for example 20 g daily intake when conditions are met.</p>
+          </article>
+          <article>
+            <strong>`lab.daily_dose`</strong>
+            <p>Approved daily use text, not personal medical dosage.</p>
+          </article>
+          <article>
+            <strong>`variant.lab.duration`</strong>
+            <p>Variant-specific duration only after final ml and dose are confirmed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="schema-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Schema og merchant</p>
+          <h2 id="schema-title">Structured data får først publiseres når feltene er ekte</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>ProductGroup</h3>
+            <p>Brukes for size variants når produktnavn, varianter, SKU/GTIN, pris, lager og bilder er godkjent.</p>
+          </article>
+          <article>
+            <h3>Offer</h3>
+            <p>Må matche synlig pris, currency, availability, checkout-fakta og produktstatus. Ingen placeholder offers.</p>
+          </article>
+          <article>
+            <h3>Shipping</h3>
+            <p>Posten/Bring-priser og leveringsregler må være endelige før shipping schema eller Merchant Center feed låses.</p>
+          </article>
+          <article>
+            <h3>Returns</h3>
+            <p>MerchantReturnPolicy må matche juridisk godkjente returvilkår og synlig policy-side.</p>
+          </article>
+          <article>
+            <h3>VideoObject</h3>
+            <p>Legges først inn når produsentvideo, poster, transkript, varighet og metadata finnes.</p>
+          </article>
+          <article>
+            <h3>Support KB</h3>
+            <p>FAQ/supportagent skal bruke godkjente dokumenter, ikke frontend-copy som inneholder røde claims.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="workflow-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Arbeidsflyt</p>
+          <h2 id="workflow-title">Datainntak til launch</h2>
+        </div>
+        <div class="launch-phases">
+          <article>
+            <span>01</span>
+            <strong>Intake</strong>
+            <p>Fyll produkt-, variant-, COA-, media-, policy- og kontofelt.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Definitions</strong>
+            <p>Opprett metafield definitions og eventuelle metaobjects i Shopify.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Import</strong>
+            <p>Legg inn produkter/varianter som draft med media og metafields.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Theme</strong>
+            <p>Koble Liquid-seksjoner til feltene, uten hardkodede fallback-fakta.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <strong>Validation</strong>
+            <p>Test produktvisning, kjøp, schema, support, consent og frakt.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <strong>Publish</strong>
+            <p>Fjern noindex først når claims, produkter, betaling og frakt er godkjent.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="nogos-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Data-gates</p>
+          <h2 id="nogos-title">Hvis dette mangler, skal siden fortsatt være i preview</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Mangler pris</strong>
+            <p>Kjøpsknapper skal være deaktivert. Ingen Offer schema.</p>
+          </article>
+          <article>
+            <strong>Mangler ml/størrelse</strong>
+            <p>Størrelsestabell og duration må vise at data mangler.</p>
+          </article>
+          <article>
+            <strong>Mangler COA</strong>
+            <p>Ingen batchverdier, analysebevis-CTA eller claim-kontekst som om dokumentet finnes.</p>
+          </article>
+          <article>
+            <strong>Mangler claim review</strong>
+            <p>Ikke bruk sykdoms-, biomarkør-, medisin- eller effektpåstander i live copy eller support.</p>
+          </article>
+          <article>
+            <strong>Mangler checkout test</strong>
+            <p>Vipps/MobilePay, kort og Posten/Bring skal omtales som plan, ikke som verifisert live flyt.</p>
+          </article>
+          <article>
+            <strong>Mangler support KB</strong>
+            <p>Live-agent skal ikke aktiveres før dokumenter er godkjent, indeksert og testet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="next-title">
+        <p class="eyebrow">Neste steg</p>
+        <h2 id="next-title">Bruk CSV-feltlisten som produksjonsinput.</h2>
+        <p>
+          Når feltene er fylt ut og godkjent, kan theme scaffolden lastes opp til Shopify og kobles mot ekte produkter,
+          varianter, metafields, media og checkout.
+        </p>
+        <div class="hub-actions inline">
+          <a class="primary" href="./docs/SHOPIFY_DATA_CONTRACT_FIELDS_2026-06-07.csv">Åpne CSV-feltliste</a>
+          <a class="secondary" href="./docs/PRODUCT_INTAKE_TEMPLATE.csv">Produktintake CSV</a>
+          <a class="secondary" href="./docs/SHOPIFY_METAFIELDS.md">Metafield-plan</a>
+          <a class="secondary" href="./production-build-brief.html">Produksjonsbrief</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

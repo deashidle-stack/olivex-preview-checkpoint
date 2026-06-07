@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Deploy og deling</title>
+    <meta
+      name="description"
+      content="Deploy- og delingsinstruks for OliveX preview-hubben, Netlify Drop-pakken og riktig kunde-lenke."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Deploy og deling</p>
+          <h1>Publiser hubben som første side.</h1>
+          <p>
+            Netlify Drop-pakken er laget slik at rotlenken åpner leveranseoversikten. Storefronten er fortsatt med, men
+            ligger som et valg i hubben slik at kontakten får riktig kontekst før nettsiden vurderes.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./client-handoff.html">Kundehandoff</a>
+          <a class="secondary" href="./index.html">Preview-hub</a>
+          <a class="secondary" href="./website.html">Nettsiden</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="package-title">
+        <p class="eyebrow">Pakke</p>
+        <h2 id="package-title">Bruk den slanke Drop-pakken når previewen skal deles offentlig.</h2>
+        <p>
+          `share-preview/` er komplett arbeidsmateriale og inneholder QA-screenshots. Den slanke deploy-pakken som ble
+          brukt til offentlig deling ligger lokalt i `deliverables/olivex-preview-hub-netlify-drop/`. Den beholder hub,
+          storefront, review-sider, docs, Shopify-scaffold og visuelle assets, men utelater det tunge QA-bildearkivet.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="deploy-steps-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Netlify Drop</p>
+          <h2 id="deploy-steps-title">Slik publiserer du riktig preview-opplevelse</h2>
+          <p>
+            Offisiell Netlify-dokumentasjon sier at manuell deploy ikke kjører build-kommando, og at du kan lage et
+            nytt site ved å dra en prosjektmappe med site-filer til Netlify Drop.
+          </p>
+        </div>
+        <div class="review-steps">
+          <article>
+            <span>01</span>
+            <strong>Bygg pakken</strong>
+            <p>Kjør `node scripts/build-netlify-drop-package.cjs` fra prosjektroten.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Åpne folder</strong>
+            <p>Bruk `deliverables/olivex-preview-hub-netlify-drop/`, ikke hele `share-preview/`.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Dra til Netlify</strong>
+            <p>Dra folderen til Netlify Drop. Ikke dra ZIP-en hvis Netlify UI-et ber om en folder.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Test rotlenken</strong>
+            <p>Den offentlige root-URL-en skal vise preview-hubben med `Kundehandoff` og `Åpne nettsiden`.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <strong>Åpne nettsiden</strong>
+            <p>I hubben skal storefronten ligge på `website.html`, ikke som root-siden.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <strong>Send e-post</strong>
+            <p>Lim root-URL-en inn i e-postutkastet fra kundehandoff-siden.</p>
+          </article>
+          <article>
+            <span>07</span>
+            <strong>Ny versjon</strong>
+            <p>Ved endringer: bygg pakken på nytt og dra den oppdatert folderen til samme Netlify-prosjekt.</p>
+          </article>
+          <article>
+            <span>08</span>
+            <strong>Ikke live</strong>
+            <p>Previewen er fortsatt `noindex` og mangler produktdata, claims, checkout og fraktkontoer.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="contents-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Innhold</p>
+          <h2 id="contents-title">Hva pakken inneholder</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Root hub</h3>
+            <p>`index.html` i deploy-pakken er preview-hubben, ikke storefronten.</p>
+          </article>
+          <article>
+            <h3>Storefront</h3>
+            <p>`website.html` viser selve OliveX-nettsiden med levert hero-copy og kildeærlig produktstatus.</p>
+          </article>
+          <article>
+            <h3>Reviewmateriale</h3>
+            <p>Reviewguide, handoff, datakontrakt, produksjonsbrief, intake, claims, checkout, SEO og accessibility.</p>
+          </article>
+          <article>
+            <h3>Noindex</h3>
+            <p>Alle HTML-sider har `noindex,nofollow`; pakken inkluderer også `robots.txt` og `_headers`.</p>
+          </article>
+          <article>
+            <h3>Utelatt</h3>
+            <p>QA-screenshots utelates fra den slanke Drop-pakken for raskere opplasting og mindre støy.</p>
+          </article>
+          <article>
+            <h3>Dokumentasjon</h3>
+            <p>Markdown-dokumenter og Shopify-scaffold følger med som produksjonsgrunnlag.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="verify-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Go/no-go</p>
+          <h2 id="verify-title">Sjekk dette før du sender lenken</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Root</strong>
+            <p>Offentlig URL uten ekstra sti åpner hubben.</p>
+          </article>
+          <article>
+            <strong>Nettsiden</strong>
+            <p>`Åpne nettsiden` i hubben åpner `website.html`.</p>
+          </article>
+          <article>
+            <strong>Handoff</strong>
+            <p>`Kundehandoff` åpner e-posttekst og reviewrekkefølge.</p>
+          </article>
+          <article>
+            <strong>Copy</strong>
+            <p>Forsiden bruker levert OliveX hero og ikke intern salg-/IA-strategi.</p>
+          </article>
+          <article>
+            <strong>Data</strong>
+            <p>Produktpriser, størrelser og analyseverdier er ikke diktet inn.</p>
+          </article>
+          <article>
+            <strong>Previewstatus</strong>
+            <p>Forklar at dette ikke er live checkout eller produksjonsklar nettbutikk.</p>
+          </article>
+        </div>
+        <div class="hub-actions inline">
+          <a class="primary" href="./client-handoff.html">Åpne kundehandoff</a>
+          <a class="secondary" href="./docs/NETLIFY_DROP_PREVIEW_PACKAGE_2026-06-07.md">Åpne teknisk notat</a>
+          <a class="secondary" href="./index.html">Til preview-hub</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="source-title">
+        <p class="eyebrow">Kilde</p>
+        <h2 id="source-title">Netlify-kilde sjekket 7. juni 2026</h2>
+        <p>
+          Kilde: Netlify Docs, `Create deploys`, særlig seksjonen om manuell deploy og drag-and-drop.
+          URL: `https://docs.netlify.com/deploy/create-deploys/`.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

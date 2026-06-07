@@ -1,0 +1,467 @@
+:root {
+  --ink: #151817;
+  --muted: #66716d;
+  --surface: #fbfaf5;
+  --mineral: #315f50;
+  --deep: #153a32;
+  --ice: #dcefed;
+  --amber: #b88338;
+  --line: rgba(21, 24, 23, 0.16);
+  --white: #ffffff;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  background: #0f211d;
+  color: var(--ink);
+}
+
+.slide {
+  position: relative;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  overflow: hidden;
+  padding: clamp(34px, 5vw, 74px);
+  background: var(--surface);
+  display: grid;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--amber);
+  font-size: clamp(0.74rem, 1.3vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 560;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 980px;
+  margin-bottom: 22px;
+  color: #fff;
+  font-size: clamp(3.5rem, 9vw, 8.8rem);
+  line-height: 0.92;
+}
+
+h2 {
+  max-width: 1050px;
+  margin-bottom: 22px;
+  font-size: clamp(2.8rem, 7vw, 7rem);
+  line-height: 0.94;
+}
+
+p {
+  max-width: 800px;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 2vw, 1.55rem);
+  line-height: 1.45;
+}
+
+.cover {
+  color: #fff;
+  background: var(--deep);
+}
+
+.cover-image,
+.cover-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.86) contrast(1.04);
+}
+
+.cover-shade {
+  background:
+    linear-gradient(90deg, rgba(9, 23, 19, 0.94), rgba(9, 23, 19, 0.66) 48%, rgba(9, 23, 19, 0.18)),
+    linear-gradient(0deg, rgba(9, 23, 19, 0.72), transparent 50%);
+}
+
+.cover-copy,
+.slide-mark {
+  position: relative;
+  z-index: 1;
+}
+
+.cover-copy p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.slide-mark {
+  align-self: end;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 760;
+}
+
+.split {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
+  gap: clamp(34px, 7vw, 90px);
+}
+
+.brief-list {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.brief-list span {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 18px 22px;
+  background: #fff;
+  color: var(--deep);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 760;
+}
+
+.statement {
+  background: var(--deep);
+  color: #fff;
+  place-items: center start;
+}
+
+.statement h2 {
+  max-width: 1180px;
+  color: #fff;
+}
+
+.statement p {
+  max-width: 930px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.matrix {
+  grid-template-rows: auto 1fr;
+  gap: 44px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  align-self: stretch;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.comparison div {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: clamp(28px, 5vw, 64px);
+  background: #fff;
+}
+
+.comparison strong {
+  color: var(--amber);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  text-transform: uppercase;
+}
+
+.comparison span {
+  color: var(--ink);
+  font-size: clamp(1.4rem, 3vw, 3.1rem);
+  line-height: 1.03;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.passport,
+.visual {
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
+  gap: clamp(28px, 6vw, 74px);
+  background: #fff;
+}
+
+.passport-visual,
+.visual-image {
+  min-height: 72dvh;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.passport-visual img,
+.visual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88);
+}
+
+.passport-copy dl {
+  display: grid;
+  gap: 1px;
+  margin: 28px 0 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.passport-copy dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  background: var(--surface);
+}
+
+dt {
+  color: var(--muted);
+}
+
+dd {
+  margin: 0;
+  color: var(--deep);
+  font-weight: 820;
+  text-align: right;
+}
+
+.architecture {
+  background:
+    linear-gradient(90deg, var(--surface), rgba(251, 250, 245, 0.82)),
+    radial-gradient(circle at 86% 22%, var(--ice), transparent 34%);
+}
+
+.architecture ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 1120px;
+  margin: 36px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+  list-style: none;
+}
+
+.architecture li {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: #fff;
+  font-size: clamp(1rem, 1.9vw, 1.45rem);
+  font-weight: 760;
+}
+
+.architecture li span,
+.timeline-row span {
+  color: var(--amber);
+  font-weight: 900;
+}
+
+.stack {
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.82fr);
+  gap: clamp(36px, 7vw, 90px);
+  color: #fff;
+  background: var(--deep);
+}
+
+.stack h2,
+.stack p {
+  color: #fff;
+}
+
+.stack p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.stack-lines {
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.stack-lines span {
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-weight: 760;
+}
+
+.visual {
+  background: var(--surface);
+}
+
+.visual-copy {
+  align-self: center;
+}
+
+.timeline {
+  grid-template-rows: auto auto 1fr;
+  gap: 24px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  align-self: stretch;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.timeline-row div {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 310px;
+  padding: 26px;
+  background: #fff;
+}
+
+.timeline-row strong {
+  color: var(--deep);
+  font-size: clamp(1.3rem, 2.2vw, 2.1rem);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+}
+
+.timeline-row p {
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+}
+
+.close {
+  place-items: center start;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(21, 58, 50, 0.96), rgba(49, 95, 80, 0.84)),
+    radial-gradient(circle at 86% 18%, rgba(220, 239, 237, 0.72), transparent 26%);
+}
+
+.close h2 {
+  color: #fff;
+}
+
+.close p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.close a {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: var(--amber);
+  color: #15110a;
+  font-weight: 820;
+  text-decoration: none;
+}
+
+.deck-nav {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(15, 33, 29, 0.78);
+  color: #fff;
+  backdrop-filter: blur(16px);
+}
+
+.deck-nav button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.deck-nav span {
+  min-width: 54px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 940px) {
+  .slide {
+    min-height: auto;
+    padding: 78px 20px;
+  }
+
+  .split,
+  .passport,
+  .visual,
+  .stack {
+    grid-template-columns: 1fr;
+  }
+
+  .passport-visual,
+  .visual-image {
+    min-height: 360px;
+  }
+
+  .comparison,
+  .architecture ol,
+  .timeline-row {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-nav {
+    left: 12px;
+    right: 12px;
+    justify-content: space-between;
+  }
+}
+
+@media print {
+  html {
+    scroll-snap-type: none;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .deck-nav {
+    display: none;
+  }
+}

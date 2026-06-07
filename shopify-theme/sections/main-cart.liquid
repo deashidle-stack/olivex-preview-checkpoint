@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ 'cart.title' | t }}</p>
+    <h1>{{ 'cart.title' | t }}</h1>
+  </div>
+
+  {% if cart.item_count > 0 %}
+    <form action="{{ routes.cart_url }}" method="post">
+      <div class="evidence-grid">
+        {% for item in cart.items %}
+          <article>
+            <h3>{{ item.product.title }}</h3>
+            <p>{{ item.variant.title }} &ndash; {{ item.final_line_price | money }}</p>
+            <label for="CartQuantity-{{ item.index | plus: 1 }}">{{ 'products.quantity' | t }}</label>
+            <input
+              id="CartQuantity-{{ item.index | plus: 1 }}"
+              class="quantity-input"
+              type="number"
+              name="updates[]"
+              value="{{ item.quantity }}"
+              min="0"
+            >
+          </article>
+        {% endfor %}
+      </div>
+      <p class="product-price">{{ cart.total_price | money }}</p>
+      <button class="button secondary" type="submit" name="update">Oppdater kurv</button>
+      <button class="button" type="submit" name="checkout">Gå til checkout</button>
+    </form>
+  {% else %}
+    <p>Kurven er tom.</p>
+    <a class="button" href="{{ routes.root_url }}">Se produkter</a>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Main cart",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Accessibility readiness</title>
+    <meta
+      name="description"
+      content="Nettleservennlig tilgjengelighetsreview for OliveX: WCAG, keyboard, fokus, skjermleser, mobil, video, skjema og checkout."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Accessibility readiness</p>
+          <h1>Tilgjengelighet må testes gjennom hele kjøpsreisen, ikke bare på forsiden.</h1>
+          <p>
+            Denne reviewen samler WCAG-mål, risikoflater og manuell testmatrise for OliveX før Shopify, checkout,
+            video, dokumentasjon og support går live.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./product-olivex-superolje.html">Produktside</a>
+          <a class="secondary" href="./checkout-readiness.html">Checkout readiness</a>
+          <a class="secondary" href="./support-agent-kb.html">Support KB</a>
+          <a class="secondary" href="./index.html">Til leveranseoversikt</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="a11y-rule-title">
+        <p class="eyebrow">Operativ regel</p>
+        <h2 id="a11y-rule-title">Målet er WCAG 2.2 AA for den faktiske nettbutikken.</h2>
+        <p>
+          Previewen har allerede semantisk HTML, fokusstiler, keyboardflyt, live regioner og mobil overflow-QA. Før
+          produksjon må samme standard testes i Shopify-tema, checkout, tredjepartsapper, video, PDF-er og
+          support/FAQ-flyt.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="a11y-status-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Status</p>
+          <h2 id="a11y-status-title">God preview-retning, men ikke ferdig produksjonsgodkjenning</h2>
+        </div>
+        <div class="claim-summary">
+          <article class="risk-yellow">
+            <span>6</span>
+            <strong>Preview-kontroller etablert</strong>
+            <p>Skip-link, synlig fokus, cart dialog, radio/tabs-keyboard, live region og mobil overflow er testet.</p>
+          </article>
+          <article class="risk-amber">
+            <span>9</span>
+            <strong>Må testes i Shopify</strong>
+            <p>Checkout, betalingsapper, Posten/Bring, skjemaer, video, COA/PDF, cookies, support og 200 % zoom.</p>
+          </article>
+          <article class="risk-red">
+            <span>0</span>
+            <strong>Produksjonsaudit fullført</strong>
+            <p>Det finnes ennå ingen axe/Lighthouse/VoiceOver/Shopify checkout-pass på live-butikk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="surface-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Risikoflater</p>
+          <h2 id="surface-title">Områdene som lett blir utilgjengelige</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Preview OK</span>
+            <strong>Handlekurv</strong>
+            <p>Dialog må ha riktig fokus, `aria-expanded`, inert bakgrunn, escape/close og statusmeldinger.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Preview OK</span>
+            <strong>Variantvalg</strong>
+            <p>Størrelse og kjøpsvalg må kunne brukes med tastatur, pil/Home/End og tydelig valgt tilstand.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Sticky mobilkjøp</strong>
+            <p>Sticky bar må ikke dekke fokus, cookie-banner, checkoutknapper eller dynamisk innhold.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Cookie/CMP</strong>
+            <p>Avvis, godta, tilpass og lagre må være tastatur- og skjermleservennlig i produksjons-CMP.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Posten/Bring checkout</strong>
+            <p>Hentestedvelger, adressefelt, feilbeskjeder og tracking må fungere med tastatur og skjermleser.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Vipps/kort</strong>
+            <p>Payment app og 3DS må testet i faktisk flow, inkludert feilet betaling og retur til checkout.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Produsentvideo</strong>
+            <p>Video trenger kontroller, norsk teksting, transkript, poster-alt og ingen autoplay med lyd.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Må testes</span>
+            <strong>Analysebevis/PDF</strong>
+            <p>COA må enten være tilgjengelig PDF eller ha HTML-sammendrag av nøkkeldata på produktsiden.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">Ikke ferdig</span>
+            <strong>Live supportagent</strong>
+            <p>Chat-widget må ha label, focus order, statusmeldinger, handoff og ikke skape keyboard trap.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="wcag-title">
+        <div class="section-kicker">
+          <p class="eyebrow">WCAG 2.2 fokus</p>
+          <h2 id="wcag-title">Praktiske krav for OliveX</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Semantikk</h3>
+            <p>Landmarks, headingrekkefølge, tabeller, lister, knapper, skjemaetiketter og tydelige lenketekster.</p>
+          </article>
+          <article>
+            <h3>Fokus</h3>
+            <p>Fokusindikator må være synlig, ikke skjult av sticky UI, og følge logisk leserekkefølge.</p>
+          </article>
+          <article>
+            <h3>Kontrast</h3>
+            <p>Tekst, knapper, fokus, badges og feiltilstander må møte kontrastkrav i alle viewports.</p>
+          </article>
+          <article>
+            <h3>Touchmål</h3>
+            <p>Viktige handlinger må være store nok for mobil, spesielt variantvalg, cart, consent og checkout.</p>
+          </article>
+          <article>
+            <h3>Feil og hjelp</h3>
+            <p>Skjemaer må ha labels, tydelige feil, statusmeldinger og ikke bare placeholder-instruksjon.</p>
+          </article>
+          <article>
+            <h3>Redusert bevegelse</h3>
+            <p>Animasjoner, video og drawer-overganger må respektere `prefers-reduced-motion`.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="test-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Manuell testmatrise</p>
+          <h2 id="test-title">Dette må testes før live</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Keyboard-only</strong>
+            <p>Forside, produktside, cart, consent, FAQ, support, checkout og Posten/Bring uten mus.</p>
+          </article>
+          <article>
+            <strong>VoiceOver</strong>
+            <p>Mac/iOS gjennomgang av landmarks, knapper, skjemafelter, cart dialog og statusmeldinger.</p>
+          </article>
+          <article>
+            <strong>200 % zoom</strong>
+            <p>Ingen horisontal scroll, overlapp eller skjult kjøpsknapp ved browser zoom.</p>
+          </article>
+          <article>
+            <strong>390 px mobil</strong>
+            <p>Sticky cart, cookie banner, tabeller, FAQ, support og checkout uten overlapp.</p>
+          </article>
+          <article>
+            <strong>Kontrast</strong>
+            <p>Automatisk og manuell kontrastsjekk for tekst, knapper, fokus og statusfarger.</p>
+          </article>
+          <article>
+            <strong>Forms</strong>
+            <p>Produksjonsintake, checkout, adresse, betaling og support må ha labels og feiltekst.</p>
+          </article>
+          <article>
+            <strong>Video</strong>
+            <p>Produsentvideo med captions, transkript, kontroller, poster og tastaturnavigasjon.</p>
+          </article>
+          <article>
+            <strong>PDF/COA</strong>
+            <p>Analysebevis må være tilgjengelig eller oppsummert i HTML med samme nøkkeldata.</p>
+          </article>
+          <article>
+            <strong>Automatisk scan</strong>
+            <p>Kjør Lighthouse/axe på root, produktside, cart state, checkout-kritiske sider og review-hub.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="go-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Go/no-go</p>
+          <h2 id="go-title">Produksjonsklar først når dette er dokumentert</h2>
+        </div>
+        <div class="checklist-board">
+          <article>
+            <h3>Preview og theme</h3>
+            <ul>
+              <li>Semantisk HTML bevart i Shopify.</li>
+              <li>Alle interaktive elementer er tastaturbrukbare.</li>
+              <li>Ingen horisontal overflow ved 390 px eller 200 % zoom.</li>
+              <li>Fokus er synlig og ikke skjult.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Checkout</h3>
+            <ul>
+              <li>Vipps/kort testet med tastatur og skjermleser.</li>
+              <li>Posten/Bring hentested testet.</li>
+              <li>Feilet betaling og feilbeskjeder er forståelige.</li>
+              <li>Refund/kansellering har tydelig status.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Innhold</h3>
+            <ul>
+              <li>Video har teksting og transkript.</li>
+              <li>Produktbilder har riktig alt eller tom alt.</li>
+              <li>COA/PDF har HTML-sammendrag.</li>
+              <li>Språk er `no`/norsk i live theme.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Dokumentasjon</h3>
+            <ul>
+              <li>Axe/Lighthouse-resultat arkivert.</li>
+              <li>Manuell tastaturtest arkivert.</li>
+              <li>VoiceOver-test arkivert.</li>
+              <li>Opplæring inkluderer tilgjengelig innhold.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Offisielle kilder</p>
+          <h2 id="source-title">Kildene som styrer tilgjengelighetskravene</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>W3C WCAG</h3>
+            <p><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG overview</a></p>
+          </article>
+          <article>
+            <h3>WCAG 2.2</h3>
+            <p><a href="https://www.w3.org/TR/WCAG22/">W3C Recommendation</a></p>
+          </article>
+          <article>
+            <h3>Nytt i 2.2</h3>
+            <p><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WAI summary</a></p>
+          </article>
+          <article>
+            <h3>Norsk uu-tilsyn</h3>
+            <p><a href="https://www.uutilsynet.no/wcag-standarden/wcag-standarden/86">WCAG-standarden</a></p>
+          </article>
+          <article>
+            <h3>WebAIM testing</h3>
+            <p><a href="https://webaim.org/articles/screenreader_testing/">Screen reader testing</a></p>
+          </article>
+          <article>
+            <h3>WAI forms</h3>
+            <p><a href="https://www.w3.org/WAI/tutorials/forms/">Accessible forms tutorial</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

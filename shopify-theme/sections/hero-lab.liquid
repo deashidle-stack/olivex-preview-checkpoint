@@ -1,0 +1,97 @@
+{% liquid
+  assign hero_logo_alt = section.settings.hero_logo_alt | default: shop.name
+%}
+
+<section class="hero-lab">
+  <div class="hero-lab__media" aria-hidden="true">
+    {% if section.settings.image %}
+      {{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'eager', alt: section.settings.image.alt | escape }}
+    {% endif %}
+  </div>
+  <div class="hero-lab__scrim" aria-hidden="true"></div>
+  <div class="hero-lab__inner">
+    <div>
+      {% if section.settings.hero_logo != blank %}
+        {{ section.settings.hero_logo | image_url: width: 520 | image_tag: class: 'hero-lab__logo', loading: 'eager', alt: hero_logo_alt }}
+      {% elsif section.settings.show_default_hero_logo %}
+        <img
+          class="hero-lab__logo"
+          src="{{ 'olivex-wordmark-white.png' | asset_url }}"
+          width="260"
+          height="94"
+          loading="eager"
+          alt="{{ hero_logo_alt | escape }}"
+        >
+      {% endif %}
+      {% if section.settings.eyebrow != blank %}
+        <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+      <h1>{{ section.settings.heading }}</h1>
+      {% if section.settings.text != blank %}
+        <p>{{ section.settings.text }}</p>
+      {% endif %}
+      <div class="hero-lab__actions">
+        {% if section.settings.primary_label != blank and section.settings.primary_link != blank %}
+          <a class="button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }}</a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}
+          <a class="button secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>
+        {% endif %}
+      </div>
+    </div>
+    <aside class="hero-lab__passport" aria-label="Ditt daglige rituale">
+      <p class="eyebrow">{{ section.settings.card_eyebrow }}</p>
+      <h2>{{ section.settings.card_heading }}</h2>
+      <p>{{ section.settings.card_text }}</p>
+      <div class="metric-grid">
+        <div>
+          <span>{{ section.settings.metric_1_label }}</span>
+          <strong>{{ section.settings.metric_1_value }}</strong>
+        </div>
+        <div>
+          <span>{{ section.settings.metric_2_label }}</span>
+          <strong>{{ section.settings.metric_2_value }}</strong>
+        </div>
+        <div>
+          <span>{{ section.settings.metric_3_label }}</span>
+          <strong>{{ section.settings.metric_3_value }}</strong>
+        </div>
+        <div>
+          <span>{{ section.settings.metric_4_label }}</span>
+          <strong>{{ section.settings.metric_4_value }}</strong>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "OliveX hero",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image" },
+    { "type": "image_picker", "id": "hero_logo", "label": "Hero logo" },
+    { "type": "checkbox", "id": "show_default_hero_logo", "label": "Use bundled white OliveX logo when no hero logo is selected", "default": true },
+    { "type": "text", "id": "hero_logo_alt", "label": "Hero logo alt text", "default": "OliveX" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Høyphenolitisk olje" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd." },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av laboratoriet." },
+    { "type": "text", "id": "primary_label", "label": "Primary label", "default": "Kjøp OliveX" },
+    { "type": "url", "id": "primary_link", "label": "Primary link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary label", "default": "Hvorfor denne oljen?" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary link" },
+    { "type": "text", "id": "card_eyebrow", "label": "Card eyebrow", "default": "Slik bruker du den" },
+    { "type": "text", "id": "card_heading", "label": "Card heading", "default": "Ditt daglige rituale" },
+    { "type": "textarea", "id": "card_text", "label": "Card text", "default": "For å oppnå den optimale, dokumenterte effekten, anbefaler vi 15–20 ml (1,5 til 2 spiseskjeer) hver morgen." },
+    { "type": "text", "id": "metric_1_label", "label": "Metric 1 label", "default": "Dosering" },
+    { "type": "text", "id": "metric_1_value", "label": "Metric 1 value", "default": "15–20 ml" },
+    { "type": "text", "id": "metric_2_label", "label": "Metric 2 label", "default": "Hvordan" },
+    { "type": "text", "id": "metric_2_value", "label": "Metric 2 value", "default": "Helseshot" },
+    { "type": "text", "id": "metric_3_label", "label": "Metric 3 label", "default": "Mat" },
+    { "type": "text", "id": "metric_3_value", "label": "Metric 3 value", "default": "Kald bruk" },
+    { "type": "text", "id": "metric_4_label", "label": "Metric 4 label", "default": "Viktig" },
+    { "type": "text", "id": "metric_4_value", "label": "Metric 4 value", "default": "Ikke steking" }
+  ],
+  "presets": [{ "name": "OliveX hero" }]
+}
+{% endschema %}

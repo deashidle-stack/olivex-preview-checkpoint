@@ -1,0 +1,42 @@
+{
+  "accessibility": {
+    "skip_to_content": "Gå til innhold"
+  },
+  "cart": {
+    "open": "Åpne handlekurv",
+    "title": "Kurv"
+  },
+  "general": {
+    "footer_navigation": "Bunnmeny",
+    "navigation": "Hovedmeny",
+    "read_more": "Les mer"
+  },
+  "privacy": {
+    "accept_all": "Godta alle",
+    "analytics": "Analyse",
+    "choices": "Personvernvalg",
+    "customize": "Tilpass",
+    "eyebrow": "Personvern",
+    "heading": "Informasjonskapsler",
+    "marketing": "Markedsføring",
+    "necessary": "Nødvendige",
+    "reject_optional": "Avvis valgfrie",
+    "save": "Lagre valg"
+  },
+  "products": {
+    "add_to_cart": "Legg i kurv",
+    "choose": "Velg",
+    "duration": "Varighet",
+    "one_time_purchase": "Engangskjøp",
+    "price": "Pris",
+    "price_per_ml": "Ca. pris per ml",
+    "purchase_option": "Kjøpsvalg",
+    "quantity": "Antall",
+    "recurring_delivery": "Fast levering",
+    "requires_size_data": "Krever størrelsesdata",
+    "select_size": "Velg størrelse",
+    "size": "Størrelse",
+    "sold_out": "Utsolgt",
+    "use_case": "Brukssituasjon"
+  }
+}

@@ -1,0 +1,65 @@
+{% liquid
+  assign card_product = product
+  assign current_variant = card_product.selected_or_first_available_variant
+%}
+
+{% if card_product != blank %}
+  <article class="product-card" data-product-shell>
+    <a class="product-card__image" href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
+      {% if card_product.featured_image %}
+        {{ card_product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: card_product.featured_image.alt | escape }}
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </a>
+    <div class="product-card__body">
+      <p class="eyebrow">{{ card_product.type | default: 'Dokumentert produkt' }}</p>
+      <h3><a href="{{ card_product.url }}">{{ card_product.title }}</a></h3>
+      <p>{{ card_product.description | strip_html | truncate: 150 }}</p>
+      <p class="product-card__price" data-current-price>{{ current_variant.price | money }}</p>
+
+      {% form 'product', card_product, class: 'product-form', data-product-form: true %}
+        {% if card_product.variants.size > 1 %}
+          <label for="Variant-{{ section.id }}-{{ card_product.id }}">{{ 'products.select_size' | t }}</label>
+          <select
+            class="variant-select"
+            id="Variant-{{ section.id }}-{{ card_product.id }}"
+            name="id"
+            data-variant-select
+          >
+            {% for variant in card_product.variants %}
+              <option
+                value="{{ variant.id }}"
+                data-price="{{ variant.price | money }}"
+                {% if variant == current_variant %}selected{% endif %}
+                {% unless variant.available %}disabled{% endunless %}
+              >
+                {{ variant.title }} &ndash; {{ variant.price | money }}
+              </option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
+        {% endif %}
+
+        <label for="Quantity-{{ section.id }}-{{ card_product.id }}">{{ 'products.quantity' | t }}</label>
+        <input
+          class="quantity-input"
+          id="Quantity-{{ section.id }}-{{ card_product.id }}"
+          type="number"
+          name="quantity"
+          value="1"
+          min="1"
+        >
+
+        <button class="product-form__submit" type="submit" {% unless current_variant.available %}disabled{% endunless %}>
+          {% if current_variant.available %}
+            {{ 'products.add_to_cart' | t }}
+          {% else %}
+            {{ 'products.sold_out' | t }}
+          {% endif %}
+        </button>
+      {% endform %}
+    </div>
+  </article>
+{% endif %}

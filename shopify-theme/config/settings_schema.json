@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "text",
+        "id": "brand_tagline",
+        "label": "Brand tagline",
+        "default": "Mer enn en matolje."
+      },
+      {
+        "type": "textarea",
+        "id": "footer_note",
+        "label": "Footer note",
+        "default": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_privacy_controls",
+        "label": "Show privacy controls",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "privacy_notice_text",
+        "label": "Privacy notice text",
+        "default": "Vi bruker nødvendige informasjonskapsler for at nettbutikken skal fungere. Analyse og markedsføring er av til du samtykker."
+      }
+    ]
+  }
+]

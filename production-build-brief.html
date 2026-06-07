@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OliveX | Produksjonsbrief</title>
+    <meta
+      name="description"
+      content="Produksjonsbrief for å gjøre OliveX-previewen om til en ekte Shopify-butikk med betaling, frakt, SEO, consent, supportagent og QA."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#173c34" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Gå til innhold</a>
+
+    <main class="hub review-page" id="main">
+      <section class="hero review-hero">
+        <div>
+          <img class="hub-logo" src="./assets/olivex-wordmark-cropped.png" alt="OliveX" />
+          <p class="eyebrow">Produksjonsbrief</p>
+          <h1>Fra preview til ekte Shopify-butikk.</h1>
+          <p>
+            Dette er arbeidsbriefen for å gjøre OliveX-opplevelsen produksjonsklar uten å miste kildedisiplinen,
+            kjøpsflyten eller kravene til trygg handel.
+          </p>
+        </div>
+        <div class="hub-actions" aria-label="Hurtiglenker">
+          <a class="primary" href="./website.html">Åpne nettsiden</a>
+          <a class="secondary" href="./product-olivex-superolje.html">Produktside</a>
+          <a class="secondary" href="./production-intake.html">Produksjonsdata</a>
+          <a class="secondary" href="./producer-video-handoff.html">Videohandoff</a>
+          <a class="secondary" href="./legal-policy-readiness.html">Juridisk</a>
+          <a class="secondary" href="./performance-readiness.html">Performance</a>
+          <a class="secondary" href="./training-ops-readiness.html">Opplæring</a>
+          <a class="secondary" href="./request-coverage.html">Kravdekning</a>
+          <a class="secondary" href="./shopify-theme-handoff.html">Theme handoff</a>
+          <a class="secondary" href="./checkout-readiness.html">Checkout</a>
+          <a class="secondary" href="./seo-merchant-readiness.html">SEO/AEO</a>
+          <a class="secondary" href="./support-agent-kb.html">Support KB</a>
+          <a class="secondary" href="./index.html">Til hub</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="decision-title">
+        <p class="eyebrow">Anbefalt retning</p>
+        <h2 id="decision-title">Bygg produksjon som en datastyrt Shopify-butikk, ikke som en statisk kopi av previewen.</h2>
+        <p>
+          Previewen viser opplevelsen. Produksjonen må bygges rundt Shopify-produkter, varianter, metafields,
+          betalingsapper, fraktregler, juridisk godkjent copy og en kontrollert support-kunnskapsbase.
+        </p>
+      </section>
+
+      <section class="review-section" aria-labelledby="architecture-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Arkitektur</p>
+          <h2 id="architecture-title">Produksjonsstack</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <h3>Shopify theme</h3>
+            <p>Bruk den lokale scaffolden som start. Konverter previewseksjoner til Liquid-seksjoner som henter produkt, variant, COA og mediedata fra Shopify.</p>
+          </article>
+          <article>
+            <h3>Produkter og metafields</h3>
+            <p>Alle størrelser, priser, batchverdier, analysebevis og advarsler skal komme fra produkter/metafields, ikke hardkodes i theme.</p>
+          </article>
+          <article>
+            <h3>Betaling</h3>
+            <p>Kortbetaling settes opp via Shopify Payments eller valgt leverandør. Vipps/MobilePay legges til som faktisk checkout-rute og testordres før live.</p>
+          </article>
+          <article>
+            <h3>Frakt</h3>
+            <p>Posten/Bring må konfigureres med reelle tjenester, hentested, priser, etikett, tracking og returregler i Shopify.</p>
+          </article>
+          <article>
+            <h3>SEO og merchant data</h3>
+            <p>ProductGroup, Product, Offer, shipping og return-policy schema publiseres først når synlige produktdata og butikkregler er endelige.</p>
+          </article>
+          <article>
+            <h3>Supportagent</h3>
+            <p>Agenten bør være server-side, kildebundet og avgrenset. Medisinske spørsmål skal rutes til lege/farmasøyt eller kundeservice, ikke besvares fritt.</p>
+          </article>
+          <article>
+            <h3>Juridisk og policy</h3>
+            <p>Kjøpsvilkår, personvern, cookies, frakt/retur, selskap og produktmerking må være synlige før noindex fjernes.</p>
+          </article>
+          <article>
+            <h3>Performance</h3>
+            <p>Core Web Vitals må måles etter theme, Shopify-apper, video, consent, supportwidget og tracking er aktivert.</p>
+          </article>
+          <article>
+            <h3>Opplæring og drift</h3>
+            <p>Kunden må kunne produkter, metafields/COA, ordre, refund, frakt, support-KB og rapporter før overtakelse.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="data-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Dataflyt</p>
+          <h2 id="data-title">Hva som må bli dynamisk</h2>
+        </div>
+        <div class="review-columns">
+          <div>
+            <h3>Produktdata</h3>
+            <ul>
+              <li>Produktnavn, produkt 2-definisjon og kategori.</li>
+              <li>To varianter per produkt med ml, SKU, pris, lager, vekt og eventuell GTIN.</li>
+              <li>Bilder, video, posterbilde, emballasje og endelige logoeksporter.</li>
+              <li>Produsentvideo med norsk teksting, transkript, rettigheter og godkjente kildefakta.</li>
+              <li>Ingredienser, anbefalt daglig mengde, porsjoner, oppbevaring og advarsler.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Dokumentasjon</h3>
+            <ul>
+              <li>COA/analysebevis med batch-ID, lab, metode, dato og PDF.</li>
+              <li>Godkjente påstander eller trygg produksjonscopy.</li>
+              <li>Frakt-, retur-, personvern-, cookie- og kjøpsvilkår.</li>
+              <li>Juridisk selger/importør, org.nr., adresse, kontakt og supportansvarlig.</li>
+              <li>FAQ-svar som er claim-reviewet og merket med godkjent status.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="phase-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Faseplan</p>
+          <h2 id="phase-title">Anbefalt gjennomføring</h2>
+        </div>
+        <div class="launch-phases">
+          <article>
+            <span>01</span>
+            <strong>Datainntak</strong>
+            <p>Lås produktdata, COA, visuelle assets, claims, vilkår og kontoansvar.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Shopify setup</strong>
+            <p>Opprett dev store, importer theme scaffold, legg inn produkter, metafields og media.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Checkout</strong>
+            <p>Aktiver kort, Vipps/MobilePay og Posten/Bring. Test betaling, capture, refund, frakt og retur.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Content lock</strong>
+            <p>Bytt previewcopy til juridisk godkjent live-copy og legg inn ekte analysebevis/video.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <strong>SEO og agent</strong>
+            <p>Legg inn schema, Merchant Center-data, Search Console og supportagent med godkjent kunnskapsbase.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <strong>Launch QA</strong>
+            <p>Kjør mobil, desktop, WCAG, checkout, tracking, speed, schema, support og testordre før noindex fjernes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="gates-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Go/no-go</p>
+          <h2 id="gates-title">Dette må være grønt før lansering</h2>
+        </div>
+        <div class="test-matrix">
+          <article>
+            <strong>Claims</strong>
+            <p>Ingen sykdoms-, medisin- eller biomarkørpåstander uten juridisk godkjenning og dokumentert grunnlag.</p>
+          </article>
+          <article>
+            <strong>Kjøp</strong>
+            <p>Begge produkter har ekte varianter, priser, lagerstatus og vellykket testordre med kort og Vipps/MobilePay.</p>
+          </article>
+          <article>
+            <strong>Frakt</strong>
+            <p>Posten/Bring viser riktige valg, priser, hentested, etikett, tracking og returflyt.</p>
+          </article>
+          <article>
+            <strong>SEO</strong>
+            <p>Synlig produktdata matcher schema, Merchant Center, canonical, sitemap og Search Console.</p>
+          </article>
+          <article>
+            <strong>Personvern</strong>
+            <p>Consent-banner, privacy policy, cookieoversikt og GA4/ads behavior er godkjent og testet.</p>
+          </article>
+          <article>
+            <strong>Performance</strong>
+            <p>LCP, INP, CLS, medievekt, tredjepartsscripts og Shopify-app embeds er testet på mobil før live.</p>
+          </article>
+          <article>
+            <strong>Support</strong>
+            <p>FAQ/supportagent svarer bare fra godkjent kunnskap og eskalerer medisinske spørsmål.</p>
+          </article>
+          <article>
+            <strong>Opplæring</strong>
+            <p>Kunden har gjennomført praktiske øvelser for produktendring, testordre, refund, tracking og support-handoff.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="review-section" aria-labelledby="source-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Kilder sjekket 7. juni 2026</p>
+          <h2 id="source-title">Produksjonsantakelser som må følges</h2>
+        </div>
+        <div class="claim-register">
+          <article>
+            <span class="risk-pill risk-yellow">Shopify</span>
+            <strong>Betaling</strong>
+            <p>Shopify betalingsmetoder administreres i Shopify admin. Abonnement krever særskilt gateway-/subscription-oppsett.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Vipps</span>
+            <strong>Checkout</strong>
+            <p>Vipps/MobilePay-pluginen lar kunder velge Vipps/MobilePay i checkout, men Express er ikke støttet i Shopify per dokumentasjonen.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-amber">Bring</span>
+            <strong>Frakt</strong>
+            <p>Posten/Bring må testes med live tjenester, pickup point, labels og tracking før det loves som produksjonsklar flyt.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Google</span>
+            <strong>Variantschema</strong>
+            <p>Google anbefaler ProductGroup/Product for varianter, validert med Rich Results Test og URL Inspection før indeksering.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-yellow">Consent</span>
+            <strong>Privacy API</strong>
+            <p>Shopify Customer Privacy API brukes for consent på Shopify-managed surfaces. Ikke manipuler Shopify-cookies direkte.</p>
+          </article>
+          <article>
+            <span class="risk-pill risk-red">AI support</span>
+            <strong>File search</strong>
+            <p>Produksjonsagenten bør bruke godkjent kunnskapsbase og retrieval, med logging og handoff for medisinske tema.</p>
+          </article>
+        </div>
+        <div class="hub-actions inline">
+          <a class="secondary" href="https://help.shopify.com/en/manual/payments">Shopify payments</a>
+          <a class="secondary" href="https://developer.vippsmobilepay.com/docs/plugins-ext/shopify/">Vipps/MobilePay Shopify</a>
+          <a class="secondary" href="https://developer.bring.com/">Bring developer</a>
+          <a class="secondary" href="https://developers.google.com/search/docs/appearance/structured-data/product-variants">Google ProductGroup</a>
+          <a class="secondary" href="https://shopify.dev/docs/api/customer-privacy">Shopify Customer Privacy API</a>
+          <a class="secondary" href="https://developers.openai.com/api/docs/guides/tools-file-search">OpenAI File Search</a>
+        </div>
+      </section>
+
+      <section class="review-band" aria-labelledby="next-title">
+        <p class="eyebrow">Neste praktiske steg</p>
+        <h2 id="next-title">Be kunden fylle produksjonsdata før Shopify bygges.</h2>
+        <p>
+          Før vi låser designet i Shopify bør kunden levere produkt 1 og produkt 2 med størrelser, priser, COA,
+          bilder, video, vilkår, fraktvalg og godkjente påstander. Uten dette må butikken fortsatt være i previewmodus.
+        </p>
+        <div class="hub-actions inline">
+          <a class="primary" href="./production-intake.html">Åpne produksjonsintake</a>
+          <a class="secondary" href="./request-coverage.html">Kravdekning</a>
+          <a class="secondary" href="./training-ops-readiness.html">Opplæring og drift</a>
+          <a class="secondary" href="./shopify-theme-handoff.html">Theme handoff</a>
+          <a class="secondary" href="./docs/PRODUCTION_BUILD_BRIEF_2026-06-07.md">Markdown-brief</a>
+          <a class="secondary" href="./launch-checklist.html">Lanseringssjekkliste</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
