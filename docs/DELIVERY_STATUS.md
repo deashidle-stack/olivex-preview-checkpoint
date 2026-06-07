@@ -142,6 +142,8 @@ Last updated: 2026-06-07.
 - Upgraded the PDP hero, signal rail, analysis/proof area, ritual section and delivery section; fixed PDP H1 clipping and PDP mobile stacking
 - Updated `docs/GENERATED_ASSETS_2026-06-07.md` with the four new body journey image assets
 - Verified local homepage and PDP desktop/mobile with system Chrome: no document-level horizontal overflow, no console errors, body tabs update images, chat accepts typed input, PDP H1 stays inside the hero and PDP ritual stacks on mobile
+- Deployed the visual comment response to GitHub Pages at commit `2ef30a7`
+- Verified public `website.html?rev=2ef30a7` and `product-olivex-superolje.html?rev=2ef30a7` with HTTP 200 and public desktop/mobile browser QA
 
 ## Not Completed Yet
 

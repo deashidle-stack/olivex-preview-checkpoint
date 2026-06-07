@@ -1716,7 +1716,7 @@ Verification:
 
 ## 2026-06-07 Annotated Visual Comment Response Pass
 
-Status: LOCAL_VERIFIED_READY_TO_SYNC_AND_DEPLOY.
+Status: PUBLIC_VERIFIED_AFTER_DEPLOY.
 
 Built in this pass:
 
@@ -1742,6 +1742,10 @@ Local verification:
 - PDP ritual section stacks to one column on mobile.
 - No browser console errors observed in local QA.
 
-Next required step:
+Public deployment:
 
-- Sync root changes to `share-preview/`, rebuild `deliverables/olivex-preview-hub-netlify-drop/`, validate customer copy/link routing, then push updated GitHub Pages checkpoint.
+- Deployed to GitHub Pages at commit `2ef30a7` with message `Address OliveX visual review comments`.
+- Public URLs verified with HTTP 200:
+  - `https://deashidle-stack.github.io/olivex-preview-checkpoint/website.html?rev=2ef30a7`
+  - `https://deashidle-stack.github.io/olivex-preview-checkpoint/product-olivex-superolje.html?rev=2ef30a7`
+- Public Playwright/Chrome QA covered homepage/PDP desktop and mobile with no document-level horizontal overflow, no console errors and no broken images.
