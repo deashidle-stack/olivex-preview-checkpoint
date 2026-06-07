@@ -13,6 +13,10 @@ These images are for preview use only. They do not show final product packaging,
 | OliveX hero editorial | `assets/visuals/olivex-hero-editorial-2026-06-07.jpg` | `assets/visuals/olivex-hero-editorial-2026-06-07.png` | Homepage hero and OliveX product-card visual |
 | Producer poster | `assets/visuals/olivex-producer-poster-2026-06-07.jpg` | `assets/visuals/olivex-producer-poster-2026-06-07.png` | Placeholder background for Greece producer-video section |
 | Product placeholder | `assets/visuals/olivex-product-placeholder-2026-06-07.jpg` | `assets/visuals/olivex-product-placeholder-2026-06-07.png` | Product 2 placeholder visual while real product data is missing |
+| Body journey: heart | `assets/visuals/body-journey/olivex-body-heart-2026-06-07.jpg` | `ig_06e62322d1cfef97016a25def58e7c8191a7991a37806c96f7.png` | Visual storytelling panel for Hjerte tab |
+| Body journey: metabolic | `assets/visuals/body-journey/olivex-body-metabolic-2026-06-07.jpg` | `ig_06e62322d1cfef97016a25df4742b88191b75aa2c92d55062b.png` | Visual storytelling panel for Metabolsk tab |
+| Body journey: liver | `assets/visuals/body-journey/olivex-body-liver-2026-06-07.jpg` | `ig_06e62322d1cfef97016a25df8ef640819191a6970406b05d97.png` | Visual storytelling panel for Fettlever tab |
+| Body journey: brain | `assets/visuals/body-journey/olivex-body-brain-2026-06-07.jpg` | `ig_06e62322d1cfef97016a25e046846c8191a359b80837c3bb28.png` | Visual storytelling panel for Hjerne tab |
 
 JPEGs are used by the site for web weight. PNGs are kept as generated source files.
 
@@ -29,6 +33,10 @@ Copied source files:
 - `ig_03d91a137ba18cd4016a24a16b05248191b098c1edb85a41a0.png`
 - `ig_03d91a137ba18cd4016a24a19435648191b5da963367f162af.png`
 - `ig_03d91a137ba18cd4016a24a1fca1948191ba6ad905a0ff8a50.png`
+- `ig_06e62322d1cfef97016a25def58e7c8191a7991a37806c96f7.png`
+- `ig_06e62322d1cfef97016a25df4742b88191b75aa2c92d55062b.png`
+- `ig_06e62322d1cfef97016a25df8ef640819191a6970406b05d97.png`
+- `ig_06e62322d1cfef97016a25e046846c8191a359b80837c3bb28.png`
 
 Conversion:
 
@@ -83,3 +91,4 @@ Constraints: no words, no logos, no labels, no fake certifications, no seals, no
 - Hero image is decorative in the current HTML and has empty `alt`.
 - Product-card images use product names as alt text through the card renderer.
 - Producer poster is a CSS background on a video placeholder. The real video still needs captions and transcript before production.
+- Body journey images are preview illustrations for storytelling. They must not be presented as medical proof, diagnostic imagery or lab documentation.

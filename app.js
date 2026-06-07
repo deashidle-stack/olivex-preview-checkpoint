@@ -55,24 +55,36 @@ const evidenceCopy = {
     title: "Forebygging av hjerte- og karsykdommer (Hjerteinfarkt og slag)",
     body:
       "Oljen beskytter hjertet ditt på tre måter samtidig: Hindre harskning av kolesterol, lavere blodtrykk og elastiske årer.",
+    image: "./assets/visuals/body-journey/olivex-body-heart-2026-06-07.jpg",
+    imageAlt: "Visualisering av hjerte, blodårer og polyfenoler fra olivenolje",
+    points: ["Hindre harskning av kolesterol", "Lavere blodtrykk", "Elastiske årer"],
   },
   diabetes: {
     step: "02",
     title: "Forebygging av type 2-diabetes og metabolsk syndrom",
     body:
       "Polyfenolene bidrar til å øke kroppens insulinsensitivitet. Dette hjelper cellene dine med å ta opp sukker fra blodet mer effektivt, noe som gir mer stabilt blodsukker og motvirker utviklingen av insulinresistens og type 2-diabetes.",
+    image: "./assets/visuals/body-journey/olivex-body-metabolic-2026-06-07.jpg",
+    imageAlt: "Visualisering av metabolsk balanse, bukspyttkjertel og polyfenoler",
+    points: ["Økt insulinsensitivitet", "Mer stabilt blodsukker", "Motvirker insulinresistens"],
   },
   liver: {
     step: "03",
     title: "Reduksjon av fettlever (Ikke-alkoholisk fettlever)",
     body:
       "Kliniske undersøkelser viser at høyt inntak av polyfenolrik olje reduserer fettansamling i levercellene og demper betennelse i leveren. Dette hjelper organet med dens naturlige fettforbrenning.",
+    image: "./assets/visuals/body-journey/olivex-body-liver-2026-06-07.jpg",
+    imageAlt: "Visualisering av lever, fettlever og polyfenoler fra olivenolje",
+    points: ["Reduserer fettansamling", "Demper betennelse", "Støtter naturlig fettforbrenning"],
   },
   brain: {
     step: "04",
     title: "Nevrologisk beskyttelse",
     body:
       "Hjerneforskning viser at oleocanthal aktiverer kroppens egne mekanismer for å renske ut skadelige proteinavleiringer (amyloid-beta-plakk) i hjernen, de samme avleiringene som knyttes til utviklingen av Alzheimers sykdom.",
+    image: "./assets/visuals/body-journey/olivex-body-brain-2026-06-07.jpg",
+    imageAlt: "Visualisering av hjerne, nervebaner og oleocanthal",
+    points: ["Aktiverer kroppens egne mekanismer", "Rensker ut proteinavleiringer", "Støtter nevrologisk beskyttelse"],
   },
 };
 
@@ -142,6 +154,14 @@ const state = {
   ),
   activeProductIndex: 0,
   cart: new Map(),
+  assistantMessages: [
+    {
+      role: "assistant",
+      title: "OliveX",
+      answer: "Hei. Skriv et spørsmål om bruk, smak, oppbevaring, analysebevis, betaling eller levering.",
+      source: "Medisinske spørsmål bør tas med lege eller farmasøyt.",
+    },
+  ],
 };
 
 const formatter = new Intl.NumberFormat("nb-NO", {
@@ -233,7 +253,7 @@ const assistantTopics = [
     source: "Kilde: nettbutikkspesifikasjon",
   },
   {
-    pattern: /posten|bring|frakt|levering|pakke|sporing/,
+    pattern: /posten|bring|frakt|levering|leveres|levert|sendes|forsendelse|pakke|sporing/,
     title: "Levering",
     answer: "Levering skjer med Posten/Bring. Leveringsvalg, pris, hentested og sporing vises i checkout.",
     source: "Kilde: nettbutikkspesifikasjon",
@@ -640,26 +660,41 @@ function normalizeText(value) {
   return value.trim().toLowerCase();
 }
 
-function renderAssistantAnswer({ title, answer, source, warning = false }, query = "") {
+function renderAssistantMessages() {
   if (!assistantAnswer) return;
-  assistantAnswer.classList.toggle("is-warning", warning);
-  assistantAnswer.innerHTML = `
-    ${
-      query
-        ? `
+  assistantAnswer.classList.toggle("is-warning", state.assistantMessages.some((message) => message.warning));
+  assistantAnswer.innerHTML = state.assistantMessages
+    .map((message) => {
+      if (message.role === "user") {
+        return `
           <div class="chat-bubble user">
             <strong>Du</strong>
-            <span>${escapeHtml(query)}</span>
+            <span>${escapeHtml(message.text)}</span>
           </div>
-        `
-        : ""
-    }
-    <div class="chat-bubble assistant ${warning ? "is-warning" : ""}">
-      <strong>${escapeHtml(title)}</strong>
-      <span>${escapeHtml(answer)}</span>
-      ${source ? `<small>${escapeHtml(source)}</small>` : ""}
-    </div>
-  `;
+        `;
+      }
+
+      return `
+        <div class="chat-bubble assistant ${message.warning ? "is-warning" : ""}">
+          <strong>${escapeHtml(message.title)}</strong>
+          <span>${escapeHtml(message.answer)}</span>
+          ${message.source ? `<small>${escapeHtml(message.source)}</small>` : ""}
+        </div>
+      `;
+    })
+    .join("");
+  assistantAnswer.scrollTop = assistantAnswer.scrollHeight;
+}
+
+function pushAssistantResponse(response, query = "") {
+  if (query) {
+    state.assistantMessages.push({ role: "user", text: query });
+  }
+  state.assistantMessages.push({ role: "assistant", ...response });
+  if (state.assistantMessages.length > 9) {
+    state.assistantMessages = [state.assistantMessages[0], ...state.assistantMessages.slice(-8)];
+  }
+  renderAssistantMessages();
 }
 
 function answerAssistant(query) {
@@ -667,7 +702,7 @@ function answerAssistant(query) {
   if (!assistantAnswer) return;
 
   if (!normalized) {
-    renderAssistantAnswer({
+    pushAssistantResponse({
       title: "Skriv et spørsmål.",
       answer: "Du kan spørre om smak, bruk, dosering, oppbevaring, analysebevis, Vipps eller levering.",
       source: "Kilde: FAQ og informasjonen på siden",
@@ -676,7 +711,7 @@ function answerAssistant(query) {
   }
 
   if (assistantMedicalPattern.test(normalized)) {
-    renderAssistantAnswer({
+    pushAssistantResponse({
       title: "Medisinske spørsmål må håndteres av helsepersonell.",
       answer:
         "Jeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.",
@@ -687,14 +722,14 @@ function answerAssistant(query) {
 
   const topic = assistantTopics.find((item) => item.pattern.test(normalized));
   if (topic) {
-    renderAssistantAnswer(topic, query);
+    pushAssistantResponse(topic, query);
     return;
   }
 
   const match = faqs.find((faq) => normalizeText(`${faq.question} ${faq.answer}`).includes(normalized));
   if (match) {
     if (assistantMedicalPattern.test(normalizeText(`${match.question} ${match.answer}`))) {
-      renderAssistantAnswer({
+      pushAssistantResponse({
         title: "Dette FAQ-treffet krever manuell vurdering.",
         answer:
           "Spørsmålet kan handle om helse, sykdom, biomarkører eller medisiner. Ta det med lege, farmasøyt eller support.",
@@ -702,7 +737,7 @@ function answerAssistant(query) {
       }, query);
       return;
     }
-    renderAssistantAnswer({
+    pushAssistantResponse({
       title: match.question,
       answer: match.answer,
       source: "Kilde: FAQ på siden",
@@ -710,7 +745,7 @@ function answerAssistant(query) {
     return;
   }
 
-  renderAssistantAnswer({
+  pushAssistantResponse({
     title: "Ingen sikkert treff.",
     answer: `Jeg fant ikke et sikkert svar på "${query}". Kontakt support for hjelp.`,
   }, query);
@@ -772,7 +807,19 @@ function selectEvidenceTab(tabId, shouldFocus = false) {
     button.tabIndex = selected ? 0 : -1;
     if (selected && shouldFocus) button.focus();
   });
-  evidencePanel.innerHTML = `<span class="journey-step">${copy.step}</span><h3>${copy.title}</h3><p>${copy.body}</p>`;
+  evidencePanel.innerHTML = `
+    <div class="evidence-story-copy">
+      <span class="journey-step">${copy.step}</span>
+      <h3>${copy.title}</h3>
+      <p>${copy.body}</p>
+      <ul>
+        ${copy.points.map((point) => `<li>${point}</li>`).join("")}
+      </ul>
+    </div>
+    <figure class="evidence-story-visual">
+      <img src="${copy.image}" alt="${copy.imageAlt}" loading="lazy" decoding="async" />
+    </figure>
+  `;
 }
 
 document.addEventListener("click", (event) => {
@@ -939,14 +986,15 @@ faqSearch?.addEventListener("input", (event) => {
 
 assistantForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  answerAssistant(assistantInput?.value || "");
+  const query = assistantInput?.value || "";
+  answerAssistant(query);
+  if (assistantInput) assistantInput.value = "";
 });
 
 document.addEventListener("click", (event) => {
   const promptButton = event.target.closest("[data-assistant-prompt]");
   if (!promptButton) return;
   const prompt = promptButton.dataset.assistantPrompt || "";
-  if (assistantInput) assistantInput.value = prompt;
   answerAssistant(prompt);
 });
 
@@ -965,6 +1013,7 @@ else showConsentBanner();
 renderCart();
 renderFaqs();
 selectEvidenceTab("heart");
+renderAssistantMessages();
 hydrateProducerVideo();
 const heroElement = document.querySelector(".hero");
 if (heroElement) {

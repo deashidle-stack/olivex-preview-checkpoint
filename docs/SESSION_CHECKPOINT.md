@@ -1713,3 +1713,35 @@ Verification:
 - Netlify connector and anonymous Netlify API deploy were both blocked by authentication: connector returned `Reauthentication required`; unauthenticated API returned `401 Access Denied`.
 - Published the checkpoint via GitHub Pages instead: `https://deashidle-stack.github.io/olivex-preview-checkpoint/`.
 - Public smoke test returned 200 for `/`, `/website.html`, `/product-olivex-superolje.html`, `/preview-readiness.html`, `/client-handoff.html`, `/shopify-theme-handoff.html` and `/deliverables/olivex-shopify-theme.zip`.
+
+## 2026-06-07 Annotated Visual Comment Response Pass
+
+Status: LOCAL_VERIFIED_READY_TO_SYNC_AND_DEPLOY.
+
+Built in this pass:
+
+- Added `docs/VISUAL_COMMENT_RESPONSE_2026-06-07.md` as the exact comment-to-response record.
+- Added four body-journey storytelling assets under `assets/visuals/body-journey/`.
+- Reworked `#body` so Hjerte, Metabolsk, Fettlever and Hjerne each show their own image and copy when selected.
+- Removed the static right-hand body bio-card and moved biotilgjengelighet into `#bioavailability`.
+- Reworked `#bioavailability` to avoid heading collision and mobile overflow.
+- Reworked homepage `#commerce` and PDP `#delivery` into payment/delivery flow compositions.
+- Reworked support from a simulated prompt surface into a typed local chat log with user and assistant messages.
+- Added explicit chat matching for `leveres`, `levert`, `sendes` and `forsendelse`.
+- Reworked PDP hero typography/grid, `#bruk` ritual section and PDP responsive stacking.
+- Updated generated-asset documentation for the new body images.
+
+Local verification:
+
+- `node --check app.js` passed.
+- Homepage desktop and mobile: no document-level horizontal overflow.
+- PDP desktop and mobile: no document-level horizontal overflow.
+- Body tabs update active copy and image for all four categories.
+- Chat accepts typed questions and returns correct responses for steking and levering.
+- PDP H1 stays inside the hero card on desktop.
+- PDP ritual section stacks to one column on mobile.
+- No browser console errors observed in local QA.
+
+Next required step:
+
+- Sync root changes to `share-preview/`, rebuild `deliverables/olivex-preview-hub-netlify-drop/`, validate customer copy/link routing, then push updated GitHub Pages checkpoint.

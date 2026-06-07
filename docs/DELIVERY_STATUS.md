@@ -133,6 +133,15 @@ Last updated: 2026-06-07.
 - Limited initial homepage FAQ output to five closed questions so the page is shorter and the support chat is visible earlier
 - Added and deployed new web assets: `olivex-wordmark-nav.png`, `olivex-wordmark-white-nav.png`, `olivex-product-ritual-2026-06-07.jpg`, `olivex-body-journey-2026-06-07.jpg` and `oleocanthal-molecule-line-2026-06-07.png`
 - Verified the refreshed local/share/drop/public preview with JS checks, customer-copy validation, 165-file link audit, desktop/mobile browser QA, carousel interaction, chat prompt interaction and live HTTP 200 checks
+- Completed a comment-by-comment visual response pass after annotated feedback on `website.html` and follow-up feedback on `product-olivex-superolje.html`
+- Added `docs/VISUAL_COMMENT_RESPONSE_2026-06-07.md` to map each visual/support/layout comment to the concrete response
+- Rebuilt the "Hva skjer i kroppen" section so each body tab now has its own visible generated storytelling image: heart, metabolic, liver and brain
+- Moved "Naturens egen synergieffekt (Biotilgjengelighet)" into its own section and fixed desktop/mobile heading overflow
+- Rebuilt homepage and PDP payment/delivery into checkout-flow compositions with payment surface plus ordered Vipps/card/Posten/Bring steps
+- Rebuilt homepage support as a real local chat interaction with typed questions, retained chat log and explicit steking/levering responses from approved preview knowledge
+- Upgraded the PDP hero, signal rail, analysis/proof area, ritual section and delivery section; fixed PDP H1 clipping and PDP mobile stacking
+- Updated `docs/GENERATED_ASSETS_2026-06-07.md` with the four new body journey image assets
+- Verified local homepage and PDP desktop/mobile with system Chrome: no document-level horizontal overflow, no console errors, body tabs update images, chat accepts typed input, PDP H1 stays inside the hero and PDP ritual stacks on mobile
 
 ## Not Completed Yet
 

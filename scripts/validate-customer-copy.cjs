@@ -8,11 +8,12 @@ const root = path.resolve(__dirname, "..");
 const HERO = "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.";
 const HERO_LEDE = "En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av laboratoriet.";
 const LOGO_ASSET = "assets/olivex-wordmark-cropped.png";
+const PDP_LOGO_ASSETS = [LOGO_ASSET, "assets/olivex-wordmark-nav.png"];
 const HERO_LOGO_ASSET = "assets/olivex-wordmark-white.png";
 
 const sourceHeadings = [
   "Hvorfor vanlig ekstra virgin olivenolje ikke er nok",
-  "Hva er Oleocanthal – og hvorfor stikker det i halsen?",
+  "Hva er Oleocanthal og hvorfor stikker det i halsen?",
   "Hjertehelse og dokumentert sykdomsforebygging",
   "Naturens egen synergieffekt (Biotilgjengelighet)",
   "Ditt daglige rituale",
@@ -86,7 +87,7 @@ const fullProjectChecks = [
   {
     file: "product-olivex-superolje.html",
     label: "root product page",
-    require: ["OliveX høyphenolitisk olje", HERO, HERO_LEDE, LOGO_ASSET, "Størrelse 1", "Størrelse 2", "Pris kommer"],
+    require: ["OliveX høyphenolitisk olje", HERO, HERO_LEDE, PDP_LOGO_ASSETS, "Størrelse 1", "Størrelse 2", "Pris kommer"],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
@@ -114,7 +115,7 @@ const fullProjectChecks = [
       "OliveX høyphenolitisk olje",
       HERO,
       HERO_LEDE,
-      LOGO_ASSET,
+      PDP_LOGO_ASSETS,
       "Størrelse 1",
       "Størrelse 2",
       "Pris kommer",
@@ -156,7 +157,7 @@ const fullProjectChecks = [
       "OliveX høyphenolitisk olje",
       HERO,
       HERO_LEDE,
-      LOGO_ASSET,
+      PDP_LOGO_ASSETS,
       "Størrelse 1",
       "Størrelse 2",
       "Pris kommer",
@@ -201,7 +202,7 @@ const packageChecks = [
       "OliveX høyphenolitisk olje",
       HERO,
       HERO_LEDE,
-      LOGO_ASSET,
+      PDP_LOGO_ASSETS,
       "Størrelse 1",
       "Størrelse 2",
       "Pris kommer",
@@ -255,12 +256,14 @@ for (const check of checks) {
   const normalizedText = normalizeWhitespace(text);
 
   for (const required of check.require || []) {
-    if (!normalizedText.includes(normalizeWhitespace(required))) {
+    const acceptableRequired = Array.isArray(required) ? required : [required];
+    const hasRequired = acceptableRequired.some((item) => normalizedText.includes(normalizeWhitespace(item)));
+    if (!hasRequired) {
       problems.push({
         file: check.file,
         label: check.label,
         issue: "missing required customer-copy evidence",
-        value: required,
+        value: Array.isArray(required) ? required.join(" OR ") : required,
       });
     }
   }
@@ -284,6 +287,7 @@ const summary = {
   requiredHero: HERO,
   requiredHeroLede: HERO_LEDE,
   logoAsset: LOGO_ASSET,
+  pdpLogoAssets: PDP_LOGO_ASSETS,
   heroLogoAsset: HERO_LOGO_ASSET,
   problems,
 };
