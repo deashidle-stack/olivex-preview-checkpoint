@@ -1,5 +1,53 @@
 # Session Checkpoint
 
+## 2026-06-07 Visual Refresh Checkpoint
+
+Status: PUBLIC_PREVIEW_REFRESH_DEPLOYED.
+
+Public preview:
+
+- `https://deashidle-stack.github.io/olivex-preview-checkpoint/website.html`
+- Published commit: `b03aa8c`
+
+User feedback addressed:
+
+- The homepage looked too generic, too box-heavy and visually dated.
+- Product presentation needed a carousel, not two side-by-side products.
+- Oleocanthal/body/references/payment/support sections needed more premium visual composition.
+- Header logo needed cropped raster assets.
+- Hero logo needed the white logo without a card/background.
+- The support area needed to behave like a chatbot-style experience, not a static form block.
+
+Built in this pass:
+
+- visual refresh CSS layer across homepage sections
+- one-product-at-a-time carousel in `app.js`
+- `chatbot-shell` support layout with user/assistant bubbles
+- initial FAQ limited to five closed questions to reduce homepage length
+- generated/local visual assets for product ritual and body journey
+- transparent oleocanthal molecule asset
+- cropped nav and white hero wordmark assets
+- updated Netlify/GitHub Pages drop build so transparent PNG assets are retained
+- updated source-copy validator for the approved no-dash Oleocanthal heading
+- `docs/VISUAL_REFRESH_CHECKPOINT_2026-06-07.md`
+
+Verification:
+
+- `node --check app.js`, `share-preview/app.js`, drop `app.js`
+- `node scripts/validate-customer-copy.cjs` -> no problems
+- package-mode customer-copy validation against share/drop temp roots -> no problems
+- `node scripts/audit-preview-links.cjs . share-preview deliverables/olivex-preview-hub-netlify-drop` -> 165 HTML files, 0 problems
+- local browser QA desktop/mobile -> no console errors and no horizontal overflow
+- carousel next button switches to product 2 placeholder
+- Vipps prompt returns a chat bubble answer
+- GitHub Pages workflow completed successfully
+- live `website.html` and new transparent oleocanthal PNG return HTTP 200
+
+Remaining risk:
+
+- This is a stronger visual checkpoint, not production readiness.
+- Final product data, real media, lab certificates, legal claim review, Shopify/Vipps/Posten setup and real support-agent backend remain open.
+
 ## 2026-06-06 OliveX Checkpoint
 
 Status: IN_PROGRESS_PREVIEW_PASS_SOURCE_COPY_CORRECTED.

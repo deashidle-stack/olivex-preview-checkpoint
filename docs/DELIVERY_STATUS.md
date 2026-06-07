@@ -127,6 +127,12 @@ Last updated: 2026-06-07.
 - Fixed product-detail page overflow by constraining PDP grid children and product-title typography; product-card images now load eagerly in the preview so root/share/drop storefronts have no broken images in browser QA
 - Updated the Shopify scaffold ZIP with the bundled white transparent hero logo and product/card overflow guards so the Shopify deliverable matches the latest preview direction more closely
 - Added `shopify-theme-handoff.html` and `docs/SHOPIFY_THEME_HANDOFF_2026-06-07.md` so the theme ZIP has a clear draft-upload, CLI/Theme Check, configuration and publish-gate handoff before owner feedback
+- Deployed a full storefront visual refresh to the public GitHub Pages preview at commit `b03aa8c`
+- Added `docs/VISUAL_REFRESH_CHECKPOINT_2026-06-07.md` documenting the visual-refresh decisions, assets, QA results and remaining production blockers
+- Reworked the public homepage with a premium visual layer: stronger hero, cropped OliveX logos, product carousel, visual polyphenol comparison, dark Oleocanthal composition, immersive body journey, reference carousel, cleaner payment/delivery section and chatbot-style support shell
+- Limited initial homepage FAQ output to five closed questions so the page is shorter and the support chat is visible earlier
+- Added and deployed new web assets: `olivex-wordmark-nav.png`, `olivex-wordmark-white-nav.png`, `olivex-product-ritual-2026-06-07.jpg`, `olivex-body-journey-2026-06-07.jpg` and `oleocanthal-molecule-line-2026-06-07.png`
+- Verified the refreshed local/share/drop/public preview with JS checks, customer-copy validation, 165-file link audit, desktop/mobile browser QA, carousel interaction, chat prompt interaction and live HTTP 200 checks
 
 ## Not Completed Yet
 
