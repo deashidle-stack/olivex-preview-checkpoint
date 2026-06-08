@@ -31,6 +31,7 @@ The goal of this pass was to tighten the visual-refresh implementation after rea
 - `share-preview/styles.css`
 - `share-preview/app.js`
 - `deliverables/olivex-preview-hub-netlify-drop/`
+- Follow-up shared-script guard in `app.js` so PDP pages do not run body-tab rendering when `data-evidence-panel` is absent.
 
 ## Verification Performed
 
@@ -59,6 +60,9 @@ Programmatic checks passed:
 - typed assistant question `Hvordan leveres den?` returns Posten/Bring
 - PDP H1 has no document-level horizontal overflow at `1536`, `1351`, `1280`, `1180`, `1024`, `768` or `390`
 - PDP H1 computed wrapping rules: `overflow-wrap: normal`, `word-break: normal`, `hyphens: none`
+- Public GitHub Pages verification passed for commit `419cdfb`
+- Public URLs returned HTTP 200 for hub, storefront, PDP and this documentation file
+- Public Chrome QA confirmed no PDP page errors after the shared-script guard
 
 Screenshot evidence is stored in:
 

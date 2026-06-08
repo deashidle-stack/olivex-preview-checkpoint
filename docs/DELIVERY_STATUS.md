@@ -147,6 +147,8 @@ Last updated: 2026-06-07.
 - Completed the 2026-06-08 follow-up annotation pass: body images now render uncropped beside the copy, biotilgjengelighet no longer has a line through the cards, reference-card numbers are aligned, checkout uses an animated Vipps-led progress flow, FAQ/search/chat are unified into one assistant surface, and the PDP hero H1 no longer splits `høyphenolitisk` on Chrome/MacBook-width viewports
 - Added `docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` documenting every new comment, the implementation response and local Chrome verification evidence
 - Regenerated `share-preview/` and `deliverables/olivex-preview-hub-netlify-drop/` after the 2026-06-08 fixes; local validation passed for JS syntax, the annotated homepage sections, support assistant behavior and PDP H1 responsive wrapping at 1536, 1351, 1280, 1180, 1024, 768 and 390 px
+- Fixed a shared-script PDP page error by guarding body-tab rendering when the body panel is absent; deployed the follow-up annotation pass to GitHub Pages at commit `419cdfb`
+- Verified public `website.html?rev=419cdfb` and `product-olivex-superolje.html?rev=419cdfb` with HTTP 200, no document-level horizontal overflow, no PDP page errors, unified support behavior and the annotated UI checks
 
 ## Not Completed Yet
 

@@ -1752,7 +1752,7 @@ Public deployment:
 
 ## 2026-06-08 Follow-Up Annotation Pass
 
-Status: LOCAL_VERIFIED_PENDING_PUBLIC_DEPLOY.
+Status: PUBLIC_VERIFIED_AFTER_DEPLOY.
 
 Built in this pass:
 
@@ -1764,6 +1764,7 @@ Built in this pass:
 - Removed the separate FAQ search/list from `#support` and unified the section into one assistant surface with quick prompts, typed questions and deterministic preview answers.
 - Added an extra initial assistant message so the chat opens as a complete support surface instead of a near-empty shell.
 - Tightened PDP hero grid and H1 typography so `OliveX høyphenolitisk olje` does not split `høyphenolitisk` at MacBook Air 15 Chrome-like viewport widths.
+- Added shared-script guards so PDP pages do not attempt to render homepage body tabs and cart rendering tolerates partial cart markup.
 - Synced root changes into `share-preview/` and rebuilt `deliverables/olivex-preview-hub-netlify-drop/` plus ZIP.
 
 Local verification:
@@ -1777,3 +1778,12 @@ Local verification:
 - PDP H1 was checked at widths `1536`, `1351`, `1280`, `1180`, `1024`, `768` and `390`; no document-level horizontal overflow occurred.
 - PDP H1 computed wrapping rules are `overflow-wrap: normal`, `word-break: normal` and `hyphens: none`.
 - Screenshot evidence saved under `artifacts/visual-review-2026-06-08/`.
+
+Public deployment:
+
+- Deployed follow-up annotations to GitHub Pages at commit `95e4b67`.
+- Deployed shared-script guard fix at commit `419cdfb`.
+- Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` with `?rev=419cdfb`.
+- Public Chrome QA passed for annotated homepage sections and PDP widths `1536`, `1351`, `1280`, `1180`, `1024`, `768` and `390`.
+- Public QA confirmed no PDP page errors after the guard fix.
+- Public screenshot evidence saved under `artifacts/visual-review-2026-06-08/public-419cdfb/`.
