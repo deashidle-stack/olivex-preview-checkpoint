@@ -159,6 +159,7 @@ Last updated: 2026-06-08.
 - Added the provided grove image as `assets/visuals/olivex-grove-harvest-2026-06-08.png`, used it as a transparent background layer on the product-page `Kvalitetspass`, split the hero H1 so `Ditt` starts the second text block, and replaced the polyphenol comparison's decorative three-line/circle treatment with a calibrated meter; local Chrome QA passed at `1512 x 1100`, `1351 x 987` and `390 x 900`
 - Deployed the hero/polyphenol/Oleocanthal/grove checkpoint to GitHub Pages at commit `cbbeebb`; public browser QA passed with no console errors, no document-level horizontal overflow, correct hero H1 split, `oil-stream` removed, `polyphenol-meter` present, Oleocanthal `01`-`04` grouped, no visible `Kilde: Wikipedia`, and grove background applied on product-page `Kvalitetspass`
 - Fixed the product-page hero/background follow-up: made the supplied grove image visibly present as a subtle PDP page background and stronger `Kvalitetspass` background layer, re-cropped the PDP hero so it shows the bottle/olives/oil bowl instead of an abstract landscape, removed the blank hero top gap, and verified local Chrome at `1351`, `1512` and `390` px with no horizontal overflow
+- Deployed the product-page hero/background follow-up to GitHub Pages at commit `a44bf2f`; public Chrome QA passed at `1351`, `1512` and `390` px with no console errors, no horizontal overflow, visible grove background on the PDP, visible grove background in `Kvalitetspass`, corrected product-image crop and PDP H1 containment
 
 ## Not Completed Yet
 

@@ -1852,7 +1852,7 @@ Public deployment:
 
 ## 2026-06-08 PDP Grove/Product Image Follow-Up
 
-Status: LOCAL_VERIFIED_PENDING_DEPLOY.
+Status: PUBLIC_VERIFIED_AFTER_DEPLOY.
 
 Built in this pass:
 
@@ -1868,3 +1868,14 @@ Local verification:
 - Chrome QA confirmed the desktop hero media and buybox share the same top edge.
 - Chrome QA confirmed the PDP H1 stays inside the buybox on desktop and mobile.
 - Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/pdp-grove-background-r4/`.
+
+Public deployment:
+
+- Deployed to GitHub Pages at commit `a44bf2f` with message `Fix OliveX PDP grove background and hero crop`.
+- GitHub Pages workflow completed successfully.
+- Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/assets/visuals/olivex-grove-harvest-2026-06-08.png` with `?rev=a44bf2f`.
+- Public Chrome QA confirmed no console errors and no document-level horizontal overflow at `1351`, `1512` and `390` px.
+- Public Chrome QA confirmed the PDP body and `Kvalitetspass` both use the supplied grove image.
+- Public Chrome QA confirmed the corrected PDP hero crop and H1 containment.
+- Public homepage smoke QA confirmed the hero H1 split, one `polyphenol-meter` and no old `oil-stream` element.
+- Public evidence saved under `artifacts/visual-review-2026-06-08/public-a44bf2f/`.

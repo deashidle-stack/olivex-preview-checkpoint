@@ -315,3 +315,18 @@ Checks performed:
 Evidence:
 
 `artifacts/visual-review-2026-06-08/pdp-grove-background-r4/`
+
+Public verification passed for commit `a44bf2f`:
+
+- GitHub Pages deploy workflow completed successfully.
+- public hub, storefront, product page and grove image asset returned HTTP 200.
+- public Chrome QA at `1351 x 987`, `1512 x 982` and `390 x 844` found no document-level horizontal overflow.
+- public Chrome QA confirmed the product-page body background uses `olivex-grove-harvest-2026-06-08.png`.
+- public Chrome QA confirmed the product-page `Kvalitetspass` section uses `olivex-grove-harvest-2026-06-08.png`.
+- public Chrome QA confirmed the hero product image uses the corrected crop position.
+- public Chrome QA confirmed the PDP H1 stays inside the buybox.
+- public homepage smoke QA confirmed the hero H1 split, the calibrated polyphenol meter and absence of the old decorative `oil-stream` element.
+
+Public evidence:
+
+`artifacts/visual-review-2026-06-08/public-a44bf2f/`
