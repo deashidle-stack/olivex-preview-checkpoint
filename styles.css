@@ -301,6 +301,10 @@ h1 {
   hyphens: none;
 }
 
+.hero-refresh h1 span {
+  display: block;
+}
+
 h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.1rem, 4vw, 4.2rem);
@@ -5068,6 +5072,8 @@ h3 {
 }
 
 .pdp-refresh-page .quality-passport-section {
+  position: relative;
+  isolation: isolate;
   width: min(1180px, calc(100% - 36px));
   display: grid;
   grid-template-columns: minmax(0, 0.96fr) minmax(440px, 1.08fr);
@@ -5081,7 +5087,29 @@ h3 {
     linear-gradient(135deg, #0f2b25, #255849);
 }
 
+.pdp-refresh-page .quality-passport-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("./assets/visuals/olivex-grove-harvest-2026-06-08.png") center/cover;
+  opacity: 0.34;
+  filter: saturate(0.9) contrast(1.04);
+}
+
+.pdp-refresh-page .quality-passport-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(6, 24, 19, 0.96), rgba(6, 24, 19, 0.76) 43%, rgba(6, 24, 19, 0.52)),
+    radial-gradient(circle at 84% 22%, rgba(240, 196, 109, 0.28), rgba(240, 196, 109, 0) 36%);
+}
+
 .pdp-refresh-page .quality-passport-section > div {
+  position: relative;
+  z-index: 1;
   padding: clamp(30px, 4rem, 56px);
 }
 
@@ -5704,6 +5732,169 @@ h3 {
   color: rgba(21, 33, 29, 0.68);
 }
 
+.concentration-refresh .polyphenol-stage {
+  grid-template-columns: minmax(300px, 0.7fr) minmax(270px, 0.55fr) minmax(360px, 0.82fr);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(245, 239, 227, 0.82)),
+    url("./assets/visuals/olivex-product-ritual-2026-06-07.jpg") center/cover;
+}
+
+.concentration-refresh .polyphenol-stage::after {
+  left: 24%;
+  right: 14%;
+  bottom: -20%;
+  height: 38%;
+  background: linear-gradient(90deg, rgba(240, 196, 109, 0), rgba(240, 196, 109, 0.12), rgba(18, 64, 53, 0.2));
+  opacity: 0.52;
+}
+
+.concentration-refresh .threshold-card {
+  align-content: center;
+}
+
+.concentration-refresh .threshold-card::before {
+  display: none;
+}
+
+.concentration-refresh .threshold-card:not(.is-olive) strong {
+  max-width: 100%;
+  font-size: clamp(3.4rem, 5.15vw, 5.45rem);
+  line-height: 0.9;
+}
+
+.concentration-refresh .threshold-card:not(.is-olive) p {
+  max-width: 18rem;
+}
+
+.polyphenol-meter {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  display: grid;
+  gap: clamp(16px, 2vw, 22px);
+  min-height: clamp(250px, 25vw, 340px);
+  align-content: center;
+  border: 1px solid rgba(15, 43, 37, 0.12);
+  border-radius: 8px;
+  padding: clamp(20px, 2.8vw, 34px);
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.74),
+    0 24px 80px rgba(16, 34, 29, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.meter-labels {
+  display: grid;
+  grid-template-columns: 0.35fr 0.3fr 0.35fr;
+  align-items: end;
+  color: rgba(21, 33, 29, 0.58);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.meter-labels span:nth-child(2) {
+  text-align: center;
+}
+
+.meter-labels span:nth-child(3) {
+  color: var(--mineral);
+  text-align: right;
+}
+
+.meter-track {
+  position: relative;
+  height: 18px;
+  overflow: visible;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(15, 43, 37, 0.12), rgba(15, 43, 37, 0.07)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.meter-track::before,
+.meter-track::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  width: 1px;
+  background: rgba(15, 43, 37, 0.18);
+}
+
+.meter-track::before {
+  left: 36%;
+}
+
+.meter-track::after {
+  left: 93%;
+  background: rgba(240, 196, 109, 0.62);
+}
+
+.meter-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 93%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(199, 143, 55, 0.32), rgba(240, 196, 109, 0.92), rgba(29, 91, 76, 0.82));
+  box-shadow: 0 0 38px rgba(199, 143, 55, 0.22);
+}
+
+.meter-marker {
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: #fffaf1;
+  box-shadow: 0 10px 30px rgba(16, 34, 29, 0.18);
+}
+
+.meter-marker::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: inherit;
+  background: rgba(199, 143, 55, 0.72);
+}
+
+.meter-marker-eu {
+  left: 36%;
+}
+
+.meter-marker-olive {
+  left: 93%;
+  background: #123c33;
+}
+
+.meter-marker-olive::after {
+  background: #f0c46d;
+}
+
+.meter-copy {
+  display: grid;
+  gap: 3px;
+  justify-items: center;
+  color: var(--ink);
+  text-align: center;
+}
+
+.meter-copy span,
+.meter-copy em {
+  color: rgba(21, 33, 29, 0.68);
+  font-style: normal;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.meter-copy strong {
+  color: var(--mineral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.3rem, 4.2vw, 4.1rem);
+  line-height: 0.92;
+}
+
 .oleo-redesign {
   position: relative;
   isolation: isolate;
@@ -6022,5 +6213,380 @@ h3 {
   .oleo-redesign .passport-card-header strong,
   .oleo-redesign .metric-row strong {
     text-align: left;
+  }
+}
+
+/* 2026-06-08 Oleocanthal constellation: split documentation across molecule and copy. */
+.oleo-constellation {
+  min-height: clamp(640px, 54vw, 760px);
+  grid-template-columns: minmax(340px, 0.72fr) minmax(0, 0.98fr);
+  gap: clamp(26px, 4.4vw, 62px);
+  padding: clamp(28px, 4vw, 54px);
+  overflow: hidden;
+}
+
+.oleo-constellation::before {
+  background:
+    radial-gradient(circle at 25% 28%, rgba(240, 196, 109, 0.18), rgba(240, 196, 109, 0) 30%),
+    radial-gradient(circle at 78% 24%, rgba(168, 211, 195, 0.16), rgba(168, 211, 195, 0) 34%),
+    linear-gradient(90deg, rgba(5, 17, 14, 0.28), rgba(5, 17, 14, 0.02) 44%, rgba(5, 17, 14, 0.18));
+}
+
+.oleo-constellation .passport-image,
+.oleo-constellation .passport-content {
+  min-width: 0;
+}
+
+.oleo-constellation .passport-image {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(250px, 0.72fr) auto;
+  gap: clamp(18px, 2.4vw, 30px);
+  align-content: stretch;
+  place-items: stretch;
+  overflow: visible;
+}
+
+.oleo-molecule-stage {
+  isolation: isolate;
+}
+
+.oleo-constellation .passport-image img {
+  position: relative;
+  z-index: 1;
+  grid-row: 1;
+  width: min(600px, 116%);
+  align-self: center;
+  justify-self: center;
+  transform: translateX(-2%) rotate(-3deg);
+  opacity: 0.84;
+}
+
+.oleo-left-panel {
+  position: relative;
+  z-index: 2;
+  grid-row: 2;
+  align-self: end;
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+
+.oleo-info-point {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(5, 17, 14, 0.38);
+  color: rgba(255, 255, 255, 0.74);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 58px rgba(0, 0, 0, 0.16);
+}
+
+.oleo-info-point summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 52px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.oleo-info-point summary::-webkit-details-marker {
+  display: none;
+}
+
+.oleo-info-point summary::after {
+  content: "+";
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  color: #f0c46d;
+  font-weight: 900;
+}
+
+.oleo-info-point[open] summary::after {
+  content: "-";
+}
+
+.oleo-info-point summary span {
+  display: inline-grid;
+  width: 32px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(240, 196, 109, 0.17);
+  color: #f0c46d;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.oleo-info-point summary strong,
+.oleo-info-point summary em {
+  min-width: 0;
+  font-style: normal;
+  grid-column: 2;
+}
+
+.oleo-info-point summary strong {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.oleo-info-point summary em {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  font-weight: 760;
+  line-height: 1.22;
+}
+
+.oleo-info-point p {
+  margin: 0;
+  padding: 0 16px 14px 56px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.46;
+}
+
+.oleo-info-point p strong {
+  color: #fff;
+}
+
+.oleo-constellation .passport-content {
+  align-self: center;
+  display: grid;
+  align-content: center;
+  padding: 0;
+}
+
+.oleo-constellation h2 {
+  max-width: 13ch;
+  font-size: clamp(3rem, 4.1vw, 4.72rem);
+  line-height: 0.91;
+}
+
+.oleo-constellation .passport-content > p:not(.eyebrow):not(.fine-print) {
+  max-width: 38rem;
+  margin-top: clamp(16px, 2vw, 22px);
+  font-size: clamp(1rem, 1.18vw, 1.14rem);
+  line-height: 1.58;
+}
+
+.oleo-constellation .oleo-proof {
+  width: min(100%, 560px);
+  grid-template-columns: minmax(0, max-content) minmax(150px, 0.48fr);
+  margin: clamp(20px, 3vw, 30px) 0;
+  padding: clamp(16px, 2vw, 22px) 0;
+}
+
+.oleo-constellation .oleo-proof strong {
+  font-size: clamp(3.9rem, 6.3vw, 6rem);
+}
+
+.oleo-constellation .oleo-copy-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 0;
+}
+
+.oleo-constellation .oleo-copy-grid p {
+  max-width: none;
+  min-width: 0;
+  padding: 16px 16px 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(6, 22, 18, 0.26);
+  font-size: clamp(0.95rem, 1.05vw, 1.04rem);
+  line-height: 1.54;
+}
+
+.oleo-constellation .oleo-copy-grid p::before {
+  top: 16px;
+  bottom: 16px;
+}
+
+.oleo-deep-dive {
+  margin-top: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(6, 22, 18, 0.32);
+  color: rgba(255, 255, 255, 0.76);
+  overflow: hidden;
+}
+
+.oleo-deep-dive summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.oleo-deep-dive summary::-webkit-details-marker {
+  display: none;
+}
+
+.oleo-deep-dive summary::after {
+  content: "+";
+  grid-column: 3;
+  justify-self: end;
+  color: #f0c46d;
+  font-weight: 900;
+}
+
+.oleo-deep-dive[open] summary::after {
+  content: "-";
+}
+
+.oleo-deep-dive summary span {
+  display: inline-grid;
+  width: 34px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(240, 196, 109, 0.18);
+  color: #f0c46d;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.oleo-deep-dive summary strong {
+  padding-right: 28px;
+  color: #fff;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+}
+
+.oleo-deep-dive p {
+  margin: 0;
+  padding: 0 16px 18px 64px;
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.95rem, 1.05vw, 1.04rem);
+  line-height: 1.56;
+}
+
+.oleo-source-card {
+  margin: clamp(14px, 2vw, 18px) 0 0;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.oleo-source-card .passport-card-header {
+  padding: 14px 16px;
+  background: rgba(5, 17, 14, 0.34);
+}
+
+.oleo-source-card .fine-print {
+  margin: 0;
+  padding: 12px 16px 14px;
+}
+
+@media (max-width: 1160px) {
+  .oleo-constellation {
+    grid-template-columns: minmax(310px, 0.66fr) minmax(0, 1fr);
+    gap: clamp(22px, 3vw, 38px);
+  }
+
+  .oleo-constellation h2 {
+    font-size: clamp(2.85rem, 4.25vw, 4rem);
+  }
+
+  .oleo-constellation .oleo-copy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 940px) {
+  .oleo-constellation {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .oleo-constellation .passport-content {
+    order: 1;
+  }
+
+  .oleo-constellation .passport-image {
+    order: 2;
+    grid-template-rows: minmax(220px, auto) auto;
+  }
+
+  .oleo-constellation h2 {
+    max-width: 12.5ch;
+  }
+
+  .oleo-constellation .passport-image img {
+    width: min(560px, 94%);
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .oleo-constellation {
+    width: min(100% - 28px, 640px);
+    padding: 22px;
+  }
+
+  .oleo-constellation h2 {
+    max-width: 100%;
+    font-size: clamp(2.28rem, 11.5vw, 3.1rem);
+    line-height: 0.96;
+  }
+
+  .oleo-constellation .oleo-proof {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .oleo-constellation .oleo-proof strong {
+    font-size: clamp(3.1rem, 17vw, 4.2rem);
+  }
+
+  .oleo-constellation .oleo-proof > span {
+    max-width: none;
+  }
+
+  .oleo-constellation .passport-image {
+    gap: 14px;
+  }
+
+  .oleo-constellation .passport-image img {
+    width: min(420px, 104%);
+  }
+
+  .oleo-constellation .passport-card-header,
+  .oleo-constellation .metric-row,
+  .oleo-deep-dive summary,
+  .oleo-info-point summary {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 13px 14px;
+  }
+
+  .oleo-info-point summary::after {
+    grid-column: 1;
+  }
+
+  .oleo-info-point p {
+    padding: 0 14px 16px;
+  }
+
+  .oleo-deep-dive summary::after {
+    grid-column: 1;
+    margin-top: 0;
+  }
+
+  .oleo-deep-dive summary strong {
+    padding-right: 0;
+  }
+
+  .oleo-deep-dive p {
+    padding: 0 14px 16px;
   }
 }

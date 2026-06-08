@@ -69,7 +69,10 @@
           <div class="hero-copy">
             <img class="hero-logo-lockup" src="./assets/olivex-wordmark-white-nav.png" alt="" aria-hidden="true" />
             <p class="eyebrow">Høyphenolitisk olje</p>
-            <h1 id="hero-title">Mer enn en matolje. Ditt daglige, flytende kosttilskudd.</h1>
+            <h1 id="hero-title">
+              <span>Mer enn en matolje.</span>
+              <span>Ditt daglige, flytende kosttilskudd.</span>
+            </h1>
             <p class="hero-lede">
               En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av
               laboratoriet.
@@ -145,16 +148,27 @@
           </p>
         </div>
         <div class="polyphenol-stage" aria-label="Sammenligning av polyfenoler">
-          <div class="threshold-card">
+          <div class="threshold-card threshold-card-eu">
             <span>EU-grense for helsepåstand</span>
             <strong>250 mg/kg</strong>
             <p>Minimum for å bruke EUs offisielle helsepåstand.</p>
           </div>
-          <div class="oil-stream" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <em>Nesten tre ganger høyere konsentrasjon</em>
+          <div class="polyphenol-meter" aria-hidden="true">
+            <div class="meter-labels">
+              <span>0</span>
+              <span>250</span>
+              <span>600-700</span>
+            </div>
+            <div class="meter-track">
+              <span class="meter-fill"></span>
+              <span class="meter-marker meter-marker-eu"></span>
+              <span class="meter-marker meter-marker-olive"></span>
+            </div>
+            <div class="meter-copy">
+              <span>Nesten</span>
+              <strong>tre ganger</strong>
+              <em>høyere konsentrasjon</em>
+            </div>
           </div>
           <div class="threshold-card is-olive">
             <span>OliveX</span>
@@ -181,50 +195,65 @@
         </div>
       </section>
 
-      <section class="passport-section oleo-refresh oleo-redesign" id="oleocanthal" aria-labelledby="passport-title">
-        <div class="passport-image">
+      <section class="passport-section oleo-refresh oleo-redesign oleo-constellation" id="oleocanthal" aria-labelledby="passport-title">
+        <div class="passport-image oleo-molecule-stage">
           <img src="./assets/visuals/oleocanthal-molecule-line-2026-06-07.png" alt="Molekylstruktur for oleocanthal" />
+          <div class="oleo-left-panel" aria-label="Oleocanthal forklart">
+            <details class="oleo-info-point" data-accordion-group="oleocanthal" open>
+              <summary>
+                <span>01</span>
+                <strong>Smak</strong>
+                <em>Skarp og pepperaktig</em>
+              </summary>
+              <p>
+                Når du smaker på vår olje, vil du merke en distinkt, skarp og pepperaktig følelse bakerst i halsen.
+                Dette er ikke en feil; det er det ultimate kvalitetstegnet.
+              </p>
+            </details>
+            <details class="oleo-info-point" data-accordion-group="oleocanthal">
+              <summary>
+                <span>02</span>
+                <strong>Forklaring</strong>
+                <em>COX-1 og COX-2</em>
+              </summary>
+              <p>
+                Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
+                totale fenolinnholdet i vår olje.
+              </p>
+            </details>
+            <details class="oleo-info-point" data-accordion-group="oleocanthal">
+              <summary>
+                <span>03</span>
+                <strong>Betennelsesdemping</strong>
+                <em>Uten bivirkninger</em>
+              </summary>
+              <p>
+                <strong>Betennelsesdemping uten bivirkninger:</strong> Mens medisiner kan irritere magesekken, tynne ut
+                blodet eller belaste nyrene ved langvarig bruk, gir vår høyphenolitiske olje en naturlig, lavdose
+                betennelsesdemping som jobber trygt i bakgrunnen – <strong>helt uten negative bivirkninger for kroppen.</strong>
+              </p>
+            </details>
+            <details class="oleo-info-point" data-accordion-group="oleocanthal">
+              <summary>
+                <span>04</span>
+                <strong>Kilde</strong>
+                <em>Beauchamp et al. (Nature, 2005)</em>
+              </summary>
+              <p>
+                I 2005 oppdaget forskere at oleocanthal hemmer kroppens betennelsesenzymer (COX-1 og COX-2) på nøyaktig
+                samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner (som Ibuprofen).
+              </p>
+            </details>
+          </div>
         </div>
         <div class="passport-content">
           <p class="eyebrow">Den unike stjernespilleren</p>
           <h2 id="passport-title">Hva er Oleocanthal og hvorfor stikker det i halsen?</h2>
-          <p>
-            Når du smaker på vår olje, vil du merke en distinkt, skarp og pepperaktig følelse bakerst i halsen.
-            Dette er ikke en feil; det er det ultimate kvalitetstegnet.
-          </p>
           <div class="oleo-proof">
             <strong aria-label="Over 67 prosent"><span>Over</span><span>67&nbsp;%</span></strong>
             <span>av det totale fenolinnholdet i vår olje</span>
           </div>
-          <div class="oleo-copy-grid">
-            <p>
-              Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
-              totale fenolinnholdet i vår olje.
-            </p>
-            <p>
-              I 2005 oppdaget forskere at oleocanthal hemmer kroppens betennelsesenzymer (COX-1 og COX-2) på nøyaktig
-              samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner.
-            </p>
-          </div>
-          <div class="passport-card">
-            <div class="passport-card-header">
-              <span>Oleocanthal</span>
-              <strong>Sensorisk kvalitetstegn</strong>
-            </div>
-            <div class="metric-row">
-              <span>Smak</span>
-              <strong>Skarp og pepperaktig</strong>
-            </div>
-            <div class="metric-row">
-              <span>Forklaring</span>
-              <strong>COX-1 og COX-2</strong>
-            </div>
-            <div class="metric-row">
-              <span>Kilde</span>
-              <strong>Beauchamp et al. (Nature, 2005)</strong>
-            </div>
-          </div>
-          <p class="fine-print">Oleocanthal: Det unike molekylet som kun finnes i olivenolje. Kilde: Wikipedia.</p>
+          <p class="fine-print">Oleocanthal: Det unike molekylet som kun finnes i olivenolje.</p>
         </div>
       </section>
 

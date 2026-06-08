@@ -188,3 +188,78 @@ Public verification passed for commit `b062ffa`:
 Public evidence:
 
 `artifacts/visual-review-2026-06-08/public-b062ffa/`
+
+## Oleocanthal Left-Side Information Revision
+
+Follow-up feedback clarified that the molecule side could not stay decorative. The section needed real information moved to the left, with the four Oleocanthal explanation points kept together and `04` placed at the bottom under the molecule.
+
+Implementation response:
+
+- Removed the decorative circles and diagonal line from the molecule side.
+- Moved the Oleocanthal information into one native `<details>` accordion module on the left side, directly under the molecule.
+- Kept points `01`, `02`, `03` and `04` together in the same left-side module.
+- Placed `04 Kilde` at the bottom of the left-side module.
+- Kept the right side focused on the headline and `Over 67 %` proof statistic.
+- Removed the visible `Kilde: Wikipedia` phrase, while keeping `Oleocanthal: Det unike molekylet som kun finnes i olivenolje.`
+- Restored the source-document wording `(som Ibuprofen)` in the Beauchamp explanation.
+- Kept `Betennelsesdemping uten bivirkninger` in the section, but moved it into progressive disclosure so all source information is present without all text being visible at once.
+
+Local Chrome verification passed at:
+
+- `1512 x 1100`
+- `1351 x 987`
+- `820 x 1180`
+- `390 x 900`
+
+Checks performed:
+
+- no document-level horizontal overflow
+- `01,02,03,04` are present in order inside the left panel
+- only one left-side Oleocanthal detail is open at a time
+- no summary-label overlap in the left module
+- `04` is the bottom item in the left module
+- visible `Kilde: Wikipedia` text is absent
+- `Beauchamp et al. (Nature, 2005)` remains present
+- `(som Ibuprofen)` and `helt uten negative bivirkninger for kroppen` remain in the section HTML
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/oleocanthal-left-content-r5/`
+
+## Hero, Polyphenol Meter And Grove Image Pass
+
+Follow-up feedback identified three additional issues before deployment:
+
+- The hero headline needed `Ditt` moved down to the line with `daglige`.
+- The polyphenol comparison still used decorative connecting lines and a center circle that did not communicate the comparison clearly.
+- The new olive-grove/harvest image should be used as a transparent background in a suitable section or on the product page.
+
+Implementation response:
+
+- Split the hero H1 into two controlled spans:
+  - `Mer enn en matolje.`
+  - `Ditt daglige, flytende kosttilskudd.`
+- Replaced the old polyphenol `oil-stream` element with a calibrated `polyphenol-meter`.
+- Removed the decorative three-line/sphere comparison from the DOM.
+- Kept the same comparison facts: EU threshold `250 mg/kg`, OliveX `600-700 mg/l`, and `Nesten tre ganger høyere konsentrasjon`.
+- Added the provided image as `assets/visuals/olivex-grove-harvest-2026-06-08.png`.
+- Used the grove image as a transparent atmospheric background layer in the product-page `Kvalitetspass` section.
+
+Local Chrome verification passed at:
+
+- `1512 x 1100`
+- `1351 x 987`
+- `390 x 900`
+
+Checks performed:
+
+- no document-level horizontal overflow
+- hero second span starts with `Ditt`
+- `#why .oil-stream` count is `0`
+- `#why .polyphenol-meter` count is `1`
+- polyphenol comparison elements stay inside the stage
+- product-page quality-passport section has the grove image applied as a pseudo-element background
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/hero-polyphenol-pdp-grove-r2/`

@@ -320,6 +320,21 @@ function setLiveMessage(message) {
   if (liveRegion) liveRegion.textContent = message;
 }
 
+function initDetailsAccordions() {
+  const groupedDetails = document.querySelectorAll("details[data-accordion-group]");
+  groupedDetails.forEach((details) => {
+    details.addEventListener("toggle", () => {
+      if (!details.open) return;
+      const group = details.dataset.accordionGroup;
+      groupedDetails.forEach((other) => {
+        if (other !== details && other.dataset.accordionGroup === group) {
+          other.open = false;
+        }
+      });
+    });
+  });
+}
+
 function readConsent() {
   try {
     const saved = localStorage.getItem(CONSENT_KEY);
@@ -1031,6 +1046,7 @@ renderFaqs();
 selectEvidenceTab("heart");
 renderAssistantMessages();
 hydrateProducerVideo();
+initDetailsAccordions();
 const heroElement = document.querySelector(".hero");
 if (heroElement) {
   observer.observe(heroElement);

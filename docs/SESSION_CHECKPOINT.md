@@ -1817,3 +1817,27 @@ Public deployment:
 - Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` with `?rev=b062ffa`.
 - Public browser QA confirmed no console errors, no horizontal overflow, no old `Problemet og løsningen` label, no Oleocanthal proof-label collision and PDP H1 containment at `1536 px`.
 - Public evidence saved under `artifacts/visual-review-2026-06-08/public-b062ffa/`.
+
+## 2026-06-08 Oleocanthal Left-Panel Revision
+
+Status: LOCAL_VERIFIED_PENDING_DEPLOY.
+
+Built in this pass:
+
+- Removed decorative-only circles and diagonal line from the Oleocanthal molecule side.
+- Moved `01 Smak`, `02 Forklaring`, `03 Betennelsesdemping` and `04 Kilde` into one left-side details module under the molecule.
+- Placed `04 Kilde` at the bottom of the left module.
+- Kept the right side focused on the source heading and `Over 67 %` proof statistic.
+- Removed visible `Kilde: Wikipedia`.
+- Kept `Beauchamp et al. (Nature, 2005)`, `(som Ibuprofen)` and `helt uten negative bivirkninger for kroppen` in the section HTML.
+- Added a small shared native-details accordion initializer so only one Oleocanthal detail is open at a time.
+
+Local verification:
+
+- `node --check app.js` passed.
+- `node scripts/validate-customer-copy.cjs` passed.
+- Chrome QA at `1512 x 1100`, `1351 x 987`, `820 x 1180` and `390 x 900` found no document-level horizontal overflow.
+- Chrome QA confirmed `01,02,03,04` are in order in the left panel.
+- Chrome QA confirmed `04` is the bottom item in the left panel.
+- Chrome QA confirmed no summary-label overlap and only one details item is open.
+- Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/oleocanthal-left-content-r5/`.
