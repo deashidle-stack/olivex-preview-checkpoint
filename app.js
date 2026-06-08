@@ -161,6 +161,13 @@ const state = {
       answer: "Hei. Skriv et spørsmål om bruk, smak, oppbevaring, analysebevis, betaling eller levering.",
       source: "Medisinske spørsmål bør tas med lege eller farmasøyt.",
     },
+    {
+      role: "assistant",
+      title: "FAQ-svar",
+      answer:
+        "Jeg kan svare direkte på spørsmål om pris, smak, daglig dose, steking, oppbevaring, analysebevis, Vipps og levering.",
+      source: "Svarene er basert på FAQ og informasjonen på siden.",
+    },
   ],
 };
 

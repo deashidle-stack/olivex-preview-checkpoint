@@ -1749,3 +1749,31 @@ Public deployment:
   - `https://deashidle-stack.github.io/olivex-preview-checkpoint/website.html?rev=2ef30a7`
   - `https://deashidle-stack.github.io/olivex-preview-checkpoint/product-olivex-superolje.html?rev=2ef30a7`
 - Public Playwright/Chrome QA covered homepage/PDP desktop and mobile with no document-level horizontal overflow, no console errors and no broken images.
+
+## 2026-06-08 Follow-Up Annotation Pass
+
+Status: LOCAL_VERIFIED_PENDING_PUBLIC_DEPLOY.
+
+Built in this pass:
+
+- Added `docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` as the follow-up comment-to-response record.
+- Updated `#body` so tab-specific body images render contained, centered and uncropped beside the explanatory copy.
+- Removed the horizontal connector line from `#bioavailability` cards.
+- Normalized reference-card number alignment across the reference carousel/list.
+- Replaced checkout phone route dots with an animated Vipps-led progress flow and labels for selected, confirmed and shipped states.
+- Removed the separate FAQ search/list from `#support` and unified the section into one assistant surface with quick prompts, typed questions and deterministic preview answers.
+- Added an extra initial assistant message so the chat opens as a complete support surface instead of a near-empty shell.
+- Tightened PDP hero grid and H1 typography so `OliveX høyphenolitisk olje` does not split `høyphenolitisk` at MacBook Air 15 Chrome-like viewport widths.
+- Synced root changes into `share-preview/` and rebuilt `deliverables/olivex-preview-hub-netlify-drop/` plus ZIP.
+
+Local verification:
+
+- `node --check app.js` passed.
+- Local Chrome verification confirmed `synergy-flow::before` is `none`.
+- Local Chrome verification confirmed old checkout `.phone-route span` count is `0` and new `.phone-flow` exists.
+- Local Chrome verification confirmed reference-number top positions are aligned.
+- Local Chrome verification confirmed support has no separate FAQ search/list and has one unified assistant log.
+- Typed assistant question `Hvordan leveres den?` returned the Posten/Bring answer.
+- PDP H1 was checked at widths `1536`, `1351`, `1280`, `1180`, `1024`, `768` and `390`; no document-level horizontal overflow occurred.
+- PDP H1 computed wrapping rules are `overflow-wrap: normal`, `word-break: normal` and `hyphens: none`.
+- Screenshot evidence saved under `artifacts/visual-review-2026-06-08/`.
