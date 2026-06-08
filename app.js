@@ -592,6 +592,7 @@ function renderProducts() {
 }
 
 function renderCart() {
+  if (!cartCount) return;
   const entries = [...state.cart.entries()]
     .map(([cartKey, quantity]) => {
       const match = getCartEntry(cartKey);
@@ -602,9 +603,11 @@ function renderCart() {
   const total = entries.reduce((sum, item) => sum + item.quantity * (item.variant.price || 0), 0);
 
   cartCount.textContent = String(totalQuantity);
-  cartTotal.textContent = formatter.format(total);
-  cartEmpty.hidden = entries.length > 0;
+  if (cartTotal) cartTotal.textContent = formatter.format(total);
+  if (cartEmpty) cartEmpty.hidden = entries.length > 0;
   setLiveMessage(totalQuantity ? `Kurven har ${totalQuantity} produkt${totalQuantity === 1 ? "" : "er"}.` : "Kurven er tom.");
+
+  if (!cartItems) return;
 
   cartItems.innerHTML = entries
     .map(
@@ -805,6 +808,7 @@ function closeCart() {
 }
 
 function selectEvidenceTab(tabId, shouldFocus = false) {
+  if (!evidencePanel) return;
   const copy = evidenceCopy[tabId];
   if (!copy) return;
   document.querySelectorAll("[data-tab]").forEach((button) => {
