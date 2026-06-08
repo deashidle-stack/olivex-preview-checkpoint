@@ -263,3 +263,21 @@ Checks performed:
 Evidence:
 
 `artifacts/visual-review-2026-06-08/hero-polyphenol-pdp-grove-r2/`
+
+Public verification passed for commit `cbbeebb`:
+
+- public `website.html?rev=cbbeebb` returned HTTP 200
+- public `product-olivex-superolje.html?rev=cbbeebb` returned HTTP 200
+- public grove image asset returned HTTP 200
+- GitHub Pages deploy workflow completed successfully
+- public browser QA found no console errors
+- public browser QA confirmed no document-level horizontal overflow
+- public browser QA confirmed the hero H1 spans are `Mer enn en matolje.` and `Ditt daglige, flytende kosttilskudd.`
+- public browser QA confirmed `#why .oil-stream` count is `0`
+- public browser QA confirmed `#why .polyphenol-meter` count is `1`
+- public browser QA confirmed the Oleocanthal left module contains `01,02,03,04`, only one item is open, visible `Kilde: Wikipedia` is absent, and Beauchamp/(som Ibuprofen) remains present
+- public browser QA confirmed the product-page `Kvalitetspass` has the grove background applied
+
+Public evidence:
+
+`artifacts/visual-review-2026-06-08/public-cbbeebb/`

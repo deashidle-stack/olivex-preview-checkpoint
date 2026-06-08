@@ -1820,7 +1820,7 @@ Public deployment:
 
 ## 2026-06-08 Oleocanthal Left-Panel Revision
 
-Status: LOCAL_VERIFIED_PENDING_DEPLOY.
+Status: PUBLIC_VERIFIED_AFTER_DEPLOY.
 
 Built in this pass:
 
@@ -1841,3 +1841,11 @@ Local verification:
 - Chrome QA confirmed `04` is the bottom item in the left panel.
 - Chrome QA confirmed no summary-label overlap and only one details item is open.
 - Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/oleocanthal-left-content-r5/`.
+
+Public deployment:
+
+- Deployed to GitHub Pages at commit `cbbeebb` with message `Refine OliveX visual checkpoint`.
+- GitHub Pages workflow completed successfully.
+- Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/assets/visuals/olivex-grove-harvest-2026-06-08.png` with `?rev=cbbeebb`.
+- Public browser QA confirmed no console errors, no document-level horizontal overflow, correct hero H1 split, no old `oil-stream` element, one `polyphenol-meter`, Oleocanthal `01,02,03,04` grouping, no visible `Kilde: Wikipedia`, retained Beauchamp/(som Ibuprofen), and grove background applied on product-page `Kvalitetspass`.
+- Public evidence saved under `artifacts/visual-review-2026-06-08/public-cbbeebb/`.
