@@ -13,7 +13,7 @@ The goal of this pass was to tighten the visual-refresh implementation after rea
 
 | Feedback | Response |
 | --- | --- |
-| Body journey images were cut so parts of the illustration disappeared. | Changed the body visual panels to use contained image rendering, centered panel alignment and non-cropping visual cards. The tab-specific images now remain visible beside the explanatory text instead of being cropped through the middle. |
+| Body journey images were cut so parts of the illustration disappeared. | Updated the direction again after owner feedback: each body tab is now a full-bleed image card. The image fills the entire panel, while the white heading, explanation and benefit chips sit inside the right-side negative space on desktop and inside the lower image area on mobile. |
 | Remove the horizontal line through the biotilgjengelighet cards. | Disabled the `synergy-flow::before` connector line. The section now uses three independent step cards without a line passing through them. |
 | Reference card number `03` was lower than the other numbers. | Normalized reference-card layout with flex column alignment and consistent number spacing. Local Chrome validation confirmed all reference-number top positions are equal. |
 | Remove the three dots at the bottom of the checkout phone and animate the payment flow with Vipps selected. | Replaced the old three-dot route with an animated progress bar and checkout labels: `Valgt`, `Bekreftes`, `Sendes`. Vipps remains the active payment option and has a subtle sweep animation. |
@@ -91,7 +91,9 @@ Implementation response:
 - Rebuilt the PDP analysis section as a premium `Kvalitetspass` composition.
 - Kept `Analysebevis` as the section eyebrow and used a clean passport card for documentation status, polyphenols, oleocanthal, batch, method and document.
 - Added traceability chips for `Opprinnelse`, `Metode`, `Måleverdier` and `PDF-lenke`.
-- Reworked the body section desktop grid so copy and image have explicit non-overlapping columns.
+- Reworked the body section from a split copy/image layout into a full-bleed visual storytelling card.
+- Added per-tab image positioning support in `app.js` and a right-side gradient/scrim so the copy remains readable without becoming another generic info box.
+- Kept body copy inside the image card on desktop and mobile, with the mobile layout moving the copy to the lower part of the image.
 - Reduced body mobile heading size so `sykdomsforebygging` fits inside the 390 px viewport without mid-word splitting.
 
 Local Chrome verification passed at:
@@ -106,3 +108,34 @@ Local Chrome verification passed at:
 Evidence:
 
 `artifacts/visual-review-2026-06-08/macbook-fix-final-local-v2/`
+
+## Body Overlay Correction
+
+The later body-section direction is now the current design source of truth:
+
+- The body image fills the full evidence panel.
+- The body copy lives inside the panel, on the right side where the generated images have usable dark space.
+- Text is constrained to the card and measured for all four tabs: `heart`, `diabetes`, `liver` and `brain`.
+- Mobile uses the same image-as-card principle, but places copy inside the lower portion of the image with a vertical readability gradient.
+
+Additional viewport checks passed for the overlay version:
+
+- `1351 x 1120`
+- `1512 x 1120`
+- `1710 x 1120`
+- `1920 x 1120`
+- `2048 x 1120`
+- `390 x 900`
+
+Checks performed:
+
+- no document-level horizontal overflow
+- no body heading/lead collision
+- body copy stays inside the evidence panel
+- the body image fills the full evidence panel
+- PDP hero title remains inside its buybox at `1512 px`
+- PDP `Kvalitetspass` title and documentation card do not overlap
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/body-overlay-local-r1/`

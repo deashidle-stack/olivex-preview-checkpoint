@@ -1,6 +1,6 @@
 # Delivery Status
 
-Last updated: 2026-06-07.
+Last updated: 2026-06-08.
 
 ## Completed Locally
 
@@ -151,6 +151,8 @@ Last updated: 2026-06-07.
 - Verified public `website.html?rev=419cdfb` and `product-olivex-superolje.html?rev=419cdfb` with HTTP 200, no document-level horizontal overflow, no PDP page errors, unified support behavior and the annotated UI checks
 - Reproduced the MacBook Air 15 Chrome screenshots as wide-viewport layout collisions rather than simple page overflow; redesigned PDP `Analysebevis` into a `Kvalitetspass` section and fixed `Hva skjer i kroppen` body composition with explicit collision tests at 1351, 1512, 1710, 1920, 2048 and 390 px
 - Updated `docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` with the Chrome regression cause, the new QA method and the section redesign response
+- Applied the corrected `Hva skjer i kroppen` direction: each tab image now fills the full card, while the white category text sits inside the right-side image space on desktop and inside the lower image area on mobile
+- Added body-overlay QA evidence in `artifacts/visual-review-2026-06-08/body-overlay-local-r1/` with checks for all four tabs, image-fill behavior, copy containment, heading/lead collision and PDP `Kvalitetspass` overlap
 
 ## Not Completed Yet
 

@@ -56,6 +56,7 @@ const evidenceCopy = {
     body:
       "Oljen beskytter hjertet ditt på tre måter samtidig: Hindre harskning av kolesterol, lavere blodtrykk og elastiske årer.",
     image: "./assets/visuals/body-journey/olivex-body-heart-2026-06-07.jpg",
+    imagePosition: "50% center",
     imageAlt: "Visualisering av hjerte, blodårer og polyfenoler fra olivenolje",
     points: ["Hindre harskning av kolesterol", "Lavere blodtrykk", "Elastiske årer"],
   },
@@ -65,6 +66,7 @@ const evidenceCopy = {
     body:
       "Polyfenolene bidrar til å øke kroppens insulinsensitivitet. Dette hjelper cellene dine med å ta opp sukker fra blodet mer effektivt, noe som gir mer stabilt blodsukker og motvirker utviklingen av insulinresistens og type 2-diabetes.",
     image: "./assets/visuals/body-journey/olivex-body-metabolic-2026-06-07.jpg",
+    imagePosition: "50% center",
     imageAlt: "Visualisering av metabolsk balanse, bukspyttkjertel og polyfenoler",
     points: ["Økt insulinsensitivitet", "Mer stabilt blodsukker", "Motvirker insulinresistens"],
   },
@@ -74,6 +76,7 @@ const evidenceCopy = {
     body:
       "Kliniske undersøkelser viser at høyt inntak av polyfenolrik olje reduserer fettansamling i levercellene og demper betennelse i leveren. Dette hjelper organet med dens naturlige fettforbrenning.",
     image: "./assets/visuals/body-journey/olivex-body-liver-2026-06-07.jpg",
+    imagePosition: "50% center",
     imageAlt: "Visualisering av lever, fettlever og polyfenoler fra olivenolje",
     points: ["Reduserer fettansamling", "Demper betennelse", "Støtter naturlig fettforbrenning"],
   },
@@ -83,6 +86,7 @@ const evidenceCopy = {
     body:
       "Hjerneforskning viser at oleocanthal aktiverer kroppens egne mekanismer for å renske ut skadelige proteinavleiringer (amyloid-beta-plakk) i hjernen, de samme avleiringene som knyttes til utviklingen av Alzheimers sykdom.",
     image: "./assets/visuals/body-journey/olivex-body-brain-2026-06-07.jpg",
+    imagePosition: "50% center",
     imageAlt: "Visualisering av hjerne, nervebaner og oleocanthal",
     points: ["Aktiverer kroppens egne mekanismer", "Rensker ut proteinavleiringer", "Støtter nevrologisk beskyttelse"],
   },
@@ -811,6 +815,7 @@ function selectEvidenceTab(tabId, shouldFocus = false) {
   if (!evidencePanel) return;
   const copy = evidenceCopy[tabId];
   if (!copy) return;
+  evidencePanel.dataset.evidenceState = tabId;
   document.querySelectorAll("[data-tab]").forEach((button) => {
     const selected = button.dataset.tab === tabId;
     button.classList.toggle("is-active", selected);
@@ -828,7 +833,7 @@ function selectEvidenceTab(tabId, shouldFocus = false) {
       </ul>
     </div>
     <figure class="evidence-story-visual">
-      <img src="${copy.image}" alt="${copy.imageAlt}" loading="lazy" decoding="async" />
+      <img src="${copy.image}" alt="${copy.imageAlt}" style="object-position: ${copy.imagePosition || "50% center"}" loading="lazy" decoding="async" />
     </figure>
   `;
 }
