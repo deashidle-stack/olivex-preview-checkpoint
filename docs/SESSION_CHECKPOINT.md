@@ -1879,3 +1879,36 @@ Public deployment:
 - Public Chrome QA confirmed the corrected PDP hero crop and H1 containment.
 - Public homepage smoke QA confirmed the hero H1 split, one `polyphenol-meter` and no old `oil-stream` element.
 - Public evidence saved under `artifacts/visual-review-2026-06-08/public-a44bf2f/`.
+
+## 2026-06-08 Typography And Hero Hierarchy Pass
+
+Status: LOCAL_VERIFIED_PENDING_DEPLOY.
+
+Research:
+
+- Inspected the supplied OliveX logo PDF fonts with `pdffonts`.
+- Confirmed the wordmark is closest to a classic Times/Garamond-style serif, but Times/Times New Roman would feel too default on the site.
+- Compared current 2026 serif/luxury ecommerce direction and practical webfont candidates.
+- Selected `Cormorant Garamond` as the best open-source preview choice.
+- Documented the decision in `docs/TYPOGRAPHY_RESEARCH_2026-06-08.md`.
+
+Built in this pass:
+
+- Added `Cormorant Garamond` to homepage and PDP.
+- Added `--display-font`.
+- Applied the display font to major headings across the storefront and PDP.
+- Rebuilt the homepage hero H1 as three controlled desktop lines:
+  - `Mer enn en matolje.`
+  - `Ditt daglige,`
+  - `flytende kosttilskudd.`
+- Reduced homepage hero heading size and tightened hero rhythm so the buttons and trust strip get more space.
+- Lifted/rebalanced the hero ritual card.
+
+Local verification:
+
+- Chrome QA at `1351 x 987`, `1512 x 982` and `390 x 844` found no document-level horizontal overflow.
+- Chrome QA confirmed homepage H1 uses `Cormorant Garamond`.
+- Chrome QA confirmed homepage desktop hero H1 is three lines.
+- Chrome QA confirmed `Mer enn en matolje.` does not wrap on desktop.
+- Chrome QA confirmed PDP H1 uses `Cormorant Garamond` and stays inside its buybox.
+- Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/hero-type-pass-r2/`.

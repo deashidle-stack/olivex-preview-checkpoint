@@ -160,6 +160,7 @@ Last updated: 2026-06-08.
 - Deployed the hero/polyphenol/Oleocanthal/grove checkpoint to GitHub Pages at commit `cbbeebb`; public browser QA passed with no console errors, no document-level horizontal overflow, correct hero H1 split, `oil-stream` removed, `polyphenol-meter` present, Oleocanthal `01`-`04` grouped, no visible `Kilde: Wikipedia`, and grove background applied on product-page `Kvalitetspass`
 - Fixed the product-page hero/background follow-up: made the supplied grove image visibly present as a subtle PDP page background and stronger `Kvalitetspass` background layer, re-cropped the PDP hero so it shows the bottle/olives/oil bowl instead of an abstract landscape, removed the blank hero top gap, and verified local Chrome at `1351`, `1512` and `390` px with no horizontal overflow
 - Deployed the product-page hero/background follow-up to GitHub Pages at commit `a44bf2f`; public Chrome QA passed at `1351`, `1512` and `390` px with no console errors, no horizontal overflow, visible grove background on the PDP, visible grove background in `Kvalitetspass`, corrected product-image crop and PDP H1 containment
+- Completed a typography research and hero hierarchy pass: logo PDF fonts were inspected, `Cormorant Garamond` was selected as the best open-source heading font close to the OliveX wordmark, homepage/PDP headings now use the display font, and the homepage hero headline is controlled as three desktop lines instead of five
 
 ## Not Completed Yet
 
