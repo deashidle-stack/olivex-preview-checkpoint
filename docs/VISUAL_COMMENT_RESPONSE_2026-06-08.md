@@ -281,3 +281,37 @@ Public verification passed for commit `cbbeebb`:
 Public evidence:
 
 `artifacts/visual-review-2026-06-08/public-cbbeebb/`
+
+## PDP Product Image And Grove Background Visibility Fix
+
+Follow-up feedback on the product page identified two concrete issues:
+
+- The provided grove/harvest image was not visible enough in the public product-page experience.
+- The product-page hero crop did not read as a representative product image.
+
+Implementation response:
+
+- Kept the provided asset at `assets/visuals/olivex-grove-harvest-2026-06-08.png`.
+- Added the grove/harvest image as a page-level atmospheric background on the PDP, with a cream overlay so it gives life to the background without competing with the commerce content.
+- Increased the visibility of the same image inside the `Kvalitetspass` section.
+- Re-cropped the PDP hero image so the bottle, olives and oil bowl are visible instead of an abstract landscape crop.
+- Removed the unintended blank top padding inside the PDP hero composition.
+
+Local Chrome verification passed at:
+
+- `1351 x 987`
+- `1512 x 982`
+- `390 x 844`
+
+Checks performed:
+
+- no document-level horizontal overflow
+- product-page body background uses `olivex-grove-harvest-2026-06-08.png`
+- product-page `Kvalitetspass` section uses `olivex-grove-harvest-2026-06-08.png`
+- PDP hero media and buybox start at the same top edge on desktop
+- PDP hero product image uses the corrected crop position
+- PDP H1 stays inside the buybox at desktop and mobile widths
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/pdp-grove-background-r4/`

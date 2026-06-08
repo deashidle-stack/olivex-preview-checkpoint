@@ -1849,3 +1849,22 @@ Public deployment:
 - Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/assets/visuals/olivex-grove-harvest-2026-06-08.png` with `?rev=cbbeebb`.
 - Public browser QA confirmed no console errors, no document-level horizontal overflow, correct hero H1 split, no old `oil-stream` element, one `polyphenol-meter`, Oleocanthal `01,02,03,04` grouping, no visible `Kilde: Wikipedia`, retained Beauchamp/(som Ibuprofen), and grove background applied on product-page `Kvalitetspass`.
 - Public evidence saved under `artifacts/visual-review-2026-06-08/public-cbbeebb/`.
+
+## 2026-06-08 PDP Grove/Product Image Follow-Up
+
+Status: LOCAL_VERIFIED_PENDING_DEPLOY.
+
+Built in this pass:
+
+- Made `assets/visuals/olivex-grove-harvest-2026-06-08.png` visible as a subtle page-level background on the product page.
+- Increased grove image visibility inside the product-page `Kvalitetspass` section.
+- Re-cropped the product-page hero image so it shows the bottle, olives and oil bowl.
+- Removed the unintended blank top gap inside the PDP hero.
+
+Local verification:
+
+- Chrome QA at `1351 x 987`, `1512 x 982` and `390 x 844` found no document-level horizontal overflow.
+- Chrome QA confirmed the PDP body and `Kvalitetspass` both use the supplied grove image.
+- Chrome QA confirmed the desktop hero media and buybox share the same top edge.
+- Chrome QA confirmed the PDP H1 stays inside the buybox on desktop and mobile.
+- Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/pdp-grove-background-r4/`.
