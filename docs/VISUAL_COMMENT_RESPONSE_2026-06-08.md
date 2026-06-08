@@ -71,3 +71,38 @@ Screenshot evidence is stored in:
 ## Remaining Production Caveat
 
 The assistant is still a static preview interaction. It behaves as one chat experience and answers deterministically from the current FAQ/product/commerce knowledge, but a true LLM-backed production agent still requires a backend, approved knowledge base, safety policy, escalation routing and Shopify/customer-support integration.
+
+## Chrome Regression Response
+
+Follow-up Chrome screenshots from a MacBook Air 15 showed two layout failures that the earlier QA did not catch:
+
+- the `Hva skjer i kroppen` heading/panel composition was collision-prone on wider Chrome viewports
+- the PDP `Analysebevis` section allowed the title/card composition to overlap at large widths
+
+The issue was not just horizontal overflow. The earlier automated checks verified document width, URL health and H1 wrapping, but did not explicitly test element-to-element collisions. This pass added collision checks for:
+
+- body heading vs body lead paragraph
+- body panel title vs body image
+- PDP analysis title vs passport card
+- heading/text clipping inside the section container
+
+Implementation response:
+
+- Rebuilt the PDP analysis section as a premium `Kvalitetspass` composition.
+- Kept `Analysebevis` as the section eyebrow and used a clean passport card for documentation status, polyphenols, oleocanthal, batch, method and document.
+- Added traceability chips for `Opprinnelse`, `Metode`, `Måleverdier` and `PDF-lenke`.
+- Reworked the body section desktop grid so copy and image have explicit non-overlapping columns.
+- Reduced body mobile heading size so `sykdomsforebygging` fits inside the 390 px viewport without mid-word splitting.
+
+Local Chrome verification passed at:
+
+- `1351 x 1200`
+- `1512 x 1200`
+- `1710 x 1200`
+- `1920 x 1200`
+- `2048 x 1200`
+- `390 x 844`
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/macbook-fix-final-local-v2/`

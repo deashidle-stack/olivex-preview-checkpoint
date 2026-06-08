@@ -149,6 +149,8 @@ Last updated: 2026-06-07.
 - Regenerated `share-preview/` and `deliverables/olivex-preview-hub-netlify-drop/` after the 2026-06-08 fixes; local validation passed for JS syntax, the annotated homepage sections, support assistant behavior and PDP H1 responsive wrapping at 1536, 1351, 1280, 1180, 1024, 768 and 390 px
 - Fixed a shared-script PDP page error by guarding body-tab rendering when the body panel is absent; deployed the follow-up annotation pass to GitHub Pages at commit `419cdfb`
 - Verified public `website.html?rev=419cdfb` and `product-olivex-superolje.html?rev=419cdfb` with HTTP 200, no document-level horizontal overflow, no PDP page errors, unified support behavior and the annotated UI checks
+- Reproduced the MacBook Air 15 Chrome screenshots as wide-viewport layout collisions rather than simple page overflow; redesigned PDP `Analysebevis` into a `Kvalitetspass` section and fixed `Hva skjer i kroppen` body composition with explicit collision tests at 1351, 1512, 1710, 1920, 2048 and 390 px
+- Updated `docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` with the Chrome regression cause, the new QA method and the section redesign response
 
 ## Not Completed Yet
 
