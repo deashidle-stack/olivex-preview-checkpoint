@@ -173,3 +173,18 @@ Checks performed:
 Evidence:
 
 `artifacts/visual-review-2026-06-08/why-oleo-redesign-r5/`
+
+Public verification passed for commit `b062ffa`:
+
+- public `website.html?rev=b062ffa` returned HTTP 200
+- public `product-olivex-superolje.html?rev=b062ffa` returned HTTP 200
+- GitHub Pages deploy workflow completed successfully
+- public browser QA confirmed no console errors
+- public browser QA confirmed no horizontal overflow on desktop or mobile
+- public browser QA confirmed the old `Problemet og løsningen` label is no longer present
+- public browser QA confirmed the `Oleocanthal` proof statistic does not overlap its explanatory label
+- public browser QA confirmed PDP H1 remains inside the buybox at `1536 px`
+
+Public evidence:
+
+`artifacts/visual-review-2026-06-08/public-b062ffa/`

@@ -1790,7 +1790,7 @@ Public deployment:
 
 ## 2026-06-08 Polyphenol/Oleocanthal Rewrite
 
-Status: LOCAL_VERIFIED_PENDING_PUBLIC_DEPLOY.
+Status: PUBLIC_VERIFIED_AFTER_DEPLOY.
 
 Built in this pass:
 
@@ -1809,3 +1809,11 @@ Local verification:
 - `#oleocanthal` heading, molecule image, proof statistic and proof label stayed inside the section.
 - Oleocanthal proof statistic no longer collided with its label.
 - Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/why-oleo-redesign-r5/`.
+
+Public deployment:
+
+- Deployed to GitHub Pages at commit `b062ffa` with message `Redesign OliveX polyphenol sections`.
+- GitHub Pages workflow completed successfully.
+- Public HTTP 200 checks passed for `/`, `/website.html`, `/product-olivex-superolje.html` and `/docs/VISUAL_COMMENT_RESPONSE_2026-06-08.md` with `?rev=b062ffa`.
+- Public browser QA confirmed no console errors, no horizontal overflow, no old `Problemet og løsningen` label, no Oleocanthal proof-label collision and PDP H1 containment at `1536 px`.
+- Public evidence saved under `artifacts/visual-review-2026-06-08/public-b062ffa/`.

@@ -154,6 +154,7 @@ Last updated: 2026-06-08.
 - Applied the corrected `Hva skjer i kroppen` direction: each tab image now fills the full card, while the white category text sits inside the right-side image space on desktop and inside the lower image area on mobile
 - Added body-overlay QA evidence in `artifacts/visual-review-2026-06-08/body-overlay-local-r1/` with checks for all four tabs, image-fill behavior, copy containment, heading/lead collision and PDP `Kvalitetspass` overlap
 - Reframed the homepage `Problemet og løsningen` section to `Polyfenolene gjør forskjellen`, rebuilt it as a visual concentration/evidence stage, removed the pale rectangle from `Oleocanthal`, and verified `#why`/`#oleocanthal` locally at `1512 x 1200` and `390 x 900` with no horizontal overflow or proof-text collision
+- Deployed the polyphenol/Oleocanthal rewrite to GitHub Pages at commit `b062ffa`; public HTTP checks passed for hub, storefront, PDP and visual-response docs, GitHub Pages workflow succeeded, and public browser QA confirmed no console errors, no horizontal overflow, no old `Problemet og løsningen` label, no Oleocanthal proof-label collision and PDP H1 containment at `1536 px`
 
 ## Not Completed Yet
 
