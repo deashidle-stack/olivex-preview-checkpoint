@@ -1787,3 +1787,25 @@ Public deployment:
 - Public Chrome QA passed for annotated homepage sections and PDP widths `1536`, `1351`, `1280`, `1180`, `1024`, `768` and `390`.
 - Public QA confirmed no PDP page errors after the guard fix.
 - Public screenshot evidence saved under `artifacts/visual-review-2026-06-08/public-419cdfb/`.
+
+## 2026-06-08 Polyphenol/Oleocanthal Rewrite
+
+Status: LOCAL_VERIFIED_PENDING_PUBLIC_DEPLOY.
+
+Built in this pass:
+
+- Replaced the homepage `Problemet og løsningen` eyebrow with `Polyfenolene gjør forskjellen`.
+- Kept the supplied source heading `Hvorfor vanlig ekstra virgin olivenolje ikke er nok`.
+- Reworked the polyphenol comparison into a concentration stage with EU threshold, OliveX concentration and a central oil-flow lens.
+- Replaced the lower generic info-card feel with a lighter evidence trail.
+- Rebuilt `#oleocanthal` into an open dark composition with the molecule floating freely instead of sitting behind/inside a pale rectangle.
+- Converted `Over 67 %` into controlled two-line display typography with an `aria-label` for screen-reader clarity.
+
+Local verification:
+
+- `node --check app.js` passed.
+- Browser QA at `1512 x 1200` and `390 x 900` found no document-level horizontal overflow.
+- `#why` heading, stage and evidence trail stayed inside the section.
+- `#oleocanthal` heading, molecule image, proof statistic and proof label stayed inside the section.
+- Oleocanthal proof statistic no longer collided with its label.
+- Screenshot and metrics evidence saved under `artifacts/visual-review-2026-06-08/why-oleo-redesign-r5/`.

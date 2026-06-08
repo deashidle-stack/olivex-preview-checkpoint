@@ -139,3 +139,37 @@ Checks performed:
 Evidence:
 
 `artifacts/visual-review-2026-06-08/body-overlay-local-r1/`
+
+## Polyphenol And Oleocanthal Rewrite
+
+Follow-up feedback identified two remaining weak sections:
+
+- `Problemet og løsningen` was the wrong framing for a premium supplement/ecommerce experience. It read like a SaaS pitch and made the sales strategy visible instead of making the product logic feel self-evident.
+- `Oleocanthal` had a good molecule asset, but the text composition was messy and the old pale-green rectangular background interrupted the molecule.
+
+Implementation response:
+
+- Removed the customer-facing `Problemet og løsningen` eyebrow and reframed the section as `Polyfenolene gjør forskjellen`.
+- Kept the supplied source heading `Hvorfor vanlig ekstra virgin olivenolje ikke er nok`, but tuned typography so the heading uses the available width more cleanly.
+- Rebuilt the polyphenol comparison into a visual concentration stage: EU threshold, OliveX concentration and a central oil-flow lens showing the almost-three-times-higher concentration point.
+- Replaced the lower generic info boxes with a lighter evidence trail using numbered markers, a single visual line and less boxed/card-heavy framing.
+- Rebuilt `Oleocanthal` as an open dark composition with the molecule floating on the left, removing the distracting pale rectangle entirely.
+- Reworked the Oleocanthal proof statistic into controlled two-line typography with an accessibility label (`Over 67 prosent`) so mobile does not leave a lonely `%` or collide with the explanatory text.
+- Reduced over-aggressive display type and verified that proof text, headings and section images stay inside their sections on desktop and mobile.
+
+Local Chrome verification passed at:
+
+- `1512 x 1200`
+- `390 x 900`
+
+Checks performed:
+
+- no document-level horizontal overflow
+- `#why` heading, concentration stage and evidence trail stay inside the section
+- `#oleocanthal` heading, molecule image, proof statistic and proof label stay inside the section
+- Oleocanthal proof statistic does not overlap its explanatory label
+- cookie banner hidden for final visual QA screenshots so layout is assessed without legal-overlay obstruction
+
+Evidence:
+
+`artifacts/visual-review-2026-06-08/why-oleo-redesign-r5/`
