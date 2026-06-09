@@ -6,7 +6,7 @@ const products = [
     description:
       "Norges høyeste polyfenol innhold i en 500 ml flaske. Abonnement er anbefalt for daglig bruk.",
     image: "./assets/visuals/olivex-product-ritual-2026-06-07.jpg",
-    imagePosition: "34% center",
+    imagePosition: "left center",
     badge: "600-700 mg/l",
     detailsUrl: "./product-olivex-superolje.html",
     facts: [
@@ -525,7 +525,7 @@ function renderProducts() {
     >
       <div class="product-carousel-stage">
         <article class="product-card product-card-feature conversion-product-card" aria-labelledby="${product.id}-title">
-          <div class="product-media">
+          <div class="product-media" style="--product-image: url('${product.image}')">
             <img src="${product.image}" alt="${product.name}" loading="eager" decoding="async" style="object-position: ${product.imagePosition || "center"}" />
             <span class="product-badge">${product.badge}</span>
             <div class="product-media-caption">
@@ -908,6 +908,7 @@ document.addEventListener("click", (event) => {
   const productSlideButton = event.target.closest("[data-product-slide]");
   const productPrevButton = event.target.closest("[data-product-carousel-prev]");
   const productNextButton = event.target.closest("[data-product-carousel-next]");
+  const producerPlayButton = event.target.closest("[data-producer-play]");
 
   if (selectButton) {
     selectVariant(selectButton.dataset.productId, selectButton.dataset.selectVariant);
@@ -986,6 +987,19 @@ document.addEventListener("click", (event) => {
 
   if (productNextButton) {
     setActiveProduct(state.activeProductIndex + 1);
+  }
+
+  if (producerPlayButton) {
+    const frame = producerPlayButton.closest(".producer-video-frame");
+    const video = frame?.querySelector("[data-producer-video]");
+    const baseSrc = video?.dataset.producerVideoSrc || video?.getAttribute("src");
+    if (frame && video && baseSrc) {
+      const separator = baseSrc.includes("?") ? "&" : "?";
+      if (!frame.classList.contains("is-video-active")) {
+        video.setAttribute("src", `${baseSrc}${separator}autoplay=1`);
+      }
+      frame.classList.add("is-video-active");
+    }
   }
 });
 

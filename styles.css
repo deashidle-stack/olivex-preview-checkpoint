@@ -6860,7 +6860,7 @@ h3,
 
 .visual-refresh-page .conversion-product-card {
   min-height: 0;
-  grid-template-columns: minmax(0, 0.98fr) minmax(390px, 0.58fr);
+  grid-template-columns: minmax(0, 0.86fr) minmax(470px, 0.64fr);
   overflow: hidden;
   border: 1px solid rgba(15, 43, 37, 0.08);
   border-radius: 8px;
@@ -6873,19 +6873,20 @@ h3,
 
 .visual-refresh-page .conversion-product-card .product-body {
   min-height: clamp(560px, 50vw, 680px);
-  padding: clamp(28px, 4.4vw, 54px);
+  padding: clamp(24px, 3.2vw, 42px);
   justify-content: center;
-  gap: 18px;
+  gap: 11px;
 }
 
 .visual-refresh-page .conversion-product-card h3 {
-  font-size: clamp(2.4rem, 3.35vw, 4rem);
-  line-height: 0.96;
+  font-size: clamp(2.25rem, 3vw, 3.5rem);
+  line-height: 0.98;
 }
 
 .visual-refresh-page .conversion-product-card .product-body > p {
   max-width: 31rem;
   margin-top: -4px;
+  line-height: 1.4;
 }
 
 .visual-refresh-page .conversion-product-card .variant-group,
@@ -6945,7 +6946,7 @@ h3,
 }
 
 .visual-refresh-page .conversion-product-card .purchase-plan-option.is-featured {
-  padding: 18px;
+  padding: 14px;
   border-color: rgba(34, 114, 83, 0.54);
   background:
     linear-gradient(135deg, rgba(226, 245, 235, 0.96), rgba(247, 252, 249, 0.94)),
@@ -6953,7 +6954,7 @@ h3,
 }
 
 .visual-refresh-page .conversion-product-card .purchase-plan-option.is-secondary {
-  padding: 13px 16px;
+  padding: 11px 14px;
   color: rgba(21, 33, 29, 0.72);
   background: rgba(255, 255, 255, 0.62);
 }
@@ -6964,12 +6965,13 @@ h3,
 
 .visual-refresh-page .conversion-product-card .purchase-plan-option ul {
   display: grid;
-  gap: 5px;
+  gap: 4px;
   margin: 2px 0 0;
   padding: 0;
   list-style: none;
   color: rgba(21, 33, 29, 0.74);
   font-size: 0.9rem;
+  line-height: 1.28;
 }
 
 .visual-refresh-page .conversion-product-card .purchase-plan-option li::before {
@@ -7005,6 +7007,11 @@ h3,
 .visual-refresh-page .conversion-product-card .product-facts {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
+}
+
+.visual-refresh-page .conversion-product-card .product-facts div {
+  min-height: 0;
+  padding: 10px 12px;
 }
 
 .commerce-note {
@@ -7109,5 +7116,194 @@ h3,
     width: 58px;
     height: 58px;
     font-size: 1.4rem;
+  }
+}
+
+/* 2026-06-10 responsive product media and producer video hero pass. */
+.visual-refresh-page .conversion-product-card .product-media {
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  background: #071714;
+}
+
+.visual-refresh-page .conversion-product-card .product-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(5, 16, 13, 0.18), rgba(5, 16, 13, 0.46)),
+    var(--product-image) center / cover no-repeat;
+  filter: blur(18px) saturate(0.92);
+  transform: scale(1.08);
+  opacity: 0.72;
+}
+
+.visual-refresh-page .conversion-product-card .product-media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: cover;
+  object-position: left center;
+  filter: saturate(0.98) contrast(1.03) drop-shadow(0 22px 42px rgba(4, 13, 11, 0.28));
+}
+
+.visual-refresh-page .conversion-product-card .product-media::after {
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(5, 16, 13, 0.04), rgba(5, 16, 13, 0.5)),
+    linear-gradient(90deg, rgba(5, 16, 13, 0.18), rgba(5, 16, 13, 0) 46%, rgba(253, 250, 242, 0.2));
+}
+
+.visual-refresh-page .conversion-product-card .product-media-caption {
+  z-index: 3;
+  width: auto;
+  max-width: calc(100% - 44px);
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(6, 21, 17, 0.5);
+  backdrop-filter: blur(14px);
+}
+
+.visual-refresh-page .producer-video-hero {
+  width: min(100% - 36px, 1180px);
+  display: block;
+  padding: clamp(64px, 9vw, 124px) 0;
+  text-align: left;
+}
+
+.visual-refresh-page .producer-video-hero .producer-video-frame {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: clamp(500px, 58vw, 760px);
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+  background: #020705;
+  box-shadow: 0 34px 96px rgba(16, 34, 29, 0.24);
+}
+
+.producer-video-frame iframe {
+  position: absolute;
+  inset: 0;
+}
+
+.producer-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(28px, 5vw, 74px);
+  color: #fff;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2, 7, 5, 0.88), rgba(2, 7, 5, 0.56) 42%, rgba(2, 7, 5, 0.16)),
+    linear-gradient(0deg, rgba(2, 7, 5, 0.82), rgba(2, 7, 5, 0.12) 58%);
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.producer-video-overlay .eyebrow {
+  color: #f0c46d;
+}
+
+.producer-video-overlay h2 {
+  max-width: 10.5ch;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.6rem, 7.2vw, 8.4rem);
+  line-height: 0.88;
+}
+
+.producer-video-overlay p:not(.eyebrow) {
+  max-width: 37rem;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1rem, 1.45vw, 1.28rem);
+}
+
+.producer-video-overlay span {
+  width: fit-content;
+  margin-top: 28px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.producer-video-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.producer-video-hit:focus-visible {
+  outline: 3px solid #f0c46d;
+  outline-offset: -8px;
+}
+
+@media (hover: hover) {
+  .producer-video-frame:hover .producer-video-overlay,
+  .producer-video-frame:focus-within .producer-video-overlay {
+    opacity: 0;
+  }
+}
+
+.producer-video-frame.is-video-active .producer-video-overlay,
+.producer-video-frame.is-video-active .producer-video-hit {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 980px) {
+  .visual-refresh-page .conversion-product-card {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-refresh-page .conversion-product-card .product-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .visual-refresh-page .conversion-product-card .product-media img {
+    object-position: left center;
+  }
+
+  .visual-refresh-page .producer-video-hero .producer-video-frame {
+    min-height: clamp(430px, 78vw, 620px);
+  }
+}
+
+@media (max-width: 620px) {
+  .visual-refresh-page .producer-video-hero {
+    width: min(100% - 28px, 1180px);
+    padding: 48px 0;
+  }
+
+  .visual-refresh-page .producer-video-hero .producer-video-frame {
+    min-height: 480px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .producer-video-overlay {
+    padding: 24px;
+  }
+
+  .producer-video-overlay h2 {
+    max-width: 9.5ch;
+    font-size: clamp(3.05rem, 16vw, 4.7rem);
   }
 }

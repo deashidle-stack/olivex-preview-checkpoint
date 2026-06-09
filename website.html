@@ -261,20 +261,29 @@
         </div>
       </section>
 
-      <section class="producer-section producer-refresh" id="producer" aria-labelledby="producer-title">
-        <div class="producer-copy">
-          <p class="eyebrow">Produsenten i Hellas</p>
-          <h2 id="producer-title">Se olivenlunden og menneskene bak oljen.</h2>
-          <p>En midlertidig video fra produsenten viser miljøet oljen kommer fra mens endelig presentasjon klargjøres.</p>
-        </div>
+      <section class="producer-section producer-refresh producer-video-hero" id="producer" aria-labelledby="producer-title">
         <div class="producer-video-frame">
           <iframe
+            data-producer-video
+            data-producer-video-src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM?rel=0&playsinline=1"
             title="Midlertidig video fra produsenten"
-            src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM"
+            src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM?rel=0&playsinline=1"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
+          <div class="producer-video-overlay">
+            <p class="eyebrow">Produsenten i Hellas</p>
+            <h2 id="producer-title">Se olivenlunden og menneskene bak oljen.</h2>
+            <p>En midlertidig video fra produsenten viser miljøet oljen kommer fra mens endelig presentasjon klargjøres.</p>
+            <span>Trykk for å spille av</span>
+          </div>
+          <button
+            class="producer-video-hit"
+            type="button"
+            data-producer-play
+            aria-label="Spill av video fra produsenten"
+          ></button>
         </div>
       </section>
 
@@ -313,7 +322,7 @@
               <span>02</span>
               <div>
                 <h3>Velg abonnement eller engangskjøp</h3>
-                <p>Abonnement er anbefalt og kan settes til 30, 45 eller 60 dagers intervall.</p>
+                <p>Abonnement er anbefalt og kan settes til 30 eller 60 dagers intervall.</p>
               </div>
             </li>
             <li>
