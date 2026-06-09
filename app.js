@@ -2,49 +2,36 @@ const products = [
   {
     id: "core",
     kicker: "Høyphenolitisk olivenolje",
-    name: "OliveX høyphenolitisk olje",
+    name: "OliveX 500 ml",
     description:
-      "Mer enn en matolje. Ditt daglige, flytende kosttilskudd. Resultatet er en olje med 600-700 mg/l polyfenoler.",
+      "Norges høyeste polyfenol innhold i en 500 ml flaske. Abonnement er anbefalt for daglig bruk.",
     image: "./assets/visuals/olivex-product-ritual-2026-06-07.jpg",
     imagePosition: "34% center",
     badge: "600-700 mg/l",
     detailsUrl: "./product-olivex-superolje.html",
     facts: [
+      ["Størrelse", "500 ml"],
+      ["EUs krav", "Nesten 3x"],
       ["Polyfenoler", "600-700 mg/l"],
       ["Oleocanthal", "Over 67 %"],
-      ["Dosering", "15-20 ml"],
     ],
     variants: [
-      { id: "core-size-1", size: "Størrelse 1", note: "ml og pris kommer", price: null },
-      { id: "core-size-2", size: "Størrelse 2", note: "ml og pris kommer", price: null },
+      { id: "core-500ml", size: "500 ml", note: "Lanseringsflaske", price: null },
     ],
     purchasePlans: [
-      { id: "one-time", label: "Engangskjøp", note: "Betales én gang", cartLabel: "Engangskjøp" },
       {
-        id: "recurring-preview",
-        label: "Fast levering",
-        note: "Jevnlig levering",
-        cartLabel: "Fast levering",
+        id: "subscription",
+        label: "Abonnement",
+        note: "Anbefalt for daglig bruk",
+        cartLabel: "Abonnement",
+        featured: true,
+        benefits: ["Fast levering uten å bestille på nytt", "Velg leveringsfrekvens selv", "Kan pauses eller avsluttes før neste utsendelse"],
       },
+      { id: "one-time", label: "Engangsleveranse", note: "Betales én gang", cartLabel: "Engangsleveranse" },
     ],
-  },
-  {
-    id: "pending",
-    kicker: "Produkt 2",
-    name: "Neste produkt kommer",
-    description:
-      "Det neste produktet legges inn når navn, innhold, størrelser og pris er klart.",
-    image: "./assets/visuals/olivex-product-placeholder-2026-06-07.jpg",
-    badge: "Kommer",
-    available: false,
-    facts: [
-      ["Produkt", "Kommer"],
-      ["Størrelser", "2 valg"],
-      ["Pris", "Kommer"],
-    ],
-    variants: [
-      { id: "pending-size-1", size: "Størrelse 1", note: "kommer", price: null },
-      { id: "pending-size-2", size: "Størrelse 2", note: "kommer", price: null },
+    frequencies: [
+      { id: "30d", label: "Hver 30. dag", cartLabel: "30 dager" },
+      { id: "60d", label: "Hver 60. dag", cartLabel: "60 dager" },
     ],
   },
 ];
@@ -156,6 +143,10 @@ const state = {
   selectedPlans: Object.fromEntries(
     products.map((product) => [product.id, product.purchasePlans?.[0]?.id || "one-time"]),
   ),
+  selectedFrequencies: Object.fromEntries(
+    products.map((product) => [product.id, product.frequencies?.[0]?.id || ""]),
+  ),
+  selectedQuantities: Object.fromEntries(products.map((product) => [product.id, 1])),
   activeProductIndex: 0,
   cart: new Map(),
   assistantMessages: [
@@ -182,11 +173,11 @@ const formatter = new Intl.NumberFormat("nb-NO", {
 });
 
 function formatPrice(price) {
-  return Number.isFinite(price) ? formatter.format(price) : "Pris kommer";
+  return Number.isFinite(price) ? formatter.format(price) : "";
 }
 
 function canPurchaseVariant(product, variant) {
-  return product.available !== false && Number.isFinite(variant?.price);
+  return product.available !== false && Boolean(variant);
 }
 
 const productGrid = document.querySelector("[data-product-grid]");
@@ -301,17 +292,22 @@ function getPlan(product, planId) {
   );
 }
 
-function getCartKey(variantId, planId = "one-time") {
-  return `${variantId}::${planId}`;
+function getFrequency(product, frequencyId) {
+  return product.frequencies?.find((frequency) => frequency.id === frequencyId) || null;
+}
+
+function getCartKey(variantId, planId = "one-time", frequencyId = "") {
+  return `${variantId}::${planId}::${frequencyId}`;
 }
 
 function getCartEntry(cartKey) {
-  const [variantId, planId = "one-time"] = cartKey.split("::");
+  const [variantId, planId = "one-time", frequencyId = ""] = cartKey.split("::");
   const match = getVariant(variantId);
   if (!match) return null;
   return {
     ...match,
     plan: getPlan(match.product, planId),
+    frequency: getFrequency(match.product, frequencyId),
     cartKey,
   };
 }
@@ -423,6 +419,16 @@ function syncPlanControls(productId, shouldFocus = false) {
   });
 }
 
+function syncFrequencyControls(productId, shouldFocus = false) {
+  const selectedFrequencyId = state.selectedFrequencies[productId] || "";
+  document.querySelectorAll(`[data-select-frequency][data-product-id="${productId}"]`).forEach((button) => {
+    const selected = button.dataset.selectFrequency === selectedFrequencyId;
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-checked", selected ? "true" : "false");
+    if (selected && shouldFocus) button.focus();
+  });
+}
+
 function syncStickyPurchase(productId) {
   stickyPurchaseBars.forEach((bar) => {
     if (bar.dataset.productId !== productId) return;
@@ -440,7 +446,7 @@ function syncStickyPurchase(productId) {
     addButton.dataset.addToCart = match.variant.id;
     addButton.dataset.productId = productId;
     addButton.disabled = !canPurchase;
-    addButton.textContent = canPurchase ? `Legg ${match.variant.size} i kurv` : "Pris kommer";
+    addButton.textContent = canPurchase ? "Kjøp" : "Ikke tilgjengelig";
     if (price) price.textContent = formatPrice(match.variant.price);
     if (planLabel) planLabel.textContent = plan.label;
   });
@@ -465,6 +471,31 @@ function selectPurchasePlan(productId, planId, shouldFocus = false) {
   syncStickyPurchase(productId);
 }
 
+function selectFrequency(productId, frequencyId, shouldFocus = false) {
+  state.selectedFrequencies[productId] = frequencyId;
+  renderProducts();
+  syncFrequencyControls(productId, shouldFocus);
+  if (shouldFocus) {
+    requestAnimationFrame(() => {
+      document.querySelector(`[data-select-frequency="${frequencyId}"]`)?.focus();
+    });
+  }
+}
+
+function changeProductQuantity(productId, delta) {
+  const current = state.selectedQuantities[productId] || 1;
+  state.selectedQuantities[productId] = Math.min(12, Math.max(1, current + delta));
+  renderProducts();
+  syncProductQuantity(productId);
+}
+
+function syncProductQuantity(productId) {
+  const quantity = state.selectedQuantities[productId] || 1;
+  document.querySelectorAll(`[data-product-quantity="${productId}"]`).forEach((node) => {
+    node.textContent = String(quantity);
+  });
+}
+
 function setActiveProduct(index, shouldFocus = false) {
   state.activeProductIndex = (index + products.length) % products.length;
   renderProducts();
@@ -481,46 +512,75 @@ function renderProducts() {
   const selectedId = state.selectedVariants[product.id];
   const selectedVariant = product.variants.find((variant) => variant.id === selectedId);
   const selectedPlanId = state.selectedPlans[product.id] || product.purchasePlans?.[0]?.id || "one-time";
+  const selectedPlan = getPlan(product, selectedPlanId);
+  const selectedFrequencyId = state.selectedFrequencies[product.id] || product.frequencies?.[0]?.id || "";
+  const quantity = state.selectedQuantities[product.id] || 1;
   const canPurchase = canPurchaseVariant(product, selectedVariant);
 
   productGrid.innerHTML = `
     <section
       class="product-carousel"
-      aria-roledescription="carousel"
-      aria-label="Produkter"
+      aria-label="Kjøp OliveX"
       aria-live="polite"
     >
       <div class="product-carousel-stage">
-        <article class="product-card product-card-feature" aria-labelledby="${product.id}-title">
+        <article class="product-card product-card-feature conversion-product-card" aria-labelledby="${product.id}-title">
           <div class="product-media">
             <img src="${product.image}" alt="${product.name}" loading="eager" decoding="async" style="object-position: ${product.imagePosition || "center"}" />
             <span class="product-badge">${product.badge}</span>
             <div class="product-media-caption">
-              <span>Slide ${state.activeProductIndex + 1} av ${products.length}</span>
-              <strong>${product.available === false ? "Produktdata kommer" : "Høyphenolitisk olje"}</strong>
+              <span>500 ml</span>
+              <strong>Høyphenolitisk olje</strong>
             </div>
           </div>
           <div class="product-body">
             <span class="product-kicker">${product.kicker}</span>
             <h3 id="${product.id}-title">${product.name}</h3>
             <p>${product.description}</p>
-            <div class="variant-group" role="radiogroup" aria-label="Velg størrelse for ${product.name}">
+            <div class="variant-group single-variant" aria-label="Størrelse">
               <span class="variant-label">Størrelse</span>
               <div class="variant-options">
-                ${product.variants
+                <button
+                  class="variant-option is-selected"
+                  type="button"
+                  aria-pressed="true"
+                  data-select-variant="${selectedVariant.id}"
+                  data-product-id="${product.id}"
+                >
+                  <strong>${selectedVariant.size}</strong>
+                  <span>${selectedVariant.note}</span>
+                </button>
+              </div>
+            </div>
+            <div class="product-quantity-row" aria-label="Velg antall">
+              <span class="variant-label">Antall</span>
+              <div class="product-quantity-control">
+                <button type="button" data-decrease-product="${product.id}" aria-label="Reduser antall">−</button>
+                <strong data-product-quantity="${product.id}">${quantity}</strong>
+                <button type="button" data-increase-product="${product.id}" aria-label="Øk antall">+</button>
+              </div>
+            </div>
+            <div class="purchase-plan-group">
+              <span class="variant-label">Kjøpsvalg</span>
+              <div class="purchase-plan-options" role="radiogroup" aria-label="Velg kjøpsvalg for ${product.name}">
+                ${product.purchasePlans
                   .map(
-                    (variant) => `
+                    (plan) => `
                       <button
-                        class="variant-option ${variant.id === selectedId ? "is-selected" : ""}"
+                        class="purchase-plan-option ${plan.id === selectedPlanId ? "is-selected" : ""} ${plan.featured ? "is-featured" : "is-secondary"}"
                         type="button"
                         role="radio"
-                        aria-checked="${variant.id === selectedId ? "true" : "false"}"
-                        data-select-variant="${variant.id}"
+                        aria-checked="${plan.id === selectedPlanId ? "true" : "false"}"
+                        data-select-plan="${plan.id}"
                         data-product-id="${product.id}"
                       >
-                        <strong>${variant.size}</strong>
-                        <span>${variant.note}</span>
-                        <span>${formatPrice(variant.price)}</span>
+                        <strong>${plan.label}</strong>
+                        <span>${plan.note}</span>
+                        ${
+                          plan.benefits
+                            ? `<ul>${plan.benefits.map((benefit) => `<li>${benefit}</li>`).join("")}</ul>`
+                            : ""
+                        }
                       </button>
                     `,
                   )
@@ -528,25 +588,23 @@ function renderProducts() {
               </div>
             </div>
             ${
-              product.available === false || !product.purchasePlans?.length
-                ? ""
-                : `
-                  <div class="purchase-plan-group">
-                    <span class="variant-label">Kjøpsvalg</span>
-                    <div class="purchase-plan-options" role="radiogroup" aria-label="Velg kjøpsvalg for ${product.name}">
-                      ${product.purchasePlans
+              selectedPlanId === "subscription" && product.frequencies?.length
+                ? `
+                  <div class="frequency-group">
+                    <span class="variant-label">Leveringsfrekvens</span>
+                    <div class="frequency-options" role="radiogroup" aria-label="Velg leveringsfrekvens">
+                      ${product.frequencies
                         .map(
-                          (plan) => `
+                          (frequency) => `
                             <button
-                              class="purchase-plan-option ${plan.id === selectedPlanId ? "is-selected" : ""}"
+                              class="frequency-option ${frequency.id === selectedFrequencyId ? "is-selected" : ""}"
                               type="button"
                               role="radio"
-                              aria-checked="${plan.id === selectedPlanId ? "true" : "false"}"
-                              data-select-plan="${plan.id}"
+                              aria-checked="${frequency.id === selectedFrequencyId ? "true" : "false"}"
+                              data-select-frequency="${frequency.id}"
                               data-product-id="${product.id}"
                             >
-                              <strong>${plan.label}</strong>
-                              <span>${plan.note}</span>
+                              ${frequency.label}
                             </button>
                           `,
                         )
@@ -554,6 +612,7 @@ function renderProducts() {
                     </div>
                   </div>
                 `
+                : ""
             }
             <div class="product-facts" aria-label="Produktfakta">
               ${product.facts
@@ -572,9 +631,13 @@ function renderProducts() {
                 class="add-button"
                 type="button"
                 ${canPurchase ? `data-add-to-cart="${selectedVariant.id}"` : "disabled"}
+                data-product-id="${product.id}"
+                data-plan-id="${selectedPlanId}"
+                data-frequency-id="${selectedPlanId === "subscription" ? selectedFrequencyId : ""}"
               >
-                ${product.available === false ? "Kommer" : canPurchase ? `Legg ${selectedVariant.size} i kurv` : "Pris kommer"}
+                Kjøp
               </button>
+              <p class="commerce-note">${selectedPlan.label}${selectedPlanId === "subscription" ? ` · ${getFrequency(product, selectedFrequencyId)?.cartLabel || ""}` : ""} · ${quantity} stk</p>
               ${
                 product.detailsUrl
                   ? `<a class="detail-link" href="${product.detailsUrl}">Produktside og analysebevis</a>`
@@ -583,28 +646,6 @@ function renderProducts() {
             </div>
           </div>
         </article>
-      </div>
-      <div class="product-carousel-controls" aria-label="Produktcarousel kontroller">
-        <button class="carousel-arrow" type="button" data-product-carousel-prev aria-label="Forrige produkt">Forrige</button>
-        <div class="product-thumbs" role="tablist" aria-label="Velg produkt">
-          ${products
-            .map(
-              (item, index) => `
-                <button
-                  class="product-thumb ${index === state.activeProductIndex ? "is-active" : ""}"
-                  type="button"
-                  role="tab"
-                  aria-selected="${index === state.activeProductIndex ? "true" : "false"}"
-                  data-product-slide="${index}"
-                >
-                  <img src="${item.image}" alt="" loading="lazy" decoding="async" />
-                  <span>${item.name}</span>
-                </button>
-              `,
-            )
-            .join("")}
-        </div>
-        <button class="carousel-arrow" type="button" data-product-carousel-next aria-label="Neste produkt">Neste</button>
       </div>
     </section>
   `;
@@ -620,9 +661,10 @@ function renderCart() {
     .filter(Boolean);
   const totalQuantity = entries.reduce((sum, item) => sum + item.quantity, 0);
   const total = entries.reduce((sum, item) => sum + item.quantity * (item.variant.price || 0), 0);
+  const hasUnpricedItems = entries.some((item) => !Number.isFinite(item.variant.price));
 
   cartCount.textContent = String(totalQuantity);
-  if (cartTotal) cartTotal.textContent = formatter.format(total);
+  if (cartTotal) cartTotal.textContent = hasUnpricedItems ? "Avklares i checkout" : formatter.format(total);
   if (cartEmpty) cartEmpty.hidden = entries.length > 0;
   setLiveMessage(totalQuantity ? `Kurven har ${totalQuantity} produkt${totalQuantity === 1 ? "" : "er"}.` : "Kurven er tom.");
 
@@ -630,12 +672,12 @@ function renderCart() {
 
   cartItems.innerHTML = entries
     .map(
-      ({ product, variant, plan, cartKey, quantity }) => `
+      ({ product, variant, plan, frequency, cartKey, quantity }) => `
         <div class="cart-item">
           <div>
             <strong>${product.name}</strong>
-            <span>${variant.size} · ${formatPrice(variant.price)}</span>
-            <span class="cart-plan">${plan.cartLabel || plan.label}</span>
+            <span>${variant.size}${Number.isFinite(variant.price) ? ` · ${formatPrice(variant.price)}` : ""}</span>
+            <span class="cart-plan">${plan.cartLabel || plan.label}${frequency ? ` · ${frequency.cartLabel}` : ""}</span>
           </div>
           <div class="quantity-control" aria-label="Antall ${product.name} ${variant.size} ${plan.cartLabel || plan.label}">
             <button type="button" data-decrease="${cartKey}" aria-label="Reduser antall">−</button>
@@ -856,9 +898,12 @@ function selectEvidenceTab(tabId, shouldFocus = false) {
 document.addEventListener("click", (event) => {
   const selectButton = event.target.closest("[data-select-variant]");
   const planButton = event.target.closest("[data-select-plan]");
+  const frequencyButton = event.target.closest("[data-select-frequency]");
   const addButton = event.target.closest("[data-add-to-cart]");
   const increaseButton = event.target.closest("[data-increase]");
   const decreaseButton = event.target.closest("[data-decrease]");
+  const increaseProductButton = event.target.closest("[data-increase-product]");
+  const decreaseProductButton = event.target.closest("[data-decrease-product]");
   const tabButton = event.target.closest("[data-tab]");
   const productSlideButton = event.target.closest("[data-product-slide]");
   const productPrevButton = event.target.closest("[data-product-carousel-prev]");
@@ -872,6 +917,18 @@ document.addEventListener("click", (event) => {
     selectPurchasePlan(planButton.dataset.productId, planButton.dataset.selectPlan);
   }
 
+  if (frequencyButton) {
+    selectFrequency(frequencyButton.dataset.productId, frequencyButton.dataset.selectFrequency);
+  }
+
+  if (increaseProductButton) {
+    changeProductQuantity(increaseProductButton.dataset.increaseProduct, 1);
+  }
+
+  if (decreaseProductButton) {
+    changeProductQuantity(decreaseProductButton.dataset.decreaseProduct, -1);
+  }
+
   if (addButton) {
     const variantId = addButton.dataset.addToCart;
     const match = getVariant(variantId);
@@ -883,10 +940,18 @@ document.addEventListener("click", (event) => {
     const productId = addButton.dataset.productId || match.product.id;
     const planId =
       addButton.dataset.planId || state.selectedPlans[productId] || match.product.purchasePlans?.[0]?.id || "one-time";
-    const cartKey = getCartKey(variantId, planId);
-    state.cart.set(cartKey, (state.cart.get(cartKey) || 0) + 1);
+    const frequencyId =
+      planId === "subscription"
+        ? addButton.dataset.frequencyId || state.selectedFrequencies[productId] || match.product.frequencies?.[0]?.id || ""
+        : "";
+    const quantity = state.selectedQuantities[productId] || 1;
+    const cartKey = getCartKey(variantId, planId, frequencyId);
+    state.cart.set(cartKey, (state.cart.get(cartKey) || 0) + quantity);
     renderCart();
-    setLiveMessage(`${match.product.name} ${match.variant.size} (${getPlan(match.product, planId).cartLabel}) lagt i kurv.`);
+    const frequency = getFrequency(match.product, frequencyId);
+    setLiveMessage(
+      `${quantity} ${match.product.name} ${match.variant.size} (${getPlan(match.product, planId).cartLabel}${frequency ? `, ${frequency.cartLabel}` : ""}) lagt i kurv.`,
+    );
     openCart();
   }
 
@@ -951,6 +1016,7 @@ document.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   const variantButton = event.target.closest?.("[data-select-variant]");
   const planButton = event.target.closest?.("[data-select-plan]");
+  const frequencyButton = event.target.closest?.("[data-select-frequency]");
   const tabButton = event.target.closest?.("[data-tab]");
 
   if (variantButton && ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
@@ -979,6 +1045,20 @@ document.addEventListener("keydown", (event) => {
     if (nextIndex >= buttons.length) nextIndex = 0;
     const nextButton = buttons[nextIndex];
     selectPurchasePlan(nextButton.dataset.productId, nextButton.dataset.selectPlan, true);
+  }
+
+  if (frequencyButton && ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
+    event.preventDefault();
+    const buttons = [...frequencyButton.closest(".frequency-options").querySelectorAll("[data-select-frequency]")];
+    const currentIndex = buttons.indexOf(frequencyButton);
+    const direction = event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1;
+    let nextIndex = currentIndex + direction;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = buttons.length - 1;
+    if (nextIndex < 0) nextIndex = buttons.length - 1;
+    if (nextIndex >= buttons.length) nextIndex = 0;
+    const nextButton = buttons[nextIndex];
+    selectFrequency(nextButton.dataset.productId, nextButton.dataset.selectFrequency, true);
   }
 
   if (tabButton && ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"].includes(event.key)) {
@@ -1037,6 +1117,7 @@ const observer = new IntersectionObserver(
 );
 
 if (productGrid) renderProducts();
+products.forEach((product) => syncFrequencyControls(product.id));
 stickyPurchaseBars.forEach((bar) => syncStickyPurchase(bar.dataset.productId));
 const savedConsent = readConsent();
 if (savedConsent) applyConsent(savedConsent);

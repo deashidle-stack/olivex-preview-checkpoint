@@ -5,19 +5,35 @@ const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
 
-const HERO = "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.";
-const HERO_LEDE = "En spiseskje om dagen for cellene, hjertet og hjernen. Dokumentert av vitenskapen – verifisert av laboratoriet.";
+const HERO = "Norges høyeste polyfenol innhold";
+const HERO_LEDE = "500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler. Tidlig høstet, kaldt brukt og dokumentert av laboratoriet.";
+const PRODUCT_TITLE = "OliveX 500 ml høyphenolitisk olje";
+const PRODUCER_VIDEO = "P5aSmPtzSaM";
 const LOGO_ASSET = "assets/olivex-wordmark-cropped.png";
 const PDP_LOGO_ASSETS = [LOGO_ASSET, "assets/olivex-wordmark-nav.png"];
 const HERO_LOGO_ASSET = "assets/olivex-wordmark-white.png";
+const INLINE_WORDMARK = "olivex-wordmark";
+const LOGO_EVIDENCE = [LOGO_ASSET, INLINE_WORDMARK];
+const PDP_LOGO_EVIDENCE = [LOGO_ASSET, "assets/olivex-wordmark-nav.png", INLINE_WORDMARK];
+const HERO_LOGO_EVIDENCE = [HERO_LOGO_ASSET, "olivex-wordmark--hero"];
 
 const sourceHeadings = [
-  "Hvorfor vanlig ekstra virgin olivenolje ikke er nok",
   "Hva er Oleocanthal og hvorfor stikker det i halsen?",
-  "Hjertehelse og dokumentert sykdomsforebygging",
   "Naturens egen synergieffekt (Biotilgjengelighet)",
   "Ditt daglige rituale",
   "Etterprøvbare referanser",
+  "Se olivenlunden og menneskene bak oljen.",
+  "Vipps, kortbetaling og Posten/Bring",
+  "Spør OliveX",
+];
+
+const purchaseEvidence = [
+  "Abonnement",
+  "Engangsleveranse",
+  "Hver 30. dag",
+  "Hver 60. dag",
+  "Antall",
+  "Kjøp",
 ];
 
 const forbiddenCustomerPhrases = [
@@ -44,13 +60,19 @@ const forbiddenCustomerPhrases = [
 const unsupportedProductData = [
   "OliveX Superolje",
   "core-250",
-  "core-500",
   "250 ml",
-  "500 ml",
   "NOK 549",
   "NOK 899",
   "549 kr",
   "899 kr",
+  "Størrelse 1",
+  "Størrelse 2",
+  "Pris kommer",
+  "Neste produkt kommer",
+  "Hver 45. dag",
+  "0 steking",
+  "Se reisen i kroppen",
+  "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
 ];
 
 const unsafePreviewStructuredData = [
@@ -81,19 +103,19 @@ const fullProjectChecks = [
   {
     file: "index.html",
     label: "root storefront",
-    require: [HERO, HERO_LEDE, LOGO_ASSET, HERO_LOGO_ASSET, ...sourceHeadings],
+    require: [HERO, HERO_LEDE, LOGO_EVIDENCE, HERO_LOGO_EVIDENCE, PRODUCER_VIDEO, ...sourceHeadings],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
     file: "product-olivex-superolje.html",
     label: "root product page",
-    require: ["OliveX høyphenolitisk olje", HERO, HERO_LEDE, PDP_LOGO_ASSETS, "Størrelse 1", "Størrelse 2", "Pris kommer"],
+    require: [PRODUCT_TITLE, HERO, "500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler", PDP_LOGO_EVIDENCE, ...purchaseEvidence],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
     file: "app.js",
     label: "root storefront script strings",
-    require: ["Neste produkt kommer", "Det neste produktet legges inn når navn, innhold, størrelser og pris er klart.", "Pris kommer"],
+    require: ["OliveX 500 ml", HERO, "500 ml", ...purchaseEvidence],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData],
   },
   {
@@ -105,23 +127,21 @@ const fullProjectChecks = [
   {
     file: "share-preview/website.html",
     label: "share storefront",
-    require: [HERO, HERO_LEDE, LOGO_ASSET, HERO_LOGO_ASSET, ...sourceHeadings],
+    require: [HERO, HERO_LEDE, LOGO_EVIDENCE, HERO_LOGO_EVIDENCE, PRODUCER_VIDEO, ...sourceHeadings],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
     file: "share-preview/product-olivex-superolje.html",
     label: "share product page",
     require: [
-      "OliveX høyphenolitisk olje",
+      PRODUCT_TITLE,
       HERO,
-      HERO_LEDE,
-      PDP_LOGO_ASSETS,
-      "Størrelse 1",
-      "Størrelse 2",
-      "Pris kommer",
+      "500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler",
+      PDP_LOGO_EVIDENCE,
+      ...purchaseEvidence,
       "./website.html#top",
       "./website.html#products",
-      "./website.html#why",
+      "./website.html#oleocanthal",
     ],
     forbid: [
       ...forbiddenCustomerPhrases,
@@ -129,13 +149,13 @@ const fullProjectChecks = [
       ...unsafePreviewStructuredData,
       "./index.html#top",
       "./index.html#products",
-      "./index.html#why",
+      "./index.html#oleocanthal",
     ],
   },
   {
     file: "share-preview/app.js",
     label: "share storefront script strings",
-    require: ["Neste produkt kommer", "Det neste produktet legges inn når navn, innhold, størrelser og pris er klart.", "Pris kommer"],
+    require: ["OliveX 500 ml", HERO, "500 ml", ...purchaseEvidence],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData],
   },
   {
@@ -147,23 +167,21 @@ const fullProjectChecks = [
   {
     file: "deliverables/olivex-preview-hub-netlify-drop/website.html",
     label: "drop storefront",
-    require: [HERO, HERO_LEDE, LOGO_ASSET, HERO_LOGO_ASSET, ...sourceHeadings],
+    require: [HERO, HERO_LEDE, LOGO_EVIDENCE, HERO_LOGO_EVIDENCE, PRODUCER_VIDEO, ...sourceHeadings],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
     file: "deliverables/olivex-preview-hub-netlify-drop/product-olivex-superolje.html",
     label: "drop product page",
     require: [
-      "OliveX høyphenolitisk olje",
+      PRODUCT_TITLE,
       HERO,
-      HERO_LEDE,
-      PDP_LOGO_ASSETS,
-      "Størrelse 1",
-      "Størrelse 2",
-      "Pris kommer",
+      "500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler",
+      PDP_LOGO_EVIDENCE,
+      ...purchaseEvidence,
       "./website.html#top",
       "./website.html#products",
-      "./website.html#why",
+      "./website.html#oleocanthal",
     ],
     forbid: [
       ...forbiddenCustomerPhrases,
@@ -171,13 +189,13 @@ const fullProjectChecks = [
       ...unsafePreviewStructuredData,
       "./index.html#top",
       "./index.html#products",
-      "./index.html#why",
+      "./index.html#oleocanthal",
     ],
   },
   {
     file: "deliverables/olivex-preview-hub-netlify-drop/app.js",
     label: "drop storefront script strings",
-    require: ["Neste produkt kommer", "Det neste produktet legges inn når navn, innhold, størrelser og pris er klart.", "Pris kommer"],
+    require: ["OliveX 500 ml", HERO, "500 ml", ...purchaseEvidence],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData],
   },
   {
@@ -192,23 +210,21 @@ const packageChecks = [
   {
     file: "website.html",
     label: "package storefront",
-    require: [HERO, HERO_LEDE, LOGO_ASSET, HERO_LOGO_ASSET, ...sourceHeadings],
+    require: [HERO, HERO_LEDE, LOGO_EVIDENCE, HERO_LOGO_EVIDENCE, PRODUCER_VIDEO, ...sourceHeadings],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData, ...unsafePreviewStructuredData],
   },
   {
     file: "product-olivex-superolje.html",
     label: "package product page",
     require: [
-      "OliveX høyphenolitisk olje",
+      PRODUCT_TITLE,
       HERO,
-      HERO_LEDE,
-      PDP_LOGO_ASSETS,
-      "Størrelse 1",
-      "Størrelse 2",
-      "Pris kommer",
+      "500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler",
+      PDP_LOGO_EVIDENCE,
+      ...purchaseEvidence,
       "./website.html#top",
       "./website.html#products",
-      "./website.html#why",
+      "./website.html#oleocanthal",
     ],
     forbid: [
       ...forbiddenCustomerPhrases,
@@ -216,13 +232,13 @@ const packageChecks = [
       ...unsafePreviewStructuredData,
       "./index.html#top",
       "./index.html#products",
-      "./index.html#why",
+      "./index.html#oleocanthal",
     ],
   },
   {
     file: "app.js",
     label: "package storefront script strings",
-    require: ["Neste produkt kommer", "Det neste produktet legges inn når navn, innhold, størrelser og pris er klart.", "Pris kommer"],
+    require: ["OliveX 500 ml", HERO, "500 ml", ...purchaseEvidence],
     forbid: [...forbiddenCustomerPhrases, ...unsupportedProductData],
   },
   {
@@ -289,6 +305,7 @@ const summary = {
   logoAsset: LOGO_ASSET,
   pdpLogoAssets: PDP_LOGO_ASSETS,
   heroLogoAsset: HERO_LOGO_ASSET,
+  inlineWordmark: INLINE_WORDMARK,
   problems,
 };
 
