@@ -5,8 +5,8 @@ const products = [
     name: "OliveX 500 ml",
     description:
       "Norges høyeste polyfenol innhold i en 500 ml flaske. Abonnement er anbefalt for daglig bruk.",
-    image: "./assets/visuals/olivex-product-ritual-2026-06-07.jpg",
-    imagePosition: "left center",
+    image: "./assets/visuals/produktbilde-2-1448.jpg",
+    imagePosition: "center",
     badge: "600-700 mg/l",
     detailsUrl: "./product-olivex-superolje.html",
     facts: [
@@ -417,6 +417,16 @@ function syncPlanControls(productId, shouldFocus = false) {
     button.setAttribute("aria-checked", selected ? "true" : "false");
     if (selected && shouldFocus) button.focus();
   });
+  syncFrequencyAvailability(productId);
+}
+
+function syncFrequencyAvailability(productId) {
+  const subscriptionActive = (state.selectedPlans[productId] || "one-time") === "subscription";
+  document.querySelectorAll(`[data-select-frequency][data-product-id="${productId}"]`).forEach((button) => {
+    button.disabled = !subscriptionActive;
+    const group = button.closest(".frequency-group");
+    if (group) group.classList.toggle("is-disabled", !subscriptionActive);
+  });
 }
 
 function syncFrequencyControls(productId, shouldFocus = false) {
@@ -525,36 +535,28 @@ function renderProducts() {
     >
       <div class="product-carousel-stage">
         <article class="product-card product-card-feature conversion-product-card" aria-labelledby="${product.id}-title">
-          <div class="product-media" style="--product-image: url('${product.image}')">
-            <img src="${product.image}" alt="${product.name}" loading="eager" decoding="async" style="object-position: ${product.imagePosition || "center"}" />
-            <span class="product-badge">${product.badge}</span>
-            <div class="product-media-caption">
-              <span>500 ml</span>
-              <strong>Høyphenolitisk olje</strong>
-            </div>
-          </div>
           <div class="product-body">
-            <span class="product-kicker">${product.kicker}</span>
-            <h3 id="${product.id}-title">${product.name}</h3>
-            <p>${product.description}</p>
-            <div class="variant-group single-variant" aria-label="Størrelse">
-              <span class="variant-label">Størrelse</span>
-              <div class="variant-options">
-                <button
-                  class="variant-option is-selected"
-                  type="button"
-                  aria-pressed="true"
-                  data-select-variant="${selectedVariant.id}"
-                  data-product-id="${product.id}"
-                >
-                  <strong>${selectedVariant.size}</strong>
-                  <span>${selectedVariant.note}</span>
-                </button>
-              </div>
+            <div class="product-head">
+              <span class="product-kicker">${product.kicker}</span>
+              <h3 id="${product.id}-title">${product.name}</h3>
+              <p>${product.description}</p>
             </div>
-            <div class="product-quantity-row" aria-label="Velg antall">
-              <span class="variant-label">Antall</span>
-              <div class="product-quantity-control">
+            <div class="product-config-row">
+              <div class="variant-group single-variant" aria-label="Størrelse">
+                <div class="variant-options">
+                  <button
+                    class="variant-option is-selected"
+                    type="button"
+                    aria-pressed="true"
+                    data-select-variant="${selectedVariant.id}"
+                    data-product-id="${product.id}"
+                  >
+                    <strong>${selectedVariant.size}</strong>
+                    <span>${selectedVariant.note}</span>
+                  </button>
+                </div>
+              </div>
+              <div class="product-quantity-control" aria-label="Velg antall">
                 <button type="button" data-decrease-product="${product.id}" aria-label="Reduser antall">−</button>
                 <strong data-product-quantity="${product.id}">${quantity}</strong>
                 <button type="button" data-increase-product="${product.id}" aria-label="Øk antall">+</button>
@@ -588,9 +590,9 @@ function renderProducts() {
               </div>
             </div>
             ${
-              selectedPlanId === "subscription" && product.frequencies?.length
+              product.frequencies?.length
                 ? `
-                  <div class="frequency-group">
+                  <div class="frequency-group ${selectedPlanId === "subscription" ? "" : "is-disabled"}">
                     <span class="variant-label">Leveringsfrekvens</span>
                     <div class="frequency-options" role="radiogroup" aria-label="Velg leveringsfrekvens">
                       ${product.frequencies
@@ -601,6 +603,7 @@ function renderProducts() {
                               type="button"
                               role="radio"
                               aria-checked="${frequency.id === selectedFrequencyId ? "true" : "false"}"
+                              ${selectedPlanId === "subscription" ? "" : "disabled"}
                               data-select-frequency="${frequency.id}"
                               data-product-id="${product.id}"
                             >
@@ -614,18 +617,6 @@ function renderProducts() {
                 `
                 : ""
             }
-            <div class="product-facts" aria-label="Produktfakta">
-              ${product.facts
-                .map(
-                  ([label, value]) => `
-                    <div>
-                      <span>${label}</span>
-                      <strong>${value}</strong>
-                    </div>
-                  `,
-                )
-                .join("")}
-            </div>
             <div class="product-actions">
               <button
                 class="add-button"
@@ -1131,7 +1122,10 @@ const observer = new IntersectionObserver(
 );
 
 if (productGrid) renderProducts();
-products.forEach((product) => syncFrequencyControls(product.id));
+products.forEach((product) => {
+  syncFrequencyControls(product.id);
+  syncFrequencyAvailability(product.id);
+});
 stickyPurchaseBars.forEach((bar) => syncStickyPurchase(bar.dataset.productId));
 const savedConsent = readConsent();
 if (savedConsent) applyConsent(savedConsent);

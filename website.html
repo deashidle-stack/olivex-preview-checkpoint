@@ -9,7 +9,7 @@
       content="OliveX er en høyphenolitisk olivenolje med 600-700 mg/l polyfenoler i en 500 ml lanseringsflaske."
     />
     <meta name="robots" content="noindex,nofollow" />
-    <meta name="theme-color" content="#173c34" />
+    <meta name="theme-color" content="#0b120f" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nb_NO" />
     <meta property="og:title" content="OliveX | Norges høyeste polyfenol innhold" />
@@ -17,26 +17,27 @@
       property="og:description"
       content="500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler."
     />
+    <meta property="og:image" content="./assets/visuals/produktbilde-1-1448.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="./assets/visuals/olivex-hero-editorial-2026-06-07.jpg" />
-    <link rel="preload" as="image" href="./assets/visuals/olivex-product-ritual-2026-06-07.jpg" />
-    <link rel="preload" as="image" href="./assets/olivex-wordmark-cropped.png" />
-    <link rel="preload" as="image" href="./assets/olivex-wordmark-white.png" />
-    <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preload" as="image" href="./assets/visuals/produktbilde-1-1448.jpg" fetchpriority="high" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b120f'/%3E%3Cg stroke='%23c9a45c' stroke-width='3.4' stroke-linecap='round' fill='none'%3E%3Cpath d='M16 50 C28 38 38 28 48 16'/%3E%3Cpath d='M30 36 C24 30 24 22 31 17 C37 23 36 31 30 36Z' fill='%23c9a45c' stroke='none'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='5' fill='%23c9a45c'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./midnight.css" />
   </head>
-  <body class="visual-refresh-page">
+  <body class="midnight-page">
     <a class="skip-link" href="#main">Gå til innhold</a>
 
     <header class="site-header" data-elevated="false">
       <a class="brand" href="#top" aria-label="OliveX hjem">
-        <img class="brand-logo" src="./assets/olivex-wordmark-nav.png" alt="OliveX" />
+        <img class="brand-logo" src="./assets/olivex-wordmark-white-nav.png" alt="OliveX" />
       </a>
       <nav class="main-nav" aria-label="Hovedmeny">
         <a href="#products">Produkt</a>
@@ -44,358 +45,558 @@
         <a href="#references">Studier</a>
         <a href="#producer">Produsent</a>
         <a href="#support">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
-      <button
-        class="cart-button"
-        type="button"
-        data-open-cart
-        aria-label="Åpne handlekurv"
-        aria-controls="cart-drawer"
-        aria-expanded="false"
-      >
-        <span>Kurv</span>
-        <strong data-cart-count>0</strong>
-      </button>
+      <div class="header-actions">
+        <button
+          class="cart-button"
+          type="button"
+          data-open-cart
+          aria-label="Åpne handlekurv"
+          aria-controls="cart-drawer"
+          aria-expanded="false"
+        >
+          <span>Kurv</span>
+          <strong data-cart-count>0</strong>
+        </button>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-label="Åpne meny"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
-    <main id="main">
-      <section class="hero hero-refresh" id="top" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img
-            src="./assets/visuals/olivex-hero-editorial-2026-06-07.jpg"
-            width="1774"
-            height="887"
-            fetchpriority="high"
-            alt=""
-          />
-        </div>
-        <div class="hero-scrim" aria-hidden="true"></div>
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <img class="hero-logo-lockup" src="./assets/olivex-wordmark-white-nav.png" alt="" aria-hidden="true" />
-            <p class="eyebrow">Høyphenolitisk olje</p>
-            <h1 id="hero-title">
-              <span class="hero-title-line hero-title-line-main">Norges høyeste</span>
-              <span class="hero-title-line hero-title-line-last">polyfenol innhold</span>
-            </h1>
-            <p class="hero-lede">
-              500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler. Tidlig høstet, kaldt brukt og
-              dokumentert av laboratoriet.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#products">Kjøp</a>
-              <a class="button ghost" href="#support">Kontakt oss</a>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobilmeny">
+        <a href="#products"><em>01</em>Produkt</a>
+        <a href="#oleocanthal"><em>02</em>Hvorfor</a>
+        <a href="#references"><em>03</em>Studier</a>
+        <a href="#producer"><em>04</em>Produsent</a>
+        <a href="#support"><em>05</em>FAQ</a>
+        <a href="#kontakt"><em>06</em>Kontakt</a>
+        <a href="./product-olivex-superolje.html"><em>07</em>OliveX 500 ml</a>
+      </nav>
+      <p class="mobile-menu-meta">Vipps · Kortbetaling · Posten/Bring</p>
+    </div>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main id="main">
+          <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="hero-media" aria-hidden="true">
+              <picture>
+                <source media="(max-width: 768px)" srcset="./assets/visuals/produktbilde-1-768.jpg" />
+                <img
+                  src="./assets/visuals/produktbilde-1-1448.jpg"
+                  width="1448"
+                  height="1086"
+                  fetchpriority="high"
+                  decoding="async"
+                  alt=""
+                />
+              </picture>
             </div>
-          </div>
-
-          <aside class="hero-ritual" aria-label="Ditt daglige rituale">
-            <span class="ritual-orbit" aria-hidden="true"></span>
-            <span class="ritual-stamp" aria-hidden="true"><span>#</span><strong>1</strong></span>
-            <p class="eyebrow">Slik bruker du den</p>
-            <h2>Ditt daglige rituale</h2>
-            <p>15-20 ml hver morgen. Bar som helseshot, eller over kald mat rett før servering.</p>
-            <dl class="ritual-meter">
-              <div>
-                <dt>1</dt>
-                <dd>Skje</dd>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <p class="eyebrow">Høyphenolitisk olje</p>
+                <h1 id="hero-title">
+                  <span class="hero-title-line hero-title-line-main">Norges høyeste</span>
+                  <span class="hero-title-line hero-title-line-last">polyfenol innhold</span>
+                </h1>
+                <p class="hero-lede">
+                  500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler. Tidlig høstet, kaldt brukt og
+                  dokumentert av laboratoriet.
+                </p>
+                <div class="hero-actions">
+                  <a class="button primary" href="#products">Kjøp</a>
+                  <a class="button ghost" href="#kontakt">Kontakt oss</a>
+                </div>
               </div>
-              <div>
-                <dt>600-700</dt>
-                <dd>mg/l polyfenoler</dd>
-              </div>
-              <div>
-                <dt>500</dt>
-                <dd>ml flaske</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
 
-      <section class="trust-strip trust-strip-refresh" aria-label="Produktkjennetegn">
-        <div>
-          <strong>Tidlig høstet</strong>
-          <span>For høy konsentrasjon av virkestoffer</span>
-        </div>
-        <div>
-          <strong>3x EUs krav</strong>
-          <span>Til sunn olje</span>
-        </div>
-        <div>
-          <strong>600-700 mg/l</strong>
-          <span>Polyfenoler</span>
-        </div>
-        <div>
-          <strong>500 ml</strong>
-          <span>Lanseringsflaske</span>
-        </div>
-      </section>
-
-      <section class="section products-section products-refresh" id="products" aria-labelledby="products-title">
-        <h2 class="sr-only" id="products-title">Kjøp OliveX</h2>
-        <div class="product-grid" data-product-grid></div>
-      </section>
-
-      <section class="passport-section oleo-refresh oleo-redesign oleo-constellation" id="oleocanthal" aria-labelledby="passport-title">
-        <div class="passport-image oleo-molecule-stage">
-          <img src="./assets/visuals/oleocanthal-molecule-line-2026-06-07.png" alt="Molekylstruktur for oleocanthal" />
-          <div class="oleo-left-panel" aria-label="Oleocanthal forklart">
-            <details class="oleo-info-point" data-accordion-group="oleocanthal" open>
-              <summary>
-                <span>01</span>
-                <strong>Smak</strong>
-                <em>Skarp og pepperaktig</em>
-              </summary>
-              <p>
-                Når du smaker på vår olje, vil du merke en distinkt, skarp og pepperaktig følelse bakerst i halsen.
-                Dette er ikke en feil; det er det ultimate kvalitetstegnet.
-              </p>
-            </details>
-            <details class="oleo-info-point" data-accordion-group="oleocanthal">
-              <summary>
-                <span>02</span>
-                <strong>Forklaring</strong>
-                <em>COX-1 og COX-2</em>
-              </summary>
-              <p>
-                Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
-                totale fenolinnholdet i vår olje.
-              </p>
-            </details>
-            <details class="oleo-info-point" data-accordion-group="oleocanthal">
-              <summary>
-                <span>03</span>
-                <strong>Betennelsesdemping</strong>
-                <em>Uten bivirkninger</em>
-              </summary>
-              <p>
-                <strong>Betennelsesdemping uten bivirkninger:</strong> Mens medisiner kan irritere magesekken, tynne ut
-                blodet eller belaste nyrene ved langvarig bruk, gir vår høyphenolitiske olje en naturlig, lavdose
-                betennelsesdemping som jobber trygt i bakgrunnen – <strong>helt uten negative bivirkninger for kroppen.</strong>
-              </p>
-            </details>
-            <details class="oleo-info-point" data-accordion-group="oleocanthal">
-              <summary>
-                <span>04</span>
-                <strong>Kilde</strong>
-                <em>Beauchamp et al. (Nature, 2005)</em>
-              </summary>
-              <p>
-                I 2005 oppdaget forskere at oleocanthal hemmer kroppens betennelsesenzymer (COX-1 og COX-2) på nøyaktig
-                samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner (som Ibuprofen).
-              </p>
-            </details>
-          </div>
-        </div>
-        <div class="passport-content">
-          <p class="eyebrow">Den unike stjernespilleren</p>
-          <h2 id="passport-title">Hva er Oleocanthal og hvorfor stikker det i halsen?</h2>
-          <div class="oleo-proof">
-            <strong aria-label="Over 67 prosent"><span>Over</span><span>67&nbsp;%</span></strong>
-            <span>av det totale fenolinnholdet i vår olje</span>
-          </div>
-          <p class="fine-print">Oleocanthal: Det unike molekylet som kun finnes i olivenolje.</p>
-        </div>
-      </section>
-
-      <section class="synergy-band synergy-refresh" id="bioavailability" aria-labelledby="synergy-title">
-        <div class="synergy-copy">
-          <p class="eyebrow">Hvorfor ikke bare ta en pille?</p>
-          <h2 id="synergy-title">Naturens egen synergieffekt (Biotilgjengelighet)</h2>
-          <p>
-            Oleocanthal og de andre polyfenolene i vår olje er fettløselige. Naturen har pakket dem inn i oljens
-            sunne, enumettede fettsyrer.
-          </p>
-        </div>
-        <div class="synergy-flow" aria-label="Biotilgjengelighet">
-          <div>
-            <span>01</span>
-            <strong>Fettet fungerer som en transportør</strong>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>Over 30 mikronæringsstoffer beskytter og forsterker hverandre</strong>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Helheten bevares når oljen tas som olje</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section references-section references-refresh" id="references" aria-labelledby="references-title">
-        <div class="section-heading compact wide-heading">
-          <p class="eyebrow">Vitenskapelig dokumentasjon</p>
-          <h2 id="references-title">Etterprøvbare referanser</h2>
-          <p>
-            Vi baserer våre forklaringer på fagfellevurdert forskning. Dette er de sentrale studiene som dokumenterer
-            effektene vi beskriver.
-          </p>
-        </div>
-        <div class="reference-list" aria-label="Forskningsreferanser">
-          <article>
-            <span>01</span>
-            <h3>Beauchamp et al. (Nature, 2005)</h3>
-            <p>Den opprinnelige studien som oppdaget oleocanthal og beskriver COX-1 og COX-2.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>PREDIMED-studien (New England Journal of Medicine)</h3>
-            <p>Stor klinisk studie på ekstra virgin olivenolje og hjerterelaterte utfall.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>EFSA Journal</h3>
-            <p>EUs offisielle godkjenning for olivenoljens polyfenoler og oksidativt stress.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Patti et al. / Ruiz-García et al.</h3>
-            <p>Kliniske studier på høyphenolitiske oljer, kroppsvekt, fettlever og betennelsesmarkører.</p>
-          </article>
-          <article>
-            <span>05</span>
-            <h3>Batarseh et al. (Metabolic Brain Disease)</h3>
-            <p>Dokumenterer hvordan oleocanthal knyttes til amyloid-beta-plakk og hjernebeskyttelse.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="producer-section producer-refresh producer-video-hero" id="producer" aria-labelledby="producer-title">
-        <div class="producer-video-frame">
-          <iframe
-            data-producer-video
-            data-producer-video-src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM?rel=0&playsinline=1"
-            title="Midlertidig video fra produsenten"
-            src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM?rel=0&playsinline=1"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-          <div class="producer-video-overlay">
-            <p class="eyebrow">Produsenten i Hellas</p>
-            <h2 id="producer-title">Se olivenlunden og menneskene bak oljen.</h2>
-            <p>En midlertidig video fra produsenten viser miljøet oljen kommer fra mens endelig presentasjon klargjøres.</p>
-            <span>Trykk for å spille av</span>
-          </div>
-          <button
-            class="producer-video-hit"
-            type="button"
-            data-producer-play
-            aria-label="Spill av video fra produsenten"
-          ></button>
-        </div>
-      </section>
-
-      <section class="commerce-section commerce-refresh" id="commerce" aria-labelledby="commerce-title">
-        <div class="commerce-intro">
-          <p class="eyebrow">Betaling og levering</p>
-          <h2 id="commerce-title">Vipps, kortbetaling og Posten/Bring</h2>
-          <p>Velg 500 ml-flaske, antall og leveringsfrekvens. Betaling skjer med Vipps eller kort, og levering med Posten/Bring.</p>
-        </div>
-        <div class="commerce-experience" aria-label="Betalings- og leveringsflyt">
-          <div class="checkout-phone" aria-hidden="true">
-            <div class="phone-top"></div>
-            <div class="phone-line wide"></div>
-            <div class="phone-pay vipps-mark">Vipps</div>
-            <div class="phone-pay">Kort</div>
-            <div class="phone-flow">
-              <div class="phone-progress">
-                <span></span>
-              </div>
-              <div class="phone-flow-labels">
-                <span>Valgt</span>
-                <span>Bekreftes</span>
-                <span>Sendes</span>
-              </div>
+              <aside class="hero-ritual" aria-label="Ditt daglige rituale">
+                <span class="ritual-orbit" aria-hidden="true"></span>
+                <span class="ritual-stamp" aria-hidden="true"><span>#</span><strong>1</strong></span>
+                <p class="eyebrow">Slik bruker du den</p>
+                <h2>Ditt daglige rituale</h2>
+                <p>15-20 ml hver morgen. Bar som helseshot, eller over kald mat rett før servering.</p>
+                <dl class="ritual-meter">
+                  <div>
+                    <dt><span data-count-to="1">1</span></dt>
+                    <dd>Skje</dd>
+                  </div>
+                  <div>
+                    <dt><span data-count-to="600">600</span>-<span data-count-to="700">700</span></dt>
+                    <dd>mg/l polyfenoler</dd>
+                  </div>
+                  <div>
+                    <dt><span data-count-to="500">500</span></dt>
+                    <dd>ml flaske</dd>
+                  </div>
+                </dl>
+              </aside>
             </div>
-          </div>
-          <ol class="commerce-steps">
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Velg antall</h3>
-                <p>Start med 500 ml og velg hvor mange flasker du vil ha.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>Velg abonnement eller engangskjøp</h3>
-                <p>Abonnement er anbefalt og kan settes til 30 eller 60 dagers intervall.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Betal med Vipps eller kort</h3>
-                <p>Betaling, Posten/Bring-fraktvalg og hentested håndteres i checkout.</p>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <h3>Sikker handel</h3>
-                <p>SSL, kjøpsvilkår, retur, personvern og ordrebekreftelse følger nettbutikken.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
+            <span class="hero-scroll-cue" aria-hidden="true">Skroll</span>
+          </section>
 
-      <section class="support-section support-refresh support-unified" id="support" aria-labelledby="support-title">
-        <div class="assistant-card chatbot-shell" aria-labelledby="support-title">
-          <div class="assistant-intro">
-            <p class="eyebrow">Spørsmål og svar</p>
-            <h2 id="support-title">Spør OliveX</h2>
-            <p>
-              Still et spørsmål, eller velg et av de vanligste spørsmålene. Svarene hentes fra FAQ, produktsiden og
-              informasjonen på siden.
-            </p>
-          </div>
-          <div class="assistant-answer" data-assistant-answer role="log" aria-live="polite" aria-label="Chatlogg">
-            <div class="chat-bubble assistant">
-              <strong>OliveX</strong>
-              <span>Hei. Spør om smak, bruk, dosering, oppbevaring, analysebevis, betaling eller levering.</span>
-              <small>Medisinske spørsmål bør tas med lege eller farmasøyt.</small>
-            </div>
-          </div>
-          <div class="assistant-prompts" aria-label="Vanlige spørsmål">
-            <button type="button" data-assistant-prompt="Hvorfor koster denne oljen mer enn ekstra virgin olivenolje i matbutikken?">
-              Hvorfor koster den mer?
-            </button>
-            <button type="button" data-assistant-prompt="Hvorfor smaker oljen litt pepperaktig, og hvorfor må jeg hoste noen ganger?">
-              Pepperaktig smak
-            </button>
-            <button type="button" data-assistant-prompt="Er 1 spiseskje om dagen virkelig nok for å gi effekt?">
-              Daglig dose
-            </button>
-            <button type="button" data-assistant-prompt="Kan jeg bruke oljen til steking?">Steking</button>
-            <button type="button" data-assistant-prompt="Hvordan oppbevares flasken?">Oppbevaring</button>
-            <button type="button" data-assistant-prompt="Hvor finner jeg analysebevis?">Analysebevis</button>
-            <button type="button" data-assistant-prompt="Kan jeg betale med Vipps?">Vipps</button>
-          </div>
-          <form class="assistant-form" data-assistant-form>
-            <label for="assistant-query">Spørsmål</label>
+          <section class="trust-strip" aria-label="Produktkjennetegn">
             <div>
-              <input
-                id="assistant-query"
-                name="assistant-query"
-                type="search"
-                autocomplete="off"
-                data-assistant-input
-                placeholder="Skriv spørsmålet ditt"
-              />
-              <button type="submit">Send</button>
+              <strong>Tidlig høstet</strong>
+              <span>For høy konsentrasjon av virkestoffer</span>
             </div>
-          </form>
-        </div>
-      </section>
-    </main>
+            <div>
+              <strong><span data-count-to="3">3</span>x EUs krav</strong>
+              <span>Til sunn olje</span>
+            </div>
+            <div>
+              <strong><span data-count-to="600">600</span>-<span data-count-to="700">700</span> mg/l</strong>
+              <span>Polyfenoler</span>
+            </div>
+            <div>
+              <strong><span data-count-to="500">500</span> ml</strong>
+              <span>Lanseringsflaske</span>
+            </div>
+          </section>
 
-    <footer class="site-footer" aria-label="Bunntekst">
-      <button class="privacy-link" type="button" data-consent-reopen hidden>Personvernvalg</button>
-    </footer>
+          <section
+            class="section products-section"
+            id="products"
+            aria-labelledby="products-title"
+            data-section-index="01"
+          >
+            <h2 class="sr-only" id="products-title">Kjøp OliveX</h2>
+            <div class="product-stage">
+              <figure class="product-photo">
+                <img
+                  src="./assets/visuals/produktbilde-1-1448.jpg"
+                  width="1448"
+                  height="1086"
+                  loading="lazy"
+                  decoding="async"
+                  alt="OliveX høyphenolitisk olivenolje, 500 ml flaske"
+                />
+                <figcaption class="product-photo-caption">500 ml · Høyphenolitisk olje</figcaption>
+              </figure>
+              <div class="product-grid" data-product-grid></div>
+            </div>
+          </section>
+
+          <section class="passport-section" id="oleocanthal" aria-labelledby="passport-title" data-section-index="02">
+            <div class="oleo-layout">
+              <div class="oleo-main">
+                <p class="eyebrow">Den unike stjernespilleren</p>
+                <h2 id="passport-title">Hva er Oleocanthal og hvorfor stikker det i halsen?</h2>
+                <div class="oleo-left-panel" aria-label="Oleocanthal forklart">
+                  <details class="oleo-info-point" data-accordion-group="oleocanthal" open>
+                    <summary>
+                      <span>01</span>
+                      <strong>Smak</strong>
+                      <em>Skarp og pepperaktig</em>
+                    </summary>
+                    <p>
+                      Når du smaker på vår olje, vil du merke en distinkt, skarp og pepperaktig følelse bakerst i halsen.
+                      Dette er ikke en feil; det er det ultimate kvalitetstegnet.
+                    </p>
+                  </details>
+                  <details class="oleo-info-point" data-accordion-group="oleocanthal">
+                    <summary>
+                      <span>02</span>
+                      <strong>Forklaring</strong>
+                      <em>COX-1 og COX-2</em>
+                    </summary>
+                    <p>
+                      Denne stikkingen skyldes <strong>Oleocanthal</strong>, et unikt polyfenol som utgjør over 67 % av det
+                      totale fenolinnholdet i vår olje.
+                    </p>
+                  </details>
+                  <details class="oleo-info-point" data-accordion-group="oleocanthal">
+                    <summary>
+                      <span>03</span>
+                      <strong>Betennelsesdemping</strong>
+                      <em>Uten bivirkninger</em>
+                    </summary>
+                    <p>
+                      <strong>Betennelsesdemping uten bivirkninger:</strong> Mens medisiner kan irritere magesekken, tynne ut
+                      blodet eller belaste nyrene ved langvarig bruk, gir vår høyphenolitiske olje en naturlig, lavdose
+                      betennelsesdemping som jobber trygt i bakgrunnen – <strong>helt uten negative bivirkninger for kroppen.</strong>
+                    </p>
+                  </details>
+                  <details class="oleo-info-point" data-accordion-group="oleocanthal">
+                    <summary>
+                      <span>04</span>
+                      <strong>Kilde</strong>
+                      <em>Beauchamp et al. (Nature, 2005)</em>
+                    </summary>
+                    <p>
+                      I 2005 oppdaget forskere at oleocanthal hemmer kroppens betennelsesenzymer (COX-1 og COX-2) på nøyaktig
+                      samme kjemiske måte som virkestoffet i kjente, betennelsesdempende medisiner (som Ibuprofen).
+                    </p>
+                  </details>
+                </div>
+              </div>
+              <div class="oleo-aside">
+                <figure class="molecule-figure" role="img" aria-label="Molekylstruktur for oleocanthal">
+                  <svg viewBox="0 0 460 222" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <g class="molecule-bonds" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                      <path d="M105 89 L136.2 107 L136.2 143 L105 161 L73.8 143 L73.8 107 Z" />
+                      <path d="M107.5 95.5 L131.5 109.5" />
+                      <path d="M132 140.5 L108.5 154.5" />
+                      <path d="M79 139 L79 111" />
+                      <path d="M73.8 143 L46 158" />
+                      <path d="M136.2 107 L167 89" />
+                      <path d="M167 89 L198 107" />
+                      <path d="M198 107 L219.5 94.5" />
+                      <path d="M238.5 94.5 L260 107" />
+                      <path d="M260 107 L291 89" />
+                      <path d="M257 112 L257 139" />
+                      <path d="M263 112 L263 139" />
+                      <path d="M291 89 L322 107" />
+                      <path d="M322 142 L350 161" />
+                      <path d="M347 166 L347 190" />
+                      <path d="M353 166 L353 190" />
+                      <path d="M322 107 L353 89" />
+                      <path d="M353 89 L384 107" />
+                      <path d="M355 96.5 L379 110.5" />
+                      <path d="M384 107 L410 128" />
+                      <path d="M353 89 L374 58" />
+                      <path d="M374 58 L398 44" />
+                      <path d="M377.5 63.5 L399.5 50.5" />
+                    </g>
+                    <polygon class="molecule-wedge" fill="currentColor" points="322,107 317.5,142 326.5,142" />
+                    <g
+                      class="molecule-labels"
+                      fill="currentColor"
+                      font-family="IBM Plex Mono, monospace"
+                      font-size="13"
+                      text-anchor="middle"
+                    >
+                      <text x="30" y="167">HO</text>
+                      <text x="229" y="93">O</text>
+                      <text x="260" y="156">O</text>
+                      <text x="350" y="206">O</text>
+                      <text x="409" y="42">O</text>
+                    </g>
+                  </svg>
+                </figure>
+                <div class="oleo-proof">
+                  <strong aria-label="Over 67 prosent"
+                    ><span>Over</span><span><span data-count-to="67">67</span>&nbsp;%</span></strong
+                  >
+                  <span>av det totale fenolinnholdet i vår olje</span>
+                </div>
+                <p class="fine-print">Oleocanthal: Det unike molekylet som kun finnes i olivenolje.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="synergy-band" id="bioavailability" aria-labelledby="synergy-title" data-section-index="03">
+            <div class="synergy-copy">
+              <p class="eyebrow">Hvorfor ikke bare ta en pille?</p>
+              <h2 id="synergy-title">Naturens egen synergieffekt (Biotilgjengelighet)</h2>
+              <p>
+                Oleocanthal og de andre polyfenolene i vår olje er fettløselige. Naturen har pakket dem inn i oljens
+                sunne, enumettede fettsyrer.
+              </p>
+            </div>
+            <div class="synergy-flow" aria-label="Biotilgjengelighet">
+              <div>
+                <span>01</span>
+                <strong>Fettet fungerer som en transportør</strong>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Over 30 mikronæringsstoffer beskytter og forsterker hverandre</strong>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Helheten bevares når oljen tas som olje</strong>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="section references-section"
+            id="references"
+            aria-labelledby="references-title"
+            data-section-index="04"
+          >
+            <div class="reference-ghost" aria-hidden="true" data-reference-ghost>01</div>
+            <div class="section-heading">
+              <p class="eyebrow">Vitenskapelig dokumentasjon</p>
+              <h2 id="references-title">Etterprøvbare referanser</h2>
+              <p>
+                Vi baserer våre forklaringer på fagfellevurdert forskning. Dette er de sentrale studiene som dokumenterer
+                effektene vi beskriver.
+              </p>
+            </div>
+            <div class="reference-list" aria-label="Forskningsreferanser">
+              <article>
+                <span>01</span>
+                <h3>Beauchamp et al. (Nature, 2005)</h3>
+                <p>Den opprinnelige studien som oppdaget oleocanthal og beskriver COX-1 og COX-2.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>PREDIMED-studien (New England Journal of Medicine)</h3>
+                <p>Stor klinisk studie på ekstra virgin olivenolje og hjerterelaterte utfall.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>EFSA Journal</h3>
+                <p>EUs offisielle godkjenning for olivenoljens polyfenoler og oksidativt stress.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <h3>Patti et al. / Ruiz-García et al.</h3>
+                <p>Kliniske studier på høyphenolitiske oljer, kroppsvekt, fettlever og betennelsesmarkører.</p>
+              </article>
+              <article>
+                <span>05</span>
+                <h3>Batarseh et al. (Metabolic Brain Disease)</h3>
+                <p>Dokumenterer hvordan oleocanthal knyttes til amyloid-beta-plakk og hjernebeskyttelse.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="producer-section" id="producer" aria-labelledby="producer-title" data-section-index="05">
+            <div class="producer-video-frame">
+              <iframe
+                data-producer-video
+                data-producer-video-src="https://www.youtube-nocookie.com/embed/P5aSmPtzSaM?rel=0&playsinline=1"
+                title="Midlertidig video fra produsenten"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <picture class="producer-poster" aria-hidden="true">
+                <source media="(max-width: 768px)" srcset="./assets/visuals/grove-harvest-768.jpg" />
+                <img
+                  src="./assets/visuals/grove-harvest-1586.jpg"
+                  width="1586"
+                  height="992"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </picture>
+              <div class="producer-video-overlay">
+                <p class="eyebrow">Produsenten i Hellas</p>
+                <h2 id="producer-title">Se olivenlunden og menneskene bak oljen.</h2>
+                <p>En midlertidig video fra produsenten viser miljøet oljen kommer fra mens endelig presentasjon klargjøres.</p>
+                <span>Trykk for å spille av</span>
+              </div>
+              <button
+                class="producer-video-hit"
+                type="button"
+                data-producer-play
+                aria-label="Spill av video fra produsenten"
+              >
+                <span class="play-disc" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 3.5v17l14-8.5z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </section>
+
+          <section class="commerce-section" id="commerce" aria-labelledby="commerce-title" data-section-index="06">
+            <div class="commerce-intro">
+              <p class="eyebrow">Betaling og levering</p>
+              <h2 id="commerce-title">Vipps, kortbetaling og Posten/Bring</h2>
+              <p>Velg 500 ml-flaske, antall og leveringsfrekvens. Betaling skjer med Vipps eller kort, og levering med Posten/Bring.</p>
+            </div>
+            <div class="commerce-experience" aria-label="Betalings- og leveringsflyt">
+              <div class="checkout-phone" aria-hidden="true">
+                <div class="phone-top"></div>
+                <div class="phone-line wide"></div>
+                <div class="phone-pay vipps-mark">Vipps</div>
+                <div class="phone-pay">Kort</div>
+                <div class="phone-flow">
+                  <div class="phone-progress">
+                    <span></span>
+                  </div>
+                  <div class="phone-flow-labels">
+                    <span>Valgt</span>
+                    <span>Bekreftes</span>
+                    <span>Sendes</span>
+                  </div>
+                </div>
+              </div>
+              <ol class="commerce-steps">
+                <li>
+                  <span>01</span>
+                  <div>
+                    <h3>Velg antall</h3>
+                    <p>Start med 500 ml og velg hvor mange flasker du vil ha.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>02</span>
+                  <div>
+                    <h3>Velg abonnement eller engangskjøp</h3>
+                    <p>Abonnement er anbefalt og kan settes til 30 eller 60 dagers intervall.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>03</span>
+                  <div>
+                    <h3>Betal med Vipps eller kort</h3>
+                    <p>Betaling, Posten/Bring-fraktvalg og hentested håndteres i checkout.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>04</span>
+                  <div>
+                    <h3>Sikker handel</h3>
+                    <p>SSL, kjøpsvilkår, retur, personvern og ordrebekreftelse følger nettbutikken.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="support-section" id="support" aria-labelledby="support-title" data-section-index="07">
+            <div class="assistant-card chatbot-shell" aria-labelledby="support-title">
+              <div class="assistant-intro">
+                <p class="eyebrow">Spørsmål og svar</p>
+                <h2 id="support-title">Spør OliveX</h2>
+                <p>
+                  Still et spørsmål, eller velg et av de vanligste spørsmålene. Svarene hentes fra FAQ, produktsiden og
+                  informasjonen på siden.
+                </p>
+              </div>
+              <div class="assistant-answer" data-assistant-answer role="log" aria-live="polite" aria-label="Chatlogg">
+                <div class="chat-bubble assistant">
+                  <strong>OliveX</strong>
+                  <span>Hei. Spør om smak, bruk, dosering, oppbevaring, analysebevis, betaling eller levering.</span>
+                  <small>Medisinske spørsmål bør tas med lege eller farmasøyt.</small>
+                </div>
+              </div>
+              <div class="assistant-prompts" aria-label="Vanlige spørsmål">
+                <button type="button" data-assistant-prompt="Hvorfor koster denne oljen mer enn ekstra virgin olivenolje i matbutikken?">
+                  Hvorfor koster den mer?
+                </button>
+                <button type="button" data-assistant-prompt="Hvorfor smaker oljen litt pepperaktig, og hvorfor må jeg hoste noen ganger?">
+                  Pepperaktig smak
+                </button>
+                <button type="button" data-assistant-prompt="Er 1 spiseskje om dagen virkelig nok for å gi effekt?">
+                  Daglig dose
+                </button>
+                <button type="button" data-assistant-prompt="Kan jeg bruke oljen til steking?">Steking</button>
+                <button type="button" data-assistant-prompt="Hvordan oppbevares flasken?">Oppbevaring</button>
+                <button type="button" data-assistant-prompt="Hvor finner jeg analysebevis?">Analysebevis</button>
+                <button type="button" data-assistant-prompt="Kan jeg betale med Vipps?">Vipps</button>
+              </div>
+              <form class="assistant-form" data-assistant-form>
+                <label for="assistant-query">Spørsmål</label>
+                <div>
+                  <input
+                    id="assistant-query"
+                    name="assistant-query"
+                    type="search"
+                    autocomplete="off"
+                    data-assistant-input
+                    placeholder="Skriv spørsmålet ditt"
+                  />
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <section class="contact-section" id="kontakt" aria-labelledby="contact-title" data-section-index="08">
+            <div class="contact-card">
+              <div class="contact-copy">
+                <p class="eyebrow">Kontakt oss</p>
+                <h2 id="contact-title">Send oss en melding</h2>
+                <p>
+                  Lurer du på noe om oljen, bestillingen eller leveringen? Send oss en melding, så svarer vi deg på
+                  e-post. For raske svar kan du også bruke Spør OliveX.
+                </p>
+                <a class="button ghost contact-assistant-link" href="#support">Spør OliveX</a>
+                <div class="contact-service-row" aria-label="Betaling og levering">
+                  <span>Vipps</span>
+                  <span>Kortbetaling</span>
+                  <span>Posten/Bring</span>
+                </div>
+              </div>
+              <form class="contact-form" data-contact-form novalidate>
+                <div class="contact-field">
+                  <label for="contact-name">Navn</label>
+                  <input id="contact-name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="contact-field">
+                  <label for="contact-email">E-post</label>
+                  <input id="contact-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="contact-field">
+                  <label for="contact-message">Melding</label>
+                  <textarea id="contact-message" name="message" rows="4" required></textarea>
+                </div>
+                <button class="button primary" type="submit">Send melding</button>
+                <p class="contact-confirm" data-contact-confirm hidden>
+                  Takk for meldingen. Vi svarer deg på e-post så raskt vi kan.
+                </p>
+                <p class="contact-error" data-contact-error hidden>Fyll ut navn, gyldig e-post og melding.</p>
+              </form>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer" aria-label="Bunntekst">
+          <div class="footer-grid">
+            <div class="footer-pitch">
+              <p class="eyebrow">Høyphenolitisk olje</p>
+              <h2>Norges høyeste polyfenol innhold</h2>
+              <p>500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler.</p>
+            </div>
+            <div class="footer-col">
+              <h3>Meny</h3>
+              <ul>
+                <li><a href="#products">Produkt</a></li>
+                <li><a href="#oleocanthal">Hvorfor</a></li>
+                <li><a href="#references">Studier</a></li>
+                <li><a href="#producer">Produsent</a></li>
+                <li><a href="#support">FAQ</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Produktside</h3>
+              <ul>
+                <li><a href="./product-olivex-superolje.html">OliveX 500 ml</a></li>
+                <li><a href="./product-olivex-superolje.html#analysebevis">Analysebevis</a></li>
+                <li><a href="./product-olivex-superolje.html#bruk">Bruk</a></li>
+                <li><a href="./product-olivex-superolje.html#delivery">Levering</a></li>
+                <li><a href="./product-olivex-superolje.html#faq">Ofte stilte spørsmål</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-meta">
+            <div class="footer-pay" aria-label="Betaling og levering">
+              <span>Vipps</span>
+              <span>Kortbetaling</span>
+              <span>Posten/Bring</span>
+            </div>
+            <button class="privacy-link" type="button" data-consent-reopen hidden>Personvernvalg</button>
+          </div>
+          <div class="footer-wordmark" aria-hidden="true">
+            <img src="./assets/olivex-wordmark-white.png" alt="" loading="lazy" decoding="async" />
+          </div>
+          <div class="footer-base"><small>© 2026 OliveX</small></div>
+        </footer>
+      </div>
+    </div>
 
     <aside class="consent-banner" data-consent-banner aria-labelledby="consent-title" hidden>
       <div>
@@ -440,7 +641,7 @@
         <div class="cart-items" data-cart-items></div>
         <div class="cart-empty" data-cart-empty>
           <strong>Kurven er tom</strong>
-          <span>Størrelser og priser legges inn før testkjøp.</span>
+          <span>Velg 500 ml-flaske, abonnement eller engangsleveranse.</span>
         </div>
         <div class="cart-summary">
           <div>
@@ -470,6 +671,11 @@
     </aside>
 
     <div class="sr-only" data-live-region aria-live="polite"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
     <script src="./app.js" defer></script>
+    <script src="./animations.js" defer></script>
   </body>
 </html>

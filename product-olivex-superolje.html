@@ -9,7 +9,7 @@
       content="OliveX 500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler."
     />
     <meta name="robots" content="noindex,nofollow" />
-    <meta name="theme-color" content="#173c34" />
+    <meta name="theme-color" content="#0b120f" />
     <meta property="og:type" content="product" />
     <meta property="og:locale" content="nb_NO" />
     <meta property="og:title" content="OliveX høyphenolitisk olje" />
@@ -17,22 +17,26 @@
       property="og:description"
       content="500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler."
     />
+    <meta property="og:image" content="./assets/visuals/produktbilde-2-1448.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="./assets/visuals/olivex-hero-editorial-2026-06-07.jpg" />
-    <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preload" as="image" href="./assets/visuals/produktbilde-2-1448.jpg" fetchpriority="high" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b120f'/%3E%3Cg stroke='%23c9a45c' stroke-width='3.4' stroke-linecap='round' fill='none'%3E%3Cpath d='M16 50 C28 38 38 28 48 16'/%3E%3Cpath d='M30 36 C24 30 24 22 31 17 C37 23 36 31 30 36Z' fill='%23c9a45c' stroke='none'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='5' fill='%23c9a45c'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./midnight.css" />
   </head>
-  <body class="product-page pdp-refresh-page">
+  <body class="midnight-page product-page">
     <a class="skip-link" href="#main">Gå til innhold</a>
 
     <header class="site-header" data-elevated="true">
       <a class="brand" href="./website.html#top" aria-label="OliveX hjem">
-        <img class="brand-logo" src="./assets/olivex-wordmark-nav.png" alt="OliveX" />
+        <img class="brand-logo" src="./assets/olivex-wordmark-white-nav.png" alt="OliveX" />
       </a>
       <nav class="main-nav" aria-label="Hovedmeny">
         <a href="./website.html#products">Produkter</a>
@@ -43,28 +47,88 @@
         <a href="#delivery">Levering</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <button
-        class="cart-button"
-        type="button"
-        data-open-cart
-        aria-label="Åpne handlekurv"
-        aria-controls="cart-drawer"
-        aria-expanded="false"
-      >
-        <span>Kurv</span>
-        <strong data-cart-count>0</strong>
-      </button>
+      <div class="header-actions">
+        <button
+          class="cart-button"
+          type="button"
+          data-open-cart
+          aria-label="Åpne handlekurv"
+          aria-controls="cart-drawer"
+          aria-expanded="false"
+        >
+          <span>Kurv</span>
+          <strong data-cart-count>0</strong>
+        </button>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-label="Åpne meny"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobilmeny">
+        <a href="./website.html#products"><em>01</em>Produkter</a>
+        <a href="#storrelser"><em>02</em>500 ml</a>
+        <a href="#analysebevis"><em>03</em>Analysebevis</a>
+        <a href="#bruk"><em>04</em>Bruk</a>
+        <a href="#delivery"><em>05</em>Levering</a>
+        <a href="#faq"><em>06</em>FAQ</a>
+      </nav>
+      <p class="mobile-menu-meta">Vipps · Kortbetaling · Posten/Bring</p>
+    </div>
+
+    <div class="grain" aria-hidden="true"></div>
 
     <main id="main">
       <section class="pdp-hero" aria-labelledby="product-title">
-        <div class="pdp-media">
-          <img
-            src="./assets/visuals/olivex-product-ritual-2026-06-07.jpg"
-            width="1774"
-            height="887"
-            alt="OliveX høyphenolitisk olivenolje i et daglig rituale"
-          />
+        <div class="pdp-gallery">
+          <figure class="gallery-main" data-gallery-main>
+            <img
+              src="./assets/visuals/produktbilde-2-1448.jpg"
+              width="1448"
+              height="1086"
+              fetchpriority="high"
+              decoding="async"
+              alt="OliveX høyphenolitisk olivenolje i et daglig rituale"
+            />
+          </figure>
+          <div class="gallery-thumbs" aria-label="Produktbilder">
+            <button
+              type="button"
+              data-gallery-src="./assets/visuals/produktbilde-2-1448.jpg"
+              aria-selected="true"
+              aria-label="Produktbilde 1"
+            >
+              <img src="./assets/visuals/produktbilde-2-768.jpg" loading="lazy" decoding="async" alt="" />
+            </button>
+            <button
+              type="button"
+              data-gallery-src="./assets/visuals/produktbilde-1-1448.jpg"
+              aria-selected="false"
+              aria-label="Produktbilde 2"
+            >
+              <img src="./assets/visuals/produktbilde-1-768.jpg" loading="lazy" decoding="async" alt="" />
+            </button>
+            <button
+              type="button"
+              data-gallery-src="./assets/visuals/bottle-cutout-1024.webp"
+              data-gallery-fit="contain"
+              data-thumb-fit="contain"
+              aria-selected="false"
+              aria-label="Produktbilde 3"
+            >
+              <img src="./assets/visuals/bottle-cutout-1024.webp" loading="lazy" decoding="async" alt="" />
+            </button>
+          </div>
         </div>
         <div class="pdp-buybox">
           <p class="eyebrow">Høyphenolitisk olivenolje</p>
@@ -176,8 +240,8 @@
         </div>
       </section>
 
-      <section class="pdp-section size-compare-section" id="storrelser" aria-labelledby="size-compare-title">
-        <div class="section-heading compact wide-heading">
+      <section class="pdp-section size-compare-section" id="storrelser" aria-labelledby="size-compare-title" data-section-index="01">
+        <div class="section-heading">
           <p class="eyebrow">Lanseringsformat</p>
           <h2 id="size-compare-title">Én størrelse ved lansering</h2>
           <p>
@@ -213,50 +277,103 @@
         </div>
       </section>
 
-      <section class="pdp-section pdp-split pdp-proof-section quality-passport-section" id="analysebevis" aria-labelledby="analysis-title">
-        <div class="pdp-proof-copy">
-          <p class="eyebrow">Analysebevis</p>
-          <h2 id="analysis-title">Kvalitetspass</h2>
-          <p>
-            Når analysebeviset er klart, legges opprinnelse, metode, relevante måleverdier og PDF-lenke inn her.
-          </p>
-          <div class="passport-note-grid" aria-label="Hva kvalitetspasset skal inneholde">
-            <span>Opprinnelse</span>
-            <span>Metode</span>
-            <span>Måleverdier</span>
-            <span>PDF-lenke</span>
+      <section class="pdp-section quality-passport-section" id="analysebevis" aria-labelledby="analysis-title" data-section-index="02">
+        <div class="pdp-split-inner">
+          <div class="pdp-proof-copy">
+            <p class="eyebrow">Analysebevis</p>
+            <h2 id="analysis-title">Kvalitetspass</h2>
+            <p>
+              Når analysebeviset er klart, legges opprinnelse, metode, relevante måleverdier og PDF-lenke inn her.
+            </p>
+            <div class="passport-note-grid" aria-label="Hva kvalitetspasset skal inneholde">
+              <span>Opprinnelse</span>
+              <span>Metode</span>
+              <span>Måleverdier</span>
+              <span>PDF-lenke</span>
+            </div>
+            <figure class="molecule-figure" role="img" aria-label="Molekylstruktur for oleocanthal">
+              <svg viewBox="0 0 460 222" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <g class="molecule-bonds" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                  <path d="M105 89 L136.2 107 L136.2 143 L105 161 L73.8 143 L73.8 107 Z" />
+                  <path d="M107.5 95.5 L131.5 109.5" />
+                  <path d="M132 140.5 L108.5 154.5" />
+                  <path d="M79 139 L79 111" />
+                  <path d="M73.8 143 L46 158" />
+                  <path d="M136.2 107 L167 89" />
+                  <path d="M167 89 L198 107" />
+                  <path d="M198 107 L219.5 94.5" />
+                  <path d="M238.5 94.5 L260 107" />
+                  <path d="M260 107 L291 89" />
+                  <path d="M257 112 L257 139" />
+                  <path d="M263 112 L263 139" />
+                  <path d="M291 89 L322 107" />
+                  <path d="M322 142 L350 161" />
+                  <path d="M347 166 L347 190" />
+                  <path d="M353 166 L353 190" />
+                  <path d="M322 107 L353 89" />
+                  <path d="M353 89 L384 107" />
+                  <path d="M355 96.5 L379 110.5" />
+                  <path d="M384 107 L410 128" />
+                  <path d="M353 89 L374 58" />
+                  <path d="M374 58 L398 44" />
+                  <path d="M377.5 63.5 L399.5 50.5" />
+                </g>
+                <polygon class="molecule-wedge" fill="currentColor" points="322,107 317.5,142 326.5,142" />
+                <g
+                  class="molecule-labels"
+                  fill="currentColor"
+                  font-family="IBM Plex Mono, monospace"
+                  font-size="13"
+                  text-anchor="middle"
+                >
+                  <text x="30" y="167">HO</text>
+                  <text x="229" y="93">O</text>
+                  <text x="260" y="156">O</text>
+                  <text x="350" y="206">O</text>
+                  <text x="409" y="42">O</text>
+                </g>
+              </svg>
+            </figure>
           </div>
-          <img src="./assets/visuals/oleocanthal-molecule-line-2026-06-07.png" alt="" aria-hidden="true" />
-        </div>
-        <div class="analysis-card quality-passport-card">
-          <div class="passport-card-header">
-            <span>Dokumentasjon</span>
-            <strong>Kommer</strong>
-          </div>
-          <div class="metric-row">
-            <span>Polyfenoler</span>
-            <strong>600-700 mg/l</strong>
-          </div>
-          <div class="metric-row">
-            <span>Oleocanthal</span>
-            <strong>Over 67 %</strong>
-          </div>
-          <div class="metric-row">
-            <span>Batch</span>
-            <strong>Vises her</strong>
-          </div>
-          <div class="metric-row">
-            <span>Metode</span>
-            <strong>Vises her</strong>
-          </div>
-          <div class="metric-row">
-            <span>Dokument</span>
-            <strong>Vises her</strong>
+          <div class="analysis-card quality-passport-card">
+            <svg class="passport-watermark" viewBox="0 0 460 222" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M105 89 L136.2 107 L136.2 143 L105 161 L73.8 143 L73.8 107 Z" />
+                <path d="M136.2 107 L167 89 L198 107 L229 89 L260 107 L291 89 L322 107 L353 89 L384 107 L410 128" />
+                <path d="M260 107 L260 139" />
+                <path d="M322 107 L322 142 L350 161 L350 190" />
+                <path d="M353 89 L374 58 L398 44" />
+              </g>
+            </svg>
+            <div class="passport-card-header">
+              <span>Dokumentasjon</span>
+              <strong>Kommer</strong>
+            </div>
+            <div class="metric-row">
+              <span>Polyfenoler</span>
+              <strong>600-700 mg/l</strong>
+            </div>
+            <div class="metric-row">
+              <span>Oleocanthal</span>
+              <strong>Over 67 %</strong>
+            </div>
+            <div class="metric-row is-pending">
+              <span>Batch</span>
+              <strong>Vises her</strong>
+            </div>
+            <div class="metric-row is-pending">
+              <span>Metode</span>
+              <strong>Vises her</strong>
+            </div>
+            <div class="metric-row is-pending">
+              <span>Dokument</span>
+              <strong>Vises her</strong>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="pdp-section pdp-split" id="bruk" aria-labelledby="usage-title">
+      <section class="pdp-section pdp-split" id="bruk" aria-labelledby="usage-title" data-section-index="03">
         <div>
           <p class="eyebrow">Slik bruker du den</p>
           <h2 id="usage-title">Ditt daglige rituale</h2>
@@ -286,7 +403,7 @@
         </div>
       </section>
 
-      <section class="pdp-section pdp-split" id="delivery" aria-labelledby="delivery-title">
+      <section class="pdp-section pdp-split" id="delivery" aria-labelledby="delivery-title" data-section-index="04">
         <div>
           <p class="eyebrow">Betaling og levering</p>
           <h2 id="delivery-title">Vipps, kortbetaling og Posten/Bring</h2>
@@ -344,7 +461,7 @@
         </div>
       </section>
 
-      <section class="pdp-section pdp-split" id="faq" aria-labelledby="pdp-faq-title">
+      <section class="pdp-section pdp-split" id="faq" aria-labelledby="pdp-faq-title" data-section-index="05">
         <div>
           <p class="eyebrow">FAQ</p>
           <h2 id="pdp-faq-title">Ofte stilte spørsmål</h2>
@@ -376,7 +493,46 @@
     </main>
 
     <footer class="site-footer" aria-label="Bunntekst">
-      <button class="privacy-link" type="button" data-consent-reopen hidden>Personvernvalg</button>
+      <div class="footer-grid">
+        <div class="footer-pitch">
+          <p class="eyebrow">Høyphenolitisk olje</p>
+          <h2>Norges høyeste polyfenol innhold</h2>
+          <p>500 ml høyphenolitisk olivenolje med 600-700 mg/l polyfenoler.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Meny</h3>
+          <ul>
+            <li><a href="./website.html#products">Produkt</a></li>
+            <li><a href="./website.html#oleocanthal">Hvorfor</a></li>
+            <li><a href="./website.html#references">Studier</a></li>
+            <li><a href="./website.html#producer">Produsent</a></li>
+            <li><a href="./website.html#support">FAQ</a></li>
+            <li><a href="./website.html#kontakt">Kontakt oss</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Produktside</h3>
+          <ul>
+            <li><a href="#storrelser">500 ml</a></li>
+            <li><a href="#analysebevis">Analysebevis</a></li>
+            <li><a href="#bruk">Bruk</a></li>
+            <li><a href="#delivery">Levering</a></li>
+            <li><a href="#faq">Ofte stilte spørsmål</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <div class="footer-pay" aria-label="Betaling og levering">
+          <span>Vipps</span>
+          <span>Kortbetaling</span>
+          <span>Posten/Bring</span>
+        </div>
+        <button class="privacy-link" type="button" data-consent-reopen hidden>Personvernvalg</button>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">
+        <img src="./assets/olivex-wordmark-white.png" alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="footer-base"><small>© 2026 OliveX</small></div>
     </footer>
 
     <aside class="consent-banner" data-consent-banner aria-labelledby="consent-title" hidden>
@@ -474,6 +630,10 @@
     </aside>
 
     <div class="sr-only" data-live-region aria-live="polite"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
     <script src="./app.js" defer></script>
+    <script src="./animations.js" defer></script>
   </body>
 </html>
