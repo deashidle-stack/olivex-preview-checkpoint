@@ -1,0 +1,216 @@
+{
+  "generatedAt": "2026-06-07T03:19:03.259Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": [
+    {
+      "name": "root storefront has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "root storefront has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "root storefront shows support status chips",
+      "passed": true,
+      "details": "[\"preview\",\"kildebundet\",\"medisinsk handoff\"]"
+    },
+    {
+      "name": "root storefront marks FAQ as claim-review source material",
+      "passed": true,
+      "details": "OFTE STILTE SPØRSMÅL\n\nOfte stilte spørsmål om vår superolje\n\nSøk i spørsmålene. Svarene under bruker levert FAQ som kildegrunnlag og må claim-reviewes før live.\n\nSøk i spørsmål\nSøk\nHvorfor koster denne oljen mer enn ekstra virgin olivenolje i matbutikken?\n\nSvaret ligger i høstetidspunktet og mengden oliven som kreves. Vanlig olivenolje produseres av modne, mørke oliven fordi de inneholder mye væsk"
+    },
+    {
+      "name": "root storefront renders FAQ list",
+      "passed": true,
+      "details": "faqCount=14"
+    },
+    {
+      "name": "root storefront answers payment as preview/checkout-tested direction",
+      "passed": true,
+      "details": "Betaling\nPreviewen legger opp til Vipps og kortbetaling. I produksjon må dette bekreftes med faktisk Shopify checkout og testordre.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "root storefront answers subscription as production-gated",
+      "passed": true,
+      "details": "Abonnement\nFast levering vises som ønsket kjøpsretning i previewen. Produksjon krever Shopify subscription-app, betalingsstøtte, vilkår og testordre før det loves.\nKilde: purchase-plan preview og produksjonsbrief"
+    },
+    {
+      "name": "root storefront answers shipping as checkout-tested direction",
+      "passed": true,
+      "details": "Levering\nPreviewen legger opp til Posten/Bring. Leveringsvalg, pris, hentested og sporing må vises og testes i Shopify checkout før live.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "root storefront escalates direct medical question",
+      "passed": true,
+      "details": "Medisinske spørsmål må håndteres av helsepersonell.\nJeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.\nSikkerhetsregel: supportagenten skal ikke gi medisinske råd"
+    },
+    {
+      "name": "root storefront escalates claim-sensitive FAQ match",
+      "passed": true,
+      "details": "Dette FAQ-treffet krever manuell vurdering.\nSpørsmålet treffer innhold som kan handle om helse, sykdom, biomarkører eller medisiner. I live-løsning skal dette eskaleres til support eller helsepersonell, ikke besvares av agenten.\nSikkerhetsregel: medisinsk eller juridisk usikkert FAQ-treff"
+    },
+    {
+      "name": "root storefront escalates unknown question",
+      "passed": true,
+      "details": "Ingen sikkert treff.\nJeg fant ikke et godkjent svar på \"Hva heter gårdshunden til produsenten?\". I ferdig løsning sendes dette videre til support.\nStatus: ukjent spørsmål må eskaleres"
+    },
+    {
+      "name": "share storefront has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "share storefront has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "share storefront shows support status chips",
+      "passed": true,
+      "details": "[\"preview\",\"kildebundet\",\"medisinsk handoff\"]"
+    },
+    {
+      "name": "share storefront marks FAQ as claim-review source material",
+      "passed": true,
+      "details": "OFTE STILTE SPØRSMÅL\n\nOfte stilte spørsmål om vår superolje\n\nSøk i spørsmålene. Svarene under bruker levert FAQ som kildegrunnlag og må claim-reviewes før live.\n\nSøk i spørsmål\nSøk\nHvorfor koster denne oljen mer enn ekstra virgin olivenolje i matbutikken?\n\nSvaret ligger i høstetidspunktet og mengden oliven som kreves. Vanlig olivenolje produseres av modne, mørke oliven fordi de inneholder mye væsk"
+    },
+    {
+      "name": "share storefront renders FAQ list",
+      "passed": true,
+      "details": "faqCount=14"
+    },
+    {
+      "name": "share storefront answers payment as preview/checkout-tested direction",
+      "passed": true,
+      "details": "Betaling\nPreviewen legger opp til Vipps og kortbetaling. I produksjon må dette bekreftes med faktisk Shopify checkout og testordre.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "share storefront answers subscription as production-gated",
+      "passed": true,
+      "details": "Abonnement\nFast levering vises som ønsket kjøpsretning i previewen. Produksjon krever Shopify subscription-app, betalingsstøtte, vilkår og testordre før det loves.\nKilde: purchase-plan preview og produksjonsbrief"
+    },
+    {
+      "name": "share storefront answers shipping as checkout-tested direction",
+      "passed": true,
+      "details": "Levering\nPreviewen legger opp til Posten/Bring. Leveringsvalg, pris, hentested og sporing må vises og testes i Shopify checkout før live.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "share storefront escalates direct medical question",
+      "passed": true,
+      "details": "Medisinske spørsmål må håndteres av helsepersonell.\nJeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.\nSikkerhetsregel: supportagenten skal ikke gi medisinske råd"
+    },
+    {
+      "name": "share storefront escalates claim-sensitive FAQ match",
+      "passed": true,
+      "details": "Dette FAQ-treffet krever manuell vurdering.\nSpørsmålet treffer innhold som kan handle om helse, sykdom, biomarkører eller medisiner. I live-løsning skal dette eskaleres til support eller helsepersonell, ikke besvares av agenten.\nSikkerhetsregel: medisinsk eller juridisk usikkert FAQ-treff"
+    },
+    {
+      "name": "share storefront escalates unknown question",
+      "passed": true,
+      "details": "Ingen sikkert treff.\nJeg fant ikke et godkjent svar på \"Hva heter gårdshunden til produsenten?\". I ferdig løsning sendes dette videre til support.\nStatus: ukjent spørsmål må eskaleres"
+    },
+    {
+      "name": "root storefront mobile has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=390, clientWidth=390"
+    },
+    {
+      "name": "root storefront mobile has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "root storefront mobile shows support status chips",
+      "passed": true,
+      "details": "[\"preview\",\"kildebundet\",\"medisinsk handoff\"]"
+    },
+    {
+      "name": "root storefront mobile marks FAQ as claim-review source material",
+      "passed": true,
+      "details": "OFTE STILTE SPØRSMÅL\n\nOfte stilte spørsmål om vår superolje\n\nSøk i spørsmålene. Svarene under bruker levert FAQ som kildegrunnlag og må claim-reviewes før live.\n\nSøk i spørsmål\nSøk\nHvorfor koster denne oljen mer enn ekstra virgin olivenolje i matbutikken?\n\nSvaret ligger i høstetidspunktet og mengden oliven som kreves. Vanlig olivenolje produseres av modne, mørke oliven fordi de inneholder mye væsk"
+    },
+    {
+      "name": "root storefront mobile renders FAQ list",
+      "passed": true,
+      "details": "faqCount=14"
+    },
+    {
+      "name": "root storefront mobile answers payment as preview/checkout-tested direction",
+      "passed": true,
+      "details": "Betaling\nPreviewen legger opp til Vipps og kortbetaling. I produksjon må dette bekreftes med faktisk Shopify checkout og testordre.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "root storefront mobile answers subscription as production-gated",
+      "passed": true,
+      "details": "Abonnement\nFast levering vises som ønsket kjøpsretning i previewen. Produksjon krever Shopify subscription-app, betalingsstøtte, vilkår og testordre før det loves.\nKilde: purchase-plan preview og produksjonsbrief"
+    },
+    {
+      "name": "root storefront mobile answers shipping as checkout-tested direction",
+      "passed": true,
+      "details": "Levering\nPreviewen legger opp til Posten/Bring. Leveringsvalg, pris, hentested og sporing må vises og testes i Shopify checkout før live.\nKilde: nettbutikkspesifikasjon og checkout readiness"
+    },
+    {
+      "name": "root storefront mobile escalates direct medical question",
+      "passed": true,
+      "details": "Medisinske spørsmål må håndteres av helsepersonell.\nJeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.\nSikkerhetsregel: supportagenten skal ikke gi medisinske råd"
+    },
+    {
+      "name": "root storefront mobile escalates claim-sensitive FAQ match",
+      "passed": true,
+      "details": "Dette FAQ-treffet krever manuell vurdering.\nSpørsmålet treffer innhold som kan handle om helse, sykdom, biomarkører eller medisiner. I live-løsning skal dette eskaleres til support eller helsepersonell, ikke besvares av agenten.\nSikkerhetsregel: medisinsk eller juridisk usikkert FAQ-treff"
+    },
+    {
+      "name": "root storefront mobile escalates unknown question",
+      "passed": true,
+      "details": "Ingen sikkert treff.\nJeg fant ikke et godkjent svar på \"Hva heter gårdshunden til produsenten?\". I ferdig løsning sendes dette videre til support.\nStatus: ukjent spørsmål må eskaleres"
+    }
+  ],
+  "pages": [
+    {
+      "pathname": "/index.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Mer enn en matolje",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/website.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Mer enn en matolje",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "isMobile": true
+      },
+      "title": "OliveX | Mer enn en matolje",
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "consoleErrors": []
+    }
+  ],
+  "screenshots": [
+    "qa/storefront-support-guardrails-2026-06-07.png",
+    "qa/share-storefront-support-guardrails-2026-06-07.png",
+    "qa/storefront-support-guardrails-mobile-2026-06-07.png"
+  ],
+  "summary": {
+    "assertions": 33,
+    "failures": 0
+  }
+}

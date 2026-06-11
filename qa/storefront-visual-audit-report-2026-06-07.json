@@ -1,0 +1,147 @@
+{
+  "checkedAt": "2026-06-07T07:29:31.344Z",
+  "cases": 5,
+  "failures": [],
+  "results": [
+    {
+      "label": "desktop top",
+      "url": "http://127.0.0.1:4182/index.html",
+      "status": 200,
+      "screenshot": "qa/storefront-visual-audit-desktop-top-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "noOverflow": true,
+        "noConsoleErrors": true,
+        "heroLogoWhiteIfPresent": true,
+        "heroLogoTransparentIfPresent": true,
+        "noSmallTargets": true
+      },
+      "data": {
+        "title": "OliveX | Mer enn en matolje",
+        "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+        "heroLogoSrc": "./assets/olivex-wordmark-white.png",
+        "heroLogoBg": "rgba(0, 0, 0, 0)",
+        "heroLogoPadding": "0px",
+        "heroLogoShadow": "none",
+        "overflowX": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "smallTargets": [],
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "label": "desktop full",
+      "url": "http://127.0.0.1:4182/index.html",
+      "status": 200,
+      "screenshot": "qa/storefront-visual-audit-desktop-full-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "noOverflow": true,
+        "noConsoleErrors": true,
+        "heroLogoWhiteIfPresent": true,
+        "heroLogoTransparentIfPresent": true,
+        "noSmallTargets": true
+      },
+      "data": {
+        "title": "OliveX | Mer enn en matolje",
+        "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+        "heroLogoSrc": "./assets/olivex-wordmark-white.png",
+        "heroLogoBg": "rgba(0, 0, 0, 0)",
+        "heroLogoPadding": "0px",
+        "heroLogoShadow": "none",
+        "overflowX": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "smallTargets": [],
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "label": "mobile top",
+      "url": "http://127.0.0.1:4182/index.html",
+      "status": 200,
+      "screenshot": "qa/storefront-visual-audit-mobile-top-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "noOverflow": true,
+        "noConsoleErrors": true,
+        "heroLogoWhiteIfPresent": true,
+        "heroLogoTransparentIfPresent": true,
+        "noSmallTargets": true
+      },
+      "data": {
+        "title": "OliveX | Mer enn en matolje",
+        "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+        "heroLogoSrc": "./assets/olivex-wordmark-white.png",
+        "heroLogoBg": "rgba(0, 0, 0, 0)",
+        "heroLogoPadding": "0px",
+        "heroLogoShadow": "none",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "smallTargets": [],
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "label": "mobile full",
+      "url": "http://127.0.0.1:4182/index.html",
+      "status": 200,
+      "screenshot": "qa/storefront-visual-audit-mobile-full-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "noOverflow": true,
+        "noConsoleErrors": true,
+        "heroLogoWhiteIfPresent": true,
+        "heroLogoTransparentIfPresent": true,
+        "noSmallTargets": true
+      },
+      "data": {
+        "title": "OliveX | Mer enn en matolje",
+        "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+        "heroLogoSrc": "./assets/olivex-wordmark-white.png",
+        "heroLogoBg": "rgba(0, 0, 0, 0)",
+        "heroLogoPadding": "0px",
+        "heroLogoShadow": "none",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "smallTargets": [],
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "label": "product mobile top",
+      "url": "http://127.0.0.1:4182/product-olivex-superolje.html",
+      "status": 200,
+      "screenshot": "qa/pdp-visual-audit-mobile-top-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "noOverflow": true,
+        "noConsoleErrors": true,
+        "heroLogoWhiteIfPresent": true,
+        "heroLogoTransparentIfPresent": true,
+        "noSmallTargets": true
+      },
+      "data": {
+        "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+        "h1": "OliveX høyphenolitisk olje",
+        "heroLogoSrc": "",
+        "heroLogoBg": "",
+        "heroLogoPadding": "",
+        "heroLogoShadow": "",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "smallTargets": [],
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    }
+  ]
+}

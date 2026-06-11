@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-06-07T06:15:27.558Z",
+  "cases": [
+    {
+      "name": "root decision desktop",
+      "url": "http://127.0.0.1:4182/client-review-decisions.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-client-review-decisions-1440x1000-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": true,
+      "reportGenerated": true,
+      "liveText": "Rapport generert. 11 punkter er fortsatt åpne."
+    },
+    {
+      "name": "root decision mobile",
+      "url": "http://127.0.0.1:4182/client-review-decisions.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/root-client-review-decisions-390x844-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": false,
+      "reportGenerated": false,
+      "liveText": ""
+    },
+    {
+      "name": "share decision desktop",
+      "url": "http://127.0.0.1:4182/share-preview/client-review-decisions.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-client-review-decisions-1440x1000-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": true,
+      "reportGenerated": true,
+      "liveText": "Rapport generert. 11 punkter er fortsatt åpne."
+    },
+    {
+      "name": "share decision mobile",
+      "url": "http://127.0.0.1:4182/share-preview/client-review-decisions.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/share-client-review-decisions-390x844-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": false,
+      "reportGenerated": false,
+      "liveText": ""
+    },
+    {
+      "name": "drop decision desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/client-review-decisions.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-client-review-decisions-1440x1000-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": true,
+      "reportGenerated": true,
+      "liveText": "Rapport generert. 11 punkter er fortsatt åpne."
+    },
+    {
+      "name": "drop decision mobile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/client-review-decisions.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/drop-client-review-decisions-390x844-2026-06-07.png",
+      "title": "OliveX | Beslutningslogg",
+      "h1": "Godkjenn retning. Fang mangler.",
+      "robots": "noindex,nofollow",
+      "overflow": false,
+      "consoleErrors": [],
+      "interacted": false,
+      "reportGenerated": false,
+      "liveText": ""
+    },
+    {
+      "name": "root hub decision tile",
+      "url": "http://127.0.0.1:4182/preview.html",
+      "tileHref": "./client-review-decisions.html",
+      "screenshot": "qa/root-hub-client-review-decisions-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    },
+    {
+      "name": "share hub decision tile",
+      "url": "http://127.0.0.1:4182/share-preview/",
+      "tileHref": "./client-review-decisions.html",
+      "screenshot": "qa/share-hub-client-review-decisions-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    },
+    {
+      "name": "drop hub decision tile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/",
+      "tileHref": "./client-review-decisions.html",
+      "screenshot": "qa/drop-hub-client-review-decisions-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    }
+  ],
+  "failures": []
+}

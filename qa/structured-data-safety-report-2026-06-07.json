@@ -1,0 +1,150 @@
+{
+  "checkedAt": "2026-06-07T06:46:26.652Z",
+  "cases": [
+    {
+      "name": "root storefront desktop",
+      "url": "http://127.0.0.1:4182/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-storefront-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "robots": "noindex,nofollow",
+      "logoCount": 3,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "root storefront mobile",
+      "url": "http://127.0.0.1:4182/index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/root-storefront-schema-safe-390x844-2026-06-07.png",
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "robots": "noindex,nofollow",
+      "logoCount": 3,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "root pdp desktop",
+      "url": "http://127.0.0.1:4182/product-olivex-superolje.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-pdp-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "root pdp mobile",
+      "url": "http://127.0.0.1:4182/product-olivex-superolje.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/root-pdp-schema-safe-390x844-2026-06-07.png",
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share storefront desktop",
+      "url": "http://127.0.0.1:4182/share-preview/website.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-storefront-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "robots": "noindex,nofollow",
+      "logoCount": 3,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share pdp desktop",
+      "url": "http://127.0.0.1:4182/share-preview/product-olivex-superolje.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-pdp-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop storefront desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/website.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-storefront-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "robots": "noindex,nofollow",
+      "logoCount": 3,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop pdp desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/product-olivex-superolje.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-pdp-schema-safe-1440x1000-2026-06-07.png",
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "jsonLdCount": 0,
+      "textHasExampleNo": false,
+      "overflow": false,
+      "cartButton": true,
+      "consoleErrors": []
+    }
+  ],
+  "failures": []
+}

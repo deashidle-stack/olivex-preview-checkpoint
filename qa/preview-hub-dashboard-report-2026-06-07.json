@@ -1,0 +1,482 @@
+{
+  "checkedAt": "2026-06-07T06:59:32.261Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "cases": 6,
+  "failures": [],
+  "results": [
+    {
+      "label": "root hub desktop",
+      "url": "http://127.0.0.1:4182/preview.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "screenshot": "qa/root-preview-hub-dashboard-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./index.html"
+          }
+        ],
+        "mainTileHref": "./index.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 4,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    },
+    {
+      "label": "root hub mobile",
+      "url": "http://127.0.0.1:4182/preview.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "screenshot": "qa/root-preview-hub-dashboard-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./index.html"
+          }
+        ],
+        "mainTileHref": "./index.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 1,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    },
+    {
+      "label": "share hub desktop",
+      "url": "http://127.0.0.1:4182/share-preview/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "screenshot": "qa/share-preview-hub-dashboard-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./website.html"
+          }
+        ],
+        "mainTileHref": "./website.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 4,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    },
+    {
+      "label": "share hub mobile",
+      "url": "http://127.0.0.1:4182/share-preview/index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "screenshot": "qa/share-preview-hub-dashboard-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./website.html"
+          }
+        ],
+        "mainTileHref": "./website.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 1,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    },
+    {
+      "label": "drop hub desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "screenshot": "qa/drop-preview-hub-dashboard-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./website.html"
+          }
+        ],
+        "mainTileHref": "./website.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 4,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    },
+    {
+      "label": "drop hub mobile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "screenshot": "qa/drop-preview-hub-dashboard-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "heroCorrect": true,
+        "dashboardExists": true,
+        "dashboardTitle": true,
+        "laneCount": true,
+        "laneLinks": true,
+        "heroActionsSlim": true,
+        "storefrontHeroHref": true,
+        "storefrontDashboardHref": true,
+        "storefrontMainTileHref": true,
+        "artifactTiles": true,
+        "artifactIntro": true,
+        "startHer": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true,
+        "skipLinkFirst": true,
+        "skipLinkTarget": true,
+        "mobileSingleColumn": true,
+        "desktopFourColumns": true
+      },
+      "data": {
+        "title": "OliveX | Leveranseoversikt",
+        "lanes": [
+          {
+            "title": "Del preview riktig",
+            "linkCount": 3
+          },
+          {
+            "title": "Review nettsiden",
+            "linkCount": 4
+          },
+          {
+            "title": "Lås produksjonsgrunnlag",
+            "linkCount": 5
+          },
+          {
+            "title": "Sjekk risiko før Shopify",
+            "linkCount": 8
+          }
+        ],
+        "heroActions": [
+          {
+            "text": "Preview v1 status",
+            "href": "./preview-readiness.html"
+          },
+          {
+            "text": "Beslutningslogg",
+            "href": "./client-review-decisions.html"
+          },
+          {
+            "text": "Kundehandoff",
+            "href": "./client-handoff.html"
+          },
+          {
+            "text": "Åpne nettsiden",
+            "href": "./website.html"
+          }
+        ],
+        "mainTileHref": "./website.html",
+        "tileCount": 46,
+        "dashboardGridColumns": 1,
+        "forbidden": [],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "focusedText": "Hopp til artefaktbiblioteket",
+        "postSkipHash": "#artifact-library"
+      }
+    }
+  ]
+}

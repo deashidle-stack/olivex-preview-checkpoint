@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "lean production intake HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "lean production intake no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "lean production intake no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean production intake noindex",
+      "pass": true
+    },
+    {
+      "name": "lean production intake export buttons present",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "lean production intake storefront route is website",
+      "pass": true
+    },
+    {
+      "name": "lean summary generated with missing block",
+      "pass": true
+    },
+    {
+      "name": "lean json export structured",
+      "pass": true,
+      "filename": "olivex-produksjonsintake.json"
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/netlify-drop-production-intake-export-2026-06-07.png"
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "generatedAt": "2026-06-06T23:57:33.618Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "method": "Codex app browser QA via in-app browser API",
+  "desktop": [
+    {
+      "clientWidth": 1440,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Preview hub",
+      "links": {
+        "claimReview": true,
+        "matrix": true,
+        "safeCopy": true
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/preview.html",
+      "riskyTerms": [],
+      "scrollWidth": 1440,
+      "staleTerms": [],
+      "title": "OliveX | Preview Hub"
+    },
+    {
+      "clientWidth": 1440,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Source-copy storefront",
+      "links": {
+        "claimReview": false,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/index.html",
+      "riskyTerms": [],
+      "scrollWidth": 1440,
+      "staleTerms": [],
+      "title": "OliveX | Mer enn en matolje"
+    },
+    {
+      "clientWidth": 1440,
+      "h1": "OliveX Superolje",
+      "label": "Product detail page",
+      "links": {
+        "claimReview": false,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/product-olivex-superolje.html",
+      "riskyTerms": [],
+      "scrollWidth": 1440,
+      "staleTerms": [],
+      "title": "OliveX Superolje | Produktdetaljer"
+    },
+    {
+      "clientWidth": 1440,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Production-safe copy preview",
+      "links": {
+        "claimReview": true,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/production-safe-copy.html",
+      "riskyTerms": [],
+      "scrollWidth": 1440,
+      "staleTerms": [],
+      "title": "OliveX | Produksjonssikker copy-variant"
+    }
+  ],
+  "mobile": [
+    {
+      "clientWidth": 390,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Preview hub mobile",
+      "links": {
+        "claimReview": true,
+        "matrix": true,
+        "safeCopy": true
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/preview.html",
+      "riskyTerms": [],
+      "scrollWidth": 390,
+      "staleTerms": [],
+      "title": "OliveX | Preview Hub"
+    },
+    {
+      "clientWidth": 390,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Storefront mobile",
+      "links": {
+        "claimReview": false,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/index.html",
+      "riskyTerms": [],
+      "scrollWidth": 390,
+      "staleTerms": [],
+      "title": "OliveX | Mer enn en matolje"
+    },
+    {
+      "clientWidth": 390,
+      "h1": "OliveX Superolje",
+      "label": "PDP mobile",
+      "links": {
+        "claimReview": false,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/product-olivex-superolje.html",
+      "riskyTerms": [],
+      "scrollWidth": 390,
+      "staleTerms": [],
+      "title": "OliveX Superolje | Produktdetaljer"
+    },
+    {
+      "clientWidth": 390,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "label": "Safe copy mobile",
+      "links": {
+        "claimReview": true,
+        "matrix": false,
+        "safeCopy": false
+      },
+      "logo": true,
+      "noindex": "noindex,nofollow",
+      "overflow": false,
+      "path": "/production-safe-copy.html",
+      "riskyTerms": [],
+      "scrollWidth": 390,
+      "staleTerms": [],
+      "title": "OliveX | Produksjonssikker copy-variant"
+    }
+  ],
+  "cart": {
+    "count": "1",
+    "expanded": true,
+    "open": true,
+    "total": "549 kr"
+  },
+  "support": {
+    "stekingAnswered": true,
+    "medicalHandoff": true,
+    "samples": {
+      "steking": "Bruk den kaldt\nDenne oljen bør brukes kaldt: som helseshot, over salat, yoghurt eller rett før servering. Høye temperaturer bryter ned de ømfintlige polyfenolene.\nKilde: FAQ om steking og kildetekstens seksjon om daglig rituale",
+      "medicalHandoff": "Medisinske spørsmål må håndteres av helsepersonell.\nJeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør du kontakte lege eller farmasøyt.\nSikkerhetsregel: supportagenten skal ikke gi medisinske råd"
+    }
+  },
+  "screenshots": {
+    "desktop": "qa/desktop.png",
+    "mobile": "qa/mobile.png",
+    "safeCopy": "qa/production-safe-copy.png"
+  },
+  "limitations": [
+    "scripts/qa-preview.cjs still requires project-local playwright package if run from shell"
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "generatedAt": "2026-06-07T03:11:06.375Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": [
+    {
+      "name": "/preview.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/preview.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/production-build-brief.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/production-build-brief.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/review-guide.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/review-guide.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/index.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/index.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/production-build-brief.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/production-build-brief.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/review-guide.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/review-guide.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/preview.html exposes production brief link",
+      "passed": true,
+      "details": "production brief link present"
+    },
+    {
+      "name": "/preview.html has 32 hub tiles",
+      "passed": true,
+      "details": "tileCount=32"
+    },
+    {
+      "name": "/preview.html primary CTA routes to index.html",
+      "passed": true,
+      "details": "primaryHref=./index.html"
+    },
+    {
+      "name": "/share-preview/index.html exposes production brief link",
+      "passed": true,
+      "details": "production brief link present"
+    },
+    {
+      "name": "/share-preview/index.html has 32 hub tiles",
+      "passed": true,
+      "details": "tileCount=32"
+    },
+    {
+      "name": "/share-preview/index.html primary CTA routes to website.html",
+      "passed": true,
+      "details": "primaryHref=./website.html"
+    },
+    {
+      "name": "/production-build-brief.html includes required production sections",
+      "passed": true,
+      "details": "required sections present"
+    },
+    {
+      "name": "/production-build-brief.html mentions critical integrations",
+      "passed": true,
+      "details": "integration terms present"
+    },
+    {
+      "name": "/production-build-brief.html uses root website route",
+      "passed": true,
+      "details": "primaryHref=./index.html"
+    },
+    {
+      "name": "/production-build-brief.html mobile has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=390, clientWidth=390"
+    },
+    {
+      "name": "/share-preview/production-build-brief.html includes required production sections",
+      "passed": true,
+      "details": "required sections present"
+    },
+    {
+      "name": "/share-preview/production-build-brief.html mentions critical integrations",
+      "passed": true,
+      "details": "integration terms present"
+    },
+    {
+      "name": "/share-preview/production-build-brief.html uses share website route",
+      "passed": true,
+      "details": "primaryHref=./website.html"
+    },
+    {
+      "name": "/share-preview/production-build-brief.html mobile has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=390, clientWidth=390"
+    }
+  ],
+  "pages": [
+    {
+      "pathname": "/preview.html",
+      "title": "OliveX | Leveranseoversikt",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 32,
+      "primaryHref": "./index.html"
+    },
+    {
+      "pathname": "/production-build-brief.html",
+      "title": "OliveX | Produksjonsbrief",
+      "h1": "Fra preview til ekte Shopify-butikk.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 0,
+      "primaryHref": "./index.html"
+    },
+    {
+      "pathname": "/review-guide.html",
+      "title": "OliveX | Reviewguide",
+      "h1": "Gjennomgang av OliveX-previewen.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 0,
+      "primaryHref": "./index.html"
+    },
+    {
+      "pathname": "/share-preview/index.html",
+      "title": "OliveX | Leveranseoversikt",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 32,
+      "primaryHref": "./website.html"
+    },
+    {
+      "pathname": "/share-preview/production-build-brief.html",
+      "title": "OliveX | Produksjonsbrief",
+      "h1": "Fra preview til ekte Shopify-butikk.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 0,
+      "primaryHref": "./website.html"
+    },
+    {
+      "pathname": "/share-preview/review-guide.html",
+      "title": "OliveX | Reviewguide",
+      "h1": "Gjennomgang av OliveX-previewen.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "consoleErrors": [],
+      "tileCount": 0,
+      "primaryHref": "./website.html"
+    }
+  ],
+  "screenshots": [
+    "qa/production-build-brief-desktop-2026-06-07.png",
+    "qa/production-build-brief-mobile-2026-06-07.png",
+    "qa/share-production-build-brief-desktop-2026-06-07.png",
+    "qa/share-production-build-brief-mobile-2026-06-07.png"
+  ],
+  "summary": {
+    "assertions": 26,
+    "failures": 0
+  }
+}

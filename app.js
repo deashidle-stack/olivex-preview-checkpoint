@@ -321,6 +321,8 @@ function initDetailsAccordions() {
   groupedDetails.forEach((details) => {
     details.addEventListener("toggle", () => {
       if (!details.open) return;
+      // animations.js tar over grupper merket data-accordion-animated (myk animasjon)
+      if (details.closest("[data-accordion-animated]")) return;
       const group = details.dataset.accordionGroup;
       groupedDetails.forEach((other) => {
         if (other !== details && other.dataset.accordionGroup === group) {

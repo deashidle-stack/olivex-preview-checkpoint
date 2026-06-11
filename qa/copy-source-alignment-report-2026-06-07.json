@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-06-07T05:01:30.254Z",
+  "checks": [
+    {
+      "name": "root-home",
+      "path": "/index.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasSourceHero": true,
+      "hasHeroLede": true,
+      "logoCount": 3,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "root-product",
+      "path": "/product-olivex-superolje.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "OliveX høyphenolitisk olje",
+      "hasSourceHero": false,
+      "hasHeroLede": true,
+      "logoCount": 1,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "share-home",
+      "path": "/share-preview/website.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasSourceHero": true,
+      "hasHeroLede": true,
+      "logoCount": 3,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "share-product",
+      "path": "/share-preview/product-olivex-superolje.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "OliveX høyphenolitisk olje",
+      "hasSourceHero": false,
+      "hasHeroLede": true,
+      "logoCount": 1,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "drop-home",
+      "path": "/deliverables/olivex-preview-hub-netlify-drop/website.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasSourceHero": true,
+      "hasHeroLede": true,
+      "logoCount": 3,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "drop-product",
+      "path": "/deliverables/olivex-preview-hub-netlify-drop/product-olivex-superolje.html",
+      "status": 200,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "h1": "OliveX høyphenolitisk olje",
+      "hasSourceHero": false,
+      "hasHeroLede": true,
+      "logoCount": 1,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "root-home-mobile",
+      "path": "/index.html",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasSourceHero": true,
+      "hasHeroLede": true,
+      "logoCount": 3,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "root-product-mobile",
+      "path": "/product-olivex-superolje.html",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "h1": "OliveX høyphenolitisk olje",
+      "hasSourceHero": false,
+      "hasHeroLede": true,
+      "logoCount": 1,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "share-home-mobile",
+      "path": "/share-preview/website.html",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasSourceHero": true,
+      "hasHeroLede": true,
+      "logoCount": 3,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "share-product-mobile",
+      "path": "/share-preview/product-olivex-superolje.html",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "h1": "OliveX høyphenolitisk olje",
+      "hasSourceHero": false,
+      "hasHeroLede": true,
+      "logoCount": 1,
+      "hasLogo": true,
+      "noStaleCopy": true,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    }
+  ],
+  "assertions": 70,
+  "failures": [],
+  "shots": [
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-home-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-product-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-home-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-product-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-home-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-product-1440x1000-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-home-mobile-390x844-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-product-mobile-390x844-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-home-mobile-390x844-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-product-mobile-390x844-copy-fix-2026-06-07.png"
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "generatedAt": "2026-06-07T03:01:48.521Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "browser": "chromium_headless_shell-1208",
+  "pages": [
+    {
+      "pathname": "/preview.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Leveranseoversikt",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/content-source-map.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Kildestatus",
+      "h1": "Hva i previewen kommer fra kilden, og hva mangler fortsatt?",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/index.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/product-olivex-superolje.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/review-guide.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Reviewguide",
+      "h1": "Gjennomgang av OliveX-previewen.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/index.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Leveranseoversikt",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/content-source-map.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Kildestatus",
+      "h1": "Hva i previewen kommer fra kilden, og hva mangler fortsatt?",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/website.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Mer enn en matolje",
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/product-olivex-superolje.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "OliveX høyphenolitisk olje | Produktdetaljer",
+      "h1": "OliveX høyphenolitisk olje",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "consoleErrors": []
+    },
+    {
+      "pathname": "/share-preview/review-guide.html",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "title": "OliveX | Reviewguide",
+      "h1": "Gjennomgang av OliveX-previewen.",
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "consoleErrors": []
+    }
+  ],
+  "assertions": [
+    {
+      "name": "/preview.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/preview.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/content-source-map.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/content-source-map.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/index.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/index.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/product-olivex-superolje.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1440, clientWidth=1440"
+    },
+    {
+      "name": "/product-olivex-superolje.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/review-guide.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/review-guide.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/index.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/index.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/content-source-map.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/content-source-map.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/website.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/website.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1440, clientWidth=1440"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/review-guide.html has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=1366, clientWidth=1366"
+    },
+    {
+      "name": "/share-preview/review-guide.html has no console errors",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/preview.html has 31 hub tiles",
+      "passed": true,
+      "details": "tileCount=31"
+    },
+    {
+      "name": "/preview.html links to source map",
+      "passed": true,
+      "details": "source map tile/action present"
+    },
+    {
+      "name": "/preview.html has approved hero copy",
+      "passed": true,
+      "details": "hero copy check"
+    },
+    {
+      "name": "/share-preview/index.html has 31 hub tiles",
+      "passed": true,
+      "details": "tileCount=31"
+    },
+    {
+      "name": "/share-preview/index.html links to source map",
+      "passed": true,
+      "details": "source map tile/action present"
+    },
+    {
+      "name": "/share-preview/index.html has approved hero copy",
+      "passed": true,
+      "details": "hero copy check"
+    },
+    {
+      "name": "/share-preview/index.html main CTA routes to website.html",
+      "passed": true,
+      "details": "mainHref=./website.html"
+    },
+    {
+      "name": "/index.html has no unsupported mock commerce copy",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/index.html uses supplied core messaging",
+      "passed": true,
+      "details": "supplied H1/lede present"
+    },
+    {
+      "name": "/product-olivex-superolje.html has no unsupported mock commerce copy",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/product-olivex-superolje.html uses supplied core messaging",
+      "passed": true,
+      "details": "supplied H1/lede present"
+    },
+    {
+      "name": "/share-preview/website.html has no unsupported mock commerce copy",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/website.html uses supplied core messaging",
+      "passed": true,
+      "details": "supplied H1/lede present"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html has no unsupported mock commerce copy",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html uses supplied core messaging",
+      "passed": true,
+      "details": "supplied H1/lede present"
+    },
+    {
+      "name": "/product-olivex-superolje.html has two planned size rows",
+      "passed": true,
+      "details": "[\"Størrelse 1\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\",\"Størrelse 2\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\"]"
+    },
+    {
+      "name": "/product-olivex-superolje.html variant buttons disabled until final data",
+      "passed": true,
+      "details": "[{\"text\":\"Pris kommer\",\"disabled\":true},{\"text\":\"Pris kommer\",\"disabled\":true}]"
+    },
+    {
+      "name": "/product-olivex-superolje.html sticky size 2 remains selectable but disabled",
+      "passed": true,
+      "details": "{\"buttons\":[{\"text\":\"Pris kommer\",\"disabled\":true},{\"text\":\"Pris kommer\",\"disabled\":true}],\"rows\":[\"Størrelse 1\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\",\"Størrelse 2\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\"],\"stickyValue\":\"core-size-2\",\"stickyButtonDisabled\":true,\"stickyButtonText\":\"Pris kommer\",\"stickyPrice\":\"Pris kommer\"}"
+    },
+    {
+      "name": "/product-olivex-superolje.html mobile has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=390, clientWidth=390"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html has two planned size rows",
+      "passed": true,
+      "details": "[\"Størrelse 1\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\",\"Størrelse 2\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\"]"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html variant buttons disabled until final data",
+      "passed": true,
+      "details": "[{\"text\":\"Pris kommer\",\"disabled\":true},{\"text\":\"Pris kommer\",\"disabled\":true}]"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html sticky size 2 remains selectable but disabled",
+      "passed": true,
+      "details": "{\"buttons\":[{\"text\":\"Pris kommer\",\"disabled\":true},{\"text\":\"Pris kommer\",\"disabled\":true}],\"rows\":[\"Størrelse 1\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\",\"Størrelse 2\\nKommer\\nPris kommer\\nKommer\\nAvklares med endelig størrelse\\nPris kommer\"],\"stickyValue\":\"core-size-2\",\"stickyButtonDisabled\":true,\"stickyButtonText\":\"Pris kommer\",\"stickyPrice\":\"Pris kommer\"}"
+    },
+    {
+      "name": "/share-preview/product-olivex-superolje.html mobile has no horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth=390, clientWidth=390"
+    },
+    {
+      "name": "source map documents source lock",
+      "passed": true,
+      "details": "content-source-map sections"
+    }
+  ],
+  "screenshots": [
+    "qa/source-data-lock-pdp-mobile-2026-06-07.png",
+    "qa/source-data-lock-pdp-mobile-share-2026-06-07.png",
+    "qa/source-data-lock-pdp-desktop-2026-06-07.png",
+    "qa/content-source-map-desktop-2026-06-07.png",
+    "qa/content-source-map-mobile-2026-06-07.png"
+  ],
+  "summary": {
+    "assertions": 44,
+    "failures": 0
+  }
+}

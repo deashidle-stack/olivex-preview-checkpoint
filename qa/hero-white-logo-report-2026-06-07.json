@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-06-07T07:15:36.418Z",
+  "cases": 3,
+  "failures": [],
+  "results": [
+    {
+      "label": "root storefront",
+      "url": "http://127.0.0.1:4182/index.html",
+      "screenshot": "qa/root-hero-white-logo-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "imgFound": true,
+        "srcWhite": true,
+        "loaded": true,
+        "noBackground": true,
+        "noBorder": true,
+        "noShadow": true,
+        "noPadding": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      },
+      "data": {
+        "status": "found",
+        "srcAttr": "./assets/olivex-wordmark-white.png",
+        "currentSrc": "http://127.0.0.1:4182/assets/olivex-wordmark-white.png",
+        "complete": true,
+        "naturalWidth": 690,
+        "naturalHeight": 360,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "0px",
+        "boxShadow": "none",
+        "paddingTop": "0px",
+        "paddingLeft": "0px",
+        "rect": {
+          "x": 88.5,
+          "y": 192.796875,
+          "width": 190,
+          "height": 99.125
+        },
+        "overflowX": false
+      }
+    },
+    {
+      "label": "share storefront",
+      "url": "http://127.0.0.1:4182/share-preview/website.html",
+      "screenshot": "qa/share-hero-white-logo-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "imgFound": true,
+        "srcWhite": true,
+        "loaded": true,
+        "noBackground": true,
+        "noBorder": true,
+        "noShadow": true,
+        "noPadding": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      },
+      "data": {
+        "status": "found",
+        "srcAttr": "./assets/olivex-wordmark-white.png",
+        "currentSrc": "http://127.0.0.1:4182/share-preview/assets/olivex-wordmark-white.png",
+        "complete": true,
+        "naturalWidth": 690,
+        "naturalHeight": 360,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "0px",
+        "boxShadow": "none",
+        "paddingTop": "0px",
+        "paddingLeft": "0px",
+        "rect": {
+          "x": 88.5,
+          "y": 192.796875,
+          "width": 190,
+          "height": 99.125
+        },
+        "overflowX": false
+      }
+    },
+    {
+      "label": "drop storefront",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/website.html",
+      "screenshot": "qa/drop-hero-white-logo-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "imgFound": true,
+        "srcWhite": true,
+        "loaded": true,
+        "noBackground": true,
+        "noBorder": true,
+        "noShadow": true,
+        "noPadding": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      },
+      "data": {
+        "status": "found",
+        "srcAttr": "./assets/olivex-wordmark-white.png",
+        "currentSrc": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/assets/olivex-wordmark-white.png",
+        "complete": true,
+        "naturalWidth": 690,
+        "naturalHeight": 360,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "0px",
+        "boxShadow": "none",
+        "paddingTop": "0px",
+        "paddingLeft": "0px",
+        "rect": {
+          "x": 88.5,
+          "y": 192.796875,
+          "width": 190,
+          "height": 99.125
+        },
+        "overflowX": false
+      }
+    }
+  ]
+}

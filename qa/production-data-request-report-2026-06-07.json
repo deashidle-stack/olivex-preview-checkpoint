@@ -1,0 +1,234 @@
+{
+  "checkedAt": "2026-06-07T07:23:02.174Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "expectedH1": "Del hubben. Hent data.",
+  "cases": 9,
+  "failures": [],
+  "results": [
+    {
+      "label": "root production request desktop",
+      "url": "http://127.0.0.1:4182/production-data-request.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-production-data-request-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "root production request mobile",
+      "url": "http://127.0.0.1:4182/production-data-request.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/root-production-data-request-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "share production request desktop",
+      "url": "http://127.0.0.1:4182/share-preview/production-data-request.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-production-data-request-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "share production request mobile",
+      "url": "http://127.0.0.1:4182/share-preview/production-data-request.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/share-production-data-request-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "drop production request desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/production-data-request.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-production-data-request-1440x1000-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "drop production request mobile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/production-data-request.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/drop-production-data-request-390x844-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "title": true,
+        "h1": true,
+        "noindex": true,
+        "logo": true,
+        "emailHasPreviewPlaceholder": true,
+        "emailRequestsCoreData": true,
+        "folderChecklist": true,
+        "copyEmail": true,
+        "copyFolder": true,
+        "hubRoute": true,
+        "intakeRoute": true,
+        "acceptanceCards": true,
+        "nextCards": true,
+        "noOverflow": true,
+        "noForbidden": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "root hub tile 47",
+      "url": "http://127.0.0.1:4182/preview.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-hub-production-data-request-tile-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "tileCount": true,
+        "tile47Href": true,
+        "dashboardLink": true,
+        "storefrontHeroHref": true,
+        "storefrontMainTileHref": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "share hub tile 47",
+      "url": "http://127.0.0.1:4182/share-preview/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-hub-production-data-request-tile-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "tileCount": true,
+        "tile47Href": true,
+        "dashboardLink": true,
+        "storefrontHeroHref": true,
+        "storefrontMainTileHref": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      }
+    },
+    {
+      "label": "drop hub tile 47",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-hub-production-data-request-tile-2026-06-07.png",
+      "checks": {
+        "httpOk": true,
+        "tileCount": true,
+        "tile47Href": true,
+        "dashboardLink": true,
+        "storefrontHeroHref": true,
+        "storefrontMainTileHref": true,
+        "noOverflow": true,
+        "noConsoleErrors": true
+      }
+    }
+  ]
+}

@@ -44,7 +44,7 @@
         <a href="#storrelser">500 ml</a>
         <a href="#analysebevis">Analysebevis</a>
         <a href="#bruk">Bruk</a>
-        <a href="#delivery">Levering</a>
+        <a href="./om-oss.html">Om oss</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="header-actions">
@@ -80,7 +80,7 @@
         <a href="#storrelser"><em>02</em>500 ml</a>
         <a href="#analysebevis"><em>03</em>Analysebevis</a>
         <a href="#bruk"><em>04</em>Bruk</a>
-        <a href="#delivery"><em>05</em>Levering</a>
+        <a href="./om-oss.html"><em>05</em>Om oss</a>
         <a href="#faq"><em>06</em>FAQ</a>
       </nav>
       <p class="mobile-menu-meta">Vipps · Kortbetaling · Posten/Bring</p>
@@ -141,18 +141,22 @@
             verifisert av laboratoriet.
           </p>
 
-          <div class="pdp-variant-grid" aria-label="Velg størrelse">
-            <article class="is-selected">
-              <span>Lanseringsflaske</span>
-              <strong>500 ml</strong>
-              <p>For daglig bruk som helseshot eller over kald mat.</p>
-              <button class="add-button" type="button" data-add-to-cart="core-500ml" data-product-id="core">Kjøp</button>
-            </article>
-          </div>
-
-          <div class="product-quantity-row pdp-quantity-row" aria-label="Velg antall">
-            <span class="variant-label">Antall</span>
-            <div class="product-quantity-control">
+          <div class="product-config-row">
+            <div class="variant-group single-variant" aria-label="Størrelse">
+              <div class="variant-options">
+                <button
+                  class="variant-option is-selected"
+                  type="button"
+                  aria-pressed="true"
+                  data-select-variant="core-500ml"
+                  data-product-id="core"
+                >
+                  <strong>500 ml</strong>
+                  <span>Lanseringsflaske</span>
+                </button>
+              </div>
+            </div>
+            <div class="product-quantity-control" aria-label="Antall">
               <button type="button" data-decrease-product="core" aria-label="Reduser antall">−</button>
               <strong data-product-quantity="core">1</strong>
               <button type="button" data-increase-product="core" aria-label="Øk antall">+</button>
@@ -211,6 +215,8 @@
               </div>
             </div>
           </div>
+
+          <button class="add-button" type="button" data-add-to-cart="core-500ml" data-product-id="core">Kjøp</button>
 
           <div class="pdp-service-row" aria-label="Kjøpsinformasjon">
             <span>Vipps</span>
@@ -403,65 +409,7 @@
         </div>
       </section>
 
-      <section class="pdp-section pdp-split" id="delivery" aria-labelledby="delivery-title" data-section-index="04">
-        <div>
-          <p class="eyebrow">Betaling og levering</p>
-          <h2 id="delivery-title">Vipps, kortbetaling og Posten/Bring</h2>
-          <p>
-            Velg størrelse, betal med Vipps eller kort, og få levering med Posten/Bring.
-          </p>
-        </div>
-        <div class="commerce-experience product-commerce" aria-label="Betalings- og leveringsflyt">
-          <div class="checkout-phone" aria-hidden="true">
-            <div class="phone-top"></div>
-            <div class="phone-line wide"></div>
-            <div class="phone-pay vipps-mark">Vipps</div>
-            <div class="phone-pay">Kort</div>
-            <div class="phone-flow">
-              <div class="phone-progress">
-                <span></span>
-              </div>
-              <div class="phone-flow-labels">
-                <span>Valgt</span>
-                <span>Bekreftes</span>
-                <span>Sendes</span>
-              </div>
-            </div>
-          </div>
-          <ol class="commerce-steps">
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Velg størrelse</h3>
-                <p>Størrelse og pris kommer før checkout aktiveres.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>Vipps eller kort</h3>
-                <p>Tilgjengelige betalingsvalg vises før kunden bekrefter kjøpet.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Posten/Bring</h3>
-                <p>Leveringsmåte, hentested og sporing velges i checkout.</p>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <h3>Retur og vilkår</h3>
-                <p>Retur, angrerett og skadet vare håndteres etter kjøpsvilkårene.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="pdp-section pdp-split" id="faq" aria-labelledby="pdp-faq-title" data-section-index="05">
+      <section class="pdp-section pdp-split" id="faq" aria-labelledby="pdp-faq-title" data-section-index="04">
         <div>
           <p class="eyebrow">FAQ</p>
           <h2 id="pdp-faq-title">Ofte stilte spørsmål</h2>
@@ -506,6 +454,7 @@
             <li><a href="./website.html#oleocanthal">Hvorfor</a></li>
             <li><a href="./website.html#references">Studier</a></li>
             <li><a href="./website.html#producer">Produsent</a></li>
+            <li><a href="./om-oss.html">Om oss</a></li>
             <li><a href="./website.html#support">FAQ</a></li>
             <li><a href="./website.html#kontakt">Kontakt oss</a></li>
           </ul>
@@ -516,7 +465,6 @@
             <li><a href="#storrelser">500 ml</a></li>
             <li><a href="#analysebevis">Analysebevis</a></li>
             <li><a href="#bruk">Bruk</a></li>
-            <li><a href="#delivery">Levering</a></li>
             <li><a href="#faq">Ofte stilte spørsmål</a></li>
           </ul>
         </div>
@@ -629,11 +577,148 @@
       </section>
     </aside>
 
+    <aside class="checkout-overlay" data-checkout aria-hidden="true" inert>
+      <div class="checkout-backdrop" data-checkout-close></div>
+      <section class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkout-title" tabindex="-1">
+        <header class="checkout-header">
+          <div class="checkout-header-title">
+            <p class="eyebrow">Kasse</p>
+            <h2 id="checkout-title">Fullfør bestillingen</h2>
+          </div>
+          <ol class="checkout-progress" data-checkout-progress>
+            <li class="is-active"><i>1</i><span>Levering</span></li>
+            <li><i>2</i><span>Betaling</span></li>
+            <li><i>3</i><span>Bekreftelse</span></li>
+          </ol>
+          <button class="icon-button" type="button" data-checkout-close aria-label="Lukk kassen">Lukk</button>
+        </header>
+        <div class="checkout-body">
+          <div class="checkout-main">
+            <form class="checkout-step is-active" data-checkout-step="1" novalidate>
+              <h3>Kontakt og levering</h3>
+              <div class="checkout-grid">
+                <div class="contact-field checkout-span-2">
+                  <label for="co-email">E-post</label>
+                  <input id="co-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="contact-field">
+                  <label for="co-name">Navn</label>
+                  <input id="co-name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="contact-field">
+                  <label for="co-phone">Telefon</label>
+                  <input id="co-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+                </div>
+                <div class="contact-field checkout-span-2">
+                  <label for="co-address">Adresse</label>
+                  <input id="co-address" name="address" type="text" autocomplete="street-address" required />
+                </div>
+                <div class="contact-field">
+                  <label for="co-zip">Postnummer</label>
+                  <input id="co-zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{4}" autocomplete="postal-code" required />
+                </div>
+                <div class="contact-field">
+                  <label for="co-city">Sted</label>
+                  <input id="co-city" name="city" type="text" autocomplete="address-level2" required />
+                </div>
+              </div>
+              <span class="variant-label">Leveringsmåte</span>
+              <div class="checkout-shipping" role="radiogroup" aria-label="Velg leveringsmåte">
+                <button class="checkout-ship-option is-selected" type="button" role="radio" aria-checked="true" data-ship-option="pickup">
+                  <strong>Hentested</strong>
+                  <span>Posten/Bring · Sporing</span>
+                </button>
+                <button class="checkout-ship-option" type="button" role="radio" aria-checked="false" data-ship-option="home">
+                  <strong>Hjemlevering</strong>
+                  <span>Posten/Bring · Sporing</span>
+                </button>
+              </div>
+              <p class="contact-error" data-checkout-error-1 hidden>Fyll ut alle feltene med gyldige verdier.</p>
+              <div class="checkout-actions">
+                <button class="button primary" type="submit">Til betaling</button>
+              </div>
+            </form>
+
+            <form class="checkout-step" data-checkout-step="2" novalidate>
+              <h3>Betaling</h3>
+              <div class="checkout-paychoice" role="radiogroup" aria-label="Velg betalingsmåte">
+                <button class="checkout-pay-option is-selected" type="button" role="radio" aria-checked="true" data-pay-option="vipps">
+                  Vipps
+                </button>
+                <button class="checkout-pay-option" type="button" role="radio" aria-checked="false" data-pay-option="card">
+                  Kort
+                </button>
+              </div>
+              <div class="checkout-pay-panel" data-pay-panel="vipps">
+                <p>Du sendes til Vipps for å bekrefte betalingen med telefonen din.</p>
+                <button class="payment-button vipps" type="submit">Fortsett med Vipps</button>
+              </div>
+              <div class="checkout-pay-panel" data-pay-panel="card" hidden>
+                <div class="checkout-grid">
+                  <div class="contact-field checkout-span-2">
+                    <label for="co-card">Kortnummer</label>
+                    <input id="co-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" required />
+                  </div>
+                  <div class="contact-field">
+                    <label for="co-exp">Utløpsdato</label>
+                    <input id="co-exp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/ÅÅ" required />
+                  </div>
+                  <div class="contact-field">
+                    <label for="co-cvc">CVC</label>
+                    <input id="co-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required />
+                  </div>
+                </div>
+                <button class="payment-button card" type="submit">Betal med kort</button>
+              </div>
+              <p class="contact-error" data-checkout-error-2 hidden>Kontroller betalingsopplysningene.</p>
+              <p class="fine-print">Forhåndsvisning — ingen betaling gjennomføres.</p>
+              <div class="checkout-actions">
+                <button class="checkout-back" type="button" data-checkout-back>Tilbake til levering</button>
+              </div>
+            </form>
+
+            <div class="checkout-step checkout-confirm" data-checkout-step="3">
+              <span class="checkout-confirm-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5 L10 18.5 L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+              <h3>Takk for bestillingen!</h3>
+              <p class="checkout-ordernumber">Ordrenummer <strong data-checkout-ordernumber>OLX-00000</strong></p>
+              <p>Ordrebekreftelse sendes til <strong data-checkout-email>e-posten din</strong>. Levering skjer med Posten/Bring, og du får sporing når pakken sendes.</p>
+              <p class="fine-print">Forhåndsvisning — ingen betaling er gjennomført.</p>
+              <div class="checkout-actions">
+                <button class="button primary" type="button" data-checkout-finish>Tilbake til butikken</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="checkout-summary" aria-label="Din bestilling">
+            <h3>Din bestilling</h3>
+            <div class="checkout-summary-items" data-checkout-items></div>
+            <div class="cart-summary">
+              <div>
+                <span>Delsum</span>
+                <strong data-checkout-total>Avklares i checkout</strong>
+              </div>
+              <div>
+                <span>Frakt</span>
+                <strong data-checkout-shipping>Posten/Bring</strong>
+              </div>
+            </div>
+            <div class="footer-pay" aria-label="Betaling og levering">
+              <span>Vipps</span>
+              <span>Kortbetaling</span>
+              <span>Posten/Bring</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </aside>
+
     <div class="sr-only" data-live-region aria-live="polite"></div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
     <script src="./app.js" defer></script>
     <script src="./animations.js" defer></script>
+    <script src="./checkout.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-06-07T06:40:57.757Z",
+  "cases": [
+    {
+      "name": "root source verification desktop",
+      "url": "http://127.0.0.1:4182/source-verification.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/root-source-verification-1440x1000-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "root source verification mobile",
+      "url": "http://127.0.0.1:4182/source-verification.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/root-source-verification-390x844-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "share source verification desktop",
+      "url": "http://127.0.0.1:4182/share-preview/source-verification.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/share-source-verification-1440x1000-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "share source verification mobile",
+      "url": "http://127.0.0.1:4182/share-preview/source-verification.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/share-source-verification-390x844-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop source verification desktop",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/source-verification.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "qa/drop-source-verification-1440x1000-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop source verification mobile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/source-verification.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "qa/drop-source-verification-390x844-2026-06-07.png",
+      "title": "OliveX | Kilde- og best-practice-verifisering",
+      "h1": "Beslutningene må være bundet til offisielle kilder.",
+      "robots": "noindex,nofollow",
+      "logoCount": 1,
+      "overflow": false,
+      "sourceLinks": 16,
+      "consoleErrors": []
+    },
+    {
+      "name": "root hub source verification tile",
+      "url": "http://127.0.0.1:4182/preview.html",
+      "screenshot": "qa/root-hub-source-verification-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    },
+    {
+      "name": "share hub source verification tile",
+      "url": "http://127.0.0.1:4182/share-preview/",
+      "screenshot": "qa/share-hub-source-verification-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    },
+    {
+      "name": "drop hub source verification tile",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/",
+      "screenshot": "qa/drop-hub-source-verification-tile-2026-06-07.png",
+      "overflow": false,
+      "consoleErrors": [],
+      "tileCount": 1
+    }
+  ],
+  "failures": []
+}

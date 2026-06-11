@@ -1,0 +1,180 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "local support testbench desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/support-agent-testbench.html"
+    },
+    {
+      "name": "local support testbench desktop: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "local support testbench desktop: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local support testbench desktop: noindex",
+      "pass": true
+    },
+    {
+      "name": "local testbench has export and suite controls",
+      "pass": true,
+      "buttons": [
+        "Test svar",
+        "Kjør standardtester",
+        "Kopier rapport",
+        "Last ned .json",
+        "Nullstill",
+        "Steking",
+        "Analysebevis",
+        "Vipps",
+        "Levering",
+        "Medisin",
+        "Sykdom",
+        "Smak",
+        "Fast levering"
+      ]
+    },
+    {
+      "name": "local testbench route to storefront support",
+      "pass": true
+    },
+    {
+      "name": "usage question classified usage_cold",
+      "pass": true,
+      "answer": "KILDEKRAV\nusage_cold\n\nOliveX bør presenteres som best egnet til kald bruk eller direkte daglig bruk. Agenten skal ikke improvisere ernærings- eller helseeffekt utover godkjent brukstekst.\n\nKILDE\nFAQ/brukstekst - må claim-reviewes før live\nHANDLING\nSvar i preview, krev godkjent brukstekst før live\nMO"
+    },
+    {
+      "name": "usage live feedback set",
+      "pass": true,
+      "live1": "Testet intent usage_cold. Handling: Svar i preview, krev godkjent brukstekst før live."
+    },
+    {
+      "name": "medical question handoff",
+      "pass": true,
+      "answer": "HANDOFF\nmedical\n\nJeg kan ikke gi medisinske råd. For spørsmål om sykdom, medisiner, graviditet eller behandling bør kunden kontakte lege eller farmasøyt.\n\nKILDE\nGuardrail\nHANDLING\nHandoff\nMODUS\nPreview"
+    },
+    {
+      "name": "production mode blocks draft payment answer",
+      "pass": true,
+      "answer": "MANGLER KILDE\npayment\n\nProduksjonsmodus: Dette svaret er blokkert fordi kilden ikke er godkjent eller produksjonsdata mangler. Send spørsmålet til support eller oppdater kunnskapsbasen.\n\nKILDE\nBetalingsoppsett - må testes i Shopify\nHANDLING\nBlokker og eskaler\nMODUS\nProduksjon"
+    },
+    {
+      "name": "standard suite populates log",
+      "pass": true,
+      "logExcerpt": "01\nKan jeg bruke oljen til steking?\n\nusage_cold · Svar i preview, krev godkjent brukstekst før live\n\nKilde: FAQ/brukstekst - må claim-reviewes før live\n02\nKan jeg ta dette med blodfortynnende medisiner?\n\nmedical · Handoff\n\nKilde: Guardrail\n03\nKan jeg betale med Vipps?\n\npayment · Blokker og eskaler\n\nKilde: Betalingsoppsett - må testes i Shopify\n04\nKan jeg bruke oljen til steking?\n\nusage_cold · Blokker og eskaler\n\nKilde: FAQ/brukstekst - må claim-reviewes før live\n05\nHvor finner jeg analysebevis?\n"
+    },
+    {
+      "name": "agent report json download structured",
+      "pass": true,
+      "filename": "olivex-supportagent-testrapport.json",
+      "total": 13
+    },
+    {
+      "name": "local support testbench mobile: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/support-agent-testbench.html"
+    },
+    {
+      "name": "local support testbench mobile: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "local support testbench mobile: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "local support testbench mobile: noindex",
+      "pass": true
+    },
+    {
+      "name": "mobile testbench has prompt controls",
+      "pass": true,
+      "buttons": [
+        "Test svar",
+        "Kjør standardtester",
+        "Kopier rapport",
+        "Last ned .json",
+        "Nullstill",
+        "Steking",
+        "Analysebevis",
+        "Vipps",
+        "Levering",
+        "Medisin",
+        "Sykdom",
+        "Smak",
+        "Fast levering"
+      ]
+    },
+    {
+      "name": "share support testbench desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/share-preview/support-agent-testbench.html"
+    },
+    {
+      "name": "share support testbench desktop: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "share support testbench desktop: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share support testbench desktop: noindex",
+      "pass": true
+    },
+    {
+      "name": "share testbench route to storefront support",
+      "pass": true
+    },
+    {
+      "name": "share testbench route to hub",
+      "pass": true
+    },
+    {
+      "name": "preview hub support testbench tile: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/preview.html"
+    },
+    {
+      "name": "preview hub support testbench tile: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "preview hub support testbench tile: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "preview hub support testbench tile: noindex",
+      "pass": true
+    },
+    {
+      "name": "preview hub exposes tile 36",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/support-agent-testbench-desktop-2026-06-07.png",
+    "qa/support-agent-testbench-mobile-2026-06-07.png",
+    "qa/share-support-agent-testbench-desktop-2026-06-07.png"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "local deploy guide desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/preview-deploy.html"
+    },
+    {
+      "name": "local deploy guide desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local deploy guide desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local deploy guide desktop: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "local deploy guide mobile: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/preview-deploy.html"
+    },
+    {
+      "name": "local deploy guide mobile: no horizontal overflow 390",
+      "pass": true,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "local deploy guide mobile: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local deploy guide mobile: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "share deploy guide desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/share-preview/preview-deploy.html"
+    },
+    {
+      "name": "share deploy guide desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share deploy guide desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share deploy guide desktop: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "lean deploy root hub: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/deliverables/olivex-preview-hub-netlify-drop/index.html"
+    },
+    {
+      "name": "lean deploy root hub: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean deploy root hub: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "lean deploy root hub: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "lean deploy guide desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/deliverables/olivex-preview-hub-netlify-drop/preview-deploy.html"
+    },
+    {
+      "name": "lean deploy guide desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean deploy guide desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "lean deploy guide desktop: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "lean handoff desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/deliverables/olivex-preview-hub-netlify-drop/client-handoff.html"
+    },
+    {
+      "name": "lean handoff desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean handoff desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "lean handoff desktop: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "lean storefront desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/deliverables/olivex-preview-hub-netlify-drop/website.html"
+    },
+    {
+      "name": "lean storefront desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean storefront desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "lean storefront desktop: noindex meta",
+      "pass": true
+    },
+    {
+      "name": "local deploy guide links zip artifact",
+      "pass": true
+    },
+    {
+      "name": "local deploy guide has Netlify source note",
+      "pass": true
+    },
+    {
+      "name": "local deploy guide describes lean folder",
+      "pass": true
+    },
+    {
+      "name": "share deploy guide does not link missing local zip",
+      "pass": true
+    },
+    {
+      "name": "share deploy guide uses share hub route",
+      "pass": true
+    },
+    {
+      "name": "share deploy guide uses share storefront route",
+      "pass": true
+    },
+    {
+      "name": "lean root opens hub not storefront",
+      "pass": true
+    },
+    {
+      "name": "lean root links storefront as website.html",
+      "pass": true
+    },
+    {
+      "name": "lean root links handoff",
+      "pass": true
+    },
+    {
+      "name": "lean deploy guide does not link missing zip",
+      "pass": true
+    },
+    {
+      "name": "lean deploy guide points to customer handoff",
+      "pass": true
+    },
+    {
+      "name": "lean handoff points hub to index",
+      "pass": true
+    },
+    {
+      "name": "lean handoff points storefront to website",
+      "pass": true
+    },
+    {
+      "name": "lean storefront keeps supplied hero",
+      "pass": true
+    },
+    {
+      "name": "lean storefront still price honest",
+      "pass": true
+    },
+    {
+      "name": "zip artifact exists and is under 10 MB",
+      "pass": true,
+      "zipBytes": 9351618
+    },
+    {
+      "name": "lean root index exists on disk",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/preview-deploy-desktop-2026-06-07.png",
+    "qa/preview-deploy-mobile-2026-06-07.png",
+    "qa/share-preview-deploy-desktop-2026-06-07.png",
+    "qa/netlify-drop-root-hub-2026-06-07.png",
+    "qa/netlify-drop-preview-deploy-2026-06-07.png",
+    "qa/netlify-drop-client-handoff-2026-06-07.png",
+    "qa/netlify-drop-website-2026-06-07.png"
+  ]
+}

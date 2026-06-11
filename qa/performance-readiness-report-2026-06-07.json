@@ -1,0 +1,258 @@
+{
+  "generatedAt": "2026-06-07T04:44:42.811Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": 46,
+  "failures": 0,
+  "resourceSummary": {
+    "totals": {
+      "count": 8,
+      "transferSize": 1495846,
+      "decodedBodySize": 1493446
+    },
+    "externalCount": 0,
+    "external": []
+  },
+  "results": [
+    {
+      "name": "local performance desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local performance desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local performance desktop h1 present",
+      "pass": true,
+      "h1": "Premium må også være raskt."
+    },
+    {
+      "name": "local performance desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local performance desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/performance-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "local performance desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local performance has final h1",
+      "pass": true
+    },
+    {
+      "name": "local performance has CWV targets",
+      "pass": true
+    },
+    {
+      "name": "local performance has asset inventory",
+      "pass": true
+    },
+    {
+      "name": "local performance has Shopify app risk",
+      "pass": true
+    },
+    {
+      "name": "local performance has official source links",
+      "pass": true
+    },
+    {
+      "name": "local performance mobile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local performance mobile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local performance mobile h1 present",
+      "pass": true,
+      "h1": "Premium må også være raskt."
+    },
+    {
+      "name": "local performance mobile no horizontal overflow",
+      "pass": true,
+      "width": 390,
+      "doc": 390,
+      "body": 390
+    },
+    {
+      "name": "local performance mobile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/performance-readiness-mobile-2026-06-07.png"
+    },
+    {
+      "name": "local performance mobile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share performance desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "share performance desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "share performance desktop h1 present",
+      "pass": true,
+      "h1": "Premium må også være raskt."
+    },
+    {
+      "name": "share performance desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "share performance desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/share-performance-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "share performance desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share performance routes storefront to website.html",
+      "pass": true,
+      "sharePrimaryHref": "./website.html"
+    },
+    {
+      "name": "drop performance desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop performance desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop performance desktop h1 present",
+      "pass": true,
+      "h1": "Premium føles tregt hvis siden er treg."
+    },
+    {
+      "name": "drop performance desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop performance desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-performance-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop performance desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop performance routes storefront to website.html",
+      "pass": true,
+      "dropPrimaryHref": "./website.html"
+    },
+    {
+      "name": "local preview hub performance HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local preview hub performance noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local preview hub performance h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "local preview hub performance no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local preview hub performance screenshot saved",
+      "pass": true,
+      "screenshot": "qa/preview-hub-performance-readiness-2026-06-07.png"
+    },
+    {
+      "name": "local preview hub performance no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local hub has tile 39",
+      "pass": true
+    },
+    {
+      "name": "drop root hub performance HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop root hub performance noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop root hub performance h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "drop root hub performance no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop root hub performance screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-hub-performance-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop root hub performance no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop hub has tile 39",
+      "pass": true
+    },
+    {
+      "name": "storefront has no external third-party resources in static preview",
+      "pass": true,
+      "totals": {
+        "count": 8,
+        "transferSize": 1495846,
+        "decodedBodySize": 1493446
+      },
+      "externalCount": 0,
+      "external": []
+    }
+  ]
+}

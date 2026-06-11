@@ -1,0 +1,270 @@
+{
+  "generatedAt": "2026-06-07T04:53:54.044Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": 51,
+  "failures": 0,
+  "results": [
+    {
+      "name": "local training ops desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local training ops desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local training ops desktop h1 present",
+      "pass": true,
+      "h1": "Kunden må kunne drive butikken uten oss i rommet."
+    },
+    {
+      "name": "local training ops desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local training ops desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/training-ops-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "local training ops desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local training has session plan",
+      "pass": true
+    },
+    {
+      "name": "local training has roles",
+      "pass": true
+    },
+    {
+      "name": "local training has guardrails",
+      "pass": true
+    },
+    {
+      "name": "local training has source links",
+      "pass": true
+    },
+    {
+      "name": "local training ops mobile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local training ops mobile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local training ops mobile h1 present",
+      "pass": true,
+      "h1": "Kunden må kunne drive butikken uten oss i rommet."
+    },
+    {
+      "name": "local training ops mobile no horizontal overflow",
+      "pass": true,
+      "width": 390,
+      "doc": 390,
+      "body": 390
+    },
+    {
+      "name": "local training ops mobile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/training-ops-readiness-mobile-2026-06-07.png"
+    },
+    {
+      "name": "local training ops mobile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share training ops desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "share training ops desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "share training ops desktop h1 present",
+      "pass": true,
+      "h1": "Kunden må kunne drive butikken uten oss i rommet."
+    },
+    {
+      "name": "share training ops desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "share training ops desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/share-training-ops-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "share training ops desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share training primary routes internally",
+      "pass": true,
+      "sharePrimaryHref": "./launch-checklist.html"
+    },
+    {
+      "name": "drop training ops desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop training ops desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop training ops desktop h1 present",
+      "pass": true,
+      "h1": "Kunden må kunne drive butikken uten oss i rommet."
+    },
+    {
+      "name": "drop training ops desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop training ops desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-training-ops-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop training ops desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop training primary routes internally",
+      "pass": true,
+      "dropPrimaryHref": "./launch-checklist.html"
+    },
+    {
+      "name": "local preview hub training HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local preview hub training noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local preview hub training h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "local preview hub training no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local preview hub training screenshot saved",
+      "pass": true,
+      "screenshot": "qa/preview-hub-training-ops-readiness-2026-06-07.png"
+    },
+    {
+      "name": "local preview hub training no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local hub has tile 40",
+      "pass": true
+    },
+    {
+      "name": "drop root hub training HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop root hub training noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop root hub training h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "drop root hub training no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop root hub training screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-hub-training-ops-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop root hub training no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop hub has tile 40",
+      "pass": true
+    },
+    {
+      "name": "review guide training route HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "review guide training route noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "review guide training route h1 present",
+      "pass": true,
+      "h1": "Gjennomgang av OliveX-previewen."
+    },
+    {
+      "name": "review guide training route no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "review guide training route screenshot saved",
+      "pass": true,
+      "screenshot": "qa/review-guide-training-ops-readiness-2026-06-07.png"
+    },
+    {
+      "name": "review guide training route no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "review guide includes training step",
+      "pass": true
+    }
+  ]
+}

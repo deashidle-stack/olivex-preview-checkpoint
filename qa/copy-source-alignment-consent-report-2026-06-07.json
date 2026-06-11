@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-06-07T05:03:35.552Z",
+  "checks": [
+    {
+      "name": "root-home",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasHero": true,
+      "hasLede": true,
+      "logoBox": {
+        "x": 44,
+        "y": 17,
+        "width": 112,
+        "height": 42
+      },
+      "saveVisible": false,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "root-home-mobile",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasHero": true,
+      "hasLede": true,
+      "logoBox": {
+        "x": 14,
+        "y": 13,
+        "width": 112,
+        "height": 42
+      },
+      "saveVisible": false,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "share-home",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasHero": true,
+      "hasLede": true,
+      "logoBox": {
+        "x": 44,
+        "y": 17,
+        "width": 112,
+        "height": 42
+      },
+      "saveVisible": false,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    },
+    {
+      "name": "drop-home",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "hasHero": true,
+      "hasLede": true,
+      "logoBox": {
+        "x": 44,
+        "y": 17,
+        "width": 112,
+        "height": 42
+      },
+      "saveVisible": false,
+      "stale": [],
+      "overflow": false,
+      "consoleMessages": []
+    }
+  ],
+  "assertions": 32,
+  "failures": [],
+  "shots": [
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-home-1440x1000-consent-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-home-mobile-390x844-consent-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-home-1440x1000-consent-copy-fix-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-home-1440x1000-consent-copy-fix-2026-06-07.png"
+  ]
+}

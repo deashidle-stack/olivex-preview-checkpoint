@@ -11,6 +11,14 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isHome = Boolean(document.querySelector(".hero"));
 
+  // Choreography pages always start at the top on reload. Without this the
+  // browser restores mid-page scroll, silently consumes every once-trigger
+  // above the fold, and the sections you scroll back to never animate.
+  if ((isHome || document.querySelector(".about-hero")) && "scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+    if (location.hash.length < 2) window.scrollTo(0, 0);
+  }
+
   /* ------------------------------------------------------------------------
      Vanilla layer — works without GSAP
      ------------------------------------------------------------------------ */
@@ -197,6 +205,75 @@
     }).observe(cartCount, { childList: true, characterData: true, subtree: true });
   }
 
+  // Smooth expand/collapse for the oleocanthal dossier accordions.
+  // Marks the panel so app.js leaves the exclusivity logic to us.
+  document.querySelectorAll(".oleo-left-panel").forEach((panel) => {
+    panel.setAttribute("data-accordion-animated", "");
+    const items = [...panel.querySelectorAll("details[data-accordion-group]")];
+
+    const openItem = (details) => {
+      details.open = true;
+      const content = details.querySelector("summary + *");
+      if (!content) return;
+      details._animating = true;
+      gsap.fromTo(
+        content,
+        { height: 0, autoAlpha: 0, overflow: "hidden" },
+        {
+          height: "auto",
+          autoAlpha: 1,
+          duration: 0.55,
+          ease: "power3.out",
+          clearProps: "height,overflow,opacity,visibility",
+          onComplete: () => {
+            details._animating = false;
+          },
+        },
+      );
+    };
+
+    const closeItem = (details) => {
+      const content = details.querySelector("summary + *");
+      if (!content) {
+        details.open = false;
+        return;
+      }
+      details._animating = true;
+      gsap.fromTo(
+        content,
+        { height: content.offsetHeight, overflow: "hidden" },
+        {
+          height: 0,
+          autoAlpha: 0,
+          duration: 0.4,
+          ease: "power3.inOut",
+          onComplete: () => {
+            details.open = false;
+            gsap.set(content, { clearProps: "all" });
+            details._animating = false;
+          },
+        },
+      );
+    };
+
+    items.forEach((details) => {
+      const summary = details.querySelector("summary");
+      if (!summary) return;
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (items.some((item) => item._animating)) return;
+        if (details.open) {
+          closeItem(details);
+        } else {
+          items.forEach((other) => {
+            if (other !== details && other.open) closeItem(other);
+          });
+          openItem(details);
+        }
+      });
+    });
+  });
+
   // Counters
   const runCounters = () => {
     document.querySelectorAll("[data-count-to]").forEach((el) => {
@@ -339,12 +416,16 @@
 
     if (media) tl.fromTo(media, { scale: 1.14 }, { scale: 1, duration: 2.6, ease: "power2.out" }, 0);
 
-    if (window.SplitText) {
-      const split = SplitText.create(".hero-title-line", { type: "lines", mask: "lines" });
-      tl.from(split.lines, { yPercent: 112, duration: 1.25, stagger: 0.14 }, 0.18);
-    } else {
-      tl.from(".hero-title-line", { yPercent: 40, autoAlpha: 0, duration: 1.1, stagger: 0.14 }, 0.18);
-    }
+    // No line masks — Fraunces descenders (g/y/p) must never be clipped
+    tl.from(".hero-title-line", { y: 84, autoAlpha: 0, duration: 1.2, stagger: 0.12 }, 0.18);
+    const stamp = hero.querySelector(".eyebrow .ritual-stamp");
+    if (stamp)
+      tl.fromTo(
+        stamp,
+        { scale: 0, rotation: 18, autoAlpha: 0 },
+        { scale: 1, rotation: -8, autoAlpha: 0.92, duration: 0.55, ease: "back.out(2.2)" },
+        1.05,
+      );
 
     if (eyebrow) tl.from(eyebrow, { autoAlpha: 0, x: -18, duration: 0.8 }, 0.5);
     if (lede) tl.from(lede, { autoAlpha: 0, y: 22, duration: 0.9 }, 0.72);

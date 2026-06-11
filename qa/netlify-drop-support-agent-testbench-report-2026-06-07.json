@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "lean support testbench HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "lean support testbench no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "lean support testbench no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean support testbench noindex",
+      "pass": true
+    },
+    {
+      "name": "lean support testbench links storefront support route",
+      "pass": true
+    },
+    {
+      "name": "lean support testbench links hub route",
+      "pass": true
+    },
+    {
+      "name": "lean support testbench controls present",
+      "pass": true,
+      "buttons": [
+        "Test svar",
+        "Kjør standardtester",
+        "Kopier rapport",
+        "Last ned .json",
+        "Nullstill",
+        "Steking",
+        "Analysebevis",
+        "Vipps",
+        "Levering",
+        "Medisin",
+        "Sykdom",
+        "Smak",
+        "Fast levering"
+      ]
+    },
+    {
+      "name": "lean support testbench medical handoff works",
+      "pass": true
+    },
+    {
+      "name": "lean support testbench json export works",
+      "pass": true,
+      "filename": "olivex-supportagent-testrapport.json",
+      "total": 1
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/netlify-drop-support-agent-testbench-2026-06-07.png"
+  ]
+}

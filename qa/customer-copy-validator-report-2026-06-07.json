@@ -1,0 +1,1083 @@
+{
+  "generatedAt": "2026-06-07T05:13:21.865Z",
+  "checks": [
+    {
+      "name": "root-copy-validator",
+      "path": "/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./index.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./preview.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./index.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "share-copy-validator",
+      "path": "/share-preview/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./index.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "drop-copy-validator",
+      "path": "/deliverables/olivex-preview-hub-netlify-drop/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./index.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "root-copy-validator",
+      "path": "/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./index.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./preview.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./index.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "share-copy-validator",
+      "path": "/share-preview/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./index.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "drop-copy-validator",
+      "path": "/deliverables/olivex-preview-hub-netlify-drop/customer-copy-validation.html",
+      "status": 200,
+      "h1": "Kildeteksten skal vinne hver gang.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": true,
+      "hasProblemsEmpty": true,
+      "hasTile41": false,
+      "hasSourceRule": true,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Produktside",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Copy guardrails",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "Leveranseoversikt",
+          "href": "./index.html"
+        },
+        {
+          "text": "Se forsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "QA-rapport",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        }
+      ]
+    },
+    {
+      "name": "root-hub-copy-validator-tile",
+      "path": "/preview.html",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": false,
+      "hasProblemsEmpty": false,
+      "hasTile41": true,
+      "hasSourceRule": false,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Kundehandoff",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./index.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Åpne påstandsgjennomgang",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "Support KB",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "Agenttest",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "Videohandoff",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "Juridisk",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "Performance",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "Opplæring",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "Copy-validator",
+          "href": "./customer-copy-validation.html"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "Produksjonsbrief",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "Åpne produksjonsdata",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "Lanseringssjekkliste",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "01\n          OliveX website\n          Forside, produktkort, handlekurv, analysekort, produsentvideo-plassholder og norsk kjøpsreise.",
+          "href": "./index.html"
+        },
+        {
+          "text": "02\n          Produktside\n          Dedikert OliveX-produktside med to planlagte størrelser, analysebevis-status, bruk, betaling og FAQ.",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "03\n          Forslagstekst\n          Norsk proposal basert på OliveX, kildeteksten og kravene til nettbutikken.",
+          "href": "./docs/CLIENT_PROPOSAL_NO.md"
+        },
+        {
+          "text": "04\n          Leveransestatus\n          Hva som er ferdig lokalt og hva som krever kontoer, data eller godkjenning.",
+          "href": "./docs/DELIVERY_STATUS.md"
+        },
+        {
+          "text": "05\n          Neste steg\n          Produktdata, visuelle assets, Shopify-oppsett, QA og produksjonsavklaringer.",
+          "href": "./docs/NEXT_STEPS.md"
+        },
+        {
+          "text": "06\n          QA og implementasjon\n          Oppdatert audit for SEO/AEO, tilgjengelighet, support-assistent og produksjonsavklaringer.",
+          "href": "./docs/IMPLEMENTATION_AUDIT_2026-06-07.md"
+        },
+        {
+          "text": "07\n          Shopify-grunnlag\n          Oversikt over lokal Shopify-struktur, seksjoner og neste tekniske steg.",
+          "href": "./shopify-theme/README.md"
+        },
+        {
+          "text": "08\n          Innholdsarkitektur\n          Kundereise og sidearkitektur med OliveX-heroen som offentlig startpunkt.",
+          "href": "./docs/CONTENT_ARCHITECTURE.md"
+        },
+        {
+          "text": "09\n          Språk og påstander\n          Arbeidsnotat for kildebruk, regulatoriske vurderinger og tryggere norske formuleringer.",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "10\n          Shopify-pakke\n          Nedlastbar theme scaffold for videre Shopify-arbeid.",
+          "href": "./deliverables/olivex-shopify-theme.zip"
+        },
+        {
+          "text": "11\n          Visuelle assets\n          Lokale imagegen-assets, promptdokumentasjon og produksjonsnotater.",
+          "href": "./docs/GENERATED_ASSETS_2026-06-07.md"
+        },
+        {
+          "text": "12\n          Supportagent\n          Spesifikasjon for FAQ-agent, kunnskapsbase, svargrenser og eskalering.",
+          "href": "./docs/SUPPORT_AGENT_SPEC_2026-06-07.md"
+        },
+        {
+          "text": "13\n          Checkout readiness\n          Vipps, kortbetaling, Posten/Bring, SSL, testordre, fast levering og opplæring før lansering.",
+          "href": "./checkout-readiness.html"
+        },
+        {
+          "text": "14\n          Produksjonsmatrise\n          Krav, risiko og godkjenningspunkter for claims, SEO, betaling, frakt, support og lansering.",
+          "href": "./docs/PRODUCTION_READINESS_MATRIX_2026-06-07.md"
+        },
+        {
+          "text": "15\n          Påstandsgjennomgang\n          Konkret register over helsepåstander, risikonivå og hva som må godkjennes før publisering.",
+          "href": "./docs/CLAIMS_REVIEW_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "16\n          Trygg copy-variant\n          Produksjonssikker norsk copy-retning uten sykdoms- eller medisinpåstander.",
+          "href": "./production-safe-copy.html"
+        },
+        {
+          "text": "17\n          QA-rapport\n          Siste browser-QA for hub, forside, produktside, trygg copy, handlekurv, support og mobil.",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "18\n          SEO/AEO readiness\n          Nettleserreview for Merchant Center, ProductGroup, VideoObject, indeksering og schema-gates.",
+          "href": "./seo-merchant-readiness.html"
+        },
+        {
+          "text": "19\n          Kjøpsvalg\n          Engangskjøp versus fast levering, med Shopify/Vipps-avklaringer før produksjon.",
+          "href": "./docs/PURCHASE_PLAN_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "20\n          Mobil hurtigkjøp\n          Sticky mobil kjøpsbar på produktsiden, nå uten fiktiv pris før produktdata er levert.",
+          "href": "./docs/MOBILE_STICKY_CART_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "21\n          Cookie consent\n          Samtykkebanner, avvis/godta, kategorivalg og produksjonskrav for GA4/CMP.",
+          "href": "./docs/CONSENT_PRIVACY_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "22\n          Størrelsesvalg\n          Sammenligning av to planlagte størrelser uten fiktive ml/priser før produktdata er levert.",
+          "href": "./docs/SIZE_COMPARISON_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "23\n          Shopify alignment\n          Oppdatert Shopify ZIP med størrelsestabell, sticky kjøp, selling-plan readiness og privacy controls.",
+          "href": "./docs/SHOPIFY_SCAFFOLD_ALIGNMENT_2026-06-07.md"
+        },
+        {
+          "text": "24\n          Kildegrunnlag 2026\n          Offisielle kilder for Shopify, Vipps/MobilePay-risiko, Posten/Bring, Google schema, WCAG og OpenAI.",
+          "href": "./docs/RESEARCH_SOURCE_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "25\n          Reviewguide\n          Nettleservennlig gjennomgang for kunde: hva bør sees, hva er klart og hva må leveres.",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "26\n          Produksjonsintake\n          Nettleserskjema for produktdata, analysebevis, media, påstander, Shopify, Vipps og Posten/Bring.",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "27\n          Påstandsgjennomgang\n          Nettleservennlig risikokart for helsepåstander, dokumentasjonskrav og tryggere live-copy.",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "28\n          Lanseringssjekkliste\n          Operativ Shopify-sjekkliste for produkter, betaling, frakt, SEO, support, QA og opplæring.",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "29\n          Support KB review\n          Kunnskapsbase, intents, svargrenser og testmatrise for fremtidig FAQ/supportagent.",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "30\n          Accessibility readiness\n          WCAG 2.2, keyboard, fokus, mobil, video, PDF/COA, support og checkout-test før live.",
+          "href": "./accessibility-readiness.html"
+        },
+        {
+          "text": "31\n          Kildestatus\n          Hva som er verbatim fra kildene, kravspesifikasjon, placeholder, fjernet mock-data og produksjonsrisiko.",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "32\n          Produksjonsbrief\n          Samlet Shopify-brief for produkter, betaling, Posten/Bring, SEO, consent, supportagent og launch QA.",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "33\n          Shopify datakontrakt\n          Feltmapping for produkter, varianter, metafields, COA, schema, support-KB og launch-gates.",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "34\n          Kundehandoff\n          Delingsside med riktig preview-hub-lenke, kort e-posttekst, reviewrekkefølge og produksjonsforbehold.",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "35\n          Deploy og deling\n          Netlify Drop-instruks, slank preview-pakke, ZIP-artefakt og sjekk før offentlig lenke sendes.",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "36\n          Supportagent testbenk\n          Interaktiv test av intents, medisinsk handoff, kildestatus, produksjonsmodus og eksportert testrapport.",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "37\n          Produsentvideo handoff\n          Filer, poster, teksting, transkript, rettigheter, Shopify-plassering og VideoObject-gate for videoen fra Hellas.",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "38\n          Juridisk og policy readiness\n          Kjøpsvilkår, angrerett, personvern, cookies, frakt/retur, selskapsinfo og produktmerking før Shopify live.",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "39\n          Performance readiness\n          Core Web Vitals, medievekt, Shopify-apper, tredjepartsscripts, video, CMP og hastighetsbudsjett før live.",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "40\n          Opplæring og drift readiness\n          Shopify-admin, produkter, metafields/COA, ordre, refund, Posten/Bring, support, analytics og handoff.",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "41\n          Kunde-copy validator\n          Automatisk sjekk av kildetekst, logo, ærlige produktdata og fravær av intern strategi i kundeopplevelsen.",
+          "href": "./customer-copy-validation.html"
+        }
+      ]
+    },
+    {
+      "name": "share-hub-copy-validator-tile",
+      "path": "/share-preview/",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": false,
+      "hasProblemsEmpty": false,
+      "hasTile41": true,
+      "hasSourceRule": false,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Kundehandoff",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Åpne påstandsgjennomgang",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "Support KB",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "Agenttest",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "Videohandoff",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "Juridisk",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "Performance",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "Opplæring",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "Copy-validator",
+          "href": "./customer-copy-validation.html"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "Produksjonsbrief",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "Åpne produksjonsdata",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "Lanseringssjekkliste",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "01\n          OliveX website\n          Forside, produktkort, handlekurv, analysekort, produsentvideo-plassholder og norsk kjøpsreise.",
+          "href": "./website.html"
+        },
+        {
+          "text": "02\n          Produktside\n          Dedikert OliveX-produktside med to planlagte størrelser, analysebevis-status, bruk, betaling og FAQ.",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "03\n          Forslagstekst\n          Norsk proposal basert på OliveX, kildeteksten og kravene til nettbutikken.",
+          "href": "./docs/CLIENT_PROPOSAL_NO.md"
+        },
+        {
+          "text": "04\n          Leveransestatus\n          Hva som er ferdig lokalt og hva som krever kontoer, data eller godkjenning.",
+          "href": "./docs/DELIVERY_STATUS.md"
+        },
+        {
+          "text": "05\n          Neste steg\n          Produktdata, visuelle assets, Shopify-oppsett, QA og produksjonsavklaringer.",
+          "href": "./docs/NEXT_STEPS.md"
+        },
+        {
+          "text": "06\n          QA og implementasjon\n          Oppdatert audit for SEO/AEO, tilgjengelighet, support-assistent og produksjonsavklaringer.",
+          "href": "./docs/IMPLEMENTATION_AUDIT_2026-06-07.md"
+        },
+        {
+          "text": "07\n          Shopify-grunnlag\n          Oversikt over lokal Shopify-struktur, seksjoner og neste tekniske steg.",
+          "href": "./shopify-theme/README.md"
+        },
+        {
+          "text": "08\n          Innholdsarkitektur\n          Kundereise og sidearkitektur med OliveX-heroen som offentlig startpunkt.",
+          "href": "./docs/CONTENT_ARCHITECTURE.md"
+        },
+        {
+          "text": "09\n          Språk og påstander\n          Arbeidsnotat for kildebruk, regulatoriske vurderinger og tryggere norske formuleringer.",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "10\n          Shopify-pakke\n          Nedlastbar theme scaffold for videre Shopify-arbeid.",
+          "href": "./deliverables/olivex-shopify-theme.zip"
+        },
+        {
+          "text": "11\n          Visuelle assets\n          Lokale imagegen-assets, promptdokumentasjon og produksjonsnotater.",
+          "href": "./docs/GENERATED_ASSETS_2026-06-07.md"
+        },
+        {
+          "text": "12\n          Supportagent\n          Spesifikasjon for FAQ-agent, kunnskapsbase, svargrenser og eskalering.",
+          "href": "./docs/SUPPORT_AGENT_SPEC_2026-06-07.md"
+        },
+        {
+          "text": "13\n          Checkout readiness\n          Vipps, kortbetaling, Posten/Bring, SSL, testordre, fast levering og opplæring før lansering.",
+          "href": "./checkout-readiness.html"
+        },
+        {
+          "text": "14\n          Produksjonsmatrise\n          Krav, risiko og godkjenningspunkter for claims, SEO, betaling, frakt, support og lansering.",
+          "href": "./docs/PRODUCTION_READINESS_MATRIX_2026-06-07.md"
+        },
+        {
+          "text": "15\n          Påstandsgjennomgang\n          Konkret register over helsepåstander, risikonivå og hva som må godkjennes før publisering.",
+          "href": "./docs/CLAIMS_REVIEW_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "16\n          Trygg copy-variant\n          Produksjonssikker norsk copy-retning uten sykdoms- eller medisinpåstander.",
+          "href": "./production-safe-copy.html"
+        },
+        {
+          "text": "17\n          QA-rapport\n          Siste browser-QA for hub, forside, produktside, trygg copy, handlekurv, support og mobil.",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "18\n          SEO/AEO readiness\n          Nettleserreview for Merchant Center, ProductGroup, VideoObject, indeksering og schema-gates.",
+          "href": "./seo-merchant-readiness.html"
+        },
+        {
+          "text": "19\n          Kjøpsvalg\n          Engangskjøp versus fast levering, med Shopify/Vipps-avklaringer før produksjon.",
+          "href": "./docs/PURCHASE_PLAN_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "20\n          Mobil hurtigkjøp\n          Sticky mobil kjøpsbar på produktsiden, nå uten fiktiv pris før produktdata er levert.",
+          "href": "./docs/MOBILE_STICKY_CART_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "21\n          Cookie consent\n          Samtykkebanner, avvis/godta, kategorivalg og produksjonskrav for GA4/CMP.",
+          "href": "./docs/CONSENT_PRIVACY_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "22\n          Størrelsesvalg\n          Sammenligning av to planlagte størrelser uten fiktive ml/priser før produktdata er levert.",
+          "href": "./docs/SIZE_COMPARISON_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "23\n          Shopify alignment\n          Oppdatert Shopify ZIP med størrelsestabell, sticky kjøp, selling-plan readiness og privacy controls.",
+          "href": "./docs/SHOPIFY_SCAFFOLD_ALIGNMENT_2026-06-07.md"
+        },
+        {
+          "text": "24\n          Kildegrunnlag 2026\n          Offisielle kilder for Shopify, Vipps/MobilePay-risiko, Posten/Bring, Google schema, WCAG og OpenAI.",
+          "href": "./docs/RESEARCH_SOURCE_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "25\n          Reviewguide\n          Nettleservennlig gjennomgang for kunde: hva bør sees, hva er klart og hva må leveres.",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "26\n          Produksjonsintake\n          Nettleserskjema for produktdata, analysebevis, media, påstander, Shopify, Vipps og Posten/Bring.",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "27\n          Påstandsgjennomgang\n          Nettleservennlig risikokart for helsepåstander, dokumentasjonskrav og tryggere live-copy.",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "28\n          Lanseringssjekkliste\n          Operativ Shopify-sjekkliste for produkter, betaling, frakt, SEO, support, QA og opplæring.",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "29\n          Support KB review\n          Kunnskapsbase, intents, svargrenser og testmatrise for fremtidig FAQ/supportagent.",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "30\n          Accessibility readiness\n          WCAG 2.2, keyboard, fokus, mobil, video, PDF/COA, support og checkout-test før live.",
+          "href": "./accessibility-readiness.html"
+        },
+        {
+          "text": "31\n          Kildestatus\n          Hva som er verbatim fra kildene, kravspesifikasjon, placeholder, fjernet mock-data og produksjonsrisiko.",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "32\n          Produksjonsbrief\n          Samlet Shopify-brief for produkter, betaling, Posten/Bring, SEO, consent, supportagent og launch QA.",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "33\n          Shopify datakontrakt\n          Feltmapping for produkter, varianter, metafields, COA, schema, support-KB og launch-gates.",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "34\n          Kundehandoff\n          Delingsside med riktig preview-hub-lenke, kort e-posttekst, reviewrekkefølge og produksjonsforbehold.",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "35\n          Deploy og deling\n          Netlify Drop-instruks, slank preview-pakke, ZIP-artefakt og sjekk før offentlig lenke sendes.",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "36\n          Supportagent testbenk\n          Interaktiv test av intents, medisinsk handoff, kildestatus, produksjonsmodus og eksportert testrapport.",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "37\n          Produsentvideo handoff\n          Filer, poster, teksting, transkript, rettigheter, Shopify-plassering og VideoObject-gate for videoen fra Hellas.",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "38\n          Juridisk og policy readiness\n          Kjøpsvilkår, angrerett, personvern, cookies, frakt/retur, selskapsinfo og produktmerking før Shopify live.",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "39\n          Performance readiness\n          Core Web Vitals, medievekt, Shopify-apper, tredjepartsscripts, video, CMP og hastighetsbudsjett før live.",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "40\n          Opplæring og drift readiness\n          Shopify-admin, produkter, metafields/COA, ordre, refund, Posten/Bring, support, analytics og handoff.",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "41\n          Kunde-copy validator\n          Automatisk sjekk av kildetekst, logo, ærlige produktdata og fravær av intern strategi i kundeopplevelsen.",
+          "href": "./customer-copy-validation.html"
+        }
+      ]
+    },
+    {
+      "name": "drop-hub-copy-validator-tile",
+      "path": "/deliverables/olivex-preview-hub-netlify-drop/",
+      "status": 200,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd.",
+      "noindex": "noindex,nofollow",
+      "hasLogo": true,
+      "hasCommand": false,
+      "hasProblemsEmpty": false,
+      "hasTile41": true,
+      "hasSourceRule": false,
+      "hasStorefrontLink": true,
+      "overflow": false,
+      "consoleMessages": [],
+      "links": [
+        {
+          "text": "Kundehandoff",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "Åpne nettsiden",
+          "href": "./website.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Kildestatus",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "Åpne påstandsgjennomgang",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "Support KB",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "Agenttest",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "Videohandoff",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "Juridisk",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "Performance",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "Opplæring",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "Copy-validator",
+          "href": "./customer-copy-validation.html"
+        },
+        {
+          "text": "Deploy og deling",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "Produksjonsbrief",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "Åpne produksjonsdata",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "Lanseringssjekkliste",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "01\n          OliveX website\n          Forside, produktkort, handlekurv, analysekort, produsentvideo-plassholder og norsk kjøpsreise.",
+          "href": "./website.html"
+        },
+        {
+          "text": "02\n          Produktside\n          Dedikert OliveX-produktside med to planlagte størrelser, analysebevis-status, bruk, betaling og FAQ.",
+          "href": "./product-olivex-superolje.html"
+        },
+        {
+          "text": "03\n          Forslagstekst\n          Norsk proposal basert på OliveX, kildeteksten og kravene til nettbutikken.",
+          "href": "./docs/CLIENT_PROPOSAL_NO.md"
+        },
+        {
+          "text": "04\n          Leveransestatus\n          Hva som er ferdig lokalt og hva som krever kontoer, data eller godkjenning.",
+          "href": "./docs/DELIVERY_STATUS.md"
+        },
+        {
+          "text": "05\n          Neste steg\n          Produktdata, visuelle assets, Shopify-oppsett, QA og produksjonsavklaringer.",
+          "href": "./docs/NEXT_STEPS.md"
+        },
+        {
+          "text": "06\n          QA og implementasjon\n          Oppdatert audit for SEO/AEO, tilgjengelighet, support-assistent og produksjonsavklaringer.",
+          "href": "./docs/IMPLEMENTATION_AUDIT_2026-06-07.md"
+        },
+        {
+          "text": "07\n          Shopify-grunnlag\n          Oversikt over lokal Shopify-struktur, seksjoner og neste tekniske steg.",
+          "href": "./shopify-theme/README.md"
+        },
+        {
+          "text": "08\n          Innholdsarkitektur\n          Kundereise og sidearkitektur med OliveX-heroen som offentlig startpunkt.",
+          "href": "./docs/CONTENT_ARCHITECTURE.md"
+        },
+        {
+          "text": "09\n          Språk og påstander\n          Arbeidsnotat for kildebruk, regulatoriske vurderinger og tryggere norske formuleringer.",
+          "href": "./docs/OLIVEX_COPY_GUARDRAILS.md"
+        },
+        {
+          "text": "10\n          Shopify-pakke\n          Nedlastbar theme scaffold for videre Shopify-arbeid.",
+          "href": "./deliverables/olivex-shopify-theme.zip"
+        },
+        {
+          "text": "11\n          Visuelle assets\n          Lokale imagegen-assets, promptdokumentasjon og produksjonsnotater.",
+          "href": "./docs/GENERATED_ASSETS_2026-06-07.md"
+        },
+        {
+          "text": "12\n          Supportagent\n          Spesifikasjon for FAQ-agent, kunnskapsbase, svargrenser og eskalering.",
+          "href": "./docs/SUPPORT_AGENT_SPEC_2026-06-07.md"
+        },
+        {
+          "text": "13\n          Checkout readiness\n          Vipps, kortbetaling, Posten/Bring, SSL, testordre, fast levering og opplæring før lansering.",
+          "href": "./checkout-readiness.html"
+        },
+        {
+          "text": "14\n          Produksjonsmatrise\n          Krav, risiko og godkjenningspunkter for claims, SEO, betaling, frakt, support og lansering.",
+          "href": "./docs/PRODUCTION_READINESS_MATRIX_2026-06-07.md"
+        },
+        {
+          "text": "15\n          Påstandsgjennomgang\n          Konkret register over helsepåstander, risikonivå og hva som må godkjennes før publisering.",
+          "href": "./docs/CLAIMS_REVIEW_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "16\n          Trygg copy-variant\n          Produksjonssikker norsk copy-retning uten sykdoms- eller medisinpåstander.",
+          "href": "./production-safe-copy.html"
+        },
+        {
+          "text": "17\n          QA-rapport\n          Siste browser-QA for hub, forside, produktside, trygg copy, handlekurv, support og mobil.",
+          "href": "./docs/QA_REPORT_2026-06-07.md"
+        },
+        {
+          "text": "18\n          SEO/AEO readiness\n          Nettleserreview for Merchant Center, ProductGroup, VideoObject, indeksering og schema-gates.",
+          "href": "./seo-merchant-readiness.html"
+        },
+        {
+          "text": "19\n          Kjøpsvalg\n          Engangskjøp versus fast levering, med Shopify/Vipps-avklaringer før produksjon.",
+          "href": "./docs/PURCHASE_PLAN_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "20\n          Mobil hurtigkjøp\n          Sticky mobil kjøpsbar på produktsiden, nå uten fiktiv pris før produktdata er levert.",
+          "href": "./docs/MOBILE_STICKY_CART_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "21\n          Cookie consent\n          Samtykkebanner, avvis/godta, kategorivalg og produksjonskrav for GA4/CMP.",
+          "href": "./docs/CONSENT_PRIVACY_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "22\n          Størrelsesvalg\n          Sammenligning av to planlagte størrelser uten fiktive ml/priser før produktdata er levert.",
+          "href": "./docs/SIZE_COMPARISON_PREVIEW_2026-06-07.md"
+        },
+        {
+          "text": "23\n          Shopify alignment\n          Oppdatert Shopify ZIP med størrelsestabell, sticky kjøp, selling-plan readiness og privacy controls.",
+          "href": "./docs/SHOPIFY_SCAFFOLD_ALIGNMENT_2026-06-07.md"
+        },
+        {
+          "text": "24\n          Kildegrunnlag 2026\n          Offisielle kilder for Shopify, Vipps/MobilePay-risiko, Posten/Bring, Google schema, WCAG og OpenAI.",
+          "href": "./docs/RESEARCH_SOURCE_REGISTER_2026-06-07.md"
+        },
+        {
+          "text": "25\n          Reviewguide\n          Nettleservennlig gjennomgang for kunde: hva bør sees, hva er klart og hva må leveres.",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "26\n          Produksjonsintake\n          Nettleserskjema for produktdata, analysebevis, media, påstander, Shopify, Vipps og Posten/Bring.",
+          "href": "./production-intake.html"
+        },
+        {
+          "text": "27\n          Påstandsgjennomgang\n          Nettleservennlig risikokart for helsepåstander, dokumentasjonskrav og tryggere live-copy.",
+          "href": "./claim-review.html"
+        },
+        {
+          "text": "28\n          Lanseringssjekkliste\n          Operativ Shopify-sjekkliste for produkter, betaling, frakt, SEO, support, QA og opplæring.",
+          "href": "./launch-checklist.html"
+        },
+        {
+          "text": "29\n          Support KB review\n          Kunnskapsbase, intents, svargrenser og testmatrise for fremtidig FAQ/supportagent.",
+          "href": "./support-agent-kb.html"
+        },
+        {
+          "text": "30\n          Accessibility readiness\n          WCAG 2.2, keyboard, fokus, mobil, video, PDF/COA, support og checkout-test før live.",
+          "href": "./accessibility-readiness.html"
+        },
+        {
+          "text": "31\n          Kildestatus\n          Hva som er verbatim fra kildene, kravspesifikasjon, placeholder, fjernet mock-data og produksjonsrisiko.",
+          "href": "./content-source-map.html"
+        },
+        {
+          "text": "32\n          Produksjonsbrief\n          Samlet Shopify-brief for produkter, betaling, Posten/Bring, SEO, consent, supportagent og launch QA.",
+          "href": "./production-build-brief.html"
+        },
+        {
+          "text": "33\n          Shopify datakontrakt\n          Feltmapping for produkter, varianter, metafields, COA, schema, support-KB og launch-gates.",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "34\n          Kundehandoff\n          Delingsside med riktig preview-hub-lenke, kort e-posttekst, reviewrekkefølge og produksjonsforbehold.",
+          "href": "./client-handoff.html"
+        },
+        {
+          "text": "35\n          Deploy og deling\n          Netlify Drop-instruks, slank preview-pakke, ZIP-artefakt og sjekk før offentlig lenke sendes.",
+          "href": "./preview-deploy.html"
+        },
+        {
+          "text": "36\n          Supportagent testbenk\n          Interaktiv test av intents, medisinsk handoff, kildestatus, produksjonsmodus og eksportert testrapport.",
+          "href": "./support-agent-testbench.html"
+        },
+        {
+          "text": "37\n          Produsentvideo handoff\n          Filer, poster, teksting, transkript, rettigheter, Shopify-plassering og VideoObject-gate for videoen fra Hellas.",
+          "href": "./producer-video-handoff.html"
+        },
+        {
+          "text": "38\n          Juridisk og policy readiness\n          Kjøpsvilkår, angrerett, personvern, cookies, frakt/retur, selskapsinfo og produktmerking før Shopify live.",
+          "href": "./legal-policy-readiness.html"
+        },
+        {
+          "text": "39\n          Performance readiness\n          Core Web Vitals, medievekt, Shopify-apper, tredjepartsscripts, video, CMP og hastighetsbudsjett før live.",
+          "href": "./performance-readiness.html"
+        },
+        {
+          "text": "40\n          Opplæring og drift readiness\n          Shopify-admin, produkter, metafields/COA, ordre, refund, Posten/Bring, support, analytics og handoff.",
+          "href": "./training-ops-readiness.html"
+        },
+        {
+          "text": "41\n          Kunde-copy validator\n          Automatisk sjekk av kildetekst, logo, ærlige produktdata og fravær av intern strategi i kundeopplevelsen.",
+          "href": "./customer-copy-validation.html"
+        }
+      ]
+    }
+  ],
+  "assertions": 72,
+  "failures": [],
+  "shots": [
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-copy-validator-1440x1000-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-copy-validator-1440x1000-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-copy-validator-1440x1000-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-copy-validator-390x844-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-copy-validator-390x844-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-copy-validator-390x844-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/root-hub-copy-validator-tile-1440x1000-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/share-hub-copy-validator-tile-1440x1000-customer-copy-validator-2026-06-07.png",
+    "/Users/andreas/Documents/Prosjekter/2026-Ideas/nordic-longevity-lab/qa/drop-hub-copy-validator-tile-1440x1000-customer-copy-validator-2026-06-07.png"
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "local production intake final: HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local production intake final: final heading copy present",
+      "pass": true
+    },
+    {
+      "name": "local production intake final: export controls present",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "local production intake final: primary route correct",
+      "pass": true,
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsidepreview",
+          "href": "./index.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "CSV-mal",
+          "href": "./docs/PRODUCT_INTAKE_TEMPLATE.csv"
+        }
+      ]
+    },
+    {
+      "name": "local production intake final: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "local production intake final: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local production intake final: noindex",
+      "pass": true
+    },
+    {
+      "name": "local production intake final: final summary still generates",
+      "pass": true
+    },
+    {
+      "name": "share production intake final: HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "share production intake final: final heading copy present",
+      "pass": true
+    },
+    {
+      "name": "share production intake final: export controls present",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "share production intake final: primary route correct",
+      "pass": true,
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsidepreview",
+          "href": "./website.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "CSV-mal",
+          "href": "./docs/PRODUCT_INTAKE_TEMPLATE.csv"
+        }
+      ]
+    },
+    {
+      "name": "share production intake final: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "share production intake final: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share production intake final: noindex",
+      "pass": true
+    },
+    {
+      "name": "share production intake final: final summary still generates",
+      "pass": true
+    },
+    {
+      "name": "lean production intake final: HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "lean production intake final: final heading copy present",
+      "pass": true
+    },
+    {
+      "name": "lean production intake final: export controls present",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "lean production intake final: primary route correct",
+      "pass": true,
+      "links": [
+        {
+          "text": "Gå til innhold",
+          "href": "#main"
+        },
+        {
+          "text": "Åpne nettsidepreview",
+          "href": "./website.html"
+        },
+        {
+          "text": "Åpne reviewguide",
+          "href": "./review-guide.html"
+        },
+        {
+          "text": "Datakontrakt",
+          "href": "./shopify-data-contract.html"
+        },
+        {
+          "text": "CSV-mal",
+          "href": "./docs/PRODUCT_INTAKE_TEMPLATE.csv"
+        }
+      ]
+    },
+    {
+      "name": "lean production intake final: no console errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "lean production intake final: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "lean production intake final: noindex",
+      "pass": true
+    },
+    {
+      "name": "lean production intake final: final summary still generates",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "screenshots": []
+}

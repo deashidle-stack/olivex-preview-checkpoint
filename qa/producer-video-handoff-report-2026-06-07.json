@@ -1,0 +1,282 @@
+{
+  "generatedAt": "2026-06-07T04:23:47.410Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": 53,
+  "failures": 0,
+  "results": [
+    {
+      "name": "local producer video handoff desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local producer video handoff desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local producer video handoff desktop h1 present",
+      "pass": true,
+      "h1": "Gjør videoen fra Hellas produksjonsklar."
+    },
+    {
+      "name": "local producer video handoff desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local producer video handoff desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/producer-video-handoff-desktop-2026-06-07.png"
+    },
+    {
+      "name": "local producer video handoff desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local handoff has file paths",
+      "pass": true
+    },
+    {
+      "name": "local handoff has rights requirement",
+      "pass": true
+    },
+    {
+      "name": "local handoff has VideoObject gate",
+      "pass": true
+    },
+    {
+      "name": "local handoff has no placeholder structured data",
+      "pass": true,
+      "ldJsonCount": 0
+    },
+    {
+      "name": "local handoff poster image loads",
+      "pass": true
+    },
+    {
+      "name": "local producer video handoff mobile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local producer video handoff mobile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local producer video handoff mobile h1 present",
+      "pass": true,
+      "h1": "Gjør videoen fra Hellas produksjonsklar."
+    },
+    {
+      "name": "local producer video handoff mobile no horizontal overflow",
+      "pass": true,
+      "width": 390,
+      "doc": 390,
+      "body": 390
+    },
+    {
+      "name": "local producer video handoff mobile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/producer-video-handoff-mobile-2026-06-07.png"
+    },
+    {
+      "name": "local producer video handoff mobile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share producer video handoff desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "share producer video handoff desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "share producer video handoff desktop h1 present",
+      "pass": true,
+      "h1": "Gjør videoen fra Hellas produksjonsklar."
+    },
+    {
+      "name": "share producer video handoff desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "share producer video handoff desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/share-producer-video-handoff-desktop-2026-06-07.png"
+    },
+    {
+      "name": "share producer video handoff desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share handoff routes placeholder to website.html",
+      "pass": true,
+      "shareProducerHref": "./website.html#producer"
+    },
+    {
+      "name": "drop producer video handoff desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop producer video handoff desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop producer video handoff desktop h1 present",
+      "pass": true,
+      "h1": "Gjør videoen fra Hellas produksjonsklar."
+    },
+    {
+      "name": "drop producer video handoff desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop producer video handoff desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-producer-video-handoff-2026-06-07.png"
+    },
+    {
+      "name": "drop producer video handoff desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop handoff routes placeholder to website.html",
+      "pass": true,
+      "dropProducerHref": "./website.html#producer"
+    },
+    {
+      "name": "local preview hub desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local preview hub desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local preview hub desktop h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "local preview hub desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local preview hub desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/preview-hub-producer-video-handoff-2026-06-07.png"
+    },
+    {
+      "name": "local preview hub desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local hub has tile 37",
+      "pass": true
+    },
+    {
+      "name": "drop root hub desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop root hub desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop root hub desktop h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "drop root hub desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop root hub desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-hub-producer-video-handoff-2026-06-07.png"
+    },
+    {
+      "name": "drop root hub desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop hub has tile 37",
+      "pass": true
+    },
+    {
+      "name": "local storefront producer placeholder HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local storefront producer placeholder noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local storefront producer placeholder h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "local storefront producer placeholder no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local storefront producer placeholder screenshot saved",
+      "pass": true,
+      "screenshot": "qa/storefront-producer-placeholder-2026-06-07.png"
+    },
+    {
+      "name": "local storefront producer placeholder no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "storefront video slot remains inactive",
+      "pass": true,
+      "videoReady": "false",
+      "videoTagCount": 0
+    },
+    {
+      "name": "storefront video slot has captions path prepared",
+      "pass": true,
+      "captionsPath": "./assets/producer-video-no.vtt"
+    }
+  ]
+}

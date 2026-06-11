@@ -1,0 +1,175 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "local handoff desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/client-handoff.html"
+    },
+    {
+      "name": "local handoff desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local handoff desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local handoff desktop: noindex protected",
+      "pass": true
+    },
+    {
+      "name": "local handoff mobile: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/client-handoff.html"
+    },
+    {
+      "name": "local handoff mobile: no horizontal overflow 390",
+      "pass": true,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "local handoff mobile: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local handoff mobile: noindex protected",
+      "pass": true
+    },
+    {
+      "name": "share handoff desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/share-preview/client-handoff.html"
+    },
+    {
+      "name": "share handoff desktop: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share handoff desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share handoff desktop: noindex protected",
+      "pass": true
+    },
+    {
+      "name": "local preview hub: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/preview.html"
+    },
+    {
+      "name": "local preview hub: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local preview hub: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local preview hub: noindex protected",
+      "pass": true
+    },
+    {
+      "name": "share preview hub: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "path": "/share-preview/index.html"
+    },
+    {
+      "name": "share preview hub: no horizontal overflow 1440",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share preview hub: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share preview hub: noindex protected",
+      "pass": true
+    },
+    {
+      "name": "local handoff H1 is polished",
+      "pass": true,
+      "h1": "Start med hubben."
+    },
+    {
+      "name": "local handoff email has placeholder",
+      "pass": true
+    },
+    {
+      "name": "local handoff email includes supplied hero",
+      "pass": true
+    },
+    {
+      "name": "local handoff textarea is readonly",
+      "pass": true
+    },
+    {
+      "name": "local handoff points hub to preview.html",
+      "pass": true
+    },
+    {
+      "name": "local handoff points storefront to index.html",
+      "pass": true
+    },
+    {
+      "name": "local mobile keeps same H1",
+      "pass": true
+    },
+    {
+      "name": "share handoff points hub to index.html",
+      "pass": true
+    },
+    {
+      "name": "share handoff points storefront to website.html",
+      "pass": true
+    },
+    {
+      "name": "share handoff does not link to missing preview.html",
+      "pass": true
+    },
+    {
+      "name": "local hub exposes Kundehandoff action",
+      "pass": true
+    },
+    {
+      "name": "local hub has tile 34",
+      "pass": true
+    },
+    {
+      "name": "share hub exposes Kundehandoff action",
+      "pass": true
+    },
+    {
+      "name": "share hub keeps website route separate",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/client-handoff-desktop-2026-06-07.png",
+    "qa/client-handoff-mobile-2026-06-07.png",
+    "qa/share-client-handoff-desktop-2026-06-07.png",
+    "qa/preview-hub-client-handoff-2026-06-07.png",
+    "qa/share-preview-hub-client-handoff-2026-06-07.png"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "checkedAt": "2026-06-07",
+  "assertions": [
+    {
+      "name": "local production intake desktop: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/production-intake.html"
+    },
+    {
+      "name": "local production intake desktop: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "local production intake desktop: noindex",
+      "pass": true
+    },
+    {
+      "name": "local production intake desktop: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local intake has export buttons",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "local intake links data contract",
+      "pass": true
+    },
+    {
+      "name": "local intake links CSV template",
+      "pass": true
+    },
+    {
+      "name": "summary includes required completion count",
+      "pass": true,
+      "excerpt": "OliveX produksjonsintake\nGenerert: 7.6.2026, 05:53:23\nPåkrevde felt: 5/21 utfylt\n\n## Kontakt og selskap\n- Kontaktperson: Kari Test\n- E-post: Mangler\n- Juridisk selger/importør: Man"
+    },
+    {
+      "name": "summary marks missing required fields",
+      "pass": true
+    },
+    {
+      "name": "summary includes next actions",
+      "pass": true
+    },
+    {
+      "name": "live region reports missing count",
+      "pass": true,
+      "liveText": "Oppsummering generert. 16 påkrevde felt mangler."
+    },
+    {
+      "name": "copy missing gives user feedback",
+      "pass": true,
+      "afterMissing": "Kunne ikke kopiere automatisk. Mangellisten er lagt i tekstfeltet."
+    },
+    {
+      "name": "markdown download filename",
+      "pass": true,
+      "filename": "olivex-produksjonsintake.md"
+    },
+    {
+      "name": "markdown download contains generated summary",
+      "pass": true
+    },
+    {
+      "name": "json download filename",
+      "pass": true,
+      "filename": "olivex-produksjonsintake.json"
+    },
+    {
+      "name": "json download has structured missing fields",
+      "pass": true,
+      "requiredMissing": 16
+    },
+    {
+      "name": "local production intake mobile export: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/production-intake.html"
+    },
+    {
+      "name": "local production intake mobile export: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "name": "local production intake mobile export: noindex",
+      "pass": true
+    },
+    {
+      "name": "local production intake mobile export: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "mobile intake has export buttons",
+      "pass": true,
+      "buttons": [
+        "Generer oppsummering",
+        "Kopier",
+        "Kopier mangelliste",
+        "Last ned .md",
+        "Last ned .json",
+        "Nullstill"
+      ]
+    },
+    {
+      "name": "share production intake desktop export: HTTP 200",
+      "pass": true,
+      "status": 200,
+      "urlPath": "/share-preview/production-intake.html"
+    },
+    {
+      "name": "share production intake desktop export: no horizontal overflow",
+      "pass": true,
+      "clientWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "name": "share production intake desktop export: noindex",
+      "pass": true
+    },
+    {
+      "name": "share production intake desktop export: no console errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share intake primary opens website.html",
+      "pass": true
+    },
+    {
+      "name": "share intake keeps data contract link",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "screenshots": [
+    "qa/production-intake-export-desktop-2026-06-07.png",
+    "qa/production-intake-export-mobile-2026-06-07.png",
+    "qa/share-production-intake-export-desktop-2026-06-07.png"
+  ]
+}

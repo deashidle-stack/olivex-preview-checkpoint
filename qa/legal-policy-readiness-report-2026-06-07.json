@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-06-07T04:33:34.802Z",
+  "baseUrl": "http://127.0.0.1:4182",
+  "assertions": 50,
+  "failures": 0,
+  "results": [
+    {
+      "name": "local legal policy desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local legal policy desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local legal policy desktop h1 present",
+      "pass": true,
+      "h1": "Ingen live nettbutikk uten synlige vilkår, selgerdata og personvern."
+    },
+    {
+      "name": "local legal policy desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local legal policy desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/legal-policy-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "local legal policy desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local legal page has required policy inventory",
+      "pass": true
+    },
+    {
+      "name": "local legal page has no-go risks",
+      "pass": true
+    },
+    {
+      "name": "local legal page has source links",
+      "pass": true
+    },
+    {
+      "name": "local legal policy mobile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local legal policy mobile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local legal policy mobile h1 present",
+      "pass": true,
+      "h1": "Ingen live nettbutikk uten synlige vilkår, selgerdata og personvern."
+    },
+    {
+      "name": "local legal policy mobile no horizontal overflow",
+      "pass": true,
+      "width": 390,
+      "doc": 390,
+      "body": 390
+    },
+    {
+      "name": "local legal policy mobile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/legal-policy-readiness-mobile-2026-06-07.png"
+    },
+    {
+      "name": "local legal policy mobile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share legal policy desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "share legal policy desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "share legal policy desktop h1 present",
+      "pass": true,
+      "h1": "Ingen live nettbutikk uten synlige vilkår, selgerdata og personvern."
+    },
+    {
+      "name": "share legal policy desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "share legal policy desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/share-legal-policy-readiness-desktop-2026-06-07.png"
+    },
+    {
+      "name": "share legal policy desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "share legal page primary routes to local share pages",
+      "pass": true,
+      "sharePrimaryHref": "./production-intake.html"
+    },
+    {
+      "name": "drop legal policy desktop HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop legal policy desktop noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop legal policy desktop h1 present",
+      "pass": true,
+      "h1": "Ingen live nettbutikk uten synlige vilkår, selgerdata og personvern."
+    },
+    {
+      "name": "drop legal policy desktop no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop legal policy desktop screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-legal-policy-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop legal policy desktop no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop legal page primary routes to production intake",
+      "pass": true,
+      "dropPrimaryHref": "./production-intake.html"
+    },
+    {
+      "name": "local preview hub legal tile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "local preview hub legal tile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "local preview hub legal tile h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "local preview hub legal tile no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "local preview hub legal tile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/preview-hub-legal-policy-readiness-2026-06-07.png"
+    },
+    {
+      "name": "local preview hub legal tile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "local hub has legal tile 38",
+      "pass": true
+    },
+    {
+      "name": "drop root hub legal tile HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "drop root hub legal tile noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "drop root hub legal tile h1 present",
+      "pass": true,
+      "h1": "Mer enn en matolje. Ditt daglige, flytende kosttilskudd."
+    },
+    {
+      "name": "drop root hub legal tile no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "drop root hub legal tile screenshot saved",
+      "pass": true,
+      "screenshot": "qa/netlify-drop-hub-legal-policy-readiness-2026-06-07.png"
+    },
+    {
+      "name": "drop root hub legal tile no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop hub has legal tile 38",
+      "pass": true
+    },
+    {
+      "name": "review guide legal route HTTP 200",
+      "pass": true,
+      "status": 200
+    },
+    {
+      "name": "review guide legal route noindex",
+      "pass": true,
+      "metaRobots": "noindex,nofollow"
+    },
+    {
+      "name": "review guide legal route h1 present",
+      "pass": true,
+      "h1": "Gjennomgang av OliveX-previewen."
+    },
+    {
+      "name": "review guide legal route no horizontal overflow",
+      "pass": true,
+      "width": 1440,
+      "doc": 1440,
+      "body": 1440
+    },
+    {
+      "name": "review guide legal route screenshot saved",
+      "pass": true,
+      "screenshot": "qa/review-guide-legal-policy-readiness-2026-06-07.png"
+    },
+    {
+      "name": "review guide legal route no console warnings/errors",
+      "pass": true,
+      "consoleErrors": []
+    },
+    {
+      "name": "review guide includes legal step",
+      "pass": true
+    }
+  ]
+}

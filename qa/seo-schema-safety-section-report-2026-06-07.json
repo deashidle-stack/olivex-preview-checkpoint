@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-06-07T06:48:41.667Z",
+  "cases": [
+    {
+      "name": "root seo schema safety",
+      "url": "http://127.0.0.1:4182/seo-merchant-readiness.html",
+      "screenshot": "qa/root-seo-schema-safety-2026-06-07.png",
+      "title": "OliveX | SEO, AEO og Merchant readiness",
+      "h1": "Gjør ekte innhold maskinlesbart. Ikke bruk schema til å pynte på placeholders.",
+      "robots": "noindex,nofollow",
+      "hasSection": true,
+      "hasDocLink": true,
+      "overflow": false,
+      "consoleErrors": []
+    },
+    {
+      "name": "share seo schema safety",
+      "url": "http://127.0.0.1:4182/share-preview/seo-merchant-readiness.html",
+      "screenshot": "qa/share-seo-schema-safety-2026-06-07.png",
+      "title": "OliveX | SEO, AEO og Merchant readiness",
+      "h1": "Gjør ekte innhold maskinlesbart. Ikke bruk schema til å pynte på placeholders.",
+      "robots": "noindex,nofollow",
+      "hasSection": true,
+      "hasDocLink": true,
+      "overflow": false,
+      "consoleErrors": []
+    },
+    {
+      "name": "drop seo schema safety",
+      "url": "http://127.0.0.1:4182/deliverables/olivex-preview-hub-netlify-drop/seo-merchant-readiness.html",
+      "screenshot": "qa/drop-seo-schema-safety-2026-06-07.png",
+      "title": "OliveX | SEO, AEO og Merchant readiness",
+      "h1": "Gjør ekte innhold maskinlesbart. Ikke bruk schema til å pynte på placeholders.",
+      "robots": "noindex,nofollow",
+      "hasSection": true,
+      "hasDocLink": true,
+      "overflow": false,
+      "consoleErrors": []
+    }
+  ],
+  "failures": []
+}
