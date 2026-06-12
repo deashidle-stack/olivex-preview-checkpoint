@@ -915,17 +915,32 @@ body.menu-open {
     margin-bottom: 2.2em;
   }
 
-  /* Portrait crop shows ~35 % of the photo's width. 38 % places the bottle
-     (image centre) in the RIGHT third of the screen — fully visible, while
-     the four narrow title lines own the left side without touching the label */
+  /* Zoomet UT for skarphet: bildet fyller bare øverste ~78 % av hero-en og
+     vises dermed NEDSKALERT fra 1448px-kilden (i stedet for oppskalert
+     cover av hele skjermen). Hele flasken er synlig i høyre del, og bildet
+     toner ut i bakgrunnsfargen der knappene og ritualkortet ligger. */
+  .hero-media {
+    inset: 0 0 22% 0;
+  }
+
+  .hero-media::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 34%;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-abyss) 96%);
+  }
+
   .hero-media img {
-    object-position: 43% 32%;
+    object-position: 42% 18%;
   }
 
   .hero-scrim {
     background:
-      linear-gradient(0deg, var(--bg-abyss) 0%, rgba(11, 18, 15, 0.5) 38%, rgba(11, 18, 15, 0.55) 100%),
-      linear-gradient(90deg, rgba(11, 18, 15, 0.66) 0%, rgba(11, 18, 15, 0.38) 55%, rgba(11, 18, 15, 0.16) 100%);
+      linear-gradient(0deg, var(--bg-abyss) 6%, rgba(11, 18, 15, 0.42) 42%, rgba(11, 18, 15, 0.5) 100%),
+      linear-gradient(90deg, rgba(11, 18, 15, 0.6) 0%, rgba(11, 18, 15, 0.32) 55%, rgba(11, 18, 15, 0.1) 100%);
   }
 
   .ritual-stamp {
