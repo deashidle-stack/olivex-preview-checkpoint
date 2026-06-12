@@ -915,16 +915,17 @@ body.menu-open {
     margin-bottom: 2.2em;
   }
 
-  /* Push the bottle out of the text column and darken the scrim so the
-     headline never sits on top of the label */
+  /* Portrait crop shows ~35 % of the photo's width. 38 % places the bottle
+     (image centre) in the RIGHT third of the screen — fully visible, while
+     the four narrow title lines own the left side without touching the label */
   .hero-media img {
-    object-position: 78% 30%;
+    object-position: 43% 32%;
   }
 
   .hero-scrim {
     background:
-      linear-gradient(0deg, var(--bg-abyss) 0%, rgba(11, 18, 15, 0.55) 38%, rgba(11, 18, 15, 0.62) 100%),
-      linear-gradient(90deg, rgba(11, 18, 15, 0.6) 0%, rgba(11, 18, 15, 0.32) 100%);
+      linear-gradient(0deg, var(--bg-abyss) 0%, rgba(11, 18, 15, 0.5) 38%, rgba(11, 18, 15, 0.55) 100%),
+      linear-gradient(90deg, rgba(11, 18, 15, 0.66) 0%, rgba(11, 18, 15, 0.38) 55%, rgba(11, 18, 15, 0.16) 100%);
   }
 
   .ritual-stamp {
